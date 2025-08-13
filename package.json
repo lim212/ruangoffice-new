@@ -1,0 +1,15 @@
+{
+  "name": "ruangoffice-nuxt",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "set NODE_OPTIONS=--no-deprecation&& nuxt dev",
+    "build": "set NODE_OPTIONS=--no-deprecation&& nuxt build",
+    "start": "set NODE_OPTIONS=--no-deprecation&& nuxt start",
+    "generate": "set NODE_OPTIONS=--no-deprecation&& nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^3.12.4"
+  }
+}
