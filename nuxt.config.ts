@@ -21,28 +21,28 @@ export default defineNuxtConfig({
         { property: 'og:url', content: 'https://www.ruangoffice.com' },
         { property: 'og:title', content: 'RuangOffice.com Biro Jasa Legalitas perizinan & Virtual Office #1 Layanan Terbaik' },
         { property: 'og:description', content: 'Jasa Pendirian dan Pembuatan layanan Perizinan bikin atau buat PT / CV / Firma / UD / Yayasan, PMA, KAP, SIUP, HAKI, ISO, NIB, Pajak, Virtual Office' },
-        { property: 'og:image', content: 'https://www.ruangoffice.com/logo-ro.ico' },
+        { property: 'og:image', content: '/assets/ruangoffice/logo-ro.ico' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:url', content: 'https://www.ruangoffice.com' },
         { name: 'twitter:title', content: 'RuangOffice.com Biro Jasa Legalitas perizinan & Virtual Office #1 Layanan Terbaik' },
         { name: 'twitter:description', content: 'Jasa Pendirian dan Pembuatan layanan Perizinan bikin atau buat PT / CV / Firma / UD / Yayasan, PMA, KAP, SIUP, HAKI, ISO, NIB, Pajak, Virtual Office' },
-        { name: 'twitter:image', content: 'https://www.ruangoffice.com/logo-ro.ico' },
+        { name: 'twitter:image', content: '/assets/ruangoffice/logo-ro.ico' },
         { name: 'robots', content: 'index, follow' }
       ],
       link: [
         // Favicons
-        { rel: 'apple-touch-icon', sizes: '57x57', href: 'https://www.ruangoffice.com/logo-ro.ico' },
-        { rel: 'apple-touch-icon', sizes: '60x60', href: 'https://www.ruangoffice.com/logo-ro.ico' },
-        { rel: 'apple-touch-icon', sizes: '72x72', href: 'https://www.ruangoffice.com/logo-ro.ico' },
-        { rel: 'apple-touch-icon', sizes: '76x76', href: 'https://www.ruangoffice.com/logo-ro.ico' },
-        { rel: 'apple-touch-icon', sizes: '114x114', href: 'https://www.ruangoffice.com/logo-ro.ico' },
-        { rel: 'apple-touch-icon', sizes: '120x120', href: 'https://www.ruangoffice.com/logo-ro.ico' },
-        { rel: 'apple-touch-icon', sizes: '144x144', href: 'https://www.ruangoffice.com/logo-ro.ico' },
-        { rel: 'apple-touch-icon', sizes: '152x152', href: 'https://www.ruangoffice.com/logo-ro.ico' },
-        { rel: 'apple-touch-icon', sizes: '180x180', href: 'https://www.ruangoffice.com/logo-ro.ico' },
-        { rel: 'icon', type: 'image/x-icon', sizes: '32x32', href: 'https://www.ruangoffice.com/logo-ro.ico' },
-        { rel: 'icon', type: 'image/x-icon', sizes: '16x16', href: 'https://www.ruangoffice.com/logo-ro.ico' },
-        { rel: 'alternate icon', href: 'https://www.ruangoffice.com/favicon.png', class: 'js-site-favicon', type: 'image/png' },
+        { rel: 'apple-touch-icon', sizes: '57x57', href: '/assets/ruangoffice/logo-ro.ico' },
+        { rel: 'apple-touch-icon', sizes: '60x60', href: '/assets/ruangoffice/logo-ro.ico' },
+        { rel: 'apple-touch-icon', sizes: '72x72', href: '/assets/ruangoffice/logo-ro.ico' },
+        { rel: 'apple-touch-icon', sizes: '76x76', href: '/assets/ruangoffice/logo-ro.ico' },
+        { rel: 'apple-touch-icon', sizes: '114x114', href: '/assets/ruangoffice/logo-ro.ico' },
+        { rel: 'apple-touch-icon', sizes: '120x120', href: '/assets/ruangoffice/logo-ro.ico' },
+        { rel: 'apple-touch-icon', sizes: '144x144', href: '/assets/ruangoffice/logo-ro.ico' },
+        { rel: 'apple-touch-icon', sizes: '152x152', href: '/assets/ruangoffice/logo-ro.ico' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/assets/ruangoffice/logo-ro.ico' },
+        { rel: 'icon', type: 'image/x-icon', sizes: '32x32', href: '/assets/ruangoffice/logo-ro.ico' },
+        { rel: 'icon', type: 'image/x-icon', sizes: '16x16', href: '/assets/ruangoffice/logo-ro.ico' },
+        { rel: 'alternate icon', href: '/assets/ruangoffice/favicon.png', class: 'js-site-favicon', type: 'image/png' },
         // Google Fonts and CSS libraries
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
@@ -64,9 +64,9 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: 'https://unpkg.com/shimmer-css@1.0.0/shimmer.css' },
         { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css' },
         { rel: 'stylesheet', href: 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' },
-        { rel: 'stylesheet', href: 'https://www.ruangoffice.com/css/styles.css' },
-        { rel: 'stylesheet', href: 'https://www.ruangoffice.com/widget/whatsapp/style.css' },
-        { rel: 'stylesheet', href: 'https://www.ruangoffice.com/css/sch-style2.css' }
+        { rel: 'stylesheet', href: '/assets/ruangoffice/css/styles.css' },
+        { rel: 'stylesheet', href: '/assets/ruangoffice/widget/whatsapp/style.css' },
+        { rel: 'stylesheet', href: '/assets/ruangoffice/css/sch-style2.css' }
       ],
       script: [
         // Google Analytics gtag
@@ -76,7 +76,7 @@ export default defineNuxtConfig({
           tagPosition: 'head'
         },
         // Font Awesome
-        { src: 'https://use.fontawesome.com/releases/v6.1.0/js/all.js', crossorigin: 'anonymous', defer: true }
+        { src: 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/js/all.min.js', crossorigin: 'anonymous', defer: true }
       ],
       // For inline scripts via innerHTML, allow unsafe inline (you may want to handle CSP separately)
       // Note: nuxt-security or strict CSP is not configured in this minimal scaffold.

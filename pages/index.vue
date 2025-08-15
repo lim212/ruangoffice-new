@@ -6,10 +6,31 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, nextTick } from 'vue'
 
 const bodyHtml = ref<string>('')
 const loaded = ref(false)
+
+function hidePreloader() {
+  try {
+    const pre = document.getElementById('preloader')
+    if (pre) {
+      pre.style.display = 'none'
+      pre.remove?.()
+    }
+    // Also ensure any overlay with class 'loading-body' is hidden
+    const loadingBody = document.querySelector('.loading-body') as HTMLElement | null
+    if (loadingBody) {
+      loadingBody.classList.add('d-none')
+      loadingBody.style.display = 'none'
+    }
+    // Restore scroll if any style blocked it
+    document.documentElement.style.overflow = ''
+    document.body.style.overflow = ''
+  } catch (err) {
+    // noop
+  }
+}
 
 onMounted(async () => {
   try {
@@ -24,6 +45,11 @@ onMounted(async () => {
     bodyHtml.value = '<p>Gagal memuat konten.</p>'
   } finally {
     loaded.value = true
+    await nextTick()
+    // Try hide immediately, then fallback by timeout in case late rendering
+    hidePreloader()
+    setTimeout(hidePreloader, 300)
+    setTimeout(hidePreloader, 1500)
   }
 })
 </script>
