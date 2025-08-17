@@ -7,7 +7,9 @@
     "dev": "set NODE_OPTIONS=--no-deprecation&& nuxt dev",
     "build": "set NODE_OPTIONS=--no-deprecation&& nuxt build",
     "start": "set NODE_OPTIONS=--no-deprecation&& nuxt start",
-    "generate": "set NODE_OPTIONS=--no-deprecation&& nuxt generate"
+    "generate": "set NODE_OPTIONS=--no-deprecation&& nuxt generate",
+    "assets:fetch:ruangoffice": "node scripts\\download-ruangoffice-assets.cjs",
+    "assets:fetch:ruangoffice:rewrite": "node scripts\\download-ruangoffice-assets.cjs --rewrite"
   },
   "dependencies": {
     "nuxt": "^3.12.4"

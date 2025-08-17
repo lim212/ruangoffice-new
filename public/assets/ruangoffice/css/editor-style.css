@@ -1,0 +1,284 @@
+.ql-container {
+    font-family: var(--bs-body-font-family);
+}
+
+.ql-video {
+    display: block;
+    max-width: 100%;
+}
+
+.ql-video.ql-align-center {
+    margin: 0 auto;
+}
+
+.ql-video.ql-align-right {
+    margin: 0 0 0 auto;
+}
+
+.ql-bg-black {
+    background-color: #000;
+}
+
+.ql-bg-red {
+    background-color: #e60000;
+}
+
+.ql-bg-orange {
+    background-color: #f90;
+}
+
+.ql-bg-yellow {
+    background-color: #ff0;
+}
+
+.ql-bg-green {
+    background-color: #008a00;
+}
+
+.ql-bg-blue {
+    background-color: #06c;
+}
+
+.ql-bg-purple {
+    background-color: #93f;
+}
+
+.ql-color-white {
+    color: #fff;
+}
+
+.ql-color-red {
+    color: #e60000;
+}
+
+.ql-color-orange {
+    color: #f90;
+}
+
+.ql-color-yellow {
+    color: #ff0;
+}
+
+.ql-color-green {
+    color: #008a00;
+}
+
+.ql-color-blue {
+    color: #06c;
+}
+
+.ql-color-purple {
+    color: #93f;
+}
+
+.ql-font-serif {
+    font-family: Georgia, Times New Roman, serif;
+}
+
+.ql-font-monospace {
+    font-family: Monaco, Courier New, monospace;
+}
+
+.ql-size-small {
+    font-size: 0.75em;
+}
+
+.ql-size-large {
+    font-size: 1.5em;
+}
+
+.ql-size-huge {
+    font-size: 2.5em;
+}
+
+.ql-direction-rtl {
+    direction: rtl;
+    text-align: inherit;
+}
+
+.ql-align-center {
+    text-align: center;
+}
+
+.ql-align-justify {
+    text-align: justify;
+}
+
+.ql-align-right {
+    text-align: right;
+}
+
+#editor-container {
+    background-color: #fff;
+    border: none;
+    opacity: 0.85;
+    overflow: hidden;
+    width: 100%;
+}
+
+#editor-container h1 {
+    font-size: 3rem;
+}
+
+#editor-container h2 {
+    font-size: 2rem;
+}
+
+#editor-container blockquote {
+    font-size: 1.5rem;
+}
+
+#editor-container .ql-size-large {
+    font-size: 24px;
+}
+
+#editor-container:hover {
+    opacity: 1;
+}
+
+#editor-container .ql-snow {
+    border: none;
+}
+
+#editor-container .ql-snow a:hover,
+#editor-container .ql-snow a:active {
+    color: #06c;
+}
+
+#editor-container #full-container {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+#editor-container #full-container .editor {
+    flex: 2;
+    overflow: hidden;
+}
+
+#full-wrapper {
+    display: inline-block;
+    height: 595px;
+    width: 100%;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+}
+
+#full-wrapper .ql-toolbar {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+
+/*** Home Demo ***/
+#editor-container .ql-editor h1,
+#editor-container .ql-editor h2,
+#editor-container .ql-editor h3,
+#editor-container .ql-editor h4,
+#editor-container .ql-editor h5,
+#editor-container .ql-editor h6,
+#editor-container .ql-editor,
+#editor-container .ql-toolbar {
+    font-family: 'Raleway', sans-serif;
+}
+
+#editor-container .ql-editor {
+    line-height: 2rem;
+}
+
+#editor-container .ql-toolbar .ql-picker-label {
+    font-size: 15px;
+}
+
+#editor-container .ql-snow .ql-header.ql-picker {
+    width: 115px;
+}
+
+#editor-container .ql-snow .ql-font.ql-picker {
+    width: 132px;
+}
+
+#editor-container .ql-snow .ql-picker.ql-font .ql-picker-label:not([data-label])::before {
+    content: 'Montserrat';
+}
+
+#editor-container .ql-snow .ql-font .ql-picker-item[data-value='public-sans']::before,
+#editor-container .ql-snow .ql-font .ql-picker-label[data-value='public-sans']:not([data-label])::before,
+#editor-container .ql-font-public-sans {
+    content: 'Public Sans';
+    font-family: 'Public Sans';
+}
+
+#editor-container .ql-snow .ql-font .ql-picker-item[data-value='roboto']::before,
+#editor-container .ql-snow .ql-font .ql-picker-label[data-value='roboto']:not([data-label])::before,
+#editor-container .ql-font-roboto {
+    content: 'Roboto';
+    font-family: 'Roboto';
+}
+
+#editor-container .ql-snow .ql-font .ql-picker-item[data-value='roboto-slab']::before,
+#editor-container .ql-snow .ql-font .ql-picker-label[data-value='roboto-slab']:not([data-label])::before,
+#editor-container .ql-font-roboto-slab {
+    content: 'Roboto Slab';
+    font-family: 'Roboto Slab';
+}
+
+#editor-container .ql-snow .ql-font .ql-picker-item[data-value='lato']::before,
+#editor-container .ql-snow .ql-font .ql-picker-label[data-value='lato']:not([data-label])::before,
+#editor-container .ql-font-lato {
+    content: 'Lato';
+    font-family: 'Lato';
+}
+
+#editor-container .ql-snow .ql-font .ql-picker-item[data-value='montserrat']::before,
+#editor-container .ql-snow .ql-font .ql-picker-label[data-value='montserrat']:not([data-label])::before,
+#editor-container .ql-font-montserrat {
+    content: 'Montserrat';
+    font-family: 'Montserrat';
+}
+
+#editor-container .ql-snow .ql-font .ql-picker-item[data-value='cookie']::before,
+#editor-container .ql-snow .ql-font .ql-picker-label[data-value='cookie']:not([data-label])::before,
+#editor-container .ql-font-cookie {
+    content: 'Cookie';
+    font-family: 'Cookie';
+}
+
+#editor-container .ql-snow .ql-font .ql-picker-item[data-value='titillium-web']::before,
+#editor-container .ql-snow .ql-font .ql-picker-label[data-value='titillium-web']:not([data-label])::before,
+#editor-container .ql-font-titillium-web {
+    content: 'Titillium Web';
+    font-family: 'Titillium Web';
+}
+
+#editor-container .ql-snow .ql-font .ql-picker-item[data-value='raleway']::before,
+#editor-container .ql-snow .ql-font .ql-picker-label[data-value='raleway']:not([data-label])::before,
+#editor-container .ql-font-raleway {
+    content: 'Raleway';
+    font-family: 'Raleway';
+}
+
+#editor-container .ql-snow .ql-font .ql-picker-item[data-value='abel']::before,
+#editor-container .ql-snow .ql-font .ql-picker-label[data-value='abel']:not([data-label])::before,
+#editor-container .ql-font-abel {
+    content: 'Abel';
+    font-family: 'Abel';
+}
+
+#editor-container .ql-snow .ql-font .ql-picker-item[data-value='advent-pro']::before,
+#editor-container .ql-snow .ql-font .ql-picker-label[data-value='advent-pro']:not([data-label])::before,
+#editor-container .ql-font-advent-pro {
+    content: 'Advent Pro';
+    font-family: 'Advent Pro';
+}
+
+#editor-container .ql-editor {
+    font-size: 1.5em;
+}
+
+#editor-container .ql-editor li {
+    margin-bottom: 0;
+}
+
+#editor-container .ql-editor pre {
+    font-size: 0.8em;
+}

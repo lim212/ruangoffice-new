@@ -35,14 +35,13 @@
     <meta property="twitter:title" content="RuangOffice.com Biro Jasa Legalitas perizinan & Virtual Office #1 Layanan Terbaik">
     <meta property="twitter:description" content="Jasa Pendirian dan Pembuatan layanan Perizinan bikin atau buat PT / CV / Firma / UD / Yayasan, PMA, KAP, SIUP, HAKI, ISO, NIB, Pajak, Virtual Office">
     <meta property="twitter:image" content="/assets/img/logo-ro.ico">
-
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
     <!-- Snippet Google Analytics telah ditambahkan oleh Site Kit -->
 <meta name="google-site-verification" content="mAWgfPqTtGu7a7MHp1_qT6QIdrxOy8WewR3yuCy0Wt4" />
 
-<!-- Favicon-->
+
 <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/logo-ro.ico">
 <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/logo-ro.ico">
 <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/logo-ro.ico">
@@ -59,10 +58,6 @@
 <link rel="icon" type="image/x-icon" sizes="16x16" href="/assets/img/logo-ro.ico">
 <meta name="msapplication-TileImage" type="image/x-icon" content="/assets/img/logo-ro.ico" />
 <link rel="alternate icon" class="js-site-favicon" type="image/png" href="/assets/img/favicon.png">
-
-<!-- Font Awesome icons (free version)-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-
 
 <!-- Google fonts-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -361,6 +356,7 @@
                     <div class="text-center swiper-slide">
                         <img loading="lazy" src="/assets/img/jp-banner-slide140-1751087941.png" class="tw-hidden md:tw-block tw-w-full" alt="slider" />
                         <img loading="lazy" src="/assets/img/whatsapp-image-2025-06-20-at-11501-pm1afad-1751087941.png" class="md:tw-hidden tw-w-full" alt="slider" />
+
                     </div>
                 </div>
 
@@ -458,7 +454,7 @@
                                         </div>
                                     </div>
 
-                                    <div @mouseout.away="showOfficeContactImage = true" @mouseover.away="showOfficeContactImage = false" class="tw-text-white tw-bg-secondary hover:tw-bg-black hover:tw-text-primary tw-w-1/2 tw-p-5">
+                                    <div class="tw-text-white tw-bg-secondary hover:tw-bg-black hover:tw-text-primary tw-w-1/2 tw-p-5">
                                         <h3 class="tw-text-center tw-text-2xl tw-underline tw-font-bold tw-uppercase tw-mb-2">Contact Us</h3>
                                         <div class="animate__animated animate__fadeIn tw-font-bold tw-text-center contact tw-my-1 head-office ">
                                             <i class="fab fa-whatsapp tw-mr-2"></i>
@@ -490,8 +486,8 @@
 
 
                                 <div class="px-2 row d-lg-none">
-                                    <div x-data="{ greenGardenOpen: false, headOfficeOpen: false }" @click.outside="greenGardenOpen = false; headOfficeOpen = false;" class="text-white col-12 col-lg-6">
-                                        <div @click="greenGardenOpen = false; headOfficeOpen = !headOfficeOpen;" data-map="head-office" class="p-2 row mobile bg-contact-us changeMapAction" :class="greenGardenOpen ? 'd-none' : ''" style="border-bottom: 2px solid #fff;">
+                                    <div x-data="{ greenGardenOpen: false, headOfficeOpen: false }"  class="text-white col-12 col-lg-6">
+                                        <div data-map="head-office" class="p-2 row mobile bg-contact-us changeMapAction" style="border-bottom: 2px solid #fff;">
                                             <div class="text-center col-1">
                                                 <i class="fas fa-building" style="font-size: 16px;"></i>
                                             </div>
@@ -580,7 +576,7 @@
                                 <div id="maps" style="background-color: rgba(0, 0, 0, 0.176);">
                                     <div class="tw-w-full">
                                         <iframe class="animate__animated animate__fadeIn map head-office" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.9080391837603!2d106.70086104782862!3d-6.193760962775623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f9df0763eaef%3A0xb13be6d791d5cdad!2sGAPURA%20OFFICE%20GREEN%20LAKE%20II!5e0!3m2!1sid!2sid!4v1664178375191!5m2!1sid!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                        <iframe class="animate__animated animate__fadeIn map green-garden d-none"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.7540874338133!2d106.76332699999999!3d-6.163679000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f72d3559f205%3A0xab7ecc293036f86b!2sRuang%20Office%20&#39;Green%20Garden&#39;!5e0!3m2!1sen!2sid!4v1699485896862!5m2!1sen!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        <iframe class="animate__animated animate__fadeIn map green-garden d-none" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.7540874338133!2d106.76332699999999!3d-6.163679000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f72d3559f205%3A0xab7ecc293036f86b!2sRuang%20Office%20&#39;Green%20Garden&#39;!5e0!3m2!1sen!2sid!4v1699485896862!5m2!1sen!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                     </div>
                                 </div>
                             </div>
@@ -672,7 +668,7 @@
                                     <a target="_blank" href="https://wa.me/62811113666">
 
 
-                                        <img loading="lazy" src="https://lh3.googleusercontent.com/d/1C4FzyUMbX-5ELdMscpZ2C2gZbkRbFBhM=w1000?authuser=0" class="img-fluid">
+                                        <img loading="lazy" src="https://lh3.googleusercontent.com/d/1C4FzyUMbX-5ELdMscpZ2C2gZbkRbFBhM=w1000?authuser=0" class="img-fluid" alt="">
 
 
                                     </a>
@@ -684,7 +680,7 @@
                                     <a target="_blank" href="https://wa.me/62811113666">
 
 
-                                        <img loading="lazy" src="https://lh3.googleusercontent.com/d/1UZ95t9x0vNObcUNrF9GkNwZK3ud7zB34=w1000?authuser=0" class="img-fluid">
+                                        <img loading="lazy" src="https://lh3.googleusercontent.com/d/1UZ95t9x0vNObcUNrF9GkNwZK3ud7zB34=w1000?authuser=0" class="img-fluid" alt="">
 
 
                                     </a>
@@ -696,7 +692,8 @@
                                     <a target="_blank" href="https://wa.me/62811113666">
 
 
-                                        <img loading="lazy" src="https://lh3.googleusercontent.com/d/1irW9Azai0gRPeMpJrc_TGZvczpkxPs-S=w1000?authuser=0" class="img-fluid">
+                                        <img loading="lazy" src="https://lh3.googleusercontent.com/d/1irW9Azai0gRPeMpJrc_TGZvczpkxPs-S=w1000?authuser=0" class="img-fluid"
+                                             alt="">
 
 
                                     </a>
@@ -1459,7 +1456,9 @@
                             <div class="swiper-slide">
                                 <div class="tw-shadow-[0_0_12px_-5px_rgba(0,0,0,0.5)] tw-rounded-lg tw-overflow-hidden tw-bg-white">
                                     <div class="tw-full tw-relative">
+
                                         <img loading="lazy" class="tw-w-full tw-h-32 tw-object-left-top tw-object-cover" src="/assets/img/bg-ourteam.png" />
+
                                         <div class="tw-absolute -tw-bottom-12 tw-w-full tw-z-50 tw-flex tw-justify-center">
                                             <img loading="lazy" class="tw-rounded-full tw-w-24 tw-h-24 tw-object-center tw-object-cover" src="https://lh3.googleusercontent.com/d/1y8pNDgbHrbC6TNxWHYGjgqGotc3V0kLy=w1000?authuser=0" />
                                         </div>
@@ -1479,7 +1478,9 @@
                             <div class="swiper-slide">
                                 <div class="tw-shadow-[0_0_12px_-5px_rgba(0,0,0,0.5)] tw-rounded-lg tw-overflow-hidden tw-bg-white">
                                     <div class="tw-full tw-relative">
+
                                         <img loading="lazy" class="tw-w-full tw-h-32 tw-object-left-top tw-object-cover" src="/assets/img/bg-ourteam.png" />
+
                                         <div class="tw-absolute -tw-bottom-12 tw-w-full tw-z-50 tw-flex tw-justify-center">
                                             <img loading="lazy" class="tw-rounded-full tw-w-24 tw-h-24 tw-object-center tw-object-cover" src="https://lh3.googleusercontent.com/d/1y8pNDgbHrbC6TNxWHYGjgqGotc3V0kLy=w1000?authuser=0" />
                                         </div>
@@ -1499,7 +1500,9 @@
                             <div class="swiper-slide">
                                 <div class="tw-shadow-[0_0_12px_-5px_rgba(0,0,0,0.5)] tw-rounded-lg tw-overflow-hidden tw-bg-white">
                                     <div class="tw-full tw-relative">
+
                                         <img loading="lazy" class="tw-w-full tw-h-32 tw-object-left-top tw-object-cover" src="/assets/img/bg-ourteam.png" />
+
                                         <div class="tw-absolute -tw-bottom-12 tw-w-full tw-z-50 tw-flex tw-justify-center">
                                             <img loading="lazy" class="tw-rounded-full tw-w-24 tw-h-24 tw-object-center tw-object-cover" src="https://lh3.googleusercontent.com/d/10nyULHGxknVrFO9rSUQDWycqjjR48vtI=w1000?authuser=0" />
                                         </div>
@@ -1519,7 +1522,9 @@
                             <div class="swiper-slide">
                                 <div class="tw-shadow-[0_0_12px_-5px_rgba(0,0,0,0.5)] tw-rounded-lg tw-overflow-hidden tw-bg-white">
                                     <div class="tw-full tw-relative">
+
                                         <img loading="lazy" class="tw-w-full tw-h-32 tw-object-left-top tw-object-cover" src="/assets/img/bg-ourteam.png" />
+
                                         <div class="tw-absolute -tw-bottom-12 tw-w-full tw-z-50 tw-flex tw-justify-center">
                                             <img loading="lazy" class="tw-rounded-full tw-w-24 tw-h-24 tw-object-center tw-object-cover" src="https://lh3.googleusercontent.com/d/1Mv1ArVfBpx-hWG7R8wM_7Ln_TqB1W5gj=w1000?authuser=0" />
                                         </div>
@@ -1538,8 +1543,9 @@
                             <!-- Slides -->
                             <div class="swiper-slide">
                                 <div class="tw-shadow-[0_0_12px_-5px_rgba(0,0,0,0.5)] tw-rounded-lg tw-overflow-hidden tw-bg-white">
-                                    <div class="tw-full tw-relative">
+
                                         <img loading="lazy" class="tw-w-full tw-h-32 tw-object-left-top tw-object-cover" src="/assets/img/bg-ourteam.png" />
+
                                         <div class="tw-absolute -tw-bottom-12 tw-w-full tw-z-50 tw-flex tw-justify-center">
                                             <img loading="lazy" class="tw-rounded-full tw-w-24 tw-h-24 tw-object-center tw-object-cover" src="https://lh3.googleusercontent.com/d/1MZa5F1DXkXlAsawWtJR29zzaO30onVcE=w1000?authuser=0" />
                                         </div>
@@ -1559,7 +1565,9 @@
                             <div class="swiper-slide">
                                 <div class="tw-shadow-[0_0_12px_-5px_rgba(0,0,0,0.5)] tw-rounded-lg tw-overflow-hidden tw-bg-white">
                                     <div class="tw-full tw-relative">
+
                                         <img loading="lazy" class="tw-w-full tw-h-32 tw-object-left-top tw-object-cover" src="/assets/img/bg-ourteam.png" />
+
                                         <div class="tw-absolute -tw-bottom-12 tw-w-full tw-z-50 tw-flex tw-justify-center">
                                             <img loading="lazy" class="tw-rounded-full tw-w-24 tw-h-24 tw-object-center tw-object-cover" src="https://lh3.googleusercontent.com/d/1gtEh-f0-93tLjeAqxYLFONBtGfghSpUb=w1000?authuser=0" />
                                         </div>
@@ -1579,7 +1587,9 @@
                             <div class="swiper-slide">
                                 <div class="tw-shadow-[0_0_12px_-5px_rgba(0,0,0,0.5)] tw-rounded-lg tw-overflow-hidden tw-bg-white">
                                     <div class="tw-full tw-relative">
+
                                         <img loading="lazy" class="tw-w-full tw-h-32 tw-object-left-top tw-object-cover" src="/assets/img/bg-ourteam.png" />
+
                                         <div class="tw-absolute -tw-bottom-12 tw-w-full tw-z-50 tw-flex tw-justify-center">
                                             <img loading="lazy" class="tw-rounded-full tw-w-24 tw-h-24 tw-object-center tw-object-cover" src="https://lh3.googleusercontent.com/d/1ZVdtMs2VGvJoPmk3yv8Z0APNCya5zz3Q=w1000?authuser=0" />
                                         </div>
@@ -1599,7 +1609,9 @@
                             <div class="swiper-slide">
                                 <div class="tw-shadow-[0_0_12px_-5px_rgba(0,0,0,0.5)] tw-rounded-lg tw-overflow-hidden tw-bg-white">
                                     <div class="tw-full tw-relative">
+
                                         <img loading="lazy" class="tw-w-full tw-h-32 tw-object-left-top tw-object-cover" src="/assets/img/bg-ourteam.png" />
+
                                         <div class="tw-absolute -tw-bottom-12 tw-w-full tw-z-50 tw-flex tw-justify-center">
                                             <img loading="lazy" class="tw-rounded-full tw-w-24 tw-h-24 tw-object-center tw-object-cover" src="https://lh3.googleusercontent.com/d/1UwcXYEL2IyQ8b9379e4v2gQJqxMPRnPf=w1000?authuser=0" />
                                         </div>
@@ -1619,7 +1631,9 @@
                             <div class="swiper-slide">
                                 <div class="tw-shadow-[0_0_12px_-5px_rgba(0,0,0,0.5)] tw-rounded-lg tw-overflow-hidden tw-bg-white">
                                     <div class="tw-full tw-relative">
+
                                         <img loading="lazy" class="tw-w-full tw-h-32 tw-object-left-top tw-object-cover" src="/assets/img/bg-ourteam.png" />
+
                                         <div class="tw-absolute -tw-bottom-12 tw-w-full tw-z-50 tw-flex tw-justify-center">
                                             <img loading="lazy" class="tw-rounded-full tw-w-24 tw-h-24 tw-object-center tw-object-cover" src="https://lh3.googleusercontent.com/d/1Zlydaw4kEqp8_pHmkHencCFmPJpUTUmp=w1000?authuser=0" />
                                         </div>
@@ -1639,7 +1653,9 @@
                             <div class="swiper-slide">
                                 <div class="tw-shadow-[0_0_12px_-5px_rgba(0,0,0,0.5)] tw-rounded-lg tw-overflow-hidden tw-bg-white">
                                     <div class="tw-full tw-relative">
+
                                         <img loading="lazy" class="tw-w-full tw-h-32 tw-object-left-top tw-object-cover" src="/assets/img/bg-ourteam.png" />
+
                                         <div class="tw-absolute -tw-bottom-12 tw-w-full tw-z-50 tw-flex tw-justify-center">
                                             <img loading="lazy" class="tw-rounded-full tw-w-24 tw-h-24 tw-object-center tw-object-cover" src="https://lh3.googleusercontent.com/d/1373LuPmd0PsvV3OIDoZQXP0zNjndCq89=w1000?authuser=0" />
                                         </div>
@@ -1684,7 +1700,7 @@
                 <div class="row">
                     <div class="mb-4 col-12 col-md-4 col-lg-4">
                         <div class="tw-mx-0 shadow card card-primary">
-                            <img loading="lazy" src="https://www.ruangoffice.com/images/what-we-offer/1-Virtual-Office-e1651936348116.jpg" class="card-img-top" alt="" style="width: 100%; height: auto;">
+                            <img loading="lazy" src="/assets/ruangoffice/images/what-we-offer/1-Virtual-Office-e1651936348116.jpg" class="card-img-top" alt="" style="width: 100%; height: auto;">
                             <div class="text-center text-primary card-body">
                                 <h5 class="tw-font-semibold tw-text-2xl">Virtual Office</h5>
                                 <p class="card-text text-muted tw-h-[100px]">Hemat biaya operasional dan tingkatkan efisiensi kerja menggunakan Virtual Office dari RuangOffice.com</p>
@@ -1694,7 +1710,7 @@
                     </div>
                     <div class="mb-4 col-12 col-md-4 col-lg-4">
                         <div class="tw-mx-0 shadow card card-primary">
-                            <img loading="lazy" src="https://www.ruangoffice.com/images/what-we-offer/PrivateOffice.png" class="card-img-top" alt="" style="width: 100%; height: auto;">
+                            <img loading="lazy" src="/assets/ruangoffice/images/what-we-offer/PrivateOffice.png" class="card-img-top" alt="" style="width: 100%; height: auto;">
                             <div class="text-center text-primary card-body">
                                 <h5 class="tw-font-semibold tw-text-2xl">Hak Paten</h5>
                                 <p class="card-text text-muted tw-h-[100px]">Sebuah Hak atas Kekayaan Intelektual (HAKI) yang diberikan oleh negara kepada individu atau lembaga</p>
@@ -1704,7 +1720,7 @@
                     </div>
                     <div class="mb-4 col-12 col-md-4 col-lg-4">
                         <div class="tw-mx-0 shadow card card-primary">
-                            <img loading="lazy" src="https://www.ruangoffice.com/images/what-we-offer/3-Private-Office-e1651936387295.jpg" class="card-img-top" alt="" style="width: 100%; height: auto;">
+                            <img loading="lazy" src="/assets/ruangoffice/images/what-we-offer/3-Private-Office-e1651936387295.jpg" class="card-img-top" alt="" style="width: 100%; height: auto;">
                             <div class="text-center text-primary card-body">
                                 <h5 class="tw-font-semibold tw-text-2xl">Private Office</h5>
                                 <p class="card-text text-muted tw-h-[100px]">Private Office yang fleksibel dan profesional untuk anda yang perlu privasi saat bekerja agar lebih nyaman</p>
@@ -1714,7 +1730,7 @@
                     </div>
                     <div class="mb-4 col-12 col-md-4 col-lg-4">
                         <div class="tw-mx-0 shadow card card-primary">
-                            <img loading="lazy" src="https://www.ruangoffice.com/images/what-we-offer/4-Pendirian-PT-CV-e1651936406677.jpg" class="card-img-top" alt="" style="width: 100%; height: auto;">
+                            <img loading="lazy" src="/assets/ruangoffice/images/what-we-offer/4-Pendirian-PT-CV-e1651936406677.jpg" class="card-img-top" alt="" style="width: 100%; height: auto;">
                             <div class="text-center text-primary card-body">
                                 <h5 class="tw-font-semibold tw-text-2xl">Pendirian PT &amp; CV</h5>
                                 <p class="card-text text-muted tw-h-[100px]">Scale up bisnis anda dan dapatkan legalitas dalam menjalankan usaha anda agar lebih profesional</p>
@@ -1724,7 +1740,7 @@
                     </div>
                     <div class="mb-4 col-12 col-md-4 col-lg-4">
                         <div class="tw-mx-0 shadow card card-primary">
-                            <img loading="lazy" src="https://www.ruangoffice.com/images/what-we-offer/5-Perizinan-Usaha-e1651936426496.jpg" class="card-img-top" alt="" style="width: 100%; height: auto;">
+                            <img loading="lazy" src="/assets/ruangoffice/images/what-we-offer/5-Perizinan-Usaha-e1651936426496.jpg" class="card-img-top" alt="" style="width: 100%; height: auto;">
                             <div class="text-center text-primary card-body">
                                 <h5 class="tw-font-semibold tw-text-2xl">Perizinan Usaha</h5>
                                 <p class="card-text text-muted tw-h-[100px]">Urus segala macam perizinan dan legalitas bisnis anda secara profesional dan cepat bersama RuangOffice.com</p>
@@ -1734,7 +1750,7 @@
                     </div>
                     <div class="mb-4 col-12 col-md-4 col-lg-4">
                         <div class="tw-mx-0 shadow card card-primary">
-                            <img loading="lazy" src="https://www.ruangoffice.com/images/what-we-offer/6-Meeting-Room-e1651936445705.png" class="card-img-top" alt="" style="width: 100%; height: auto;">
+                            <img loading="lazy" src="/assets/ruangoffice/images/what-we-offer/6-Meeting-Room-e1651936445705.png" class="card-img-top" alt="" style="width: 100%; height: auto;">
                             <div class="text-center text-primary card-body">
                                 <h5 class="tw-font-semibold tw-text-2xl">Meeting Room</h5>
                                 <p class="card-text text-muted tw-h-[100px]">Gunakan ruang meeting kami yang ditata secara profesional untuk membahas bisnis bersama mitra anda</p>
@@ -2919,18 +2935,16 @@
 
             <script>
                 const newBlogs = document.getElementById('newBlogs')
-                const newSearch = document.getElementById("searchingNewBlog")
-                const newBlogsSearch = document.getElementById("newBlogSearch")
+                document.getElementById("searchingNewBlog");
+                document.getElementById("newBlogSearch");
                 let newWpPage, algoliaPage = 1
 
                 const newDateFormatter = new Intl.DateTimeFormat('id', { day: 'numeric', month: 'long', year: "numeric" });
 
                 var headers;
-                var totalPage;
                 var newBlogPaginationHtml = document.getElementById('new-blog-pagination');
                 var newLoadingBlog = document.querySelector('.new-loading-blog');
-                var newBlogsClass = document.querySelector('.newBlogs');
-
+                document.querySelector('.newBlogs');
                 function showLoader() {
                     newLoadingBlog.classList.add('d-flex')
                     newLoadingBlog.classList.remove('d-none')
@@ -2954,12 +2968,10 @@
                         timer = setTimeout(() => { func.apply(this, args); }, timeout);
                     };
                 }
-
-                const processFetchingAlgoliaData = debounce(() => {
+                debounce(() => {
                     showLoader()
                     fetchingAlgoliaData()
                 });
-
                 const cardTemplate = (data) => {
                     let date = new Date(data.publish_at);
 
@@ -2971,7 +2983,7 @@
                     return `
         <div class="px-3 pb-2 col-6 col-sm-6 col-lg-3">
             <div class="row">
-                <a class="pt-4 pb-2 overflow-hidden rounded col-12 position-relative blog-image group" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${data.body_image ?? (data.featured_image ?? 'https://www.ruangoffice.com/images/logo.png')}'); background-size: 80% 80%; background-position: top center;" href="${url}">
+                <a class="pt-4 pb-2 overflow-hidden rounded col-12 position-relative blog-image group" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${data.body_image ?? (data.featured_image ?? '/assets/ruangoffice/images/logo.png')}'); background-size: 80% 80%; background-position: top center;" href="${url}">
                     <div class="text-uppercase position-absolute blog-tag-wrapper bg-primary" style="top: 0; right: 0; font-size: 12px;">
                         <div class="px-3 text-white text-truncate w-100 blog-tag-first" style="max-width: 170px;">${tag_first ? tag_first : ''}</div>
                         <div class="px-3 text-white w-100 blog-tag-all">${tag && tag.join(' ')}</div>
@@ -2994,7 +3006,7 @@
 
                     const search = document.querySelector('#searchingNewBlog').value;
 
-                    if (search == '') {
+                    if (search === '') {
                         await fetchingWpData(search, page);
                         return;
                     }
@@ -3147,72 +3159,90 @@
                                     <!-- Slides -->
                                     <div class="swiper-slide">
                                         <div data-gallery-id="9" class="happy-client-images-lightbox">
+
                                             <a href="/assets/img/fRWspr0yZ8BRik696jQN0lVA8IJmwTlRvMAzn49W.jpg" data-lightbox="happy-client-images-gallery9">
                                                 <img loading="lazy" src="/assets/img/fRWspr0yZ8BRik696jQN0lVA8IJmwTlRvMAzn49W.jpg" class="tw-h-[426px] tw-w-full tw-object-cover tw-object-center tw-rounded-lg tw-shadow-md">
+
                                             </a>
                                         </div>
                                     </div>
                                     <!-- Slides -->
                                     <div class="swiper-slide">
                                         <div data-gallery-id="8" class="happy-client-images-lightbox">
+
                                             <a href="/assets/img/PM03CaluAPb3b7nKKeU40i37XYdMSUAG5xRHzyhY.png" data-lightbox="happy-client-images-gallery8">
                                                 <img loading="lazy" src="/assets/img/PM03CaluAPb3b7nKKeU40i37XYdMSUAG5xRHzyhY.png" class="tw-h-[426px] tw-w-full tw-object-cover tw-object-center tw-rounded-lg tw-shadow-md">
+
                                             </a>
                                         </div>
                                     </div>
                                     <!-- Slides -->
                                     <div class="swiper-slide">
                                         <div data-gallery-id="7" class="happy-client-images-lightbox">
+
                                             <a href="/assets/img/SIkwB4kugdCAvTbx8UeIQAtqCp8cFrU4jb6UwlBV.jpg" data-lightbox="happy-client-images-gallery7">
                                                 <img loading="lazy" src="/assets/img/SIkwB4kugdCAvTbx8UeIQAtqCp8cFrU4jb6UwlBV.jpg" class="tw-h-[426px] tw-w-full tw-object-cover tw-object-center tw-rounded-lg tw-shadow-md">
+
                                             </a>
                                         </div>
                                     </div>
                                     <!-- Slides -->
                                     <div class="swiper-slide">
                                         <div data-gallery-id="6" class="happy-client-images-lightbox">
+
                                             <a href="/assets/img/pXFMJkZFZIKb5G392HpQOFrb3cfMzlYhpCcO5EDP.png" data-lightbox="happy-client-images-gallery6">
                                                 <img loading="lazy" src="/assets/img/pXFMJkZFZIKb5G392HpQOFrb3cfMzlYhpCcO5EDP.png" class="tw-h-[426px] tw-w-full tw-object-cover tw-object-center tw-rounded-lg tw-shadow-md">
+
                                             </a>
                                         </div>
                                     </div>
                                     <!-- Slides -->
                                     <div class="swiper-slide">
                                         <div data-gallery-id="5" class="happy-client-images-lightbox">
+
                                             <a href="/assets/img/RqAhnBtbjH7XJdmB4wBUB587gXFdbO0X8ossEN5C.png" data-lightbox="happy-client-images-gallery5">
                                                 <img loading="lazy" src="/assets/img/RqAhnBtbjH7XJdmB4wBUB587gXFdbO0X8ossEN5C.png" class="tw-h-[426px] tw-w-full tw-object-cover tw-object-center tw-rounded-lg tw-shadow-md">
+
                                             </a>
                                         </div>
                                     </div>
                                     <!-- Slides -->
                                     <div class="swiper-slide">
                                         <div data-gallery-id="4" class="happy-client-images-lightbox">
+
                                             <a href="/assets/img/oiwfRGt51x1fm75mOjnUy5SlH9DGAszph4baDzxr.png" data-lightbox="happy-client-images-gallery4">
                                                 <img loading="lazy" src="/assets/img/oiwfRGt51x1fm75mOjnUy5SlH9DGAszph4baDzxr.png" class="tw-h-[426px] tw-w-full tw-object-cover tw-object-center tw-rounded-lg tw-shadow-md">
+
                                             </a>
                                         </div>
                                     </div>
                                     <!-- Slides -->
                                     <div class="swiper-slide">
                                         <div data-gallery-id="3" class="happy-client-images-lightbox">
+
                                             <a href="/assets/img/Z9ZgR3u2OQjn3r1uGurEoxnVUmTon7KWN2jKVcE8.png" data-lightbox="happy-client-images-gallery3">
                                                 <img loading="lazy" src="/assets/img/Z9ZgR3u2OQjn3r1uGurEoxnVUmTon7KWN2jKVcE8.png" class="tw-h-[426px] tw-w-full tw-object-cover tw-object-center tw-rounded-lg tw-shadow-md">
+
                                             </a>
                                         </div>
                                     </div>
                                     <!-- Slides -->
                                     <div class="swiper-slide">
                                         <div data-gallery-id="2" class="happy-client-images-lightbox">
+
                                             <a href="/assets/img/yJb0ymPfQcECvL30dnkc7jKmsSqZSI2plEufNWEQ.png" data-lightbox="happy-client-images-gallery2">
                                                 <img loading="lazy" src="/assets/img/yJb0ymPfQcECvL30dnkc7jKmsSqZSI2plEufNWEQ.png" class="tw-h-[426px] tw-w-full tw-object-cover tw-object-center tw-rounded-lg tw-shadow-md">
+
                                             </a>
                                         </div>
                                     </div>
                                     <!-- Slides -->
                                     <div class="swiper-slide">
                                         <div data-gallery-id="1" class="happy-client-images-lightbox">
+
                                             <a href="/assets/img/ziSAtdCGrc2lj2nd1TxStuuQgw3wS3DErcHQMpUr.png" data-lightbox="happy-client-images-gallery1">
                                                 <img loading="lazy" src="/assets/img/ziSAtdCGrc2lj2nd1TxStuuQgw3wS3DErcHQMpUr.png" class="tw-h-[426px] tw-w-full tw-object-cover tw-object-center tw-rounded-lg tw-shadow-md">
+
                                             </a>
                                         </div>
                                     </div>
@@ -3500,7 +3530,7 @@
 
                                         <div data-gallery-id="6" class="testimonial-images-lightbox">
                                             <a href="https://lh3.googleusercontent.com/d/1gEe-kyGR0C_ihLoOJXalANqRT1YKe0ku=w1000?authuser=0" data-lightbox="testimonial-images-gallery6">
-                                                <img loading="lazy" src="https://lh3.googleusercontent.com/d/1gEe-kyGR0C_ihLoOJXalANqRT1YKe0ku=w1000?authuser=0" class="tw-h-full tw-w-full tw-rounded-lg tw-shadow-md">
+                                                <img loading="lazy" src="https://lh3.googleusercontent.com/d/1gEe-kyGR0C_ihLoOJXalANqRT1YKe0ku=w1000?authuser=0" class="tw-h-full tw-w-full tw-rounded-lg tw-shadow-md" alt="">
                                             </a>
                                         </div>
 
@@ -3512,7 +3542,7 @@
 
                                         <div data-gallery-id="3" class="testimonial-images-lightbox">
                                             <a href="https://lh3.googleusercontent.com/d/1FKKuGlwWoz5y_KSFMUBM2FqIcDpztifg=w1000?authuser=0" data-lightbox="testimonial-images-gallery3">
-                                                <img loading="lazy" src="https://lh3.googleusercontent.com/d/1FKKuGlwWoz5y_KSFMUBM2FqIcDpztifg=w1000?authuser=0" class="tw-h-full tw-w-full tw-rounded-lg tw-shadow-md">
+                                                <img loading="lazy" src="https://lh3.googleusercontent.com/d/1FKKuGlwWoz5y_KSFMUBM2FqIcDpztifg=w1000?authuser=0" class="tw-h-full tw-w-full tw-rounded-lg tw-shadow-md" alt="">
                                             </a>
                                         </div>
 
@@ -3524,7 +3554,7 @@
 
                                         <div data-gallery-id="2" class="testimonial-images-lightbox">
                                             <a href="https://lh3.googleusercontent.com/d/1F6kCQCSb9P0NY-8iRfGEnmqF5jq3Ffhm=w1000?authuser=0" data-lightbox="testimonial-images-gallery2">
-                                                <img loading="lazy" src="https://lh3.googleusercontent.com/d/1F6kCQCSb9P0NY-8iRfGEnmqF5jq3Ffhm=w1000?authuser=0" class="tw-h-full tw-w-full tw-rounded-lg tw-shadow-md">
+                                                <img loading="lazy" src="https://lh3.googleusercontent.com/d/1F6kCQCSb9P0NY-8iRfGEnmqF5jq3Ffhm=w1000?authuser=0" class="tw-h-full tw-w-full tw-rounded-lg tw-shadow-md" alt="">
                                             </a>
                                         </div>
 
@@ -3715,7 +3745,7 @@
                     <div id="maps" style="background-color: rgba(0, 0, 0, 0.176);">
                         <div class="tw-w-full">
                             <iframe class="animate__animated animate__fadeIn map head-office" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.9080391837603!2d106.70086104782862!3d-6.193760962775623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f9df0763eaef%3A0xb13be6d791d5cdad!2sGAPURA%20OFFICE%20GREEN%20LAKE%20II!5e0!3m2!1sid!2sid!4v1664178375191!5m2!1sid!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            <iframe class="animate__animated animate__fadeIn map green-garden d-none"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.7540874338133!2d106.76332699999999!3d-6.163679000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f72d3559f205%3A0xab7ecc293036f86b!2sRuang%20Office%20&#39;Green%20Garden&#39;!5e0!3m2!1sen!2sid!4v1699485896862!5m2!1sen!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe class="animate__animated animate__fadeIn map green-garden d-none" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.7540874338133!2d106.76332699999999!3d-6.163679000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f72d3559f205%3A0xab7ecc293036f86b!2sRuang%20Office%20&#39;Green%20Garden&#39;!5e0!3m2!1sen!2sid!4v1699485896862!5m2!1sen!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
@@ -4432,7 +4462,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="d-flex w-100 h-100 justify-content-center align-items-center">
-                            <img src="https://www.ruangoffice.com/images/logo.png" style="width: 50%;" alt="">
+                            <img src="/assets/ruangoffice/images/logo.png" style="width: 50%;" alt="">
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -4523,7 +4553,7 @@
         <div id="floating-widget">
             <div id="whatsapp-widget">
                 <div id="whatsapp-icon" onclick="toggleAgentList()" x-on:click="liveChatOpen = !liveChatOpen">
-                    <img loading="lazy" id="icon" src="https://www.ruangoffice.com/widget/whatsapp/assets/wa-icon.svg" data-src='{ "hide": "https://www.ruangoffice.com/widget/whatsapp/assets/wa-icon.svg", "show": "https://www.ruangoffice.com/widget/whatsapp/assets/x-icon.svg" }' alt="WhatsApp Icon">
+                    <img loading="lazy" id="icon" src="/assets/ruangoffice/widget/whatsapp/assets/wa-icon.svg" data-src='{ "hide": "/assets/ruangoffice/widget/whatsapp/assets/wa-icon.svg", "show": "/assets/ruangoffice/widget/whatsapp/assets/x-icon.svg" }' alt="WhatsApp Icon">
                 </div>
 
                 <div id="agent-list" style="display:none;">
@@ -4535,28 +4565,28 @@
                     <!-- Agent List -->
                     <ul>
                         <li>
-                            <img loading="lazy" class="agent-avatar" src="https://www.ruangoffice.com/images/favicon.png" alt="Marketing 1">
+                            <img loading="lazy" class="agent-avatar" src="/assets/ruangoffice/images/favicon.png" alt="Marketing 1">
                             <div class="agent-info">
                                 <strong>Marketing 1</strong>
                                 <p>Marketing</p>
                             </div>
-                            <img loading="lazy" class="agent-wa-icon" src="https://www.ruangoffice.com/widget/whatsapp/assets/wa-icon-green.svg" alt="WhatsApp Icon">
+                            <img loading="lazy" class="agent-wa-icon" src="/assets/ruangoffice/widget/whatsapp/assets/wa-icon-green.svg" alt="WhatsApp Icon">
                         </li>
                         <li>
-                            <img loading="lazy" class="agent-avatar" src="https://www.ruangoffice.com/images/favicon.png" alt="Marketing 2">
+                            <img loading="lazy" class="agent-avatar" src="/assets/ruangoffice/images/favicon.png" alt="Marketing 2">
                             <div class="agent-info">
                                 <strong>Marketing 2</strong>
                                 <p>Marketing</p>
                             </div>
-                            <img loading="lazy" class="agent-wa-icon" src="https://www.ruangoffice.com/widget/whatsapp/assets/wa-icon-green.svg" alt="WhatsApp Icon">
+                            <img loading="lazy" class="agent-wa-icon" src="/assets/ruangoffice/widget/whatsapp/assets/wa-icon-green.svg" alt="WhatsApp Icon">
                         </li>
                         <li>
-                            <img loading="lazy" class="agent-avatar" src="https://www.ruangoffice.com/images/favicon.png" alt="Marketing 3">
+                            <img loading="lazy" class="agent-avatar" src="/assets/ruangoffice/images/favicon.png" alt="Marketing 3">
                             <div class="agent-info">
                                 <strong>Marketing 3</strong>
                                 <p>Marketing</p>
                             </div>
-                            <img loading="lazy" class="agent-wa-icon" src="https://www.ruangoffice.com/widget/whatsapp/assets/wa-icon-green.svg" alt="WhatsApp Icon">
+                            <img loading="lazy" class="agent-wa-icon" src="/assets/ruangoffice/widget/whatsapp/assets/wa-icon-green.svg" alt="WhatsApp Icon">
                         </li>
                     </ul>
                 </div>
@@ -4571,6 +4601,7 @@
                  x-transition
                  style="display: none;">
                 <a class="hover:tw-bg-success tw-bg-white tw-inline-block tw-px-2.5 py-3 tw-flex-shrink-0 icon-bottom-menu first:tw-border-0 tw-border-l" href="https://ruangoffice.com/" target="_blank">
+
                     <img loading="lazy" class="tw-size-[45px]" src="/assets/img/icons8-menu-500-1741164827.png" alt="">
                 </a>
                 <a class="hover:tw-bg-success tw-bg-white tw-inline-block tw-px-2.5 py-3 tw-flex-shrink-0 icon-bottom-menu first:tw-border-0 tw-border-l" href="https://ruangoffice.com/" target="_blank">
@@ -4594,6 +4625,7 @@
             </div>
 
         
+
         </div>
     </div>
 
@@ -4630,7 +4662,7 @@
             const interval = setInterval(() => {
                 if ($('.chat-heading').length > 0) {
                     $('.chat-header').css('background-color', '#000000');
-                    $('.chat-heading').html('<img src="https://www.ruangoffice.com/images/logo-transparant.png" style="max-width: 100%;">');
+                    $('.chat-heading').html('<img src="/assets/ruangoffice/images/logo-transparant.png" style="max-width: 100%;">');
                     clearInterval(interval);
                 }
             }, 100);
@@ -4647,7 +4679,7 @@
         var gotoTopButton = document.getElementById("gotoTopTw");
         var gotoDownButton = document.getElementById("gotoDownTw");
 
-        // When the user scrolls down 20px from the top of the document, show the button
+        // When the user scrolls down 20 px from the top of the document, show the button
         window.onscroll = function() { scrollFunction() };
 
         function scrollFunction() {
@@ -4794,7 +4826,7 @@
 
                 <div class="nib-not-found">
                     <div class="py-5 text-center">
-                        <img loading="lazy" style="width: 40%" class="mb-5 w-md-25" src="https://www.ruangoffice.com/assets/img/illustrations/not-found.svg" alt="">
+                        <img loading="lazy" style="width: 40%" class="mb-5 w-md-25" src="/assets/ruangoffice/assets/img/illustrations/not-found.svg" alt="">
                         <div>Silahkan Bpk/Ibu menginput nomor NIB diatas untuk melakukan cek status izin usaha Aktif / NonAktif.</div>
                     </div>
                 </div>
@@ -4909,7 +4941,7 @@
 
 <!-- Lightbox-->
 <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@latest/dist/index.bundle.min.js"></script>
-<script src="https://www.ruangoffice.com/assets/vendor/lightbox/js/lightbox.min.js"></script>
+<script src="/assets/ruangoffice/assets/vendor/lightbox/js/lightbox.min.js"></script>
 
 <!-- SplideJs -->
 
@@ -4918,7 +4950,7 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <!-- Core theme JS-->
-<script src="https://www.ruangoffice.com/js/scripts.js"></script>
+<script src="/assets/ruangoffice/js/scripts.js"></script>
 
 <!-- Inline Js Page -->
 <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.js"></script>
@@ -5430,6 +5462,8 @@
 
 <script>
     // document.addEventListener('contextmenu', event => event.preventDefault());
+
+    import {$} from "../.output/server/chunks/_/nitro.mjs";
 
     window.addEventListener("load", (event) => {
         showLoader(false)
@@ -6013,7 +6047,7 @@
                 } else {
                     const html = `
                             <div class="py-5 text-center">
-                                <img loading="lazy" style="width: 40%" class="mb-5 w-md-25" src="https://www.ruangoffice.com/assets/img/illustrations/not-found.svg" alt="">
+                                <img loading="lazy" style="width: 40%" class="mb-5 w-md-25" src="/assets/ruangoffice/assets/img/illustrations/not-found.svg" alt="">
                                 <div>Hasil Pencarian data BLOG Bpk/Ibu tidak kami temukan dalam database, Silahkan Bpk/ibu melakukan pencarian kembali</div>
                                 <div>Jika Bpk/Ibu masih tidak menemukan, Team kami akan membantu Bpk/Ibu</div>
                                 <div>Hub:
@@ -6104,7 +6138,7 @@
                 } else {
                     const html = `
                             <div class="flex-column d-flex justify-content-center align-items-center text-muted w-100">
-                                <img loading="lazy" width="150" height="150" src="https://www.ruangoffice.com/images/no-data.png" />
+                                <img loading="lazy" width="150" height="150" src="/assets/ruangoffice/images/no-data.png" />
                                 <span>No data</span>
                             </div>
                         `
@@ -6143,7 +6177,7 @@
                                     <div class="border-0 rounded shadow card bg-light tw-mx-0" style="overflow: hidden;">
                                         <div class="px-5 pt-0 pb-2 testimonial-card card-body fw-bold">
                                             <div class="p-5 position-absolute bg-secondary rounded-circle" style="top: 0; right: 0; margin-top: -80px; margin-right: -80px; width: 204px; height: 204px;">
-                                                <img loading="lazy" style="position: absolute; bottom: 32px; left: 38px;" class="img-fluid" src="https://www.ruangoffice.com/images/quote-white.png" alt="">
+                                                <img loading="lazy" style="position: absolute; bottom: 32px; left: 38px;" class="img-fluid" src="/assets/ruangoffice/images/quote-white.png" alt="">
                                             </div>
 
                                             <h4 class="tw-mt-8 tw-text-2xl">${data.name}</h4>
@@ -6190,7 +6224,7 @@
                 } else {
                     const html = `
                             <div class="flex-column d-flex justify-content-center align-items-center text-muted w-100">
-                                <img loading="lazy" width="150" height="150" src="https://www.ruangoffice.com/images/no-data.png" />
+                                <img loading="lazy" width="150" height="150" src="/assets/ruangoffice/images/no-data.png" />
                                 <span>No data</span>
                             </div>
                         `
@@ -7062,7 +7096,7 @@
     function resetStateNIB() {
         $('#searchingNibInput').val('')
         $('.nib-not-found').removeClass('d-none').html(`<div class="py-5 text-center">
-                <img loading="lazy" style="width: 40%" class="mb-5 w-md-25" src="https://www.ruangoffice.com/assets/img/illustrations/not-found.svg" alt="">
+                <img loading="lazy" style="width: 40%" class="mb-5 w-md-25" src="/assets/ruangoffice/assets/img/illustrations/not-found.svg" alt="">
                 <div>Silahkan Bpk/Ibu menginput nomor NIB diatas untuk melakukan cek status izin usaha Aktif / NonAktif.</div>
             </div>`)
 

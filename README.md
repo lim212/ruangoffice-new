@@ -28,3 +28,11 @@ This approach minimizes manual changes and keeps the original layout and content
 - If the original HTML relied on inline scripts inside the `<body>`, those may not execute automatically when injected via `v-html`. We already load key external scripts (Google Analytics, Font Awesome). If you need additional scripts to run, consider porting them to Nuxt plugins or `onMounted` hooks.
 - All external assets referenced via full URLs (CDN) will continue to work. If there are local relative assets, copy them into `public/` and update paths accordingly.
 - You can move more of the `<head>` configuration from the original HTML into `nuxt.config.ts` if needed.
+
+## Downloading ruangoffice.com assets locally
+- Use the provided script to download all assets referenced from `https://www.ruangoffice.com` into the project under `public/assets/ruangoffice`.
+- Commands:
+  - Download assets only: `npm run assets:fetch:ruangoffice`
+  - Download and rewrite references to local paths: `npm run assets:fetch:ruangoffice:rewrite`
+- The script scans `.html`, `.vue`, `.ts`, `.js`, `.tsx`, `.jsx`, `.json` files and fetches asset file types: `.css, .js, .png, .jpg, .jpeg, .gif, .svg, .ico, .webp, .woff, .woff2, .ttf, .otf, .json, .map`.
+- A report is saved to `public/assets/ruangoffice/download-report.json` listing download statuses.
