@@ -593,7 +593,7 @@
                                         </div>
                                     </div>
 
-                                    <div @mouseout.away="showOfficeContactImage = true" @mouseover.away="showOfficeContactImage = false" class="tw-text-white tw-bg-secondary hover:tw-bg-black hover:tw-text-primary tw-w-1/2 tw-p-5">
+                                    <div class="tw-text-white tw-bg-secondary hover:tw-bg-black hover:tw-text-primary tw-w-1/2 tw-p-5">
                                         <h3 class="tw-text-center tw-text-2xl tw-underline tw-font-bold tw-uppercase tw-mb-2">Contact Us</h3>
                                         <div class="animate__animated animate__fadeIn tw-font-bold tw-text-center contact tw-my-1 head-office ">
                                             <i class="fab fa-whatsapp tw-mr-2"></i>
@@ -625,8 +625,8 @@
 
 
                                 <div class="px-2 row d-lg-none">
-                                    <div x-data="{ greenGardenOpen: false, headOfficeOpen: false }" @click.outside="greenGardenOpen = false; headOfficeOpen = false;" class="text-white col-12 col-lg-6">
-                                        <div @click="greenGardenOpen = false; headOfficeOpen = !headOfficeOpen;" data-map="head-office" class="p-2 row mobile bg-contact-us changeMapAction" :class="greenGardenOpen ? 'd-none' : ''" style="border-bottom: 2px solid #fff;">
+                                    <div x-data="{ greenGardenOpen: false, headOfficeOpen: false }"  class="text-white col-12 col-lg-6">
+                                        <div data-map="head-office" class="p-2 row mobile bg-contact-us changeMapAction" style="border-bottom: 2px solid #fff;">
                                             <div class="text-center col-1">
                                                 <i class="fas fa-building" style="font-size: 16px;"></i>
                                             </div>
@@ -715,7 +715,7 @@
                                 <div id="maps" style="background-color: rgba(0, 0, 0, 0.176);">
                                     <div class="tw-w-full">
                                         <iframe class="animate__animated animate__fadeIn map head-office" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.9080391837603!2d106.70086104782862!3d-6.193760962775623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f9df0763eaef%3A0xb13be6d791d5cdad!2sGAPURA%20OFFICE%20GREEN%20LAKE%20II!5e0!3m2!1sid!2sid!4v1664178375191!5m2!1sid!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                        <iframe class="animate__animated animate__fadeIn map green-garden d-none"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.7540874338133!2d106.76332699999999!3d-6.163679000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f72d3559f205%3A0xab7ecc293036f86b!2sRuang%20Office%20&#39;Green%20Garden&#39;!5e0!3m2!1sen!2sid!4v1699485896862!5m2!1sen!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        <iframe class="animate__animated animate__fadeIn map green-garden d-none" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.7540874338133!2d106.76332699999999!3d-6.163679000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f72d3559f205%3A0xab7ecc293036f86b!2sRuang%20Office%20&#39;Green%20Garden&#39;!5e0!3m2!1sen!2sid!4v1699485896862!5m2!1sen!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                     </div>
                                 </div>
                             </div>
@@ -807,7 +807,7 @@
                                     <a target="_blank" href="https://wa.me/62811113666">
 
 
-                                        <img loading="lazy" src="https://lh3.googleusercontent.com/d/1C4FzyUMbX-5ELdMscpZ2C2gZbkRbFBhM=w1000?authuser=0" class="img-fluid">
+                                        <img loading="lazy" src="https://lh3.googleusercontent.com/d/1C4FzyUMbX-5ELdMscpZ2C2gZbkRbFBhM=w1000?authuser=0" class="img-fluid" alt="">
 
 
                                     </a>
@@ -819,7 +819,7 @@
                                     <a target="_blank" href="https://wa.me/62811113666">
 
 
-                                        <img loading="lazy" src="https://lh3.googleusercontent.com/d/1UZ95t9x0vNObcUNrF9GkNwZK3ud7zB34=w1000?authuser=0" class="img-fluid">
+                                        <img loading="lazy" src="https://lh3.googleusercontent.com/d/1UZ95t9x0vNObcUNrF9GkNwZK3ud7zB34=w1000?authuser=0" class="img-fluid" alt="">
 
 
                                     </a>
@@ -831,7 +831,8 @@
                                     <a target="_blank" href="https://wa.me/62811113666">
 
 
-                                        <img loading="lazy" src="https://lh3.googleusercontent.com/d/1irW9Azai0gRPeMpJrc_TGZvczpkxPs-S=w1000?authuser=0" class="img-fluid">
+                                        <img loading="lazy" src="https://lh3.googleusercontent.com/d/1irW9Azai0gRPeMpJrc_TGZvczpkxPs-S=w1000?authuser=0" class="img-fluid"
+                                             alt="">
 
 
                                     </a>
@@ -3056,18 +3057,16 @@
 
             <script>
                 const newBlogs = document.getElementById('newBlogs')
-                const newSearch = document.getElementById("searchingNewBlog")
-                const newBlogsSearch = document.getElementById("newBlogSearch")
+                document.getElementById("searchingNewBlog");
+                document.getElementById("newBlogSearch");
                 let newWpPage, algoliaPage = 1
 
                 const newDateFormatter = new Intl.DateTimeFormat('id', { day: 'numeric', month: 'long', year: "numeric" });
 
                 var headers;
-                var totalPage;
                 var newBlogPaginationHtml = document.getElementById('new-blog-pagination');
                 var newLoadingBlog = document.querySelector('.new-loading-blog');
-                var newBlogsClass = document.querySelector('.newBlogs');
-
+                document.querySelector('.newBlogs');
                 function showLoader() {
                     newLoadingBlog.classList.add('d-flex')
                     newLoadingBlog.classList.remove('d-none')
@@ -3091,12 +3090,10 @@
                         timer = setTimeout(() => { func.apply(this, args); }, timeout);
                     };
                 }
-
-                const processFetchingAlgoliaData = debounce(() => {
+                debounce(() => {
                     showLoader()
                     fetchingAlgoliaData()
                 });
-
                 const cardTemplate = (data) => {
                     let date = new Date(data.publish_at);
 
@@ -3131,7 +3128,7 @@
 
                     const search = document.querySelector('#searchingNewBlog').value;
 
-                    if (search == '') {
+                    if (search === '') {
                         await fetchingWpData(search, page);
                         return;
                     }
@@ -3285,7 +3282,7 @@
                                     <div class="swiper-slide">
                                         <div data-gallery-id="9" class="happy-client-images-lightbox">
                                             <a href="/assets/ruangoffice/storage/happy-client/fRWspr0yZ8BRik696jQN0lVA8IJmwTlRvMAzn49W.jpg" data-lightbox="happy-client-images-gallery9">
-                                                <img loading="lazy" src="/assets/ruangoffice/storage/happy-client/fRWspr0yZ8BRik696jQN0lVA8IJmwTlRvMAzn49W.jpg" class="tw-h-[426px] tw-w-full tw-object-cover tw-object-center tw-rounded-lg tw-shadow-md">
+                                                <img loading="lazy" src="/assets/ruangoffice/storage/happy-client/fRWspr0yZ8BRik696jQN0lVA8IJmwTlRvMAzn49W.jpg" class="tw-h-[426px] tw-w-full tw-object-cover tw-object-center tw-rounded-lg tw-shadow-md" alt="">
                                             </a>
                                         </div>
                                     </div>
@@ -3293,7 +3290,7 @@
                                     <div class="swiper-slide">
                                         <div data-gallery-id="8" class="happy-client-images-lightbox">
                                             <a href="/assets/ruangoffice/storage/happy-client/PM03CaluAPb3b7nKKeU40i37XYdMSUAG5xRHzyhY.png" data-lightbox="happy-client-images-gallery8">
-                                                <img loading="lazy" src="/assets/ruangoffice/storage/happy-client/PM03CaluAPb3b7nKKeU40i37XYdMSUAG5xRHzyhY.png" class="tw-h-[426px] tw-w-full tw-object-cover tw-object-center tw-rounded-lg tw-shadow-md">
+                                                <img loading="lazy" src="/assets/ruangoffice/storage/happy-client/PM03CaluAPb3b7nKKeU40i37XYdMSUAG5xRHzyhY.png" class="tw-h-[426px] tw-w-full tw-object-cover tw-object-center tw-rounded-lg tw-shadow-md" alt="">
                                             </a>
                                         </div>
                                     </div>
@@ -3301,7 +3298,7 @@
                                     <div class="swiper-slide">
                                         <div data-gallery-id="7" class="happy-client-images-lightbox">
                                             <a href="/assets/ruangoffice/storage/happy-client/SIkwB4kugdCAvTbx8UeIQAtqCp8cFrU4jb6UwlBV.jpg" data-lightbox="happy-client-images-gallery7">
-                                                <img loading="lazy" src="/assets/ruangoffice/storage/happy-client/SIkwB4kugdCAvTbx8UeIQAtqCp8cFrU4jb6UwlBV.jpg" class="tw-h-[426px] tw-w-full tw-object-cover tw-object-center tw-rounded-lg tw-shadow-md">
+                                                <img loading="lazy" src="/assets/ruangoffice/storage/happy-client/SIkwB4kugdCAvTbx8UeIQAtqCp8cFrU4jb6UwlBV.jpg" class="tw-h-[426px] tw-w-full tw-object-cover tw-object-center tw-rounded-lg tw-shadow-md" alt="">
                                             </a>
                                         </div>
                                     </div>
@@ -3309,7 +3306,7 @@
                                     <div class="swiper-slide">
                                         <div data-gallery-id="6" class="happy-client-images-lightbox">
                                             <a href="/assets/ruangoffice/storage/happy-client/pXFMJkZFZIKb5G392HpQOFrb3cfMzlYhpCcO5EDP.png" data-lightbox="happy-client-images-gallery6">
-                                                <img loading="lazy" src="/assets/ruangoffice/storage/happy-client/pXFMJkZFZIKb5G392HpQOFrb3cfMzlYhpCcO5EDP.png" class="tw-h-[426px] tw-w-full tw-object-cover tw-object-center tw-rounded-lg tw-shadow-md">
+                                                <img loading="lazy" src="/assets/ruangoffice/storage/happy-client/pXFMJkZFZIKb5G392HpQOFrb3cfMzlYhpCcO5EDP.png" class="tw-h-[426px] tw-w-full tw-object-cover tw-object-center tw-rounded-lg tw-shadow-md" alt="">
                                             </a>
                                         </div>
                                     </div>
@@ -3317,7 +3314,7 @@
                                     <div class="swiper-slide">
                                         <div data-gallery-id="5" class="happy-client-images-lightbox">
                                             <a href="/assets/ruangoffice/storage/happy-client/RqAhnBtbjH7XJdmB4wBUB587gXFdbO0X8ossEN5C.png" data-lightbox="happy-client-images-gallery5">
-                                                <img loading="lazy" src="/assets/ruangoffice/storage/happy-client/RqAhnBtbjH7XJdmB4wBUB587gXFdbO0X8ossEN5C.png" class="tw-h-[426px] tw-w-full tw-object-cover tw-object-center tw-rounded-lg tw-shadow-md">
+                                                <img loading="lazy" src="/assets/ruangoffice/storage/happy-client/RqAhnBtbjH7XJdmB4wBUB587gXFdbO0X8ossEN5C.png" class="tw-h-[426px] tw-w-full tw-object-cover tw-object-center tw-rounded-lg tw-shadow-md" alt="">
                                             </a>
                                         </div>
                                     </div>
@@ -3325,7 +3322,7 @@
                                     <div class="swiper-slide">
                                         <div data-gallery-id="4" class="happy-client-images-lightbox">
                                             <a href="/assets/ruangoffice/storage/happy-client/oiwfRGt51x1fm75mOjnUy5SlH9DGAszph4baDzxr.png" data-lightbox="happy-client-images-gallery4">
-                                                <img loading="lazy" src="/assets/ruangoffice/storage/happy-client/oiwfRGt51x1fm75mOjnUy5SlH9DGAszph4baDzxr.png" class="tw-h-[426px] tw-w-full tw-object-cover tw-object-center tw-rounded-lg tw-shadow-md">
+                                                <img loading="lazy" src="/assets/ruangoffice/storage/happy-client/oiwfRGt51x1fm75mOjnUy5SlH9DGAszph4baDzxr.png" class="tw-h-[426px] tw-w-full tw-object-cover tw-object-center tw-rounded-lg tw-shadow-md" alt="">
                                             </a>
                                         </div>
                                     </div>
@@ -3341,7 +3338,7 @@
                                     <div class="swiper-slide">
                                         <div data-gallery-id="2" class="happy-client-images-lightbox">
                                             <a href="/assets/ruangoffice/storage/happy-client/yJb0ymPfQcECvL30dnkc7jKmsSqZSI2plEufNWEQ.png" data-lightbox="happy-client-images-gallery2">
-                                                <img loading="lazy" src="/assets/ruangoffice/storage/happy-client/yJb0ymPfQcECvL30dnkc7jKmsSqZSI2plEufNWEQ.png" class="tw-h-[426px] tw-w-full tw-object-cover tw-object-center tw-rounded-lg tw-shadow-md">
+                                                <img loading="lazy" src="/assets/ruangoffice/storage/happy-client/yJb0ymPfQcECvL30dnkc7jKmsSqZSI2plEufNWEQ.png" class="tw-h-[426px] tw-w-full tw-object-cover tw-object-center tw-rounded-lg tw-shadow-md" alt="">
                                             </a>
                                         </div>
                                     </div>
@@ -3637,7 +3634,7 @@
 
                                         <div data-gallery-id="6" class="testimonial-images-lightbox">
                                             <a href="https://lh3.googleusercontent.com/d/1gEe-kyGR0C_ihLoOJXalANqRT1YKe0ku=w1000?authuser=0" data-lightbox="testimonial-images-gallery6">
-                                                <img loading="lazy" src="https://lh3.googleusercontent.com/d/1gEe-kyGR0C_ihLoOJXalANqRT1YKe0ku=w1000?authuser=0" class="tw-h-full tw-w-full tw-rounded-lg tw-shadow-md">
+                                                <img loading="lazy" src="https://lh3.googleusercontent.com/d/1gEe-kyGR0C_ihLoOJXalANqRT1YKe0ku=w1000?authuser=0" class="tw-h-full tw-w-full tw-rounded-lg tw-shadow-md" alt="">
                                             </a>
                                         </div>
 
@@ -3649,7 +3646,7 @@
 
                                         <div data-gallery-id="3" class="testimonial-images-lightbox">
                                             <a href="https://lh3.googleusercontent.com/d/1FKKuGlwWoz5y_KSFMUBM2FqIcDpztifg=w1000?authuser=0" data-lightbox="testimonial-images-gallery3">
-                                                <img loading="lazy" src="https://lh3.googleusercontent.com/d/1FKKuGlwWoz5y_KSFMUBM2FqIcDpztifg=w1000?authuser=0" class="tw-h-full tw-w-full tw-rounded-lg tw-shadow-md">
+                                                <img loading="lazy" src="https://lh3.googleusercontent.com/d/1FKKuGlwWoz5y_KSFMUBM2FqIcDpztifg=w1000?authuser=0" class="tw-h-full tw-w-full tw-rounded-lg tw-shadow-md" alt="">
                                             </a>
                                         </div>
 
@@ -3661,7 +3658,7 @@
 
                                         <div data-gallery-id="2" class="testimonial-images-lightbox">
                                             <a href="https://lh3.googleusercontent.com/d/1F6kCQCSb9P0NY-8iRfGEnmqF5jq3Ffhm=w1000?authuser=0" data-lightbox="testimonial-images-gallery2">
-                                                <img loading="lazy" src="https://lh3.googleusercontent.com/d/1F6kCQCSb9P0NY-8iRfGEnmqF5jq3Ffhm=w1000?authuser=0" class="tw-h-full tw-w-full tw-rounded-lg tw-shadow-md">
+                                                <img loading="lazy" src="https://lh3.googleusercontent.com/d/1F6kCQCSb9P0NY-8iRfGEnmqF5jq3Ffhm=w1000?authuser=0" class="tw-h-full tw-w-full tw-rounded-lg tw-shadow-md" alt="">
                                             </a>
                                         </div>
 
@@ -3852,7 +3849,7 @@
                     <div id="maps" style="background-color: rgba(0, 0, 0, 0.176);">
                         <div class="tw-w-full">
                             <iframe class="animate__animated animate__fadeIn map head-office" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.9080391837603!2d106.70086104782862!3d-6.193760962775623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f9df0763eaef%3A0xb13be6d791d5cdad!2sGAPURA%20OFFICE%20GREEN%20LAKE%20II!5e0!3m2!1sid!2sid!4v1664178375191!5m2!1sid!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            <iframe class="animate__animated animate__fadeIn map green-garden d-none"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.7540874338133!2d106.76332699999999!3d-6.163679000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f72d3559f205%3A0xab7ecc293036f86b!2sRuang%20Office%20&#39;Green%20Garden&#39;!5e0!3m2!1sen!2sid!4v1699485896862!5m2!1sen!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe class="animate__animated animate__fadeIn map green-garden d-none" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.7540874338133!2d106.76332699999999!3d-6.163679000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f72d3559f205%3A0xab7ecc293036f86b!2sRuang%20Office%20&#39;Green%20Garden&#39;!5e0!3m2!1sen!2sid!4v1699485896862!5m2!1sen!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
@@ -4790,7 +4787,7 @@
         var gotoTopButton = document.getElementById("gotoTopTw");
         var gotoDownButton = document.getElementById("gotoDownTw");
 
-        // When the user scrolls down 20px from the top of the document, show the button
+        // When the user scrolls down 20 px from the top of the document, show the button
         window.onscroll = function() { scrollFunction() };
 
         function scrollFunction() {
@@ -5573,6 +5570,8 @@
 
 <script>
     // document.addEventListener('contextmenu', event => event.preventDefault());
+
+    import {$} from "../.output/server/chunks/_/nitro.mjs";
 
     window.addEventListener("load", (event) => {
         showLoader(false)
