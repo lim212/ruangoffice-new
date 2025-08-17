@@ -5,20 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bcd0e7cf-1327-4678-9409-4a107b88f5b6" name="Changes" comment="init asset">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/dev/index.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/dev/index.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/server.mjs.map" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/dist/server/server.mjs.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/server.mjs.map.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/dist/server/server.mjs.map.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/styles.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/dist/server/styles.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/manifest/latest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/manifest/latest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/manifest/meta/824dddc9-9f2e-4eb1-8d7c-020688adc7d2.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/manifest/meta/dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/manifest/meta/dev.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/nitro.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/nitro.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/nuxt.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/nuxt.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/jiti/ruangoffice-new-nuxt.config.f35e4b21.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/jiti/ruangoffice-new-nuxt.config.f35e4b21.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/original.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/original.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,6 +88,7 @@
       <workItem from="1755215475613" duration="290000" />
       <workItem from="1755215787537" duration="3498000" />
       <workItem from="1755399874944" duration="2250000" />
+      <workItem from="1755406604693" duration="161000" />
     </task>
     <task id="LOCAL-00001" summary="init asset">
       <option name="closed" value="true" />
