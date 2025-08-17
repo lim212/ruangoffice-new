@@ -1,141 +1,141 @@
 .sch-title-demo {
-    text-align: center;
-    margin: 50px 0;
-    font-weight: bold;
+  text-align: center;
+  margin: 50px 0;
+  font-weight: bold;
 }
 
 .sch-title {
-    margin-bottom: 50px;
-    font-size: 25px;
-    font-weight: bold;
-    font-style: italic;
+  margin-bottom: 50px;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .sch-title i {
-    color: #c53821;
+  color: #c53821;
 }
 
 .sch-style-light {
-    margin-bottom: 50px;
-    background: #fff;
+  margin-bottom: 50px;
+  background: #fff;
 }
 
 .sch-style-light .sch-title {
-    color: #222;
+  color: #222;
 }
 
 .sch-style-dark {
-    margin-bottom: 50px;
-    padding: 50px 0;
-    background: #222;
+  margin-bottom: 50px;
+  padding: 50px 0;
+  background: #222;
 }
 
 .sch-style-dark .sch-title {
-    color: #fff;
+  color: #fff;
 }
 
 .sch-our-team {
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    border-radius: 10px;
-    overflow: hidden;
-    background: #fff;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
 }
 
 .sch-our-team:hover {
-    background: rgb(var(--bs-primary-rgb), 0.9);
+  background: rgb(var(--bs-primary-rgb), 0.9);
 }
 
 .sch-our-team:hover .sch-info div,
 .sch-our-team:hover .sch-info div a {
-    color: #fff !important;
+  color: #fff !important;
 }
 
 .sch-our-team .sch-bg {
-    position: relative;
+  position: relative;
 }
 
 .sch-our-team .sch-bg img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    object-position: top left;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: top left;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .sch-our-team .sch-social {
-    position: absolute;
-    width: 100%;
-    right: 0;
-    top: 25px;
-    left: 0;
-    margin: 0 auto;
-    /* max-width: 50px; */
-    padding: 0;
-    list-style: none;
+  position: absolute;
+  width: 100%;
+  right: 0;
+  top: 25px;
+  left: 0;
+  margin: 0 auto;
+  /* max-width: 50px; */
+  padding: 0;
+  list-style: none;
 
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .sch-our-team .sch-social li {
-    width: 100%;
-    color: #fff;
-    height: 50px;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  color: #fff;
+  height: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 .sch-our-team .sch-social li.middle a {
-    left: 0;
-    height: 50px;
-    width: 50px;
-    transition: all .4s ease-in-out 0s;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  transition: all 0.4s ease-in-out 0s;
 }
 
 .sch-our-team .sch-social a.instagram {
-    /* position: absolute;
+  /* position: absolute;
   right: 0;
   top: 0;
   bottom: 0; */
-    background-color: #E1306C;
+  background-color: #e1306c;
 }
 
 .sch-our-team .sch-social a.telegram {
-    /* position: absolute;
+  /* position: absolute;
   right: 0;
   top: 0;
   bottom: 0; */
-    background-color: #405DE6;
+  background-color: #405de6;
 }
 
 .sch-our-team .sch-social a.facebook {
-    /* position: absolute;
+  /* position: absolute;
   right: 0;
   top: 0;
   bottom: 0; */
-    background-color: #4264AA;
+  background-color: #4264aa;
 }
 
 .sch-our-team .sch-social a.twitter {
-    /* position: absolute;
+  /* position: absolute;
   top: 0;
   right: 0px; */
-    background-color: #6CB7F0;
+  background-color: #6cb7f0;
 }
 
 .sch-our-team .sch-social a.whatsapp {
-    /* position: absolute;
+  /* position: absolute;
   right: 0;
   top: 0;
   bottom: 0; */
-    background-color: #25D366;
+  background-color: #25d366;
 }
 
 .sch-our-team .sch-social li a {
-    color: #fff;
-    font-size: 30px;
+  color: #fff;
+  font-size: 30px;
 }
 
 /* .sch-our-team:hover .sch-social li .whatsapp {
@@ -151,202 +151,202 @@
 } */
 
 .sch-our-team:hover .sch-social li {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .sch-our-team:hover .sch-social li:hover span {
-    opacity: 1;
+  opacity: 1;
 }
 
 .sch-our-team .sch-social i {
-    color: #fff;
-    cursor: pointer;
-    background: rgb(var(--bs-primary-rgb));
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    padding: 0;
-    font-size: 16px;
-    margin-bottom: 10px;
+  color: #fff;
+  cursor: pointer;
+  background: rgb(var(--bs-primary-rgb));
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .sch-our-team .sch-social i:hover {
-    color: rgb(var(--bs-primary-rgb));
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  color: rgb(var(--bs-primary-rgb));
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .sch-our-team .sch-social i:last-child {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .sch-our-team .sch-images {
-    display: inline-block;
+  display: inline-block;
 }
 
 .sch-our-team .sch-images img {
-    width: 130px;
-    height: 130px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 50%;
-    /* border: 5px solid #fff; */
-    margin-top: -50%;
-    z-index: 1;
-    position: relative;
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  /* border: 5px solid #fff; */
+  margin-top: -50%;
+  z-index: 1;
+  position: relative;
 }
 
 .sch-our-team .sch-info {
-    position: relative;
-    padding-bottom: 70px;
+  position: relative;
+  padding-bottom: 70px;
 }
 
 .sch-our-team .sch-info .sch-name {
-    margin-top: 15px;
-    font-size: 25px;
-    font-weight: bold;
-    color: rgb(var(--bs-primary-rgb));
+  margin-top: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(var(--bs-primary-rgb));
 }
 
 .sch-our-team .sch-info .sch-job {
-    margin-bottom: 15px;
-    font-size: 16px;
-    color: rgb(var(--bs-primary-rgb));
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: rgb(var(--bs-primary-rgb));
 }
 
 .sch-our-team .sch-info .sch-button-description {
-    display: inline-block;
+  display: inline-block;
 }
 
 .sch-our-team .sch-info .sch-button-description a {
-    padding: 10px 30px;
-    background: rgb(var(--bs-primary-rgb));
-    color: #fff;
-    display: inline-block;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 10px;
-    border: 1px solid transparent;
+  padding: 10px 30px;
+  background: rgb(var(--bs-primary-rgb));
+  color: #fff;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 1px solid transparent;
 }
 
 .sch-our-team .sch-info .sch-button-description a:hover {
-    background: #fff;
-    color: rgb(var(--bs-primary-rgb));
-    border: 1px solid rgb(var(--bs-primary-rgb));
+  background: #fff;
+  color: rgb(var(--bs-primary-rgb));
+  border: 1px solid rgb(var(--bs-primary-rgb));
 }
 
 .sch-our-team .sch-info .sch-button-heart {
-    background: rgb(var(--bs-primary-rgb));
-    width: 100px;
-    text-align: center;
-    position: absolute;
-    bottom: -25px;
-    transform: rotate(44deg);
-    left: -38px;
-    color: #fff;
-    height: 70px;
+  background: rgb(var(--bs-primary-rgb));
+  width: 100px;
+  text-align: center;
+  position: absolute;
+  bottom: -25px;
+  transform: rotate(44deg);
+  left: -38px;
+  color: #fff;
+  height: 70px;
 }
 
 .sch-our-team .sch-info .sch-button-heart i {
-    line-height: 45px;
-    color: #fff;
-    transform: rotate(-44deg);
+  line-height: 45px;
+  color: #fff;
+  transform: rotate(-44deg);
 }
 
 .sch-our-team .sch-info .sch-button-like {
-    background: rgb(var(--bs-primary-rgb));
-    width: 100px;
-    text-align: center;
-    position: absolute;
-    bottom: -25px;
-    transform: rotate(-44deg);
-    right: -38px;
-    color: #fff;
-    height: 70px;
+  background: rgb(var(--bs-primary-rgb));
+  width: 100px;
+  text-align: center;
+  position: absolute;
+  bottom: -25px;
+  transform: rotate(-44deg);
+  right: -38px;
+  color: #fff;
+  height: 70px;
 }
 
 .sch-our-team .sch-info .sch-button-like i {
-    line-height: 45px;
-    color: #fff;
-    transform: rotate(44deg);
+  line-height: 45px;
+  color: #fff;
+  transform: rotate(44deg);
 }
 
 .sch-style-carousel .owl-nav {
-    display: none;
+  display: none;
 }
 
 .sch-style-carousel .owl-dots {
-    text-align: center;
-    margin-top: 30px;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .sch-style-carousel .owl-theme .owl-dots .owl-dot.active span,
 .sch-style-carousel .owl-theme .owl-dots .owl-dot:hover span {
-    background: rgb(var(--bs-primary-rgb));
-    border-color: #fff;
-    opacity: 1;
+  background: rgb(var(--bs-primary-rgb));
+  border-color: #fff;
+  opacity: 1;
 }
 
 .sch-style-carousel .owl-theme .owl-dots .owl-dot span {
-    width: 32px;
-    height: 10px;
-    margin: 5px 7px;
-    background: #fff;
-    border: 2px solid rgb(var(--bs-primary-rgb));
-    display: block;
-    -webkit-backface-visibility: visible;
-    transition: opacity .2s ease;
-    border-radius: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  width: 32px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #fff;
+  border: 2px solid rgb(var(--bs-primary-rgb));
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity 0.2s ease;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .owl-carousel .owl-item {
-    padding: 2px;
+  padding: 2px;
 }
 
-@media (min-width:768px) and (max-width:979px) {
-    .sch-our-team .sch-info .sch-button-description a {
-        padding: 5px 10px;
-        font-size: 12px;
-    }
+@media (min-width: 768px) and (max-width: 979px) {
+  .sch-our-team .sch-info .sch-button-description a {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
 
-    .sch-our-team .sch-bg img {
-        height: 140px;
-    }
+  .sch-our-team .sch-bg img {
+    height: 140px;
+  }
 
-    .sch-our-team .sch-images img {
-        width: 100px;
-        height: 100px;
-    }
+  .sch-our-team .sch-images img {
+    width: 100px;
+    height: 100px;
+  }
 
-    .sch-our-team .sch-info .sch-name {
-        font-size: 18px;
-    }
+  .sch-our-team .sch-info .sch-name {
+    font-size: 18px;
+  }
 
-    .sch-our-team .sch-info .sch-job,
-    .sch-our-team .sch-social i {
-        font-size: 14px;
-    }
+  .sch-our-team .sch-info .sch-job,
+  .sch-our-team .sch-social i {
+    font-size: 14px;
+  }
 
-    .sch-our-team .sch-social {
-        max-width: 30px;
-    }
+  .sch-our-team .sch-social {
+    max-width: 30px;
+  }
 
-    .sch-our-team .sch-social li.middle a {
-        width: 30px;
-        height: 30px;
-    }
+  .sch-our-team .sch-social li.middle a {
+    width: 30px;
+    height: 30px;
+  }
 
-    .sch-our-team .sch-social i,
-    .sch-our-team .sch-social li {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-    }
+  .sch-our-team .sch-social i,
+  .sch-our-team .sch-social li {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
 
-    /* .sch-our-team:hover .sch-social li .whatsapp {
+  /* .sch-our-team:hover .sch-social li .whatsapp {
 		left: -40px;
 	}
 	.sch-our-team:hover .sch-social li .facebook {
@@ -355,31 +355,31 @@
 	.sch-our-team:hover .sch-social li .twitter {
 		left: 40px;
 	} */
-    .sch-our-team .sch-social {
-        right: -10px;
-    }
+  .sch-our-team .sch-social {
+    right: -10px;
+  }
 }
 
-@media (min-width:578px) and (max-width:767px) {
-    .col-md-3 {
-        margin-bottom: 30px;
-    }
+@media (min-width: 578px) and (max-width: 767px) {
+  .col-md-3 {
+    margin-bottom: 30px;
+  }
 
-    .col-md-3:nth-child(3) {
-        margin-bottom: 0px;
-    }
+  .col-md-3:nth-child(3) {
+    margin-bottom: 0px;
+  }
 
-    .col-md-3:nth-child(4) {
-        margin-bottom: 0px;
-    }
+  .col-md-3:nth-child(4) {
+    margin-bottom: 0px;
+  }
 }
 
-@media only screen and (max-width:577px) {
-    .col-md-3 {
-        margin-bottom: 30px;
-    }
+@media only screen and (max-width: 577px) {
+  .col-md-3 {
+    margin-bottom: 30px;
+  }
 
-    .col-md-3:last-child {
-        margin-bottom: 0px;
-    }
+  .col-md-3:last-child {
+    margin-bottom: 0px;
+  }
 }

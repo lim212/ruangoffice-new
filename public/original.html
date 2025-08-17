@@ -235,6 +235,54 @@
 
 
 
+    <style>
+        /* Desktop header tidy & responsiveness */
+        nav.custom-navigation > ul {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            gap: .25rem;
+            padding: .5rem 1rem;
+        }
+        nav.custom-navigation > ul > li { list-style: none; }
+        nav.custom-navigation > ul > li.line { width: 1px; height: 24px; background-color: rgba(255,255,255,.25); }
+        nav.custom-navigation > ul .nav-right { margin-left: auto; display: flex; align-items: center; gap: .75rem; }
+        nav.custom-navigation > ul .nav-search { min-width: 220px; max-width: 320px; width: clamp(220px, 22vw, 320px) !important; }
+        @media (min-width: 992px) and (max-width: 1200px) { nav.custom-navigation > ul > li.line { display: none; } }
+
+        /* Top icon banner (marquee) */
+        .top-icon-marquee { overflow: hidden; }
+        .top-icon-marquee .track { display: flex; gap: 2rem; white-space: nowrap; will-change: transform; animation: top-marquee 35s linear infinite; }
+        .top-icon-marquee .item { display: inline-flex; align-items: center; gap: .5rem; color: #1b1b1b; opacity: .95; font-weight: 600; text-decoration: none; }
+        .top-icon-marquee .item i { color: #0e8349; }
+        @keyframes top-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    </style>
+
+    <!-- Top icon banner above the header -->
+    <div class="top-icon-marquee d-none d-lg-block bg-warning">
+        <div class="px-3 py-1">
+            <div class="track">
+                <a class="item" href="/virtualoffice"><i class="fa-solid fa-building"></i><span>Virtual Office</span></a>
+                <a class="item" href="https://www.ruangoffice.com/contact-us"><i class="fa-solid fa-location-dot"></i><span>Jakarta</span></a>
+                <a class="item" href="/price"><i class="fa-solid fa-money-bill-wave"></i><span>Pricing</span></a>
+                <a class="item" href="https://ruangoffice.com/kbli"><i class="fa-solid fa-table-list"></i><span>KBLI</span></a>
+                <a class="item" href="https://ruangoffice.com/regulasi"><i class="fa-solid fa-scale-balanced"></i><span>Regulasi</span></a>
+                <a class="item" href="https://ruangoffice.com/blog"><i class="fa-solid fa-blog"></i><span>Blog</span></a>
+                <a class="item" href="https://www.ruangoffice.com/contact-us#contact-form"><i class="fa-solid fa-comments"></i><span>Hubungi Kami</span></a>
+                <a class="item" href="https://ruangoffice.co.id/tracking"><i class="fa-solid fa-truck-fast"></i><span>Track Perizinan</span></a>
+                <!-- duplicated for seamless loop -->
+                <a class="item" href="/virtualoffice"><i class="fa-solid fa-building"></i><span>Virtual Office</span></a>
+                <a class="item" href="https://www.ruangoffice.com/contact-us"><i class="fa-solid fa-location-dot"></i><span>Jakarta</span></a>
+                <a class="item" href="/price"><i class="fa-solid fa-money-bill-wave"></i><span>Pricing</span></a>
+                <a class="item" href="https://ruangoffice.com/kbli"><i class="fa-solid fa-table-list"></i><span>KBLI</span></a>
+                <a class="item" href="https://ruangoffice.com/regulasi"><i class="fa-solid fa-scale-balanced"></i><span>Regulasi</span></a>
+                <a class="item" href="https://ruangoffice.com/blog"><i class="fa-solid fa-blog"></i><span>Blog</span></a>
+                <a class="item" href="https://www.ruangoffice.com/contact-us#contact-form"><i class="fa-solid fa-comments"></i><span>Hubungi Kami</span></a>
+                <a class="item" href="https://ruangoffice.co.id/tracking"><i class="fa-solid fa-truck-fast"></i><span>Track Perizinan</span></a>
+            </div>
+        </div>
+    </div>
+
     <nav style="font-size: 1rem; letter-spacing: 1px;" class="mx-auto text-center custom-navigation d-none d-lg-block position-relative bg-dark" role="navigation">
         <ul class="bg-secondary">
             <li class="p-0 "><a class="p-3 d-block" href="/">HOME</a></li>
@@ -322,11 +370,11 @@
             <li class="line">&nbsp;</li>
             <li class="p-0 "><a class="p-3 d-block" href="https://www.ruangoffice.com/contact-us#contact-form" aria-haspopup="true">HUBUNGI KAMI</a></li>
 
-            <div class="d-inline-block">
+            <div class="nav-right d-inline-flex align-items-center">
                 <a class="btn-tracking" href="https://ruangoffice.co.id/tracking" aria-haspopup="true">TRACK PERIZINAN</a>
             </div>
 
-            <div class="d-inline-block ms-4" style="width: 15%">
+            <div class="nav-search d-inline-block ms-4">
                 <div class="gap-3 d-flex">
                     <button type="button" class="d-flex justify-content-between align-items-center btn btn-outline-light w-100" data-bs-toggle="modal" data-bs-target="#searchingModal">
                         <span>Pencarian</span>
@@ -361,11 +409,28 @@
                 </div>
 
                 <!-- If we need navigation buttons -->
-                <div class="tw-size-10 tw-bg-black/20 hover:after:tw-text-white hover:tw-bg-black tw-rounded-full tw-left-1 lg:tw-size-0 after:tw-text-[21px] lg:after:tw-text-[30px] after:tw-content-['prev'] swiper-button-prev swiper-button-prev-banner"></div>
-                <div class="tw-size-10 tw-bg-black/20 hover:after:tw-text-white hover:tw-bg-black tw-rounded-full tw-right-1 lg:tw-size-0 after:tw-text-[21px] lg:after:tw-text-[30px] after:tw-content-['next'] swiper-button-next swiper-button-next-banner"></div>
+                <div class="tw-size-10 tw-bg-black/20 hover:after:tw-text-white hover:tw-bg-black tw-rounded-full tw-left-1 lg:tw-size-0 swiper-button-prev swiper-button-prev-banner banner-nav-btn"></div>
+                <div class="tw-size-10 tw-bg-black/20 hover:after:tw-text-white hover:tw-bg-black tw-rounded-full tw-right-1 lg:tw-size-0 swiper-button-next swiper-button-next-banner banner-nav-btn"></div>
             </div>
+            <style>
+              /* Banner slider polish */
+              #swiper-banner .swiper-slide { display:flex; align-items:center; justify-content:center; background:#fff; }
+              #swiper-banner .swiper-slide img { width:100%; height:auto; max-height:420px; object-fit:cover; }
+              @media (min-width: 1024px) { #swiper-banner .swiper-slide img { max-height:520px; } }
+              .banner-nav-btn { width:46px; height:46px; background:rgba(0,0,0,0.3); border-radius:9999px; backdrop-filter:saturate(180%) blur(6px); box-shadow:0 6px 18px rgba(0,0,0,0.2); }
+              .banner-nav-btn:after { color:#fff; font-size:22px; font-weight:700; }
+              .swiper-button-prev-banner:after { content:'\u2039' !important; }
+              .swiper-button-next-banner:after { content:'\u203A' !important; }
+              @media (max-width: 576px) {
+                .banner-nav-btn { width:36px; height:36px; }
+              }
+              .banner-search { width: min(90vw, 900px); }
+              @media (max-width: 576px) {
+                .banner-search { width: 95vw; }
+              }
+            </style>
 
-            <div class="px-2 position-absolute top-100 start-50 translate-middle w-75 w-md-50" style="z-index: 1;">
+            <div class="px-2 position-absolute top-100 start-50 translate-middle w-75 w-md-50 banner-search" style="z-index: 1;">
                 <div class="input-group">
             <span class="bg-white border-primary input-group-text" style="border-right: none !important;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
@@ -646,7 +711,7 @@
 
         <div id="section-3">
             <div class="tw-mt-3">
-                <div class="tw-bg-white tw-rounded-lg tw-px-3 tw-pb-2.5 tw-shadow-[0_0_12px_-5px_rgba(0,0,0,0.5)]">
+                <div class="tw-bg-white tw-rounded-lg tw-px-3 tw-pt-6 tw-pb-6 tw-shadow-[0_0_12px_-5px_rgba(0,0,0,0.5)] tw-overflow-hidden promo-section tw-mb-8 md:tw-mb-12">
                     <div class="tw-text-center tw-font-bold tw-mb-10 lg:tw-pt-2">
                         <h2 class="tw-text-lg lg:tw-text-3xl text-heading-title text-heading-title-with-bg-cover">Penawaran Terbaik</h2>
 
@@ -658,7 +723,7 @@
 
                     <div class="text-center position-relative">
                         <!-- Slider main container -->
-                        <div class="swiper" id="swiper-promo-1" style="width: 100%">
+                        <div class="swiper promo-swiper tw-rounded-xl tw-overflow-hidden tw-shadow-[0_10px_25px_rgba(0,0,0,0.08)]" id="swiper-promo-1" style="width: 100%">
                             <!-- Additional required wrapper -->
                             <div class="swiper-wrapper promo">
 
@@ -743,7 +808,7 @@
                         </div>
 
                         <!-- Slider main container -->
-                        <div class="swiper" id="swiper-promo-2" style="width: 100%">
+                        <div class="swiper promo-swiper tw-rounded-xl tw-overflow-hidden tw-shadow-[0_10px_25px_rgba(0,0,0,0.08)] tw-mt-6" id="swiper-promo-2" style="width: 100%">
                             <!-- Additional required wrapper -->
                             <div class="swiper-wrapper promo">
 
@@ -827,8 +892,32 @@
                         </div>
 
                         <!-- If we need navigation buttons -->
-                        <div class="tw-size-10 tw-bg-black/20 hover:after:tw-text-white hover:tw-bg-black tw-rounded-full tw-ml-10 lg:after:tw-text-[30px] lg:tw-size-0 after:tw-text-[30px] after:tw-content-['prev'] swiper-button-prev swiper-button-prev-promo"></div>
-                        <div class="tw-size-10 tw-bg-black/20 hover:after:tw-text-white hover:tw-bg-black tw-rounded-full tw-mr-10 lg:after:tw-text-[30px] lg:tw-size-0 after:tw-text-[30px] after:tw-content-['next'] swiper-button-next swiper-button-next-promo"></div>
+                        <div class="swiper-button-prev swiper-button-prev-promo promo-nav-btn"></div>
+                        <div class="swiper-button-next swiper-button-next-promo promo-nav-btn"></div>
+                        <style>
+                          /* Promo section polish */
+                          .promo-section { position: relative; }
+                          .promo-section .promo-swiper { border-radius: 16px; }
+                          /* Make slides stack content vertically so bottom box can span full width */
+                          .promo-section .promo-swiper .swiper-slide { display:flex; flex-direction:column; align-items:stretch; justify-content:flex-start; background: #fff; }
+                          .promo-section .promo-swiper .swiper-slide img { width:100%; height:auto; max-height:480px; object-fit:cover; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+                          @media (min-width: 1024px) { .promo-section .promo-swiper .swiper-slide img { max-height:520px; } }
+                          .promo-section .swiper-pagination { margin-top: 8px; }
+                          .promo-section .promo-nav-btn { width:46px; height:46px; background:rgba(0,0,0,0.3); border-radius:9999px; backdrop-filter:saturate(180%) blur(6px); box-shadow: 0 6px 18px rgba(0,0,0,0.2); }
+                          .promo-section .promo-nav-btn:after { color:#fff; font-size:22px; font-weight:700; }
+                          .promo-section .swiper-button-prev-promo:after { content:'\u2039' !important; }
+                          .promo-section .swiper-button-next-promo:after { content:'\u203A' !important; }
+                          .promo-section .swiper-button-prev-promo { left: 10px; }
+                          .promo-section .swiper-button-next-promo { right: 10px; }
+                          /* Bottom content box under each slide */
+                          .promo-section .promo-swiper .swiper-slide a { display:flex; flex-direction:column; width:100%; text-decoration:none; }
+                          .promo-section .promo-swiper .swiper-slide a::after { content:'Lihat Penawaran'; display:block; margin-top:10px; background:#ffffff; border:1px solid #e5e7eb; border-radius:12px; padding:10px 14px; color:#111827; font-weight:600; line-height:1.2; box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+                          @media (min-width: 1024px) { .promo-section .promo-swiper .swiper-slide a::after { padding:12px 16px; } }
+                          @media (min-width: 1024px) {
+                            .promo-section .promo-nav-btn { width:54px; height:54px; }
+                            .promo-section .promo-nav-btn:after { font-size:26px; }
+                          }
+                        </style>
                     </div>
                 </div>
             </div>
@@ -2991,7 +3080,7 @@
 
                     <div class="py-2 position-absolute blog-title-wrapper group-hover:tw-text-white">
                         <div class="px-3">
-                            <marquee class="tw-font-bold">${data.title}</marquee>
+                            <div class="tw-font-bold blog-title-marquee">${data.title}</div>
                         </div>
                         <div class="tw-border-b tw-border-success lg:tw-py-1 tw-mb-1"></div>
                         <small class="px-3">${newDateFormatter.format(date)}</small>
@@ -3752,8 +3841,6 @@
             </div>
         </div>
     </main>
-
-</div>
 
 <div id="section-17">
     <div
@@ -5651,20 +5738,61 @@
     //     },
     // }).mount();
 
-    new Swiper('#swiper-banner', {
-        loop: true,
-        spaceBetween: 30,
-        slidesPerView: 1,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next-banner',
-            prevEl: '.swiper-button-prev-banner',
+    (function initBannerSlider(){
+        var wrapper = document.querySelector('#swiper-banner .swiper-wrapper');
+        function getFallbackSources(){
+            var imgs = document.querySelectorAll('#swiper-banner .swiper-slide img.tw-hidden');
+            var list = [];
+            imgs.forEach(function(img){ list.push(img.getAttribute('src')); });
+            return list;
         }
-    });
+        function buildSlides(list){
+            if(!wrapper) return;
+            if(list && list.length){ wrapper.innerHTML = ''; }
+            (list && list.length ? list : getFallbackSources()).forEach(function(src){
+                var slide = document.createElement('div');
+                slide.className = 'text-center swiper-slide';
+                var imgDesktop = document.createElement('img');
+                imgDesktop.loading = 'lazy';
+                imgDesktop.src = src;
+                imgDesktop.alt = 'slider';
+                imgDesktop.className = 'tw-hidden md:tw-block tw-w-full';
+                var imgMobile = document.createElement('img');
+                imgMobile.loading = 'lazy';
+                imgMobile.src = src;
+                imgMobile.alt = 'slider';
+                imgMobile.className = 'md:tw-hidden tw-w-full';
+                slide.appendChild(imgDesktop);
+                slide.appendChild(imgMobile);
+                wrapper.appendChild(slide);
+            });
+            new Swiper('#swiper-banner', {
+                loop: true,
+                spaceBetween: 30,
+                slidesPerView: 1,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next-banner',
+                    prevEl: '.swiper-button-prev-banner',
+                }
+            });
+        }
+        fetch('/assets/ruangoffice/download-report.json')
+            .then(function(r){ return r.json(); })
+            .then(function(items){
+                if(!Array.isArray(items)) { buildSlides(); return; }
+                var list = items
+                    .filter(function(it){ return it.dest && it.dest.indexOf('public\\\\assets\\\\ruangoffice\\\\storage\\\\slider') !== -1 && it.status !== 'failed'; })
+                    .map(function(it){ return it.dest.replace(/^public\\\\/, '/').replace(/\\\\/g, '/'); });
+                var unique = Array.from(new Set(list));
+                if(unique.length){ buildSlides(unique); } else { buildSlides(); }
+            })
+            .catch(function(){ buildSlides(); });
+    })();
 
     new Swiper('#swiper-teams', {
         loop: true,
@@ -7195,5 +7323,85 @@
     }
 
 </script>
+<style id="section-enhancements">
+/* Section headings spacing */
+#section-4 .tw-text-center,
+#section-5 .tw-text-center,
+#section-6 .tw-text-center,
+#section-7 .tw-text-center { padding-top: 0.5rem; margin-bottom: 1.5rem; }
+
+/* Proses Terselesaikan: card grid and hover */
+#section-4 .tw-grid { gap: 1rem; }
+@media (min-width: 768px) { #section-4 .tw-grid { gap: 1.25rem; } }
+#section-4 .tw-overflow-hidden { transition: transform .2s ease, box-shadow .2s ease; }
+#section-4 .tw-overflow-hidden:hover { transform: translateY(-4px); box-shadow: 0 10px 20px -10px rgba(0,0,0,.3); }
+#section-4 .bg-gradient-1, #section-4 .bg-gradient-2 { min-height: 5rem; }
+@media (min-width: 768px) { #section-4 .bg-gradient-1, #section-4 .bg-gradient-2 { min-height: 6rem; } }
+
+/* KBLI: top control row spacing and content paddings */
+#section-5 #section-kbli .tw-mb-4 { gap: .75rem; }
+@media (min-width: 1024px) { #section-5 #section-kbli .tw-mb-4 { gap: 1rem; align-items: center; } }
+#section-5 #kbli-button.btn-group { display: inline-flex !important; }
+#section-5 #kbli-info-deskripsi,
+#section-5 #kbli-deskripsi,
+#section-5 #kbli-ruang-lingkup,
+#section-5 #kbli-umku,
+#section-5 #kbli-data { padding-left: .75rem; padding-right: .75rem; }
+
+/* Database Peraturan: form and table tuning */
+#section-6 .card-body > .row { row-gap: .75rem; }
+#section-6 .form-select, #section-6 .form-control { min-height: 2.75rem; }
+#section-6 .table { font-size: .9rem; }
+@media (min-width: 768px) { #section-6 .table { font-size: 1rem; } }
+#section-6 .table thead th { position: sticky; top: 0; background: #fff; z-index: 1; }
+#section-6 .table-hover tbody tr:hover { background: rgba(0,0,0,.03); }
+
+/* Company Profile readability and layout */
+#section-7 .tw-px-3 { padding-left: 1rem; padding-right: 1rem; }
+#section-7 p { margin-top: .5rem; margin-bottom: .5rem; line-height: 1.7; }
+#section-7 ul { margin-top: .25rem; margin-bottom: .25rem; padding-left: 1.25rem; }
+#section-7 li { margin-bottom: .35rem; }
+#section-7 .tw-flex { gap: 1rem; }
+@media (min-width: 1024px) { #section-7 .tw-flex { gap: 2rem; } }
+
+/* Shared: small icon size in hr-icon */
+.hr-icon .px-2 { font-size: 1.125rem; }
+</style>
+<style id="top-banner-polish">
+/* Top marquee polish */
+.top-icon-marquee { height: 36px; display: flex; align-items: center; }
+.top-icon-marquee .track { gap: 2rem; animation: top-marquee 35s linear infinite; }
+.top-icon-marquee .item { font-size: 0.95rem; }
+.top-icon-marquee:hover .track { animation-play-state: paused; }
+
+/* Blog title: single line, ellipsis instead of marquee */
+.blog-title-marquee { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* Banner slider polish */
+#section-1 #swiper-banner { border-radius: 12px; overflow: hidden; background: #f7f7f7; }
+#section-1 #swiper-banner .swiper-slide { display: flex; align-items: center; justify-content: center; }
+#section-1 #swiper-banner .swiper-slide img { width: 100%; height: auto; max-height: 420px; object-fit: cover; }
+@media (min-width: 1024px) { #section-1 #swiper-banner .swiper-slide img { max-height: 520px; } }
+
+/* Banner nav buttons */
+.swiper-button-prev-banner, .swiper-button-next-banner { width: 42px; height: 42px; background: rgba(0,0,0,0.3); border-radius: 9999px; box-shadow: 0 6px 18px rgba(0,0,0,0.2); }
+.swiper-button-prev-banner:after, .swiper-button-next-banner:after { color: #fff; font-size: 22px; font-weight: 700; }
+.swiper-button-prev-banner:after { content: '\2039' !important; }
+.swiper-button-next-banner:after { content: '\203A' !important; }
+@media (min-width: 1024px) { .swiper-button-prev-banner, .swiper-button-next-banner { width: 50px; height: 50px; } .swiper-button-prev-banner:after, .swiper-button-next-banner:after { font-size: 24px; } }
+.swiper-button-prev-banner { left: 10px; }
+.swiper-button-next-banner { right: 10px; }
+
+/* Search bar overlay responsivity */
+#section-1 .position-relative > .position-absolute { z-index: 20; }
+@media (max-width: 767.98px) {
+  #section-1 .position-relative > .position-absolute { position: static !important; transform: none !important; width: 100% !important; }
+  #section-1 .input-group .input-group-text { border-width: 1px; }
+}
+
+/* Spacing adjustments */
+nav.custom-navigation { border-top: 1px solid rgba(255,255,255,0.08); }
+#section-1 .position-relative { margin-top: .5rem; }
+</style>
 </body>
 </html>

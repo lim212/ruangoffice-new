@@ -12,6 +12,7 @@
     "assets:fetch:ruangoffice:rewrite": "node scripts\\download-ruangoffice-assets.cjs --rewrite"
   },
   "dependencies": {
-    "nuxt": "^3.12.4"
+    "nuxt": "^3.12.4",
+    "pdf-parse": "^1.1.1"
   }
 }
