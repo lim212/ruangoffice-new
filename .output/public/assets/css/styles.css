@@ -1,0 +1,3 @@
+/* Alias CSS to match original ruangoffice.com path.
+   This file simply forwards to the existing theme stylesheet. */
+@import url("./style.css");
