@@ -1,5 +1,0 @@
-const index_vue_vue_type_style_index_0_lang = ".loading{padding:2rem;text-align:center}.__migrated-html{min-height:100vh;overflow-x:hidden}.__migrated-html img{height:auto;max-width:100%}.promo-section{margin-left:auto;margin-right:auto;max-width:min(1200px,95vw)}.promo-section .swiper{width:100%}.promo-section .swiper-pagination{margin-top:8px}.promo-section .promo-nav-btn{height:42px;width:42px}@media (max-width:576px){.promo-section{padding-left:.5rem;padding-right:.5rem}.promo-section .promo-nav-btn{display:none!important}}footer.text-primary.fs-6.position-relative{margin-top:2rem}@media (max-width:992px){.col-footer{margin-bottom:1.25rem}}";
-export {
-  index_vue_vue_type_style_index_0_lang as default
-};
-//# sourceMappingURL=index-styles-1.mjs-Bubt_TJ-.js.map

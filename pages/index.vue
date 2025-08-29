@@ -1,17 +1,39 @@
 <template>
   <div>
     <div v-if="!loaded" class="loading">Loading...</div>
-    <div v-else id="page-top" class="__migrated-html" v-html="bodyHtml"></div>
+    <div v-else>
+      <template v-if="useLegacy">
+        <div id="page-top" class="__migrated-html"></div>
+      </template>
+      <template v-else>
+        <Hero
+          headline="Layanan Perizinan & Virtual Office Terbaik"
+          ctaText="Konsultasi Gratis"
+          ctaHref="/hubungi-kami"
+        />
+        <Services />
+      </template>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { onMounted, ref, nextTick } from "vue";
+import { useAppSeoMeta } from "~/composables/useSeoMeta";
+import { injectOriginalHtml } from "~/scripts/injectOriginal";
 
 // Render this page on client only to avoid SSR/dev module import issues
-definePageMeta({ ssr: false, layout: false });
+definePageMeta({ ssr: false, layoutChrome: false });
 
-const bodyHtml = ref<string>("");
+// SEO for homepage
+useAppSeoMeta({
+  title: "Ruangoffice Biro Jasa Legalitas perizinan & Virtual Office #1 Layanan Terbaik",
+  description: "Biro Jasa Legalitas Perizinan & Virtual Office #1 dengan layanan terbaik untuk pendirian PT/CV/Firma/Yayasan, PMA, NIB, HAKI, ISO, SIUP, Pajak, dan lainnya.",
+  keywords: ["ruangoffice", "jasa legalitas", "perizinan", "virtual office", "pendirian PT", "NIB", "HAKI"],
+  url: "https://www.ruangoffice.com/"
+});
+
+const useLegacy = true;
 const loaded = ref(false);
 let scriptsExecuted = false;
 
@@ -65,15 +87,16 @@ async function executeScriptsFromMigratedHtml() {
         .filter(Boolean),
     );
 
-    // Helper: wait for key libraries that inline scripts commonly depend on
+    // Helper: wait for key libraries (Swiper, Lightbox, Bootstrap) before running inline initializers
     function waitForLibraries(timeoutMs = 5000): Promise<void> {
       const start = Date.now();
       return new Promise((resolve) => {
         const check = () => {
-          const hasJQ = typeof (window as any).jQuery !== "undefined" || typeof (window as any).$ !== "undefined";
           const hasSwiper = typeof (window as any).Swiper !== "undefined";
+          const hasLightbox = typeof (window as any).lightbox !== "undefined";
           const hasBootstrap = typeof (window as any).bootstrap !== "undefined";
-          if (hasJQ && hasSwiper && hasBootstrap) {
+          const hasQuill = typeof (window as any).Quill !== "undefined";
+          if (hasSwiper && hasLightbox && hasBootstrap && hasQuill) {
             resolve();
             return;
           }
@@ -114,26 +137,36 @@ async function executeScriptsFromMigratedHtml() {
       document.body.appendChild(s);
     }
 
-    // Process scripts in original order, awaiting externals; delay inline until libs are ready
+    // Ensure Quill library from injected body is available before running inline FAQ initializers
+    try {
+      const quillScripts = scripts.filter((s) => {
+        const src = s.getAttribute("src") || "";
+        return /quill(\.min)?\.js/i.test(src) || /cdn\.quilljs\.com/i.test(src);
+      }) as HTMLScriptElement[];
+      for (const qs of quillScripts) {
+        await loadExternalScriptFrom(qs);
+      }
+    } catch (_) {}
+
+    // Process only inline scripts to avoid reloading conflicting libraries from the original body
     for (const oldScript of scripts) {
-      if (oldScript.src) {
-        let normalized = oldScript.src;
-        try {
-          normalized = new URL(oldScript.src, window.location.href).href;
-        } catch {
-          // ignore
-        }
-        if (existingSrcSet.has(normalized)) {
-          // Already present (likely from Nuxt head). Give it a moment to load if needed.
-          await waitForLibraries(4000);
-        } else {
-          existingSrcSet.add(normalized);
-          await loadExternalScriptFrom(oldScript);
-        }
-      } else {
-        // Before running inline, ensure primary libs are available
-        await waitForLibraries(6000);
+      const hasSrc = !!oldScript.getAttribute("src");
+      const type = (oldScript.getAttribute("type") || "").toLowerCase();
+      if (hasSrc) {
+        // We deliberately skip external scripts in the injected body.
+        // Nuxt head already loads required libraries (Bootstrap, Swiper, Lightbox, etc.).
+        continue;
+      }
+      if (type === "module") {
+        // Do not run module inline scripts from the original body
+        continue;
+      }
+      // Before running inline, ensure primary libs are available
+      await waitForLibraries(6000);
+      try {
         runInlineScript(oldScript);
+      } catch (e) {
+        console.warn("Skipped an inline script from migrated HTML due to error", e);
       }
     }
   } catch (e) {
@@ -142,44 +175,80 @@ async function executeScriptsFromMigratedHtml() {
 }
 
 onMounted(async () => {
-  try {
-    // Fetch the original static HTML that we placed in /public/original.html
-    const res = await fetch("/original.html", { cache: "no-store" });
-    const html = await res.text();
-    // Extract the content inside <body>...</body>
-    const match = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
-    const rawBody = match ? match[1] : html;
+  // Ensure the target container exists before injecting to avoid blank page
+  loaded.value = true;
+  await nextTick();
 
-    // Inject the full original body content without stripping elements to ensure 1:1 match with original site
-    const temp = document.createElement("div");
-    temp.innerHTML = rawBody;
-    bodyHtml.value = temp.innerHTML;
-  } catch (e) {
-    console.error("Failed to load original HTML", e);
-    bodyHtml.value = "<p>Gagal memuat konten.</p>";
-  } finally {
-    loaded.value = true;
-    await nextTick();
-    // Initialize Alpine.js on the injected HTML if available (for x-data components)
+  if (useLegacy) {
     try {
-      const container = document.querySelector("div.__migrated-html");
-      const Alpine = (window as any).Alpine;
-      if (container && Alpine && typeof Alpine.initTree === "function") {
-        Alpine.initTree(container);
+      await injectOriginalHtml();
+    } catch (e) {
+      console.error("Failed to inject original HTML", e);
+    } finally {
+      await nextTick();
+      // Initialize Alpine.js on the injected HTML if available (for x-data components)
+      try {
+        const container = document.querySelector("div.__migrated-html");
+        const Alpine = (window as any).Alpine;
+        if (container && Alpine && typeof Alpine.initTree === "function") {
+          Alpine.initTree(container);
+        }
+      } catch (_) {}
+
+      // Small utility to remove stray text nodes or elements that only contain '<<' or '>>' (scoped to injected container)
+      function removeDoubleAngleNoise() {
+        try {
+          const containerEl = document.querySelector("div.__migrated-html") as HTMLElement | null;
+          const root: ParentNode = containerEl || document.body;
+          const walker = document.createTreeWalker(root as Node, NodeFilter.SHOW_TEXT, {
+            acceptNode(node) {
+              const t = (node.nodeValue || "").trim();
+              return t === "<<" || t === ">>" ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+            },
+          } as any);
+          const toRemove: Node[] = [];
+          // Collect first to avoid mutating while walking
+          while (walker.nextNode()) {
+            toRemove.push(walker.currentNode);
+          }
+          for (const n of toRemove) {
+            n.parentNode?.removeChild(n);
+          }
+          // Also remove elements that render only those tokens (no children)
+          if (containerEl) {
+            const els = Array.from(containerEl.querySelectorAll("*"));
+            for (const el of els) {
+              if ((el as HTMLElement).children && (el as HTMLElement).children.length > 0) continue;
+              const txt = (el.textContent || "").trim();
+              if (txt === "<<" || txt === ">>") {
+                (el as HTMLElement).remove();
+              }
+            }
+          }
+        } catch (_) {
+          // noop
+        }
       }
-    } catch (_) {}
-    // Execute any scripts that were part of the original body (Bootstrap, Swiper, inline init, etc.)
-    executeScriptsFromMigratedHtml();
-    // Try hide immediately, then fallback by timeout in case late rendering
+
+      // Execute any scripts that were part of the original body (Bootstrap, Swiper, inline init, etc.)
+      executeScriptsFromMigratedHtml();
+      // Try hide immediately, then fallback by timeout in case late rendering
+      hidePreloader();
+      removeDoubleAngleNoise();
+      setTimeout(() => {
+        executeScriptsFromMigratedHtml();
+        hidePreloader();
+        removeDoubleAngleNoise();
+      }, 300);
+      setTimeout(() => {
+        executeScriptsFromMigratedHtml();
+        hidePreloader();
+        removeDoubleAngleNoise();
+      }, 1500);
+    }
+  } else {
+    // If we are not using legacy injection, still ensure any preloader overlays are hidden
     hidePreloader();
-    setTimeout(() => {
-      executeScriptsFromMigratedHtml();
-      hidePreloader();
-    }, 300);
-    setTimeout(() => {
-      executeScriptsFromMigratedHtml();
-      hidePreloader();
-    }, 1500);
   }
 });
 </script>
@@ -193,5 +262,4 @@ onMounted(async () => {
   min-height: 100vh;
   overflow-x: hidden;
 }
-/* Note: Avoid overriding original template styles to keep layout consistent with ruangoffice.online */
 </style>

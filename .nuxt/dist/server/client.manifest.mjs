@@ -1,1 +1,1 @@
-export { default } from "file:///C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
+export { default } from "file:///C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
