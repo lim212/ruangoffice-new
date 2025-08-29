@@ -13640,14 +13640,30 @@ ul.custom-navigation-dropdown > li.active:hover a {
 
 .swiper-button-prev-promo,
 .swiper-button-prev-client {
-  left: -40px !important;
-  /* top: 4.5rem; */
+  left: 8px !important;
+}
+
+/* Keep arrows outside only on large screens */
+@media (min-width: 992px) {
+  .swiper-button-prev-promo,
+  .swiper-button-prev-client {
+    left: -40px !important;
+    /* top: 4.5rem; */
+  }
 }
 
 .swiper-button-next-promo,
 .swiper-button-next-client {
-  right: -40px !important;
-  /* top: 4.5rem; */
+  right: 8px !important;
+}
+
+/* Keep arrows outside only on large screens */
+@media (min-width: 992px) {
+  .swiper-button-next-promo,
+  .swiper-button-next-client {
+    right: -40px !important;
+    /* top: 4.5rem; */
+  }
 }
 
 .swiper-wrapper.promo > .swiper-slide:hover {

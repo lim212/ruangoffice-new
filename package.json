@@ -4,15 +4,39 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "predev": "node scripts\\check-peraturan.mjs",
+    "prestart": "node scripts\\check-peraturan.mjs",
+    "prebuild": "node scripts\\check-peraturan.mjs",
+    "pregenerate": "node scripts\\check-peraturan.mjs",
     "dev": "set NODE_OPTIONS=--no-deprecation&& nuxt dev",
     "build": "set NODE_OPTIONS=--no-deprecation&& nuxt build",
     "start": "set NODE_OPTIONS=--no-deprecation&& nuxt start",
     "generate": "set NODE_OPTIONS=--no-deprecation&& nuxt generate",
     "assets:fetch:ruangoffice": "node scripts\\download-ruangoffice-assets.cjs",
-    "assets:fetch:ruangoffice:rewrite": "node scripts\\download-ruangoffice-assets.cjs --rewrite"
+    "assets:fetch:ruangoffice:rewrite": "node scripts\\download-ruangoffice-assets.cjs --rewrite",
+    "scrape": "node scraper.js",
+    "scrape:peraturan": "node scripts\\scrape-peraturan.mjs",
+    "blog:generate": "node scripts\\generate-blog.mjs",
+    "generate:blog": "npm run blog:generate",
+    "blog:cron": "node scripts\\cron.mjs",
+    "seo:titles": "node scripts\\generate-seo-titles.mjs --out assets\\seo-titles.txt"
   },
   "dependencies": {
     "nuxt": "^3.12.4",
-    "pdf-parse": "^1.1.1"
+    "pdf-parse": "^1.1.1",
+    "swiper": "^11.1.10",
+    "axios": "^1.7.7",
+    "cheerio": "^1.0.0-rc.12",
+    "puppeteer": "^22.11.0",
+    "openai": "^4.57.0",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.10",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.15"
   }
 }

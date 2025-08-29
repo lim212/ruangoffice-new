@@ -2,13 +2,19 @@
 // We include essential head/meta/link/script tags here. You can extend as needed.
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
+  modules: ["@nuxtjs/tailwindcss"],
+  css: ["~/assets/css/tailwind.css", "~/assets/css/patch.css"],
+  runtimeConfig: {
+    public: {
+      waPhone: process.env.NUXT_PUBLIC_WA_PHONE || '62811113666',
+      testimonialsEndpoint: process.env.NUXT_PUBLIC_TESTIMONIALS_ENDPOINT || ''
+    }
+  },
   app: {
     head: {
       htmlAttrs: {
         lang: "id",
       },
-      title:
-        "RuangOffice.com Biro Jasa Legalitas perizinan & Virtual Office #1 Layanan Terbaik",
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1, shrink-to-fit=no" },
@@ -32,7 +38,7 @@ export default defineNuxtConfig({
         },
         { name: "author", content: "RuangOffice.com" },
         { property: "og:type", content: "website" },
-        { property: "og:url", content: "https://www.ruangoffice.com" },
+        { property: "og:url", content: "https://ruangoffice.online" },
         {
           property: "og:title",
           content:
@@ -43,9 +49,9 @@ export default defineNuxtConfig({
           content:
             "Jasa Pendirian dan Pembuatan layanan Perizinan bikin atau buat PT / CV / Firma / UD / Yayasan, PMA, KAP, SIUP, HAKI, ISO, NIB, Pajak, Virtual Office",
         },
-        { property: "og:image", content: "/assets/ruangoffice/logo-ro.ico" },
+        { property: "og:image", content: "/assets/img/logo-ro.ico" },
         { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:url", content: "https://www.ruangoffice.com" },
+        { name: "twitter:url", content: "https://ruangoffice.online" },
         {
           name: "twitter:title",
           content:
@@ -56,76 +62,77 @@ export default defineNuxtConfig({
           content:
             "Jasa Pendirian dan Pembuatan layanan Perizinan bikin atau buat PT / CV / Firma / UD / Yayasan, PMA, KAP, SIUP, HAKI, ISO, NIB, Pajak, Virtual Office",
         },
-        { name: "twitter:image", content: "/assets/ruangoffice/logo-ro.ico" },
+        { name: "twitter:image", content: "/assets/img/logo-ro.ico" },
         { name: "robots", content: "index, follow" },
       ],
       link: [
-        // Favicons
+        // Favicons (use local assets to match ruangoffice.com/.online)
         {
           rel: "apple-touch-icon",
           sizes: "57x57",
-          href: "/assets/ruangoffice/logo-ro.ico",
+          href: "/assets/img/logo-ro.ico",
         },
         {
           rel: "apple-touch-icon",
           sizes: "60x60",
-          href: "/assets/ruangoffice/logo-ro.ico",
+          href: "/assets/img/logo-ro.ico",
         },
         {
           rel: "apple-touch-icon",
           sizes: "72x72",
-          href: "/assets/ruangoffice/logo-ro.ico",
+          href: "/assets/img/logo-ro.ico",
         },
         {
           rel: "apple-touch-icon",
           sizes: "76x76",
-          href: "/assets/ruangoffice/logo-ro.ico",
+          href: "/assets/img/logo-ro.ico",
         },
         {
           rel: "apple-touch-icon",
           sizes: "114x114",
-          href: "/assets/ruangoffice/logo-ro.ico",
+          href: "/assets/img/logo-ro.ico",
         },
         {
           rel: "apple-touch-icon",
           sizes: "120x120",
-          href: "/assets/ruangoffice/logo-ro.ico",
+          href: "/assets/img/logo-ro.ico",
         },
         {
           rel: "apple-touch-icon",
           sizes: "144x144",
-          href: "/assets/ruangoffice/logo-ro.ico",
+          href: "/assets/img/logo-ro.ico",
         },
         {
           rel: "apple-touch-icon",
           sizes: "152x152",
-          href: "/assets/ruangoffice/logo-ro.ico",
+          href: "/assets/img/logo-ro.ico",
         },
         {
           rel: "apple-touch-icon",
           sizes: "180x180",
-          href: "/assets/ruangoffice/logo-ro.ico",
+          href: "/assets/img/logo-ro.ico",
         },
+        // Standard favicons
         {
           rel: "icon",
-          type: "image/x-icon",
-          sizes: "32x32",
-          href: "/assets/ruangoffice/logo-ro.ico",
-        },
-        {
-          rel: "icon",
-          type: "image/x-icon",
-          sizes: "16x16",
-          href: "/assets/ruangoffice/logo-ro.ico",
-        },
-        {
-          rel: "icon",
-          href: "/assets/ruangoffice/favicon.png",
           type: "image/png",
+          sizes: "32x32",
+          href: "/assets/img/favicon.png",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "16x16",
+          href: "/assets/img/favicon.png",
+        },
+        {
+          rel: "icon",
+          href: "/assets/img/logo-ro.ico",
+          type: "image/x-icon",
         },
         {
           rel: "alternate icon",
-          href: "/assets/ruangoffice/favicon.png",
+          href: "/assets/img/favicon.png",
           class: "js-site-favicon",
           type: "image/png",
         },
@@ -219,10 +226,11 @@ export default defineNuxtConfig({
           href: "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css",
           crossorigin: "anonymous"
         },
-        { rel: "stylesheet", href: "/assets/ruangoffice/assets/vendor/lightbox/css/lightbox.min.css" },
+        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" },
         { rel: "stylesheet", href: "/assets/css/styles.css" },
-        { rel: "stylesheet", href: "/assets/widget/whatsapp/style.css" },
+        { rel: "stylesheet", href: "/assets/ruangoffice/widget/whatsapp/style.css" },
         { rel: "stylesheet", href: "/assets/css/sch-style2.css" },
+        { rel: "stylesheet", href: "/assets/css/patch.css" },
       ],
       script: [
         // Google Analytics gtag
@@ -270,6 +278,16 @@ export default defineNuxtConfig({
           src: "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js",
           defer: true,
         },
+        // Lightbox2 (for gallery in "Kantor Kami" section)
+        {
+          src: "https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js",
+          defer: true,
+        },
+        // Lightbox2 (for image galleries in Happy Client)
+        {
+          src: "/assets/ruangoffice/assets/vendor/lightbox/js/lightbox.min.js",
+          defer: true,
+        },
       ],
       // For inline scripts via innerHTML, allow unsafe inline (you may want to handle CSP separately)
       // Note: nuxt-security or strict CSP is not configured in this minimal scaffold.
@@ -283,5 +301,26 @@ export default defineNuxtConfig({
   // This page only renders client-side content fetched from /public/original.html anyway.
   routeRules: {
     "/": { ssr: false },
+  },
+
+  // SEO & Sitemaps via @nuxtjs/seo-experiments
+  site: {
+    url: process.env.NUXT_PUBLIC_SITE_URL || "https://ruangoffice.online",
+  },
+  sitemap: {
+    // Auto-generate from pages (default behavior of the module)
+    exclude: ["/admin", "/admin/**"],
+  },
+  robots: {
+    groups: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/admin", "/admin/"],
+      },
+    ],
+    sitemap: [
+      `${process.env.NUXT_PUBLIC_SITE_URL || "https://ruangoffice.online"}/sitemap.xml`,
+    ],
   },
 });

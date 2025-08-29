@@ -3,40 +3,40 @@ import { Server } from 'node:http';
 import { resolve, dirname, join } from 'node:path';
 import nodeCrypto from 'node:crypto';
 import { parentPort, threadId } from 'node:worker_threads';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, createError, getQuery as getQuery$1, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatus, getRouterParam, getResponseStatusText } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/h3/dist/index.mjs';
-import { escapeHtml } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/@vue/shared/dist/shared.cjs.js';
-import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, decodePath, withLeadingSlash, withoutTrailingSlash, joinRelativeURL } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/ufo/dist/index.mjs';
-import { renderToString } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/vue/server-renderer/index.mjs';
-import { klona } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/klona/dist/index.mjs';
-import defu, { defuFn } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/defu/dist/defu.mjs';
-import destr, { destr as destr$1 } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/destr/dist/index.mjs';
-import { snakeCase } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/scule/dist/index.mjs';
-import { createHead as createHead$1, propsToString, renderSSRHead } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/unhead/dist/server.mjs';
-import { stringify, uneval } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/devalue/index.js';
-import { isVNode, toValue, isRef } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/vue/index.mjs';
-import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/unhead/dist/plugins.mjs';
-import { createHooks } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/hookable/dist/index.mjs';
-import { createFetch, Headers as Headers$1 } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/ofetch/dist/node.mjs';
-import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/node-mock-http/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/unstorage/drivers/fs.mjs';
-import { digest } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/ohash/dist/index.mjs';
-import { toRouteMatcher, createRouter } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/radix3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, createError, getQuery as getQuery$1, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatus, getRouterParam, getResponseStatusText } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/h3/dist/index.mjs';
+import { escapeHtml } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/@vue/shared/dist/shared.cjs.js';
+import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, decodePath, withLeadingSlash, withoutTrailingSlash, joinRelativeURL } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/ufo/dist/index.mjs';
+import { renderToString } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/vue/server-renderer/index.mjs';
+import { klona } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/klona/dist/index.mjs';
+import defu, { defuFn } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/defu/dist/defu.mjs';
+import destr, { destr as destr$1 } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/destr/dist/index.mjs';
+import { snakeCase } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/scule/dist/index.mjs';
+import { createHead as createHead$1, propsToString, renderSSRHead } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/unhead/dist/server.mjs';
+import { stringify, uneval } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/devalue/index.js';
+import { isVNode, toValue, isRef } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/vue/index.mjs';
+import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/unhead/dist/plugins.mjs';
+import { createHooks } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/hookable/dist/index.mjs';
+import { createFetch, Headers as Headers$1 } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/ofetch/dist/node.mjs';
+import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/node-mock-http/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/unstorage/drivers/fs.mjs';
+import { digest } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/ohash/dist/index.mjs';
+import { toRouteMatcher, createRouter } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/radix3/dist/index.mjs';
 import { readFile } from 'node:fs/promises';
-import consola, { consola as consola$1 } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/consola/dist/index.mjs';
-import { ErrorParser } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/youch-core/build/index.js';
-import { Youch } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/nitropack/node_modules/youch/build/index.js';
-import { SourceMapConsumer } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/source-map/source-map.js';
+import consola, { consola as consola$1 } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/consola/dist/index.mjs';
+import { ErrorParser } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/youch-core/build/index.js';
+import { Youch } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/nitropack/node_modules/youch/build/index.js';
+import { SourceMapConsumer } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/source-map/source-map.js';
 import { AsyncLocalStorage } from 'node:async_hooks';
-import { getContext } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/unctx/dist/index.mjs';
-import { captureRawStackTrace, parseRawStackTrace } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/errx/dist/index.js';
+import { getContext } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/unctx/dist/index.mjs';
+import { captureRawStackTrace, parseRawStackTrace } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/errx/dist/index.js';
 import { promises } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { dirname as dirname$1, resolve as resolve$1 } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/pathe/dist/index.mjs';
-import { walkResolver } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/node_modules/unhead/dist/utils.mjs';
+import { dirname as dirname$1, resolve as resolve$1 } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/pathe/dist/index.mjs';
+import { walkResolver } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/unhead/dist/utils.mjs';
 
-const serverAssets = [{"baseName":"server","dir":"C:/Users/FELIX/WebstormProjects/ruangoffice-new/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"C:/Users/FELIX/WebstormProjects/ruangoffice-news/server/assets"}];
 
 const assets$1 = createStorage();
 
@@ -48,11 +48,11 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets$1);
 
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:/Users/FELIX/WebstormProjects/ruangoffice-new","watchOptions":{"ignored":[null]}}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:/Users/FELIX/WebstormProjects/ruangoffice-new/server","watchOptions":{"ignored":[null]}}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:/Users/FELIX/WebstormProjects/ruangoffice-new/.nuxt"}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:/Users/FELIX/WebstormProjects/ruangoffice-new/.nuxt/cache"}));
-storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"C:/Users/FELIX/WebstormProjects/ruangoffice-new/.data/kv"}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:/Users/FELIX/WebstormProjects/ruangoffice-news","watchOptions":{"ignored":[null]}}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:/Users/FELIX/WebstormProjects/ruangoffice-news/server","watchOptions":{"ignored":[null]}}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:/Users/FELIX/WebstormProjects/ruangoffice-news/.nuxt"}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:/Users/FELIX/WebstormProjects/ruangoffice-news/.nuxt/cache"}));
+storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"C:/Users/FELIX/WebstormProjects/ruangoffice-news/.data/kv"}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -650,7 +650,10 @@ const _inlineRuntimeConfig = {
       }
     }
   },
-  "public": {}
+  "public": {
+    "waPhone": "62811113666",
+    "testimonialsEndpoint": ""
+  }
 };
 const envOptions = {
   prefix: "NITRO_",
@@ -1015,15 +1018,15 @@ if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
 window.__NUXT_DEVTOOLS_TIME_METRIC__.appInit = Date.now()
 `;
 
-const _Ep0BJwZWs4BUjFue4Q8gbQYkyBRcQIo4TPw8q5PTQ = (function(nitro) {
+const _61dYjTvEklGBeDfWuycYLA_2Y4gNvArQ_6pOlZiJXc = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script}<\/script>`);
   });
 });
 
-const rootDir = "C:/Users/FELIX/WebstormProjects/ruangoffice-new";
+const rootDir = "C:/Users/FELIX/WebstormProjects/ruangoffice-news";
 
-const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1, shrink-to-fit=no"},{"name":"csrf-token","content":"dt9YQgqXhSV9oCNOfdjoWlyQNJFzXqcEj2esCZFu"},{"name":"google-site-verification","content":"7vvLsc2TMRyTFk8JMcnDbqT1EwtIDcMl8E0RBVf6Me0"},{"name":"description","content":"Jasa Pendirian dan Pembuatan layanan Perizinan bikin atau buat PT / CV / Firma / UD / Yayasan, PMA, KAP, SIUP, HAKI, ISO, NIB, Pajak, Virtual Office"},{"name":"keywords","content":"jasa buat pt, jasa bikin pt, jasa buat cv, jasa pendirian pt, jasa pendirian cv, jasa pendirian PMA, jasa TDP, Jasa SIUP, Jasa ISO, Jasa SNI, jasa bikin SNI, jasa buat SNI, jasa bpom,jasa bikin bpom, jasa buat bpom, jasa buat haki, jasa bikin haki, jasa bikin yayasan, jasa bikin cv, jasa buat firma, jasa bikin firma, jasa buat ud, jasa bikin ud, jasa buat yayasan, jasa bikin yayasan, jasa legalitas, jasa KAP, jasa Haki, jasa konsultan pajak, jasa buat NIB, Jasa Bikin NIB, jasa iso, jasa buat pma, jasa bikin pma, jasa buat pt pma, Virtual Office, perizinan, perijinan, pajak, SIUP, jasa buat siup, jasa bikin siup, Perizinan bikin PT / CV / Firma / UD / Yayasan, Domisili, PMA, KAP, SIUP, HAKI, ISO, NIB, Pajak, Virtual Office"},{"name":"author","content":"RuangOffice.com"},{"property":"og:type","content":"website"},{"property":"og:url","content":"https://www.ruangoffice.com"},{"property":"og:title","content":"RuangOffice.com Biro Jasa Legalitas perizinan & Virtual Office #1 Layanan Terbaik"},{"property":"og:description","content":"Jasa Pendirian dan Pembuatan layanan Perizinan bikin atau buat PT / CV / Firma / UD / Yayasan, PMA, KAP, SIUP, HAKI, ISO, NIB, Pajak, Virtual Office"},{"property":"og:image","content":"/assets/ruangoffice/logo-ro.ico"},{"name":"twitter:card","content":"summary_large_image"},{"name":"twitter:url","content":"https://www.ruangoffice.com"},{"name":"twitter:title","content":"RuangOffice.com Biro Jasa Legalitas perizinan & Virtual Office #1 Layanan Terbaik"},{"name":"twitter:description","content":"Jasa Pendirian dan Pembuatan layanan Perizinan bikin atau buat PT / CV / Firma / UD / Yayasan, PMA, KAP, SIUP, HAKI, ISO, NIB, Pajak, Virtual Office"},{"name":"twitter:image","content":"/assets/ruangoffice/logo-ro.ico"},{"name":"robots","content":"index, follow"}],"link":[{"rel":"apple-touch-icon","sizes":"57x57","href":"/assets/ruangoffice/logo-ro.ico"},{"rel":"apple-touch-icon","sizes":"60x60","href":"/assets/ruangoffice/logo-ro.ico"},{"rel":"apple-touch-icon","sizes":"72x72","href":"/assets/ruangoffice/logo-ro.ico"},{"rel":"apple-touch-icon","sizes":"76x76","href":"/assets/ruangoffice/logo-ro.ico"},{"rel":"apple-touch-icon","sizes":"114x114","href":"/assets/ruangoffice/logo-ro.ico"},{"rel":"apple-touch-icon","sizes":"120x120","href":"/assets/ruangoffice/logo-ro.ico"},{"rel":"apple-touch-icon","sizes":"144x144","href":"/assets/ruangoffice/logo-ro.ico"},{"rel":"apple-touch-icon","sizes":"152x152","href":"/assets/ruangoffice/logo-ro.ico"},{"rel":"apple-touch-icon","sizes":"180x180","href":"/assets/ruangoffice/logo-ro.ico"},{"rel":"icon","type":"image/x-icon","sizes":"32x32","href":"/assets/ruangoffice/logo-ro.ico"},{"rel":"icon","type":"image/x-icon","sizes":"16x16","href":"/assets/ruangoffice/logo-ro.ico"},{"rel":"icon","href":"/assets/ruangoffice/favicon.png","type":"image/png"},{"rel":"alternate icon","href":"/assets/ruangoffice/favicon.png","class":"js-site-favicon","type":"image/png"},{"rel":"preconnect","href":"https://fonts.googleapis.com"},{"rel":"preconnect","href":"https://fonts.gstatic.com","crossorigin":"anonymous"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Cookie:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Roboto+Slab:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Abel&display=swap"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"},{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css"},{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css"},{"rel":"stylesheet","href":"https://cdn.quilljs.com/1.3.6/quill.snow.css"},{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"},{"rel":"stylesheet","href":"https://unpkg.com/shimmer-css@1.0.0/shimmer.css"},{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"},{"rel":"stylesheet","href":"https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"},{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css","crossorigin":"anonymous"},{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css","crossorigin":"anonymous"},{"rel":"stylesheet","href":"/assets/ruangoffice/assets/vendor/lightbox/css/lightbox.min.css"},{"rel":"stylesheet","href":"/assets/css/styles.css"},{"rel":"stylesheet","href":"/assets/widget/whatsapp/style.css"},{"rel":"stylesheet","href":"/assets/css/sch-style2.css"}],"style":[],"script":[{"src":"https://www.googletagmanager.com/gtag/js?id=G-64CPVQTDR6","async":true},{"children":"window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-64CPVQTDR6');","tagPosition":"head"},{"src":"https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js","crossorigin":"anonymous","defer":true},{"src":"https://cdn.jsdelivr.net/npm/axios@1.7.7/dist/axios.min.js","crossorigin":"anonymous","defer":true},{"src":"https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js","defer":true},{"src":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/js/all.min.js","crossorigin":"anonymous","defer":true},{"src":"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js","crossorigin":"anonymous","defer":true},{"src":"https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js","defer":true}],"noscript":[],"htmlAttrs":{"lang":"id"},"title":"RuangOffice.com Biro Jasa Legalitas perizinan & Virtual Office #1 Layanan Terbaik"};
+const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1, shrink-to-fit=no"},{"name":"csrf-token","content":"dt9YQgqXhSV9oCNOfdjoWlyQNJFzXqcEj2esCZFu"},{"name":"google-site-verification","content":"7vvLsc2TMRyTFk8JMcnDbqT1EwtIDcMl8E0RBVf6Me0"},{"name":"description","content":"Jasa Pendirian dan Pembuatan layanan Perizinan bikin atau buat PT / CV / Firma / UD / Yayasan, PMA, KAP, SIUP, HAKI, ISO, NIB, Pajak, Virtual Office"},{"name":"keywords","content":"jasa buat pt, jasa bikin pt, jasa buat cv, jasa pendirian pt, jasa pendirian cv, jasa pendirian PMA, jasa TDP, Jasa SIUP, Jasa ISO, Jasa SNI, jasa bikin SNI, jasa buat SNI, jasa bpom,jasa bikin bpom, jasa buat bpom, jasa buat haki, jasa bikin haki, jasa bikin yayasan, jasa bikin cv, jasa buat firma, jasa bikin firma, jasa buat ud, jasa bikin ud, jasa buat yayasan, jasa bikin yayasan, jasa legalitas, jasa KAP, jasa Haki, jasa konsultan pajak, jasa buat NIB, Jasa Bikin NIB, jasa iso, jasa buat pma, jasa bikin pma, jasa buat pt pma, Virtual Office, perizinan, perijinan, pajak, SIUP, jasa buat siup, jasa bikin siup, Perizinan bikin PT / CV / Firma / UD / Yayasan, Domisili, PMA, KAP, SIUP, HAKI, ISO, NIB, Pajak, Virtual Office"},{"name":"author","content":"RuangOffice.com"},{"property":"og:type","content":"website"},{"property":"og:url","content":"https://ruangoffice.online"},{"property":"og:title","content":"RuangOffice.com Biro Jasa Legalitas perizinan & Virtual Office #1 Layanan Terbaik"},{"property":"og:description","content":"Jasa Pendirian dan Pembuatan layanan Perizinan bikin atau buat PT / CV / Firma / UD / Yayasan, PMA, KAP, SIUP, HAKI, ISO, NIB, Pajak, Virtual Office"},{"property":"og:image","content":"/assets/img/logo-ro.ico"},{"name":"twitter:card","content":"summary_large_image"},{"name":"twitter:url","content":"https://ruangoffice.online"},{"name":"twitter:title","content":"RuangOffice.com Biro Jasa Legalitas perizinan & Virtual Office #1 Layanan Terbaik"},{"name":"twitter:description","content":"Jasa Pendirian dan Pembuatan layanan Perizinan bikin atau buat PT / CV / Firma / UD / Yayasan, PMA, KAP, SIUP, HAKI, ISO, NIB, Pajak, Virtual Office"},{"name":"twitter:image","content":"/assets/img/logo-ro.ico"},{"name":"robots","content":"index, follow"}],"link":[{"rel":"apple-touch-icon","sizes":"57x57","href":"/assets/img/logo-ro.ico"},{"rel":"apple-touch-icon","sizes":"60x60","href":"/assets/img/logo-ro.ico"},{"rel":"apple-touch-icon","sizes":"72x72","href":"/assets/img/logo-ro.ico"},{"rel":"apple-touch-icon","sizes":"76x76","href":"/assets/img/logo-ro.ico"},{"rel":"apple-touch-icon","sizes":"114x114","href":"/assets/img/logo-ro.ico"},{"rel":"apple-touch-icon","sizes":"120x120","href":"/assets/img/logo-ro.ico"},{"rel":"apple-touch-icon","sizes":"144x144","href":"/assets/img/logo-ro.ico"},{"rel":"apple-touch-icon","sizes":"152x152","href":"/assets/img/logo-ro.ico"},{"rel":"apple-touch-icon","sizes":"180x180","href":"/assets/img/logo-ro.ico"},{"rel":"icon","type":"image/png","sizes":"32x32","href":"/assets/img/favicon.png"},{"rel":"icon","type":"image/png","sizes":"16x16","href":"/assets/img/favicon.png"},{"rel":"icon","href":"/assets/img/logo-ro.ico","type":"image/x-icon"},{"rel":"alternate icon","href":"/assets/img/favicon.png","class":"js-site-favicon","type":"image/png"},{"rel":"preconnect","href":"https://fonts.googleapis.com"},{"rel":"preconnect","href":"https://fonts.gstatic.com","crossorigin":"anonymous"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Cookie:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Roboto+Slab:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Abel&display=swap"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"},{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css"},{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css"},{"rel":"stylesheet","href":"https://cdn.quilljs.com/1.3.6/quill.snow.css"},{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"},{"rel":"stylesheet","href":"https://unpkg.com/shimmer-css@1.0.0/shimmer.css"},{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"},{"rel":"stylesheet","href":"https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"},{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css","crossorigin":"anonymous"},{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css","crossorigin":"anonymous"},{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css"},{"rel":"stylesheet","href":"/assets/css/styles.css"},{"rel":"stylesheet","href":"/assets/ruangoffice/widget/whatsapp/style.css"},{"rel":"stylesheet","href":"/assets/css/sch-style2.css"},{"rel":"stylesheet","href":"/assets/css/patch.css"}],"style":[],"script":[{"src":"https://www.googletagmanager.com/gtag/js?id=G-64CPVQTDR6","async":true},{"children":"window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-64CPVQTDR6');","tagPosition":"head"},{"src":"https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js","crossorigin":"anonymous","defer":true},{"src":"https://cdn.jsdelivr.net/npm/axios@1.7.7/dist/axios.min.js","crossorigin":"anonymous","defer":true},{"src":"https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js","defer":true},{"src":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/js/all.min.js","crossorigin":"anonymous","defer":true},{"src":"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js","crossorigin":"anonymous","defer":true},{"src":"https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js","defer":true},{"src":"https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js","defer":true},{"src":"/assets/ruangoffice/assets/vendor/lightbox/js/lightbox.min.js","defer":true}],"noscript":[],"htmlAttrs":{"lang":"id"}};
 
 const appRootTag = "div";
 
@@ -1040,7 +1043,7 @@ const devReducers = {
   URL: (data) => data instanceof URL ? data.toString() : void 0
 };
 const asyncContext = getContext("nuxt-dev", { asyncContext: true, AsyncLocalStorage });
-const _7ypNFmlRo8LFN3gFKidapD1kWCQqbhbBU2pwsBbdkDE = (nitroApp) => {
+const _xvY26iTS_DvyWUNiT35YqQWcRClc90sQ0cVXhi9_8 = (nitroApp) => {
   const handler = nitroApp.h3App.handler;
   nitroApp.h3App.handler = (event) => {
     return asyncContext.callAsync({ logs: [], event }, () => handler(event));
@@ -1110,8 +1113,8 @@ function onConsoleLog(callback) {
 }
 
 const plugins = [
-  _Ep0BJwZWs4BUjFue4Q8gbQYkyBRcQIo4TPw8q5PTQ,
-_7ypNFmlRo8LFN3gFKidapD1kWCQqbhbBU2pwsBbdkDE
+  _61dYjTvEklGBeDfWuycYLA_2Y4gNvArQ_6pOlZiJXc,
+_xvY26iTS_DvyWUNiT35YqQWcRClc90sQ0cVXhi9_8
 ];
 
 const assets = {};
@@ -1139,7 +1142,7 @@ function getAsset (id) {
 
 const METHODS = /* @__PURE__ */ new Set(["HEAD", "GET"]);
 const EncodingMap = { gzip: ".gz", br: ".br" };
-const _2YTYlB = eventHandler((event) => {
+const _rVj5bL = eventHandler((event) => {
   if (event.method && !METHODS.has(event.method)) {
     return;
   }
@@ -1274,8 +1277,8 @@ function publicAssetsURL(...path) {
 
 const APP_ROOT_OPEN_TAG = `<${appRootTag}${propsToString(appRootAttrs)}>`;
 const APP_ROOT_CLOSE_TAG = `</${appRootTag}>`;
-const getServerEntry = () => import('file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/.nuxt//dist/server/server.mjs').then((r) => r.default || r);
-const getClientManifest = () => import('file://C:/Users/FELIX/WebstormProjects/ruangoffice-new/.nuxt//dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getServerEntry = () => import('file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/.nuxt//dist/server/server.mjs').then((r) => r.default || r);
+const getClientManifest = () => import('file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/.nuxt//dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
 const getSSRRenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
   if (!manifest) {
@@ -1521,13 +1524,15 @@ async function getIslandContext(event) {
   return ctx;
 }
 
-const _lazy_CpZghO = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_IKOu9p = () => Promise.resolve().then(function () { return testimonials$1; });
+const _lazy_qs0kj6 = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '', handler: _2YTYlB, lazy: false, middleware: true, method: undefined },
-  { route: '/__nuxt_error', handler: _lazy_CpZghO, lazy: true, middleware: false, method: undefined },
+  { route: '', handler: _rVj5bL, lazy: false, middleware: true, method: undefined },
+  { route: '/api/testimonials', handler: _lazy_IKOu9p, lazy: true, middleware: false, method: undefined },
+  { route: '/__nuxt_error', handler: _lazy_qs0kj6, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: _SxA8c9, lazy: false, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_CpZghO, lazy: true, middleware: false, method: undefined }
+  { route: '/**', handler: _lazy_qs0kj6, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
@@ -1853,6 +1858,96 @@ const styles = {};
 const styles$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   default: styles
+}, Symbol.toStringTag, { value: 'Module' }));
+
+function normalizeItem(raw) {
+  if (!raw || typeof raw !== "object") return null;
+  const name = raw.name || raw.nama || raw.author || raw.user || raw.title;
+  const review = raw.review || raw.comment || raw.ulasan || raw.message || raw.text || raw.desc || raw.description;
+  const avatar = raw.avatar || raw.photo || raw.foto || raw.image || raw.picture;
+  const rating = Number(raw.rating || raw.rate || raw.stars || 5);
+  const company = raw.company || raw.perusahaan || raw.org || raw.role;
+  const date = raw.date || raw.tanggal || raw.created_at || raw.time;
+  if (!name || !review) return null;
+  const r = isFinite(rating) ? Math.max(1, Math.min(5, rating)) : 5;
+  return { name: String(name), review: String(review), avatar: avatar ? String(avatar) : void 0, rating: r, company: company ? String(company) : void 0, date: date ? String(date) : void 0 };
+}
+function dedupe(items) {
+  const seen = /* @__PURE__ */ new Set();
+  const out = [];
+  for (const it of items) {
+    const key = `${it.name}|${it.review}`.toLowerCase();
+    if (!seen.has(key)) {
+      seen.add(key);
+      out.push(it);
+    }
+  }
+  return out;
+}
+function padTo24(items) {
+  const out = items.slice(0, 24);
+  if (out.length >= 24) return out;
+  let i = 0;
+  while (out.length < 24 && items.length > 0) {
+    const base = items[i % items.length];
+    out.push({ ...base, name: `${base.name} \xB7 ${Math.floor(out.length / items.length) + 2}` });
+    i++;
+  }
+  return out;
+}
+function fallbackTestimonials() {
+  return [
+    { name: "Andi Pratama", review: "Proses cepat dan jelas, dokumen beres tanpa ribet. Mantap!", rating: 5 },
+    { name: "Siti Lestari", review: "Timnya responsif dan sabar menjelaskan. Sangat membantu.", rating: 5 },
+    { name: "Budi Santoso", review: "Harga transparan, layanan profesional. Recomended!", rating: 5 },
+    { name: "Dewi Kartika", review: "Pengurusan NIB selesai tepat waktu. Good job!", rating: 5 },
+    { name: "Rangga Saputra", review: "Pertama kali urus PT, dibimbing step by step. Puas.", rating: 5 },
+    { name: "Yuni Maharani", review: "Virtual Office rapi dan representatif. Nilai plus!", rating: 4 },
+    { name: "Fajar Nugraha", review: "Komunikasi lancar, update progress rutin. Profesional.", rating: 5 },
+    { name: "Maya Putri", review: "Pelayanan ramah, hasil sesuai janji. Terima kasih!", rating: 5 },
+    { name: "Hendra Wijaya", review: "Legalitas clear, dokumen lengkap. Recommended.", rating: 5 },
+    { name: "Nadia Safitri", review: "Pengerjaan rapi, timeline on point. Keren.", rating: 5 },
+    { name: "Iqbal Maulana", review: "Support after sales juga oke. Senang bekerjasama.", rating: 5 },
+    { name: "Citra Ayu", review: "Semua proses dijelaskan detail, jadi tenang.", rating: 5 },
+    { name: "Teguh Prakoso", review: "Fast response dan profesional.", rating: 5 },
+    { name: "Ririn Oktaviani", review: "Berkas rapi, tinggal pakai. Sungguh membantu.", rating: 5 },
+    { name: "Dimas Alamsyah", review: "On budget, on time. Luar biasa.", rating: 5 },
+    { name: "Anisa Rahma", review: "Pelayanan ramah, hasil memuaskan.", rating: 5 },
+    { name: "Wahyu Hidayat", review: "Sangat terbantu untuk urus perizinan.", rating: 5 },
+    { name: "Fitri Handayani", review: "VO strategis, fasilitas lengkap.", rating: 4 },
+    { name: "Galih Kurnia", review: "Dokumen valid dan resmi. Mantap.", rating: 5 },
+    { name: "Putri Amelia", review: "Tim ahli dan komunikatif.", rating: 5 },
+    { name: "Rafi Akbar", review: "Proses mudah, hasil jelas.", rating: 5 },
+    { name: "Nisa Fadhila", review: "Cepat, amanah, terpercaya.", rating: 5 },
+    { name: "Reza Aditya", review: "Sesuai kebutuhan bisnis saya.", rating: 5 },
+    { name: "Aulia Syifa", review: "Pelayanan terbaik sejauh ini.", rating: 5 }
+  ];
+}
+const testimonials = defineEventHandler(async (event) => {
+  var _a;
+  const config = useRuntimeConfig();
+  const q = getQuery$1(event);
+  const endpoint = q.endpoint || ((_a = config.public) == null ? void 0 : _a.testimonialsEndpoint);
+  try {
+    let items = [];
+    if (endpoint) {
+      const res = await $fetch(endpoint, { timeout: 7e3 }).catch(() => null);
+      const arr = Array.isArray(res) ? res : Array.isArray(res == null ? void 0 : res.data) ? res.data : [];
+      const normalized = arr.map(normalizeItem).filter(Boolean);
+      items = dedupe(normalized);
+    }
+    if (!items || items.length === 0) {
+      items = fallbackTestimonials();
+    }
+    return padTo24(items);
+  } catch (e) {
+    return padTo24(fallbackTestimonials());
+  }
+});
+
+const testimonials$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: testimonials
 }, Symbol.toStringTag, { value: 'Module' }));
 
 function renderPayloadResponse(ssrContext) {

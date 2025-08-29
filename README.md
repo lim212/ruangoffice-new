@@ -5,8 +5,8 @@ This repository was converted from a standalone `index.html` into a minimal Nuxt
 ## How it works
 
 - Essential `<head>` meta, favicon links, fonts, and external CSS/JS are declared in `nuxt.config.ts` under `app.head`.
-- The original static HTML is preserved at `public/original.html`.
-- The Nuxt page `pages/index.vue` loads the original HTML at runtime and injects the `<body>` content into the page using `v-html`.
+- The original static HTML source is stored at `assets/original.html` and loaded at runtime via Vite raw import; it is not exposed as a public route to avoid duplicate pages.
+- The homepage `pages/index.vue` is the single source of truth and injects the `<body>` content from `assets/original.html`.
 
 This approach minimizes manual changes and keeps the original layout and content intact while providing a Nuxt app structure.
 

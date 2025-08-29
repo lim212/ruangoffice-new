@@ -198,18 +198,46 @@
       </div>
     </div>
   </section>
+
+  <!-- Simple Tailwind table implementation -->
+  <section class="my-8">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="mb-3">
+        <input v-model="query" type="text" placeholder="Cari kode, judul, atau deskripsi..." class="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring focus:ring-blue-200" />
+      </div>
+      <div class="overflow-x-auto">
+        <table class="min-w-full border border-gray-200 text-sm">
+          <thead class="bg-gray-100">
+            <tr>
+              <th class="text-left px-4 py-2 border-b">Kode</th>
+              <th class="text-left px-4 py-2 border-b">Judul</th>
+              <th class="text-left px-4 py-2 border-b">Deskripsi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(row, idx) in filteredTable" :key="row.code" :class="idx % 2 === 1 ? 'bg-gray-50' : ''">
+              <td class="align-top px-4 py-2 border-b whitespace-nowrap font-semibold">{{ row.code }}</td>
+              <td class="align-top px-4 py-2 border-b">{{ row.title }}</td>
+              <td class="align-top px-4 py-2 border-b">{{ row.description }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
 </template>
 
 <script setup lang="ts">
 import { computed, ref, watch, onMounted } from 'vue'
-import { useFetch, useHead } from '#app'
+import { useFetch } from '#app'
 import { useRoute, useRouter } from '#imports'
+import { useAppSeoMeta } from '~/composables/useSeoMeta'
 
-useHead({
+useAppSeoMeta({
   title: 'KBLI — RuangOffice',
-  meta: [
-    { name: 'description', content: 'Cari dan filter daftar KBLI (Klasifikasi Baku Lapangan Usaha Indonesia) berdasarkan kode, judul, dan uraian.' }
-  ]
+  description: 'Cari dan filter daftar KBLI (Klasifikasi Baku Lapangan Usaha Indonesia) berdasarkan kode, judul, dan uraian.',
+  keywords: ['kbli', 'klasifikasi', 'usaha', 'pencarian', 'filter']
 })
 
 // Category mapping based on first two digits of KBLI code
@@ -253,6 +281,25 @@ function getSectionLabel(section: string): string {
 }
 
 const { data, pending, error } = await useFetch('/kbli.json', { server: false, key: 'kbli-data', default: () => [] as any[] })
+
+// Simple table data refs for requirement
+const kbliData = ref<any[]>([])
+watch(data, (val) => {
+  const v = (val as any) ?? []
+  kbliData.value = Array.isArray(v) ? v : []
+}, { immediate: true })
+
+const query = ref('')
+const filteredTable = computed(() => {
+  const q = (query.value || '').toLowerCase().trim()
+  if (!q) return kbliData.value
+  return kbliData.value.filter((it: any) => {
+    const code = String(it.code || '').toLowerCase()
+    const title = String(it.title || '').toLowerCase()
+    const desc = String(it.description || '').toLowerCase()
+    return code.includes(q) || title.includes(q) || desc.includes(q)
+  })
+})
 
 // Local reactive states
 const search = ref('')

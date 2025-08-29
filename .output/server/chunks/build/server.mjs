@@ -1,4 +1,4 @@
-import { hasInjectionContext, getCurrentInstance, defineAsyncComponent, defineComponent, h, inject, computed, unref, shallowRef, provide, shallowReactive, ref, Suspense, Fragment, useSSRContext, createApp, withCtx, createVNode, toRef, onErrorCaptured, onServerPrefetch, resolveDynamicComponent, reactive, effectScope, isReadonly, isRef, isShallow, isReactive, toRaw, nextTick, mergeProps, getCurrentScope } from 'vue';
+import { hasInjectionContext, getCurrentInstance, inject, defineAsyncComponent, defineComponent, h, computed, unref, shallowRef, provide, shallowReactive, ref, Suspense, Fragment, useSSRContext, createApp, withCtx, createVNode, toRef, onErrorCaptured, onServerPrefetch, resolveDynamicComponent, reactive, effectScope, isReadonly, isRef, isShallow, isReactive, toRaw, nextTick, mergeProps, getCurrentScope } from 'vue';
 import { h as createError$1, k as hasProtocol, l as isScriptProtocol, m as joinURL, w as withQuery, n as sanitizeStatusCode, o as getContext, $ as $fetch, p as createHooks, q as executeAsync, r as toRouteMatcher, v as createRouter$1, x as defu } from '../_/nitro.mjs';
 import { b as baseURL } from '../routes/renderer.mjs';
 import { useRoute as useRoute$1, RouterView, createMemoryHistory, createRouter, START_LOCATION } from 'vue-router';
@@ -385,16 +385,57 @@ async function getRouteRules(arg) {
     return defu({}, ..._routeRulesMatcher.matchAll(path).reverse());
   }
 }
+const __nuxt_page_meta$1 = { ssr: false, layoutChrome: true };
+const __nuxt_page_meta = { ssr: false };
 const _routes = [
+  {
+    name: "blog",
+    path: "/blog",
+    component: () => import('./blog-B0e5Kgi-.mjs'),
+    children: [
+      {
+        name: "blog-slug",
+        path: ":slug()",
+        component: () => import('./_slug_-CQvfhqzh.mjs')
+      }
+    ]
+  },
   {
     name: "kbli",
     path: "/kbli",
-    component: () => import('./kbli-CJd_M0Of.mjs')
+    component: () => import('./kbli-BT2eUssx.mjs')
   },
   {
     name: "index",
     path: "/",
-    component: () => import('./index-CnfmdUue.mjs')
+    meta: __nuxt_page_meta$1 || {},
+    component: () => import('./index-MsIXj9TY.mjs')
+  },
+  {
+    name: "price",
+    path: "/price",
+    meta: __nuxt_page_meta || {},
+    component: () => import('./price-CpXdozXF.mjs')
+  },
+  {
+    name: "berita",
+    path: "/berita",
+    component: () => import('./berita-DHQm7Tuu.mjs')
+  },
+  {
+    name: "peraturan",
+    path: "/peraturan",
+    component: () => import('./peraturan-DgCTJ0Z2.mjs')
+  },
+  {
+    name: "hubungi-kami",
+    path: "/hubungi-kami",
+    component: () => import('./hubungi-kami-Cxfs5rt-.mjs')
+  },
+  {
+    name: "company-profile",
+    path: "/company-profile",
+    component: () => import('./company-profile-BcrturiU.mjs')
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -743,7 +784,7 @@ const plugins = [
   components_plugin_z4hgvsiddfKkfXTP6M8M4zG5Cb7sGnDhcryKVM45Di4
 ];
 const layouts = {
-  default: defineAsyncComponent(() => import('./default-Bh-wlLP6.mjs').then((m) => m.default || m))
+  default: defineAsyncComponent(() => import('./default-CvfHnbl7.mjs').then((m) => m.default || m))
 };
 const LayoutLoader = defineComponent({
   name: "LayoutLoader",
@@ -1004,8 +1045,8 @@ const _sfc_main$1 = {
     const statusMessage = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-Cima2yK6.mjs'));
-    const _Error = defineAsyncComponent(() => import('./error-500-dSD80SKK.mjs'));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-ByblgJAp.mjs'));
+    const _Error = defineAsyncComponent(() => import('./error-500-BAr4xZ1y.mjs'));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(unref(ErrorTemplate), mergeProps({ statusCode: unref(statusCode), statusMessage: unref(statusMessage), description: unref(description), stack: unref(stack) }, _attrs), null, _parent));
@@ -1086,5 +1127,5 @@ let entry;
 }
 const entry$1 = (ssrContext) => entry(ssrContext);
 
-export { useNuxtApp as a, useRuntimeConfig as b, nuxtLinkDefaults as c, asyncDataDefaults as d, entry$1 as default, createError as e, fetchDefaults as f, navigateTo as n, resolveRouteObject as r, tryUseNuxtApp as t, useRouter as u };
+export { useRouter as a, useRuntimeConfig as b, createError as c, useNuxtApp as d, entry$1 as default, asyncDataDefaults as e, fetchDefaults as f, nuxtLinkDefaults as g, navigateTo as n, resolveRouteObject as r, tryUseNuxtApp as t, useRoute as u };
 //# sourceMappingURL=server.mjs.map

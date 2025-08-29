@@ -1,1 +1,0 @@
-import{$ as r,a0 as o,a1 as u,J as c,a2 as i}from"./Cckli-Kh.js";function x(e){const t=e||o();return t?.ssrContext?.head||t?.runWithContext(()=>{if(u())return c(i)})}function d(e,t={}){const n=x(t.nuxt);if(n)return r(e,{head:n,...t})}const h=(e,t)=>{const n=e.__vccOpts||e;for(const[a,s]of t)n[a]=s;return n};export{h as _,d as u};

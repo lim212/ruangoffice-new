@@ -5,192 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bcd0e7cf-1327-4678-9409-4a107b88f5b6" name="Changes" comment="init asset">
-      <change afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/KBLI_-_Isi_Buku.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/blog.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/blog/[slug].vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/peraturan.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/berita.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/berita.seed.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/peraturan.seed.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/extract-peraturan.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/generate-seo-titles.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/scrape-peraturan.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/api/testimonials.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/app.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/app.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/components.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/components.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/dev/index.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/dev/index.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/dev/index.mjs.map" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/dev/index.mjs.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/client/_nuxt/BPQtE_pu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/client/_nuxt/CsbuRiZ8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/client/_nuxt/CtcVx8eI.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/client/_nuxt/D_rfAowf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/client/_nuxt/Gxdnorbm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/client/_nuxt/error-404.DqZyKpgk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/client/_nuxt/error-500.CZqNkBuR.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/client/_nuxt/index.DR7YqYJ6.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/_plugin-vue_export-helper-BUM9pxQf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/_plugin-vue_export-helper-BUM9pxQf.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/_plugin-vue_export-helper-BUM9pxQf.js.map.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/error-404-DTDiq1o5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/error-404-DTDiq1o5.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/error-404-DTDiq1o5.js.map.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/error-404-styles-1.mjs-BM9_Q4j3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/error-404-styles-1.mjs-BM9_Q4j3.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/error-404-styles-1.mjs-BM9_Q4j3.js.map.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/error-404-styles.DFuUZ_1i.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/error-404-styles.DYPeZSru.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/error-500-FSbgmqTm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/error-500-FSbgmqTm.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/error-500-FSbgmqTm.js.map.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/error-500-styles-1.mjs-mxY_iheb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/error-500-styles-1.mjs-mxY_iheb.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/error-500-styles-1.mjs-mxY_iheb.js.map.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/error-500-styles.D5zYv3n5.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/error-500-styles.DH4SuYyS.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/index-BBXCv0tY.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/index-BBXCv0tY.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/index-BBXCv0tY.js.map.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/index-styles-1.mjs-BZhUzlg2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/index-styles-1.mjs-BZhUzlg2.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/index-styles-1.mjs-BZhUzlg2.js.map.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/index-styles.DV8ttYMU.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/_nuxt/index-styles.Ddwk77G7.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/client.manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/dist/server/client.manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/client.manifest.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/dist/server/client.manifest.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/server.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/dist/server/server.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/server.mjs.map" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/dist/server/server.mjs.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/server.mjs.map.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/dist/server/server.mjs.map.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/styles.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/dist/server/styles.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/imports.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/imports.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/manifest/latest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/manifest/latest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/manifest/meta/79ac728c-a6ce-43b0-be20-dc03771beae6.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/manifest/meta/dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/manifest/meta/dev.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/nitro.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/nitro.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/nuxt.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/nuxt.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/nuxt.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/nuxt.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/schema/nuxt.schema.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/schema/nuxt.schema.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/schema/nuxt.schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/schema/nuxt.schema.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/tsconfig.server.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/tsconfig.server.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/types/app-defaults.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/types/app-defaults.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/types/app.config.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/types/app.config.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/types/build.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/types/build.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/types/imports.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/types/imports.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/types/layouts.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/types/layouts.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/types/middleware.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/types/middleware.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/types/nitro-config.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/types/nitro-config.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/types/nitro-imports.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/types/nitro-imports.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/types/nitro-middleware.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/types/nitro-middleware.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/types/nitro-nuxt.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/types/nitro-nuxt.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/types/nitro-routes.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/types/nitro-routes.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/types/nitro.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/types/nitro.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/types/plugins.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/types/plugins.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/types/schema.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/types/schema.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.output/nitro.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/nitro.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/public/_nuxt/BPQtE_pu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/public/_nuxt/CsbuRiZ8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/public/_nuxt/CtcVx8eI.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/public/_nuxt/D_rfAowf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/public/_nuxt/Gxdnorbm.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.output/public/_nuxt/builds/latest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/public/_nuxt/builds/latest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/public/_nuxt/builds/meta/79ac728c-a6ce-43b0-be20-dc03771beae6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/public/_nuxt/error-404.DqZyKpgk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/public/_nuxt/error-500.CZqNkBuR.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/public/_nuxt/index.DR7YqYJ6.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/public/assets/ruangoffice/assets/vendor/lightbox/css/lightbox.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/.output/public/assets/ruangoffice/assets/vendor/lightbox/css/lightbox.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/public/assets/ruangoffice/assets/vendor/lightbox/js/lightbox.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/.output/public/assets/ruangoffice/assets/vendor/lightbox/js/lightbox.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/public/assets/ruangoffice/build/assets/app-BEcqXY6c.js" beforeDir="false" afterPath="$PROJECT_DIR$/.output/public/assets/ruangoffice/build/assets/app-BEcqXY6c.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/public/assets/ruangoffice/build/assets/app-ESTwb5-4.css" beforeDir="false" afterPath="$PROJECT_DIR$/.output/public/assets/ruangoffice/build/assets/app-ESTwb5-4.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/public/assets/ruangoffice/css/editor-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/.output/public/assets/ruangoffice/css/editor-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/public/assets/ruangoffice/css/sch-style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/.output/public/assets/ruangoffice/css/sch-style2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/public/assets/ruangoffice/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/.output/public/assets/ruangoffice/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/public/assets/ruangoffice/download-report.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/public/assets/ruangoffice/download-report.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/public/assets/ruangoffice/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/.output/public/assets/ruangoffice/js/scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/public/assets/ruangoffice/widget/whatsapp/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/.output/public/assets/ruangoffice/widget/whatsapp/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/public/assets/ruangoffice/widget/whatsapp/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/.output/public/assets/ruangoffice/widget/whatsapp/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/public/original.html" beforeDir="false" afterPath="$PROJECT_DIR$/.output/public/original.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/_/error-500.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/chunks/_/error-500.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.output/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/.output/public/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.output/server/chunks/_/nitro.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/chunks/_/nitro.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/_/nitro.mjs.map" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/chunks/_/nitro.mjs.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/_plugin-vue_export-helper-BUM9pxQf.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/_plugin-vue_export-helper-BUM9pxQf.mjs.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/client.manifest.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/chunks/build/client.manifest.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/client.manifest.mjs.map" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/chunks/build/client.manifest.mjs.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/error-404-DTDiq1o5.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/error-404-DTDiq1o5.mjs.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/error-404-styles-1.mjs-BM9_Q4j3.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/error-404-styles-1.mjs-BM9_Q4j3.mjs.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/error-404-styles.DFuUZ_1i.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/error-404-styles.DFuUZ_1i.mjs.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/error-404-styles.DYPeZSru.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/error-404-styles.DYPeZSru.mjs.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/error-500-FSbgmqTm.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/error-500-FSbgmqTm.mjs.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/error-500-styles-1.mjs-mxY_iheb.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/error-500-styles-1.mjs-mxY_iheb.mjs.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/error-500-styles.D5zYv3n5.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/error-500-styles.D5zYv3n5.mjs.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/error-500-styles.DH4SuYyS.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/error-500-styles.DH4SuYyS.mjs.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/index-BBXCv0tY.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/index-BBXCv0tY.mjs.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/index-styles-1.mjs-BZhUzlg2.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/index-styles-1.mjs-BZhUzlg2.mjs.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/index-styles.DV8ttYMU.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/index-styles.DV8ttYMU.mjs.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/index-styles.Ddwk77G7.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/index-styles.Ddwk77G7.mjs.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/server.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/chunks/build/server.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/server.mjs.map" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/chunks/build/server.mjs.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/styles.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/chunks/build/styles.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/styles.mjs.map" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/chunks/build/styles.mjs.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/routes/renderer.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/chunks/routes/renderer.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/virtual/_virtual_spa-template.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/chunks/virtual/_virtual_spa-template.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/index.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/index.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/node_modules/@babel/parser/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/node_modules/@babel/parser/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/node_modules/@vue/compiler-core/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/node_modules/@vue/compiler-core/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/node_modules/@vue/compiler-dom/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/node_modules/@vue/compiler-dom/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/node_modules/@vue/compiler-ssr/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/node_modules/@vue/compiler-ssr/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/node_modules/@vue/devtools-api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/node_modules/@vue/devtools-api/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/node_modules/@vue/reactivity/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/node_modules/@vue/reactivity/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/node_modules/@vue/runtime-core/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/node_modules/@vue/runtime-core/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/node_modules/@vue/runtime-dom/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/node_modules/@vue/runtime-dom/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/node_modules/@vue/server-renderer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/node_modules/@vue/server-renderer/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/node_modules/@vue/shared/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/node_modules/@vue/shared/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/node_modules/devalue/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/node_modules/devalue/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/node_modules/entities/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/node_modules/entities/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/node_modules/estree-walker/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/node_modules/estree-walker/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/node_modules/hookable/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/node_modules/hookable/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/node_modules/source-map-js/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/node_modules/source-map-js/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/node_modules/ufo/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/node_modules/ufo/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/node_modules/unhead/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/node_modules/unhead/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/node_modules/vue-bundle-renderer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/node_modules/vue-bundle-renderer/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/node_modules/vue-router/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/node_modules/vue-router/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/node_modules/vue/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/node_modules/vue/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vite/client/deps/@vue_devtools-core.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vite/client/deps/@vue_devtools-core.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vite/client/deps/@vue_devtools-core.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vite/client/deps/@vue_devtools-core.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vite/client/deps/@vue_devtools-kit.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vite/client/deps/@vue_devtools-kit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vite/client/deps/@vue_devtools-kit.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vite/client/deps/@vue_devtools-kit.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/TopBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/TopBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/vite/client/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vite/client/deps/_metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vite/client/deps/chunk-OT3Q6CPD.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vite/client/deps/chunk-OT3Q6CPD.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vite/client/deps/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vite/client/deps/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/hubungi-kami.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/hubungi-kami.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/css/sch-style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/sch-style2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/ruangoffice/assets/vendor/lightbox/css/lightbox.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/ruangoffice/assets/vendor/lightbox/css/lightbox.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/ruangoffice/assets/vendor/lightbox/js/lightbox.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/ruangoffice/assets/vendor/lightbox/js/lightbox.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/ruangoffice/build/assets/app-BEcqXY6c.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/ruangoffice/build/assets/app-BEcqXY6c.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/ruangoffice/build/assets/app-ESTwb5-4.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/ruangoffice/build/assets/app-ESTwb5-4.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/ruangoffice/css/editor-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/ruangoffice/css/editor-style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/ruangoffice/css/sch-style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/ruangoffice/css/sch-style2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/ruangoffice/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/ruangoffice/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/ruangoffice/download-report.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/ruangoffice/download-report.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/ruangoffice/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/ruangoffice/js/scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/ruangoffice/widget/whatsapp/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/ruangoffice/widget/whatsapp/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/ruangoffice/widget/whatsapp/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/ruangoffice/widget/whatsapp/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/widget/whatsapp/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/widget/whatsapp/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/original.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/original.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/download-ruangoffice-assets.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/download-ruangoffice-assets.cjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,9 +102,15 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "configurable.group.editor",
     "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\FELIX\WebstormProjects\ruangoffice-news\public\assets\img" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -271,6 +135,9 @@
       <workItem from="1755399874944" duration="2250000" />
       <workItem from="1756259088187" duration="7563000" />
       <workItem from="1756297798531" duration="5940000" />
+      <workItem from="1756350652839" duration="5829000" />
+      <workItem from="1756366238977" duration="830000" />
+      <workItem from="1756383796199" duration="33164000" />
     </task>
     <task id="LOCAL-00001" summary="init asset">
       <option name="closed" value="true" />
@@ -280,7 +147,23 @@
       <option name="project" value="LOCAL" />
       <updated>1755219189441</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init asset">
+      <option name="closed" value="true" />
+      <created>1756429407279</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1756429407279</updated>
+    </task>
+    <task id="LOCAL-00003" summary="init asset">
+      <option name="closed" value="true" />
+      <created>1756429423713</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1756429423713</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
