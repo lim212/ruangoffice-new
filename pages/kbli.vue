@@ -1,10 +1,11 @@
 <template>
   <section class="kbli-page">
     <div class="container my-4">
-      <div class="row g-3 align-items-end">
+      <div class="row g-3 align-items-end kbli-toolbar">
         <div class="col-12">
-          <h1 class="h3 mb-0">Daftar KBLI</h1>
-          <p class="text-muted mb-0">Pencarian dan filter Klasifikasi Baku Lapangan Usaha Indonesia (KBLI)</p>
+          <h1 class="h3 mb-0">KBLI Berbasis Risiko</h1>
+          <p class="text-muted mb-0">Cari KBLI (kode/judul) dan lihat uraian secara ringkas. Tampilan terinspirasi OSS RBA untuk kemudahan navigasi.</p>
+          <div class="kbli-underline"></div>
         </div>
         <div class="col-12 col-md-8 position-relative">
           <label for="kbliSearch" class="form-label">Cari</label>
@@ -77,6 +78,46 @@
         </div>
       </div>
 
+      <!-- Quick 4 cards (popular search shortcuts) -->
+      <div class="ro-quick-grid row g-3 mt-3">
+        <div class="col-6 col-md-3">
+          <button type="button" class="ro-quick-card w-100" @click="setQuick('Virtual Office')">
+            <div class="ro-quick-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h2M12 7h2M8 11h2M12 11h2M8 15h2M12 15h2"/></svg>
+            </div>
+            <div class="ro-quick-title">Virtual Office</div>
+            <div class="ro-quick-sub">Alamat bisnis resmi</div>
+          </button>
+        </div>
+        <div class="col-6 col-md-3">
+          <button type="button" class="ro-quick-card w-100" @click="setQuick('Pendirian PT')">
+            <div class="ro-quick-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h6"/></svg>
+            </div>
+            <div class="ro-quick-title">Pendirian PT</div>
+            <div class="ro-quick-sub">Legalitas usaha</div>
+          </button>
+        </div>
+        <div class="col-6 col-md-3">
+          <button type="button" class="ro-quick-card w-100" @click="setQuick('NIB')">
+            <div class="ro-quick-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M8 12l-2 6l6-2l6 2l-2-6"/></svg>
+            </div>
+            <div class="ro-quick-title">NIB</div>
+            <div class="ro-quick-sub">Nomor Induk Berusaha</div>
+          </button>
+        </div>
+        <div class="col-6 col-md-3">
+          <button type="button" class="ro-quick-card w-100" @click="setQuick('HAKI')">
+            <div class="ro-quick-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 4v5c0 5-3.5 8-7 9c-3.5-1-7-4-7-9V7l7-4z"/></svg>
+            </div>
+            <div class="ro-quick-title">HAKI</div>
+            <div class="ro-quick-sub">Merek Dagang</div>
+          </button>
+        </div>
+      </div>
+
       <div class="d-flex justify-content-between align-items-center mt-3">
         <small class="text-muted">Menampilkan {{ displayStart.toLocaleString('id-ID') }}–{{ displayEnd.toLocaleString('id-ID') }} dari {{ totalItems.toLocaleString('id-ID') }} KBLI</small>
         <div v-if="pending" class="text-warning"><i class="fa-solid fa-circle-notch fa-spin"></i> Memuat data…</div>
@@ -125,6 +166,10 @@
               </span>
             </div>
             <p class="mb-2 text-muted" v-html="highlight(it.description)"></p>
+            <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+              <span v-if="it.risk" :class="['badge', riskClass(it.risk)]">Tingkat Risiko: {{ riskLabel(it.risk) }}</span>
+              <span v-for="(perm, pidx) in parsePermits(it.permits)" :key="'perm-'+it.code+'-'+pidx" class="badge bg-warning text-dark">{{ perm }}</span>
+            </div>
             <div class="d-flex gap-2 flex-wrap">
               <button type="button" class="btn btn-sm btn-outline-primary" @click="copyCode(it.code)">
                 <i class="fa-regular fa-copy me-1"></i>
@@ -156,6 +201,29 @@
           <small class="text-muted">Halaman {{ page }} dari {{ totalPages }}</small>
           <button type="button" class="btn btn-outline-secondary" @click="nextPage" :disabled="page >= totalPages || totalItems === 0">Berikutnya</button>
         </nav>
+
+        <!-- Bottom info/CTA box -->
+        <div class="ro-bottom-box mt-4">
+          <div class="ro-bottom-inner">
+            <div class="ro-bottom-text">
+              <h3 class="ro-bottom-title">Butuh bantuan memilih KBLI?</h3>
+              <p class="ro-bottom-desc">Pilih cepat kata kunci populer atau konsultasi gratis via WhatsApp.</p>
+              <div class="ro-bottom-chips">
+                <button type="button" class="ro-chip" @click="setQuick('Virtual Office')">Virtual Office</button>
+                <button type="button" class="ro-chip" @click="setQuick('Pendirian PT')">Pendirian PT</button>
+                <button type="button" class="ro-chip" @click="setQuick('NIB')">NIB</button>
+                <button type="button" class="ro-chip" @click="setQuick('HAKI')">HAKI</button>
+                <button type="button" class="ro-chip" @click="setQuick('BPOM')">BPOM</button>
+                <button type="button" class="ro-chip" @click="setQuick('PKP')">PKP</button>
+              </div>
+            </div>
+            <div class="ro-bottom-cta">
+              <a href="https://wa.me/62811113666" target="_blank" rel="noopener" class="btn btn-success ro-wa-btn">
+                <i class="fa-brands fa-whatsapp me-2"></i> Konsultasi WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
 
         <!-- Detail Modal -->
         <div class="modal fade" id="kbliDetailModal" tabindex="-1" aria-labelledby="kbliDetailLabel" aria-hidden="true">
@@ -199,32 +267,6 @@
     </div>
   </section>
 
-  <!-- Simple Tailwind table implementation -->
-  <section class="my-8">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="mb-3">
-        <input v-model="query" type="text" placeholder="Cari kode, judul, atau deskripsi..." class="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring focus:ring-blue-200" />
-      </div>
-      <div class="overflow-x-auto">
-        <table class="min-w-full border border-gray-200 text-sm">
-          <thead class="bg-gray-100">
-            <tr>
-              <th class="text-left px-4 py-2 border-b">Kode</th>
-              <th class="text-left px-4 py-2 border-b">Judul</th>
-              <th class="text-left px-4 py-2 border-b">Deskripsi</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(row, idx) in filteredTable" :key="row.code" :class="idx % 2 === 1 ? 'bg-gray-50' : ''">
-              <td class="align-top px-4 py-2 border-b whitespace-nowrap font-semibold">{{ row.code }}</td>
-              <td class="align-top px-4 py-2 border-b">{{ row.title }}</td>
-              <td class="align-top px-4 py-2 border-b">{{ row.description }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
 
 </template>
 
@@ -310,11 +352,14 @@ const categoryOptions = computed(() => SECTION_MAP.map(m => ({ value: m.section,
 
 // Enrich items with section computed
 const items = computed(() => {
-  const arr: { code: string; title: string; description: string; section: string }[] = (data.value || []).map((it: any) => ({
+  const arr: any[] = (data.value || []).map((it: any) => ({
     code: it.code,
     title: it.title,
     description: it.description,
-    section: getSection(String(it.code || ''))
+    section: getSection(String(it.code || '')),
+    // optional fields if dataset provides
+    risk: it.risk || it.risk_level || it.tingkat_risiko || '',
+    permits: it.permits || it.perizinan || it.output || it.outputs || null
   }))
   const sectionOrder = (s: string) => {
     const idx = SECTION_MAP.findIndex(m => m.section === s)
@@ -341,6 +386,36 @@ function highlight(text: string): string {
   const safe = escapeHtml(t)
   const re = new RegExp(`(${escapeRegExp(q)})`, 'ig')
   return safe.replace(re, '<mark>$1</mark>').replace(/\r?\n/g, '<br>')
+}
+
+// Optional: map risk level to human label (case-insensitive)
+function riskLabel(v: any): string {
+  const s = String(v || '').trim().toLowerCase()
+  if (!s) return ''
+  if (['r', 'rendah', 'low'].includes(s)) return 'Rendah'
+  if (['mr', 'menengah rendah', 'medium low', 'menengah-rendah'].includes(s)) return 'Menengah Rendah'
+  if (['mt', 'menengah tinggi', 'medium high', 'menengah-tinggi'].includes(s)) return 'Menengah Tinggi'
+  if (['t', 'tinggi', 'high'].includes(s)) return 'Tinggi'
+  return (s.charAt(0).toUpperCase() + s.slice(1))
+}
+
+// Optional: map risk level to bootstrap badge class
+function riskClass(v: any): string {
+  const s = String(v || '').trim().toLowerCase()
+  if (['r', 'rendah', 'low'].includes(s)) return 'bg-success'
+  if (['mr', 'menengah rendah', 'medium low', 'menengah-rendah'].includes(s)) return 'bg-primary'
+  if (['mt', 'menengah tinggi', 'medium high', 'menengah-tinggi'].includes(s)) return 'bg-warning text-dark'
+  if (['t', 'tinggi', 'high'].includes(s)) return 'bg-danger'
+  return 'bg-secondary'
+}
+
+// Normalize permits/output into array of chips
+function parsePermits(v: any): string[] {
+  if (!v) return []
+  if (Array.isArray(v)) return v.map(x => String(x || '').trim()).filter(Boolean)
+  const s = String(v)
+  // split by comma/semicolon/pipe
+  return s.split(/[,;|]/).map(x => x.trim()).filter(Boolean)
 }
 
 const filteredItems = computed(() => {
@@ -459,6 +534,17 @@ function viewAll() {
   if (typeof window === 'undefined') return
   const el = document.getElementById('kbliList')
   if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
+
+// Quick helper: set search term from top/bottom cards and go to results
+function setQuick(term: string) {
+  try {
+    search.value = term
+    suggestionsOpen.value = false
+    page.value = 1
+    const list = document.getElementById('kbliList')
+    if (list) list.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  } catch {}
 }
 
 // Pagination state and computed
@@ -684,4 +770,82 @@ function shareWhatsApp(it: KbliItem) {
 
 /* Modal text rendering */
 #kbliDetailModal .modal-body { line-height: 1.6; }
+
+/* Toolbar card look */
+.kbli-toolbar {
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
+  border: 1px solid rgba(2,6,23,.08);
+  border-radius: 16px;
+  padding: 12px 12px 8px;
+  box-shadow: 0 8px 24px rgba(2,6,23,.06);
+}
+/* Underline accent */
+.kbli-underline {
+  width: 88px;
+  height: 4px;
+  border-radius: 9999px;
+  background: #eab308;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+/* Search input group pill */
+.kbli-toolbar .input-group {
+  border: 1px solid rgba(2,6,23,.08);
+  border-radius: 9999px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(2,6,23,.06);
+}
+.kbli-toolbar .input-group-text {
+  background: transparent;
+  border: 0;
+  color: #0ea5e9;
+}
+.kbli-toolbar .form-control {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+.kbli-toolbar .btn.btn-outline-secondary {
+  border: 0;
+  border-left: 1px solid rgba(2,6,23,.06);
+  background: #f1f5f9;
+  transition: all .2s ease;
+}
+.kbli-toolbar .btn.btn-outline-secondary:hover {
+  background: #e2e8f0;
+}
+
+/* Pills for small buttons (chips) */
+.kbli-page .btn.btn-sm {
+  border-radius: 9999px;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.kbli-page .btn.btn-sm:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,.08);
+}
+
+/* Result list polish */
+.kbli-page .list-group-item-action {
+  transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease;
+}
+.kbli-page .list-group-item-action:hover {
+  background-color: rgba(0,0,0,.02);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,.08);
+}
+
+/* Highlighted text */
+.kbli-page mark {
+  background: #fff3bf;
+  padding: 0 .1em;
+  border-radius: .2em;
+}
+
+/* Badges weight */
+.kbli-page .badge {
+  font-weight: 700;
+}
 </style>

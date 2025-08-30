@@ -1,72 +1,72 @@
 [
   {
-    "title": "Panduan Pendirian PT untuk Pemula",
-    "slug": "panduan-pendirian-pt-untuk-pemula",
-    "image": "https://picsum.photos/seed/pt1/800/500",
-    "content": "<p>Artikel ini membahas langkah-langkah awal dalam mendirikan Perseroan Terbatas (PT), mulai dari persyaratan dasar, pengajuan nama, hingga proses akta notaris dan pengesahan Kemenkumham.</p>",
+    "title": "Contoh Artikel Berita 1",
+    "slug": "contoh-artikel-berita-1",
+    "image": "/assets/img/Header-RuangOffice-Dekstop.png",
+    "content": "<p>Ini adalah isi artikel berita contoh pertama yang membahas layanan pendirian PT dan perkembangan regulasi terbaru di Indonesia.</p><h2>Poin Penting</h2><ul><li>Persyaratan dokumen</li><li>Estimasi waktu</li><li>Biaya dan langkah-langkah</li></ul>",
     "date": "2024-01-15"
   },
   {
-    "title": "Apa Itu PT PMA dan Bagaimana Cara Mendirikannya?",
-    "slug": "apa-itu-pt-pma-dan-cara-mendirikannya",
-    "image": "https://picsum.photos/seed/ptpma1/800/500",
-    "content": "<p>PT PMA (Penanaman Modal Asing) memungkinkan investor asing memiliki saham di Indonesia. Pelajari syarat, struktur kepemilikan, dan prosedur perizinan OSS.</p>",
-    "date": "2024-01-16"
+    "title": "Contoh Artikel Berita 2",
+    "slug": "contoh-artikel-berita-2",
+    "image": "/assets/img/Header-RuangOffice-Dekstop.png",
+    "content": "<p>Artikel kedua membahas PT PMA dan strategi masuk pasar Indonesia bagi investor asing.</p><p>Kami rangkum ketentuan modal, bidang usaha, serta alur pendaftaran OSS.</p>",
+    "date": "2024-02-10"
   },
   {
-    "title": "Keuntungan Menggunakan Virtual Office di Jakarta",
-    "slug": "keuntungan-menggunakan-virtual-office-di-jakarta",
-    "image": "https://picsum.photos/seed/vo1/800/500",
-    "content": "<p>Virtual Office memberikan alamat bisnis prestisius tanpa biaya kantor fisik. Cocok untuk startup dan UKM yang mengutamakan efisiensi.</p>",
-    "date": "2024-01-17"
+    "title": "Contoh Artikel Berita 3",
+    "slug": "contoh-artikel-berita-3",
+    "image": "/assets/img/Header-RuangOffice-Dekstop.png",
+    "content": "<p>Mengenal Virtual Office untuk efisiensi operasional bisnis rintisan serta manfaat alamat domisili usaha.</p>",
+    "date": "2024-03-05"
   },
   {
-    "title": "Langkah Mudah Pendirian CV di Indonesia",
-    "slug": "langkah-mudah-pendirian-cv-di-indonesia",
-    "image": "https://picsum.photos/seed/cv1/800/500",
-    "content": "<p>CV (Commanditaire Vennootschap) menjadi alternatif badan usaha yang lebih sederhana. Simak syarat dan proses pembentukannya.</p>",
-    "date": "2024-01-18"
+    "title": "Contoh Artikel Berita 4",
+    "slug": "contoh-artikel-berita-4",
+    "image": "/assets/img/Header-RuangOffice-Dekstop.png",
+    "content": "<p>Pendirian CV: perbedaan, kelebihan, dan kapan sebaiknya memilih CV dibanding PT untuk usaha Anda.</p>",
+    "date": "2024-04-01"
   },
   {
-    "title": "Proses Pengurusan Izin BPOM untuk Produk Anda",
-    "slug": "proses-pengurusan-izin-bpom-untuk-produk-anda",
-    "image": "https://picsum.photos/seed/bpom1/800/500",
-    "content": "<p>Ulasan mengenai dokumen, alur pendaftaran, hingga estimasi waktu pengurusan izin BPOM untuk produk makanan dan kosmetik.</p>",
-    "date": "2024-01-19"
+    "title": "Contoh Artikel Berita 5",
+    "slug": "contoh-artikel-berita-5",
+    "image": "/assets/img/Header-RuangOffice-Dekstop.png",
+    "content": "<p>Langkah-langkah pengurusan izin BPOM untuk produk makanan dan minuman UMKM.</p>",
+    "date": "2024-05-12"
   },
   {
-    "title": "Cara Mendaftarkan Merek Dagang (HAKI) dengan Mudah",
-    "slug": "cara-mendaftarkan-merek-dagang-haki-dengan-mudah",
-    "image": "https://picsum.photos/seed/haki1/800/500",
-    "content": "<p>Perlindungan merek penting untuk bisnis. Pelajari cara pendaftaran merek di DJKI, biaya, dan lamanya proses.</p>",
-    "date": "2024-01-20"
+    "title": "Contoh Artikel Berita 6",
+    "slug": "contoh-artikel-berita-6",
+    "image": "/assets/img/Header-RuangOffice-Dekstop.png",
+    "content": "<p>Pendaftaran Merek (HAKI): tahapan, biaya, jangka waktu, dan tips menghindari penolakan.</p>",
+    "date": "2024-06-20"
   },
   {
-    "title": "Panduan Sertifikasi Halal untuk UMKM",
-    "slug": "panduan-sertifikasi-halal-untuk-umkm",
-    "image": "https://picsum.photos/seed/halal1/800/500",
-    "content": "<p>Sertifikasi halal kini krusial bagi UMKM makanan. Ketahui persyaratan, alur pengajuan, dan lembaga terkait.</p>",
-    "date": "2024-01-21"
+    "title": "Contoh Artikel Berita 7",
+    "slug": "contoh-artikel-berita-7",
+    "image": "/assets/img/Header-RuangOffice-Dekstop.png",
+    "content": "<p>Proses sertifikasi halal untuk F&B: dokumen yang dibutuhkan, LPH, dan masa berlaku sertifikat.</p>",
+    "date": "2024-07-14"
   },
   {
-    "title": "Izin SIO: Apa dan Bagaimana Mengurusnya?",
-    "slug": "izin-sio-apa-dan-bagaimana-mengurusnya",
-    "image": "https://picsum.photos/seed/sio1/800/500",
-    "content": "<p>Surat Izin Operasional (SIO) dibutuhkan untuk jenis usaha tertentu. Artikel ini menjelaskan kategori, persyaratan, dan alur pengajuannya.</p>",
-    "date": "2024-01-22"
+    "title": "Contoh Artikel Berita 8",
+    "slug": "contoh-artikel-berita-8",
+    "image": "/assets/img/Header-RuangOffice-Dekstop.png",
+    "content": "<p>Izin SIO K3: pemahaman umum, kategori pekerjaan, dan pentingnya keselamatan kerja.</p>",
+    "date": "2024-08-09"
   },
   {
-    "title": "Mengenal IZIN BUJP untuk Usaha Jasa Pengamanan",
-    "slug": "mengenal-izin-bujp-untuk-usaha-jasa-pengamanan",
-    "image": "https://picsum.photos/seed/bujp1/800/500",
-    "content": "<p>BUJP adalah izin untuk perusahaan jasa pengamanan. Ketahui tahapan pengurusan dan regulasi yang berlaku.</p>",
-    "date": "2024-01-23"
+    "title": "Contoh Artikel Berita 9",
+    "slug": "contoh-artikel-berita-9",
+    "image": "/assets/img/Header-RuangOffice-Dekstop.png",
+    "content": "<p>Izin BUJP: tahapan, persyaratan, dan audit kepatuhan yang perlu diperhatikan perusahaan jasa pengamanan.</p>",
+    "date": "2024-09-18"
   },
   {
-    "title": "Tips Masuk ke Pasar Indonesia bagi Perusahaan Asing",
-    "slug": "tips-masuk-ke-pasar-indonesia-bagi-perusahaan-asing",
-    "image": "https://picsum.photos/seed/asing1/800/500",
-    "content": "<p>Ringkasan strategi market entry, pilihan badan usaha (PT PMA), dan kewajiban perizinan untuk perusahaan asing.</p>",
-    "date": "2024-01-24"
+    "title": "Contoh Artikel Berita 10",
+    "slug": "contoh-artikel-berita-10",
+    "image": "/assets/img/Header-RuangOffice-Dekstop.png",
+    "content": "<p>Panduan singkat ekspansi usaha asing di Indonesia melalui PT PMA dan kemitraan lokal.</p>",
+    "date": "2024-10-27"
   }
 ]

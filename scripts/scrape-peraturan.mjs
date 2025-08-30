@@ -1,238 +1,234 @@
 #!/usr/bin/env node
 
-// Puppeteer-based scraper for https://legalitas.org/database-peraturan
-// Outputs: public/peraturan.json with schema [{ jenis, nomor, tahun, tentang, file }]
-// Usage:
-//   node scripts\\scrape-peraturan.mjs [--headless=true|false] [--maxPages=200] [--timeout=20000]
-// Env:
-//   HEADLESS=0 to disable headless
+// Scraper for https://legalitas.org/database-peraturan
+// - Navigates all pagination pages (until no more Next)
+// - Extracts columns: Jenis Peraturan | Nomor | Tahun | Tentang | File
+// - Saves to public/peraturan.json
+// - Requires: puppeteer (preferred due to potentially dynamic table)
+// Fallback: if puppeteer fails, try axios+cheerio for at least first page.
 
-import path from 'node:path'
-import url from 'node:url'
 import { mkdir, writeFile } from 'node:fs/promises'
 import { existsSync } from 'node:fs'
+import path from 'node:path'
+import axios from 'axios'
+import * as cheerio from 'cheerio'
 import puppeteer from 'puppeteer'
 
-const __filename = url.fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
+const START_URL = 'https://legalitas.org/database-peraturan'
+const OUTPUT_PATH = path.resolve(process.cwd(), 'public', 'peraturan.json')
 
-const BASE = 'https://legalitas.org'
-const START_URL = BASE + '/database-peraturan'
-
-function parseArgs(argv) {
-  const out = {}
-  for (const a of argv.slice(2)) {
-    const m = a.match(/^--([^=]+)=(.*)$/)
-    if (m) out[m[1]] = m[2]
-  }
-  return out
-}
-
-function normalize(s) {
-  return (s ?? '').replace(/\s+/g, ' ').trim()
-}
-
-function isValidRow(row) {
-  if (!row) return false
-  const tahunOk = /^(19|20)\d{2}$/.test(String(row.tahun || ''))
-  const tentangOk = String(row.tentang || '').trim().length > 3
-  const jenisOk = String(row.jenis || '').trim().length > 0
-  const nomorOk = String(row.nomor || '').trim().length > 0
-  return tahunOk && tentangOk && (jenisOk || nomorOk)
-}
-
-async function extractRowsFromPage(page) {
-  // Returns array of { jenis, nomor, tahun, tentang, file }
-  return await page.evaluate(() => {
-    function norm(s) { return (s ?? '').replace(/\s+/g, ' ').trim() }
-
-    const results = []
-    const table = document.querySelector('table') || document.querySelector('table.dataTable')
-    if (!table) {
-      // Fallback: scan generic list items
-      document.querySelectorAll('tbody tr, tr').forEach((tr) => {
-        const tds = tr.querySelectorAll('td')
-        if (tds.length >= 4) {
-          const cells = Array.from(tds).map((td) => norm(td.textContent))
-          let jenis = cells[0] || ''
-          let nomor = cells[1] || ''
-          let tahun = (cells.find((c) => /\b(19|20)\d{2}\b/.test(c)) || '').match(/\b(19|20)\d{2}\b/)?.[0] || ''
-          let tentang = cells[cells.length - 2] || cells[2] || ''
-          let file = ''
-          const link = tr.querySelector('a[href*=".pdf" i]') || tr.querySelector('a[href*="download" i]')
-          if (link) file = new URL(link.getAttribute('href') || '', document.baseURI).toString()
-          results.push({ jenis, nomor, tahun, tentang, file })
-        }
-      })
-      return results
-    }
-
-    // Map headers to indices
-    const headers = Array.from(table.querySelectorAll('thead th')).map((th) => norm(th.textContent))
-    const map = {}
-    headers.forEach((h, i) => {
-      const key = h.toLowerCase()
-      if (key.includes('jenis')) map.jenis = i
-      else if (key.includes('nomor')) map.nomor = i
-      else if (key.includes('tahun')) map.tahun = i
-      else if (key.includes('tentang') || key.includes('judul')) map.tentang = i
-      else if (key.includes('file') || key.includes('pdf')) map.file = i
-    })
-
-    const trs = table.querySelectorAll('tbody tr')
-    trs.forEach((tr) => {
-      const tds = tr.querySelectorAll('td')
-      if (!tds || tds.length === 0) return
-      let jenis = '', nomor = '', tahun = '', tentang = '', file = ''
-
-      if (Object.keys(map).length >= 3) {
-        if (map.jenis != null && tds[map.jenis]) jenis = norm(tds[map.jenis].textContent)
-        if (map.nomor != null && tds[map.nomor]) nomor = norm(tds[map.nomor].textContent)
-        if (map.tahun != null && tds[map.tahun]) tahun = (norm(tds[map.tahun].textContent).match(/\b(19|20)\d{2}\b/) || [,''])[0] || ''
-        if (map.tentang != null && tds[map.tentang]) tentang = norm(tds[map.tentang].textContent)
-        if (map.file != null && tds[map.file]) {
-          const a = tds[map.file].querySelector('a[href]')
-          const href = a?.getAttribute('href') || ''
-          if (/\.pdf(\?|#|$)/i.test(href)) file = new URL(href, document.baseURI).toString()
-        }
-      } else {
-        const cells = Array.from(tds).map((td) => norm(td.textContent))
-        jenis = cells[0] || ''
-        nomor = cells[1] || ''
-        tahun = (cells.find((c) => /\b(19|20)\d{2}\b/.test(c)) || '').match(/\b(19|20)\d{2}\b/)?.[0] || ''
-        tentang = cells[cells.length - 2] || cells[2] || ''
-      }
-
-      if (!file) {
-        const link = tr.querySelector('a[href*=".pdf" i], a[href*="download" i]')
-        const href = link?.getAttribute('href') || ''
-        if (href) file = new URL(href, document.baseURI).toString()
-      }
-
-      results.push({ jenis, nomor, tahun, tentang, file })
-    })
-
-    return results
-  })
-}
-
-async function waitForTableRows(page, timeout) {
+/**
+ * Normalize and absolutize URL against base
+ * @param {string} href
+ * @param {string} base
+ */
+function toAbsoluteUrl(href, base) {
+  if (!href) return ''
   try {
-    await page.waitForSelector('tbody tr', { timeout })
+    return new URL(href, base).toString()
   } catch {
-    // Fallback to any <table>
-    await page.waitForSelector('table', { timeout })
+    return href
   }
 }
 
-async function clickNextIfAny(page) {
-  return await page.evaluate(() => {
-    const sels = [
-      'a.paginate_button.next:not(.disabled)',
-      'li.next:not(.disabled) a',
-      'a[rel="next"]',
-      'button[aria-label="Next"]:not([disabled])',
-      'a.next:not(.disabled)'
-    ]
-    for (const sel of sels) {
-      const el = document.querySelector(sel)
-      if (el) {
-        (el instanceof HTMLElement ? el : el).click()
-        return true
+/**
+ * Extract table rows from a cheerio DOM
+ * @param {import('cheerio').CheerioAPI} $
+ * @param {string} base
+ */
+function extractRowsCheerio($, base) {
+  /** @type {{ jenis: string, nomor: string, tahun: string, tentang: string, file: string }[]} */
+  const rows = []
+  const $tables = $('table')
+  $tables.each((_, tbl) => {
+    const $tbodyRows = $(tbl).find('tbody tr')
+    $tbodyRows.each((__, tr) => {
+      const tds = $(tr).find('td')
+      if (tds.length < 5) return
+      const jenis = $(tds[0]).text().trim()
+      const nomor = $(tds[1]).text().trim()
+      const tahun = $(tds[2]).text().trim()
+      const tentang = $(tds[3]).text().trim()
+      let file = ''
+      // try link inside last column
+      const link = $(tds[4]).find('a[href]').attr('href') || ''
+      file = toAbsoluteUrl(link, base)
+      rows.push({ jenis, nomor, tahun, tentang, file })
+    })
+  })
+  return rows
+}
+
+async function scrapeWithAxiosCheerio(url) {
+  const res = await axios.get(url, { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; RuangOfficeBot/1.0)' } })
+  const $ = cheerio.load(res.data)
+  return extractRowsCheerio($, url)
+}
+
+async function scrapeWithPuppeteer() {
+  const browser = await puppeteer.launch({ headless: 'new', args: ['--no-sandbox','--disable-setuid-sandbox'] })
+  const page = await browser.newPage()
+  await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
+  await page.goto(START_URL, { waitUntil: 'domcontentloaded' })
+
+  /** @type {{ jenis: string, nomor: string, tahun: string, tentang: string, file: string }[]} */
+  const all = []
+  const seen = new Set()
+
+  async function extractCurrentPage() {
+    // Wait for any table rows to appear
+    await page.waitForSelector('table tbody tr, table tr', { timeout: 30000 })
+    const base = page.url()
+    const items = await page.$$eval('table tbody tr', (rows, baseUrl) => {
+      const toAbs = (href) => {
+        try { return new URL(href, baseUrl).toString() } catch { return href || '' }
+      }
+      const out = []
+      for (const tr of rows) {
+        const tds = tr.querySelectorAll('td')
+        if (tds.length < 5) continue
+        const jenis = tds[0].textContent?.trim() || ''
+        const nomor = tds[1].textContent?.trim() || ''
+        const tahun = tds[2].textContent?.trim() || ''
+        const tentang = tds[3].textContent?.trim() || ''
+        const a = tds[4].querySelector('a[href]')
+        const file = toAbs(a?.getAttribute('href') || '')
+        out.push({ jenis, nomor, tahun, tentang, file })
+      }
+      return out
+    }, base)
+
+    for (const it of items) {
+      const key = `${it.jenis}||${it.nomor}||${it.tahun}||${it.tentang}`
+      if (!seen.has(key)) {
+        seen.add(key)
+        all.push(it)
       }
     }
-    return false
-  })
+  }
+
+  function hasNextSelector() {
+    return page.evaluate(() => {
+      const candidates = [
+        'div.dataTables_paginate a.next:not(.disabled)',
+        'ul.pagination li.next:not(.disabled) a',
+        'a[rel="next"]',
+        'a.next:not(.disabled)',
+        'a:has(span.sr-only:contains("Next"))',
+      ]
+      for (const sel of candidates) {
+        const el = document.querySelector(sel)
+        if (el) return true
+      }
+      // Fallback: find an anchor containing Next/Berikutnya/›/» not disabled
+      const anchors = Array.from(document.querySelectorAll('a, button'))
+      const next = anchors.find(a => /Next|Berikutnya|›|»/i.test(a.textContent || '') && !a.classList.contains('disabled'))
+      return !!next
+    })
+  }
+
+  async function clickNext() {
+    const clicked = await page.evaluate(() => {
+      const tryClick = (sel) => {
+        const el = document.querySelector(sel)
+        if (el) {
+          el.dispatchEvent(new MouseEvent('click', { bubbles: true }))
+          return true
+        }
+        return false
+      }
+      const selectors = [
+        'div.dataTables_paginate a.next:not(.disabled)',
+        'ul.pagination li.next:not(.disabled) a',
+        'a[rel="next"]',
+        'a.next:not(.disabled)'
+      ]
+      for (const s of selectors) {
+        if (tryClick(s)) return true
+      }
+      // Fallback by text
+      const anchors = Array.from(document.querySelectorAll('a, button'))
+      const cand = anchors.find(a => /Next|Berikutnya|›|»/i.test(a.textContent || '') && !a.classList.contains('disabled'))
+      if (cand) { cand.dispatchEvent(new MouseEvent('click', { bubbles: true })); return true }
+      return false
+    })
+
+    if (clicked) {
+      // wait for table to change; simple delay then wait for selector
+      await page.waitForTimeout(1500)
+      // Heuristic: ensure some change by waiting for network idle or DOM
+      try { await page.waitForNetworkIdle({ idleTime: 500, timeout: 5000 }) } catch {}
+    }
+    return clicked
+  }
+
+  // Some tables may support changing length to 100 per page; try to set if DataTables
+  try {
+    await page.waitForTimeout(800)
+    const changed = await page.evaluate(() => {
+      const sel = document.querySelector('select[name$="_length"], .dataTables_length select')
+      if (sel) {
+        const options = Array.from(sel.options)
+        const option = options.find(o => ['100','50'].includes(o.value)) || options[options.length - 1]
+        if (option) {
+          sel.value = option.value
+          sel.dispatchEvent(new Event('change', { bubbles: true }))
+          return true
+        }
+      }
+      return false
+    })
+    if (changed) {
+      await page.waitForTimeout(1500)
+      try { await page.waitForNetworkIdle({ idleTime: 500, timeout: 5000 }) } catch {}
+    }
+  } catch {}
+
+  // Loop through pages
+  let pageIndex = 1
+  while (true) {
+    console.log(`[scrape-peraturan] Scraping page ${pageIndex} ...`)
+    await extractCurrentPage()
+    const canNext = await hasNextSelector()
+    if (!canNext) break
+    const ok = await clickNext()
+    if (!ok) break
+    pageIndex++
+  }
+
+  await browser.close()
+  return all
 }
 
 async function main() {
-  const args = parseArgs(process.argv)
-  const headlessArg = args.headless ?? (process.env.HEADLESS === '0' ? 'false' : 'true')
-  const headless = String(headlessArg).toLowerCase() !== 'false'
-  const maxPages = Number(args.maxPages ?? 200)
-  const timeout = Number(args.timeout ?? 20000)
-
-  console.log(`[scrape-peraturan] Launching Puppeteer (headless=${headless})`)
-  const browser = await puppeteer.launch({ headless })
-  const page = await browser.newPage()
-  page.setDefaultTimeout(timeout)
-
-  const outPath = path.resolve(process.cwd(), 'public', 'peraturan.json')
-  const outDir = path.dirname(outPath)
-  if (!existsSync(outDir)) await mkdir(outDir, { recursive: true })
-
-  /** @type {{ jenis: string, nomor: string, tahun: string, tentang: string, file: string }[]} */
-  const results = []
-  const dedup = new Set()
-
   try {
-    await page.goto(START_URL, { waitUntil: 'networkidle2', timeout })
-    await waitForTableRows(page, timeout)
-
-    let pageIndex = 1
-    for (; pageIndex <= maxPages; pageIndex++) {
-      console.log(`[scrape-peraturan] Extracting page ${pageIndex}`)
-      const rows = await extractRowsFromPage(page)
-      let newCount = 0
-      for (const r of rows) {
-        const row = {
-          jenis: normalize(r.jenis),
-          nomor: normalize(r.nomor),
-          tahun: normalize(r.tahun),
-          tentang: normalize(r.tentang),
-          file: normalize(r.file)
+    const data = await scrapeWithPuppeteer()
+    if (!data || data.length === 0) {
+      console.warn('[scrape-peraturan] Puppeteer extracted 0 rows; trying axios+cheerio for first page as fallback')
+      try {
+        const first = await scrapeWithAxiosCheerio(START_URL)
+        if (first.length > 0) {
+          await mkdir(path.dirname(OUTPUT_PATH), { recursive: true })
+          await writeFile(OUTPUT_PATH, JSON.stringify(first, null, 2), 'utf8')
+          console.log(`[scrape-peraturan] Saved ${first.length} rows to ${OUTPUT_PATH}`)
+          return
         }
-        const key = JSON.stringify([row.jenis, row.nomor, row.tahun, row.tentang, row.file])
-        if (!dedup.has(key) && isValidRow(row)) {
-          dedup.add(key)
-          results.push(row)
-          newCount++
-        }
-      }
-      console.log(`[scrape-peraturan] Page ${pageIndex}: +${newCount} rows (total ${results.length})`)
-
-      // Try clicking Next; if missing, try URL parameter pagination (?page=n)
-      const getSignature = async () => await page.evaluate(() => Array.from(document.querySelectorAll('tbody tr')).slice(0, 5).map((tr)=>tr.textContent?.trim()).join('|'))
-      const prevSigClick = await getSignature()
-      const clicked = await clickNextIfAny(page)
-      if (clicked) {
-        try {
-          await page.waitForFunction((prev) => {
-            const curr = Array.from(document.querySelectorAll('tbody tr')).slice(0, 5).map((tr)=>tr.textContent?.trim()).join('|')
-            return curr && curr !== prev
-          }, { timeout: Math.max(1500, Math.min(timeout, 8000)) }, prevSigClick)
-        } catch {}
-        await new Promise((r) => setTimeout(r, 500))
-        continue
-      }
-
-      // Fallback: query param pagination
-      const urlWithPage = `${START_URL}?page=${pageIndex + 1}`
-      console.log(`[scrape-peraturan] Trying page param: ${urlWithPage}`)
-      const prevSignature = await page.evaluate(() => Array.from(document.querySelectorAll('tbody tr')).slice(0, 3).map((tr)=>tr.textContent?.trim()).join('|'))
-      await page.goto(urlWithPage, { waitUntil: 'networkidle2', timeout }).catch(() => {})
-      try { await waitForTableRows(page, Math.min(timeout, 8000)) } catch {}
-      const newSignature = await page.evaluate(() => Array.from(document.querySelectorAll('tbody tr')).slice(0, 3).map((tr)=>tr.textContent?.trim()).join('|'))
-      if (!newSignature || newSignature === prevSignature) {
-        console.log('[scrape-peraturan] No further pages detected; stopping.')
-        break
+      } catch (e) {
+        console.error('[scrape-peraturan] Fallback failed:', e?.message || e)
       }
     }
-  } catch (e) {
-    console.error('[scrape-peraturan] Error:', e?.message || e)
-  } finally {
+    await mkdir(path.dirname(OUTPUT_PATH), { recursive: true })
+    await writeFile(OUTPUT_PATH, JSON.stringify(data, null, 2), 'utf8')
+    console.log(`[scrape-peraturan] Saved ${data.length} rows to ${OUTPUT_PATH}`)
+  } catch (err) {
+    console.error('[scrape-peraturan] Error:', err?.message || err)
+    // write empty array to keep downstream steps unblocked but signal failure via exitCode
     try {
-      const pretty = JSON.stringify(results, null, 2)
-      await writeFile(outPath, pretty, 'utf8')
-      console.log(`[scrape-peraturan] Wrote ${results.length} rows to ${outPath}`)
-    } catch (e) {
-      console.error('[scrape-peraturan] Failed to write output:', e?.message || e)
-    }
-    await browser.close().catch(() => {})
+      await mkdir(path.dirname(OUTPUT_PATH), { recursive: true })
+      if (!existsSync(OUTPUT_PATH)) await writeFile(OUTPUT_PATH, '[]', 'utf8')
+    } catch {}
+    process.exitCode = 1
   }
 }
 
-main().catch((e) => {
-  console.error('[scrape-peraturan] Unexpected error:', e)
-  process.exitCode = 1
-})
+main()

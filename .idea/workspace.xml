@@ -5,50 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bcd0e7cf-1327-4678-9409-4a107b88f5b6" name="Changes" comment="init asset">
-      <change afterPath="$PROJECT_DIR$/pages/blog.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/blog/[slug].vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/peraturan.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/berita.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/berita.seed.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/peraturan.seed.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/extract-peraturan.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/generate-seo-titles.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/scrape-peraturan.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/api/testimonials.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/livechat.client.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nuxt/components.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/components.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/dev/index.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/dev/index.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/dev/index.mjs.map" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/dev/index.mjs.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/server.mjs.map" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/dist/server/server.mjs.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/server.mjs.map.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/dist/server/server.mjs.map.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/dist/server/styles.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/dist/server/styles.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/imports.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/imports.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/manifest/latest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/manifest/latest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/manifest/meta/dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/manifest/meta/dev.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/nitro.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/nitro.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/nuxt.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/nuxt.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/types/imports.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/types/imports.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/types/nitro-routes.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/types/nitro-routes.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/types/schema.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/types/schema.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/nitro.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/nitro.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/public/_nuxt/builds/latest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.output/public/_nuxt/builds/latest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/.output/public/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/_/nitro.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/chunks/_/nitro.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/client.manifest.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/chunks/build/client.manifest.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/client.manifest.mjs.map" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/chunks/build/client.manifest.mjs.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/server.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/chunks/build/server.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/styles.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/chunks/build/styles.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.output/server/chunks/build/styles.mjs.map" beforeDir="false" afterPath="$PROJECT_DIR$/.output/server/chunks/build/styles.mjs.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nuxt/types/plugins.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/types/plugins.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/TopBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/TopBar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vite/client/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vite/client/deps/_metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/hubungi-kami.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/hubungi-kami.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/kbli.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/kbli.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/peraturan.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/peraturan.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/css/sch-style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/sch-style2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/ruangoffice/css/sch-style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/ruangoffice/css/sch-style2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/berita.seed.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/berita.seed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/scrape-peraturan.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/scrape-peraturan.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,28 +60,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/FELIX/WebstormProjects/ruangoffice-new",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.editor",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/FELIX/WebstormProjects/ruangoffice-new&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2025.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\FELIX\WebstormProjects\ruangoffice-news\public\assets\img" />
@@ -137,7 +113,7 @@
       <workItem from="1756297798531" duration="5940000" />
       <workItem from="1756350652839" duration="5829000" />
       <workItem from="1756366238977" duration="830000" />
-      <workItem from="1756383796199" duration="33164000" />
+      <workItem from="1756383796199" duration="64819000" />
     </task>
     <task id="LOCAL-00001" summary="init asset">
       <option name="closed" value="true" />
@@ -163,7 +139,23 @@
       <option name="project" value="LOCAL" />
       <updated>1756429423713</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="init asset">
+      <option name="closed" value="true" />
+      <created>1756447017865</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1756447017865</updated>
+    </task>
+    <task id="LOCAL-00005" summary="init asset">
+      <option name="closed" value="true" />
+      <created>1756447174993</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1756447174993</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

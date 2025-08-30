@@ -1,26 +1,22 @@
 <template>
   <div>
-    <div v-if="!loaded" class="loading">Loading...</div>
-    <div v-else>
       <template v-if="useLegacy">
         <div id="page-top" class="__migrated-html"></div>
       </template>
       <template v-else>
-        <Hero
-          headline="Layanan Perizinan & Virtual Office Terbaik"
-          ctaText="Konsultasi Gratis"
-          ctaHref="/hubungi-kami"
-        />
+        <HeroSection />
+        <HeroSlider />
         <Services />
+        <LatestNews />
       </template>
 
       <!-- Company Profile -->
-      <section v-if="!useLegacy" id="company-profile" class="tw-max-w-6xl tw-mx-auto tw-px-4 tw-py-10">
-        <div class="tw-rounded-2xl tw-bg-gradient-to-br tw-from-white tw-to-green-50 tw-shadow-lg tw-overflow-hidden tw-ring-1 tw-ring-green-100">
-          <div class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-8 tw-p-6 md:tw-p-10">
-            <div class="reveal-up md:tw-max-w-2xl">
+      <section v-if="!useLegacy" id="company-profile" class="tw-max-w-6xl tw-mx-auto tw-px-4 tw-py-14 md:tw-py-20">
+        <div class="tw-relative tw-group tw-rounded-2xl tw-bg-gradient-to-br tw-from-white tw-to-green-50 tw-shadow-lg tw-overflow-hidden tw-ring-1 tw-ring-green-100">
+          <div class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-items-center tw-gap-8 lg:tw-gap-12 tw-p-6 md:tw-p-10">
+            <div class="reveal-up md:tw-max-w-2xl tw-order-2 md:tw-order-1">
               <p class="tw-text-xs tw-tracking-widest tw-font-semibold tw-text-green-700 tw-uppercase">Tentang Ruangoffice</p>
-              <h2 class="tw-mt-1 tw-text-2xl md:tw-text-3xl tw-font-extrabold tw-tracking-tight tw-leading-tight tw-uppercase">Profil Perusahaan</h2>
+              <h2 class="tw-mt-1 tw-text-2xl md:tw-text-3xl tw-font-extrabold tw-tracking-tight tw-leading-tight tw-bg-clip-text tw-text-transparent tw-bg-gradient-to-r tw-from-emerald-700 tw-to-lime-600">Profil Perusahaan</h2>
               <p class="tw-mt-3 tw-text-gray-700 tw-leading-relaxed tw-text-base md:tw-text-lg tw-max-w-2xl">
                 Ruangoffice adalah mitra tepercaya untuk legalitas usaha dan layanan Virtual Office resmi. Kami menangani pendirian badan usaha (PT, PT PMA, CV, Yayasan), pengurusan perizinan, hingga domisili perusahaan secara cepat, transparan, dan sesuai regulasi yang berlaku.
               </p>
@@ -51,123 +47,51 @@
                 Siap mempercepat legalitas usaha Anda — mulai dengan konsultasi gratis bersama tim ahli kami.
               </p>
               <div class="tw-mt-6">
-                <NuxtLink to="/hubungi-kami" class="tw-inline-flex tw-items-center tw-gap-2 tw-bg-green-600 tw-text-white tw-font-semibold tw-px-5 tw-py-2.5 tw-rounded-lg hover:tw-bg-green-700 tw-shadow hover:tw-shadow-md tw-transition-all">
+                <NuxtLink to="/hubungi-kami" class="tw-inline-flex tw-items-center tw-gap-2 tw-bg-green-600 tw-text-white tw-font-semibold tw-px-5 tw-py-2.5 tw-rounded-lg hover:tw-bg-green-700 tw-shadow hover:tw-shadow-md tw-transition-all focus:tw-ring-2 focus:tw-ring-green-300 focus:tw-offset-2 focus:tw-offset-green-50">
                   Konsultasi Gratis
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="tw-w-5 tw-h-5"><path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 0 1 1.06 0l7 7a.75.75 0 0 1 0 1.06l-7 7a.75.75 0 0 1-1.06-1.06l5.72-5.72H3.75a.75.75 0 0 1 0-1.5h14.94l-5.72-5.72a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/></svg>
                 </NuxtLink>
               </div>
             </div>
-            <div class="reveal-up">
-              <div class="img-float">
-                <img loading="lazy" src="/assets/img/Header-RuangOffice-Dekstop.png" alt="Ruangoffice – Layanan Legalitas & Virtual Office" class="tw-w-full tw-h-64 md:tw-h-96 tw-object-cover tw-rounded-xl tw-shadow"/>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Ringkasan KBLI 2020 -->
-      <section v-if="showKbliBox" class="tw-max-w-6xl tw-mx-auto tw-px-4 tw-py-8">
-        <div class="tw-rounded-2xl tw-bg-white tw-shadow-lg tw-border tw-p-4 md:tw-p-8">
-        <h2 class="tw-font-bold tw-uppercase tw-text-xl md:tw-text-2xl tw-text-center tw-border-b-4 tw-border-black tw-pb-2 tw-mb-6">
-          KLASIFIKASI BAKU LAPANGAN USAHA INDONESIA (KBLI) 2020
-        </h2>
-
-        <!-- Search bar with suggestions -->
-        <div class="tw-relative tw-mb-4">
-          <div class="tw-flex tw-flex-col sm:tw-flex-row tw-items-stretch tw-gap-2 sm:tw-gap-0">
-            <div class="tw-relative tw-w-full">
-              <span class="tw-absolute tw-left-3 tw-top-1/2 -tw-translate-y-1/2 tw-text-gray-400">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="tw-size-5"><path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 4.243 12.024l4.74 4.743a.75.75 0 1 0 1.06-1.06l-4.743-4.74A6.75 6.75 0 0 0 10.5 3.75Zm-5.25 6.75a5.25 5.25 0 1 1 10.5 0 5.25 5.25 0 0 1-10.5 0Z" clip-rule="evenodd"/></svg>
-              </span>
-              <input
-                v-model="kbliQuery"
-                @focus="onKbliFocus"
-                @blur="onKbliBlur"
-                @keydown="onKbliKeydown"
-                type="search"
-                placeholder="Cari KBLI (kode atau kata kunci)..."
-                class="tw-border tw-rounded-lg tw-pl-10 tw-pr-10 tw-py-2 tw-shadow-sm tw-w-full focus:tw-ring-2 focus:tw-ring-green-200 focus:tw-border-green-400"
-                aria-label="Cari KBLI"
-                autocomplete="off"
-              />
-              <button v-if="kbliQuery" type="button" class="tw-absolute tw-right-2 tw-top-1/2 -tw-translate-y-1/2 tw-text-gray-400 hover:tw-text-gray-600" @mousedown.prevent @click="kbliQuery=''; showKbliSug=true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="tw-size-5"><path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 0 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/></svg>
-              </button>
-            </div>
-            <button
-              type="button"
-              class="tw-ml-2 tw-bg-green-600 tw-text-white tw-rounded-lg tw-px-4 hover:tw-bg-green-700"
-              @click="showKbliSug=true"
-              aria-label="Cari"
-            >
-              Cari
-            </button>
-          </div>
-
-          <!-- Suggestions dropdown -->
-          <div v-if="showKbliSug && kbliSuggestions.length" class="tw-absolute tw-z-20 tw-mt-2 tw-w-full tw-bg-white tw-border tw-rounded-lg tw-shadow-lg tw-overflow-hidden" role="listbox" :aria-activedescendant="activeKbliId" @mousedown.prevent>
-            <div class="tw-flex tw-gap-2 tw-items-center tw-px-2 tw-py-1 tw-bg-gray-50 tw-text-xs tw-text-gray-600">
-              Ketikan: <span class="tw-font-semibold">{{ kbliQuery }}</span> • {{ kbliSuggestions.length }} saran
-            </div>
-            <button
-              v-for="(s,itIdx) in kbliSuggestions"
-              :key="'sug-'+s.code"
-              :id="'kbli-sug-'+itIdx"
-              type="button"
-              class="tw-w-full tw-text-left tw-px-3 tw-py-2 hover:tw-bg-green-50 focus:tw-bg-green-50"
-              :class="{ 'tw-bg-green-100': itIdx===activeKbliIndex }"
-              role="option"
-              :aria-selected="itIdx===activeKbliIndex"
-              @click="selectKbliSuggestion(s)"
-            >
-              <div class="tw-flex tw-items-center tw-justify-between">
-                <div>
-                  <span class="tw-inline-block tw-bg-green-600 tw-text-white tw-text-[11px] tw-font-bold tw-px-1.5 tw-py-0.5 tw-rounded">{{ s.code }}</span>
-                  <span class="tw-ml-2 tw-font-medium" v-html="kbliHighlight(s.title)"></span>
+            <div class="reveal-up tw-order-1 md:tw-order-2">
+              <div class="tw-relative">
+                <div aria-hidden="true" class="tw-absolute -tw-top-6 -tw-right-6 tw-w-36 tw-h-36 md:tw-w-56 md:tw-h-56 tw-bg-emerald-300 tw-rounded-full tw-blur-3xl tw-opacity-40"></div>
+                <div aria-hidden="true" class="tw-absolute -tw-bottom-8 -tw-left-8 tw-w-24 tw-h-24 md:tw-w-40 md:tw-h-40 tw-bg-lime-300 tw-rounded-full tw-blur-3xl tw-opacity-40"></div>
+                <div class="img-float tw-rounded-xl tw-overflow-hidden tw-shadow tw-ring-1 tw-ring-white/60">
+                  <img loading="lazy" src="/assets/img/Header-RuangOffice-Dekstop.png" alt="Ruangoffice – Layanan Legalitas & Virtual Office" class="tw-w-full tw-h-56 sm:tw-h-72 md:tw-h-96 tw-object-cover tw-transition-transform tw-duration-500 group-hover:tw-scale-105" @error="onHeroImageError"/>
                 </div>
               </div>
-              <div class="tw-text-xs tw-text-gray-500 tw-line-clamp-2" v-html="kbliHighlight(s.description)"></div>
-            </button>
-            <button type="button" class="tw-w-full tw-text-center tw-text-green-700 tw-font-semibold tw-px-3 tw-py-2 hover:tw-bg-green-50" @click="goToAllKbli">Lihat semua hasil</button>
-          </div>
-        </div>
-
-        <!-- Grid daftar ringkasan KBLI -->
-        <div class="tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 md:tw-grid-cols-3 tw-gap-4">
-          <div
-            v-for="item in filteredKbli"
-            :key="item.code"
-            class="tw-bg-white tw-border tw-rounded-lg tw-shadow-md tw-p-4 hover:tw-shadow-lg hover:tw-scale-105 tw-transition-all tw-duration-200"
-          >
-            <div class="tw-flex tw-items-center tw-gap-2">
-              <span class="tw-bg-yellow-400 tw-text-black tw-px-2 tw-py-1 tw-rounded tw-font-bold tw-text-xs">{{ item.code }}</span>
             </div>
-            <div class="tw-font-semibold tw-text-lg tw-mt-2">{{ item.title }}</div>
-            <p class="tw-text-gray-600 tw-text-sm tw-mt-1 line-clamp-3">{{ item.description }}</p>
           </div>
-        </div>
-
-        <div v-if="filteredKbli.length === 0" class="tw-text-center tw-text-sm tw-text-gray-600 tw-mt-4">
-          Tidak ada hasil untuk pencarian tersebut.
-        </div>
-
-        <!-- Tombol Lihat Semua KBLI -->
-        <div class="tw-flex tw-justify-center tw-mt-6">
-          <NuxtLink to="/kbli" class="tw-bg-green-600 tw-text-white tw-font-semibold tw-px-6 tw-py-2 tw-rounded-lg hover:tw-bg-green-700 tw-transition">
-            Lihat Semua KBLI
-          </NuxtLink>
-        </div>
         </div>
       </section>
 
+      <KbliQuickSearch v-if="!useLegacy" />
+
       <SectionTestimonials v-if="!useLegacy" />
-    </div>
+
+      <!-- CTA Band -->
+      <section v-if="!useLegacy" aria-labelledby="cta-title" class="tw-relative tw-px-0 tw-pt-2">
+        <div class="tw-bg-gradient-to-r tw-from-emerald-600 tw-to-lime-600 tw-text-white tw-py-10 md:tw-py-14">
+          <div class="tw-max-w-6xl tw-mx-auto tw-px-4 tw-flex tw-flex-col md:tw-flex-row tw-items-center tw-justify-between tw-gap-4">
+            <div>
+              <h3 id="cta-title" class="tw-text-2xl md:tw-text-3xl tw-font-extrabold tw-tracking-tight">Siap Wujudkan Legalitas Usaha Anda?</h3>
+              <p class="tw-mt-1 tw-text-white/90">Diskusikan kebutuhan Anda bersama konsultan kami. Gratis!</p>
+            </div>
+            <div>
+              <NuxtLink to="/hubungi-kami" class="tw-inline-flex tw-items-center tw-gap-2 tw-bg-white tw-text-emerald-700 tw-font-semibold tw-px-5 tw-py-2.5 tw-rounded-lg hover:tw-bg-emerald-50 tw-shadow-md hover:tw-shadow-lg tw-transition-all focus:tw-ring-2 focus:tw-ring-white/60">
+                Konsultasi Gratis
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="tw-w-5 tw-h-5"><path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 0 1 1.06 0l7 7a.75.75 0 0 1 0 1.06l-7 7a.75.75 0 0 1-1.06-1.06l5.72-5.72H3.75a.75.75 0 0 1 0-1.5h14.94l-5.72-5.72a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/></svg>
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
+      </section>
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref, nextTick, computed } from "vue";
+import { onMounted, nextTick } from "vue";
 import { useAppSeoMeta } from "~/composables/useSeoMeta";
 import { injectOriginalHtml } from "~/scripts/injectOriginal";
 
@@ -183,140 +107,8 @@ useAppSeoMeta({
 });
 
 const useLegacy = true;
-const loaded = ref(false);
 let scriptsExecuted = false;
 
-// Control whether to show the improved KBLI box only in modern mode
-const showKbliBox = computed(() => !useLegacy);
-
-// KBLI summary state
-interface KbliItem { code: string; title: string; description: string }
-const kbliQuery = ref<string>("");
-const kbli = ref<KbliItem[]>([]);
-const filteredKbli = computed(() => {
-  const q = kbliQuery.value.trim().toLowerCase();
-  if (!q) return kbli.value;
-  return kbli.value.filter((item) =>
-    item.code.toLowerCase().includes(q) ||
-    item.title.toLowerCase().includes(q) ||
-    (item.description || "").toLowerCase().includes(q)
-  );
-});
-
-// Lightweight client-side index for better suggestions performance
-interface KbliIdx { code: string; title: string; description: string; lcCode: string; lcTitle: string; lcDesc: string }
-const kbliIndex = computed<KbliIdx[]>(() => (kbli.value || []).map((it) => ({
-  code: it.code,
-  title: it.title,
-  description: it.description,
-  lcCode: String(it.code || '').toLowerCase(),
-  lcTitle: String(it.title || '').toLowerCase(),
-  lcDesc: String(it.description || '').toLowerCase(),
-})));
-
-// Suggestion dropdown state and behavior
-const showKbliSug = ref(false);
-const activeKbliIndex = ref(0);
-const activeKbliId = computed(() => `kbli-sug-${activeKbliIndex.value}`);
-
-function kbliEscapeHtml(s: string): string {
-  return String(s || '')
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
-}
-
-function kbliEscapeRegExp(s: string): string {
-  return String(s || '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-function kbliHighlight(text: string): string {
-  const t = kbliEscapeHtml(String(text || ''));
-  const q = kbliQuery.value.trim();
-  if (!q) return t;
-  try {
-    const re = new RegExp(`(${kbliEscapeRegExp(q)})`, 'ig');
-    return t.replace(re, '<mark>$1</mark>');
-  } catch {
-    return t;
-  }
-}
-
-function kbliScore(it: KbliIdx, q: string): number {
-  if (!q) return 999;
-  if (it.lcCode === q) return 0;
-  if (it.lcCode.startsWith(q)) return 1;
-  if (it.lcTitle.includes(q)) return 2;
-  if (it.lcDesc.includes(q)) return 3;
-  return 999;
-}
-
-const kbliSuggestions = computed(() => {
-  const q = kbliQuery.value.trim().toLowerCase();
-  if (!q) return [] as KbliIdx[];
-  const list = kbliIndex.value
-    .map((it) => ({ it, score: kbliScore(it, q) }))
-    .filter((s) => s.score < 999)
-    .sort((a, b) => (a.score - b.score) || String(a.it.code || '').localeCompare(String(b.it.code || '')))
-    .slice(0, 12)
-    .map((s) => s.it);
-  // reset active index when list updates
-  activeKbliIndex.value = Math.min(activeKbliIndex.value, Math.max(0, list.length - 1));
-  return list;
-});
-
-function onKbliFocus() {
-  if (kbliSuggestions.value.length) showKbliSug.value = true;
-}
-function onKbliBlur() {
-  // Delay to allow click inside the dropdown (mousedown handled)
-  setTimeout(() => { showKbliSug.value = false; }, 120);
-}
-function onKbliKeydown(e: KeyboardEvent) {
-  if (!showKbliSug.value && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) {
-    showKbliSug.value = true;
-  }
-  if (!kbliSuggestions.value.length) return;
-  if (e.key === 'ArrowDown') {
-    e.preventDefault();
-    activeKbliIndex.value = (activeKbliIndex.value + 1) % kbliSuggestions.value.length;
-  } else if (e.key === 'ArrowUp') {
-    e.preventDefault();
-    activeKbliIndex.value = (activeKbliIndex.value - 1 + kbliSuggestions.value.length) % kbliSuggestions.value.length;
-  } else if (e.key === 'Enter') {
-    e.preventDefault();
-    const s = kbliSuggestions.value[activeKbliIndex.value];
-    if (s) selectKbliSuggestion(s);
-  } else if (e.key === 'Escape') {
-    showKbliSug.value = false;
-  }
-}
-
-function selectKbliSuggestion(s: KbliIdx) {
-  // Fill query and close suggestions
-  kbliQuery.value = s.code;
-  showKbliSug.value = false;
-}
-
-import { useRouter } from '#imports'
-const router = useRouter();
-function goToAllKbli() {
-  router.push('/kbli');
-  showKbliSug.value = false;
-}
-
-async function loadKbli() {
-  try {
-    const res = await fetch('/kbli.json', { cache: 'no-store' });
-    if (res.ok) {
-      const data = await res.json();
-      if (Array.isArray(data)) kbli.value = data as KbliItem[];
-    }
-  } catch (e) {
-    console.warn('KBLI data not available', e);
-  }
-}
 
 function hidePreloader() {
   try {
@@ -615,14 +407,7 @@ async function populateRegulationTable() {
 }
 
 onMounted(async () => {
-  // Ensure the target container exists before injecting to avoid blank page
-  loaded.value = true;
   await nextTick();
-  // Load KBLI data only in modern mode
-  if (showKbliBox.value) {
-    loadKbli();
-  }
-
   if (useLegacy) {
     try {
       await injectOriginalHtml();
@@ -703,6 +488,24 @@ onMounted(async () => {
     initRevealOnScroll();
   }
 });
+
+function onHeroImageError(e: Event) {
+  try {
+    const img = (e?.target as HTMLImageElement | null)
+    if (!img) return
+    // Avoid infinite loop
+    if ((img as any).__fallbackTried) {
+      const wrap = img.closest('.img-float') as HTMLElement | null
+      if (wrap) wrap.style.display = 'none'
+      return
+    }
+    ;(img as any).__fallbackTried = true
+    img.onerror = null
+    img.src = '/assets/img/Header-RuangOffice-Dekstop.png'
+  } catch (_) {
+    // noop
+  }
+}
 </script>
 
 <style>

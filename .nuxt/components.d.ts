@@ -18,7 +18,11 @@ interface _GlobalComponents {
     'Header': typeof import("../components/Header.vue")['default']
     'HeaderNav': typeof import("../components/HeaderNav.vue")['default']
     'Hero': typeof import("../components/Hero.vue")['default']
+    'HeroSection': typeof import("../components/HeroSection.vue")['default']
     'HeroSlider': typeof import("../components/HeroSlider.vue")['default']
+    'JenisISO': typeof import("../components/JenisISO.vue")['default']
+    'KbliQuickSearch': typeof import("../components/KbliQuickSearch.vue")['default']
+    'LatestNews': typeof import("../components/LatestNews.vue")['default']
     'Pricing': typeof import("../components/Pricing.vue")['default']
     'RunningInfo': typeof import("../components/RunningInfo.vue")['default']
     'RunningText': typeof import("../components/RunningText.vue")['default']
@@ -57,7 +61,11 @@ interface _GlobalComponents {
     'LazyHeader': LazyComponent<typeof import("../components/Header.vue")['default']>
     'LazyHeaderNav': LazyComponent<typeof import("../components/HeaderNav.vue")['default']>
     'LazyHero': LazyComponent<typeof import("../components/Hero.vue")['default']>
+    'LazyHeroSection': LazyComponent<typeof import("../components/HeroSection.vue")['default']>
     'LazyHeroSlider': LazyComponent<typeof import("../components/HeroSlider.vue")['default']>
+    'LazyJenisISO': LazyComponent<typeof import("../components/JenisISO.vue")['default']>
+    'LazyKbliQuickSearch': LazyComponent<typeof import("../components/KbliQuickSearch.vue")['default']>
+    'LazyLatestNews': LazyComponent<typeof import("../components/LatestNews.vue")['default']>
     'LazyPricing': LazyComponent<typeof import("../components/Pricing.vue")['default']>
     'LazyRunningInfo': LazyComponent<typeof import("../components/RunningInfo.vue")['default']>
     'LazyRunningText': LazyComponent<typeof import("../components/RunningText.vue")['default']>
@@ -102,7 +110,11 @@ export const Footer: typeof import("../components/Footer.vue")['default']
 export const Header: typeof import("../components/Header.vue")['default']
 export const HeaderNav: typeof import("../components/HeaderNav.vue")['default']
 export const Hero: typeof import("../components/Hero.vue")['default']
+export const HeroSection: typeof import("../components/HeroSection.vue")['default']
 export const HeroSlider: typeof import("../components/HeroSlider.vue")['default']
+export const JenisISO: typeof import("../components/JenisISO.vue")['default']
+export const KbliQuickSearch: typeof import("../components/KbliQuickSearch.vue")['default']
+export const LatestNews: typeof import("../components/LatestNews.vue")['default']
 export const Pricing: typeof import("../components/Pricing.vue")['default']
 export const RunningInfo: typeof import("../components/RunningInfo.vue")['default']
 export const RunningText: typeof import("../components/RunningText.vue")['default']
@@ -141,7 +153,11 @@ export const LazyFooter: LazyComponent<typeof import("../components/Footer.vue")
 export const LazyHeader: LazyComponent<typeof import("../components/Header.vue")['default']>
 export const LazyHeaderNav: LazyComponent<typeof import("../components/HeaderNav.vue")['default']>
 export const LazyHero: LazyComponent<typeof import("../components/Hero.vue")['default']>
+export const LazyHeroSection: LazyComponent<typeof import("../components/HeroSection.vue")['default']>
 export const LazyHeroSlider: LazyComponent<typeof import("../components/HeroSlider.vue")['default']>
+export const LazyJenisISO: LazyComponent<typeof import("../components/JenisISO.vue")['default']>
+export const LazyKbliQuickSearch: LazyComponent<typeof import("../components/KbliQuickSearch.vue")['default']>
+export const LazyLatestNews: LazyComponent<typeof import("../components/LatestNews.vue")['default']>
 export const LazyPricing: LazyComponent<typeof import("../components/Pricing.vue")['default']>
 export const LazyRunningInfo: LazyComponent<typeof import("../components/RunningInfo.vue")['default']>
 export const LazyRunningText: LazyComponent<typeof import("../components/RunningText.vue")['default']>

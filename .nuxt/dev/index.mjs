@@ -5,6 +5,7 @@ import nodeCrypto from 'node:crypto';
 import { parentPort, threadId } from 'node:worker_threads';
 import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, createError, getQuery as getQuery$1, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatus, getRouterParam, getResponseStatusText } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/h3/dist/index.mjs';
 import { escapeHtml } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/@vue/shared/dist/shared.cjs.js';
+import { readFile } from 'node:fs/promises';
 import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/vue-bundle-renderer/dist/runtime.mjs';
 import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, decodePath, withLeadingSlash, withoutTrailingSlash, joinRelativeURL } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/ufo/dist/index.mjs';
 import { renderToString } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/vue/server-renderer/index.mjs';
@@ -23,7 +24,6 @@ import { createStorage, prefixStorage } from 'file://C:/Users/FELIX/WebstormProj
 import unstorage_47drivers_47fs from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/unstorage/drivers/fs.mjs';
 import { digest } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/ohash/dist/index.mjs';
 import { toRouteMatcher, createRouter } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/radix3/dist/index.mjs';
-import { readFile } from 'node:fs/promises';
 import consola, { consola as consola$1 } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/consola/dist/index.mjs';
 import { ErrorParser } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/youch-core/build/index.js';
 import { Youch } from 'file://C:/Users/FELIX/WebstormProjects/ruangoffice-news/node_modules/nitropack/node_modules/youch/build/index.js';
@@ -1524,11 +1524,13 @@ async function getIslandContext(event) {
   return ctx;
 }
 
+const _lazy_WSfZH6 = () => Promise.resolve().then(function () { return news_get$1; });
 const _lazy_IKOu9p = () => Promise.resolve().then(function () { return testimonials$1; });
 const _lazy_qs0kj6 = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
   { route: '', handler: _rVj5bL, lazy: false, middleware: true, method: undefined },
+  { route: '/api/news', handler: _lazy_WSfZH6, lazy: true, middleware: false, method: "get" },
   { route: '/api/testimonials', handler: _lazy_IKOu9p, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_error', handler: _lazy_qs0kj6, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: _SxA8c9, lazy: false, middleware: false, method: undefined },
@@ -1858,6 +1860,55 @@ const styles = {};
 const styles$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   default: styles
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const news_get = defineEventHandler(async () => {
+  const wpUrl = "https://ruangoffice.online/wp-json/wp/v2/posts";
+  const params = {
+    per_page: "6",
+    _fields: "id,link,title,excerpt,jetpack_featured_media_url,date"
+  };
+  try {
+    const posts = await $fetch(wpUrl, { params, timeout: 15e3 });
+    const mapped = (posts || []).map((p) => {
+      var _a, _b;
+      return {
+        id: p.id,
+        title: ((_a = p == null ? void 0 : p.title) == null ? void 0 : _a.rendered) || "",
+        excerpt: cleanHtml(((_b = p == null ? void 0 : p.excerpt) == null ? void 0 : _b.rendered) || ""),
+        link: (p == null ? void 0 : p.link) || "#",
+        image: (p == null ? void 0 : p.jetpack_featured_media_url) || void 0,
+        date: p == null ? void 0 : p.date
+      };
+    });
+    return { ok: true, source: "wp", items: mapped };
+  } catch (err) {
+    try {
+      const filePath = join(process.cwd(), "public", "berita.seed.json");
+      const raw = await readFile(filePath, "utf8");
+      const seed = JSON.parse(raw);
+      const mapped = (seed || []).slice(0, 6).map((p, i) => ({
+        id: p.id || i,
+        title: p.title || p.judul || "Berita",
+        excerpt: cleanHtml(p.excerpt || p.ringkasan || ""),
+        link: p.link || p.url || "#",
+        image: p.image || p.thumbnail || void 0,
+        date: p.date || p.tanggal || void 0
+      }));
+      return { ok: true, source: "seed", items: mapped };
+    } catch (e2) {
+      return { ok: false, source: "none", items: [], error: "failed_fetch" };
+    }
+  }
+});
+function cleanHtml(html) {
+  const text = String(html || "").replace(/<[^>]*>/g, " ").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/\s+/g, " ").trim();
+  return text;
+}
+
+const news_get$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: news_get
 }, Symbol.toStringTag, { value: 'Module' }));
 
 function normalizeItem(raw) {
