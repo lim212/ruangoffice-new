@@ -1,6 +1,5 @@
 import { defineEventHandler, getQuery } from 'h3'
 import { useRuntimeConfig } from '#imports'
-import { ofetch } from 'ofetch'
 
 interface TestimonialItem {
   name: string

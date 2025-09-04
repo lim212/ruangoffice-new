@@ -1,0 +1,152 @@
+/* Minimal Tailwind-like utilities for RuangOffice */
+
+/* Grid */
+.tw-grid { display: grid !important; }
+.tw-grid-cols-3 { grid-template-columns: repeat(3, 1fr) !important; }
+.tw-grid-cols-6 { grid-template-columns: repeat(6, 1fr) !important; }
+.tw-gap-3 { gap: 0.75rem !important; }
+
+/* Spacing */
+.tw-mt-3 { margin-top: 0.75rem !important; }
+.tw-mt-8 { margin-top: 2rem !important; }
+.tw-mb-10 { margin-bottom: 2.5rem !important; }
+.tw-px-3 { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
+.tw-px-4 { padding-left: 1rem !important; padding-right: 1rem !important; }
+.tw-px-6 { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+.tw-px-24 { padding-left: 6rem !important; padding-right: 6rem !important; }
+.tw-py-2 { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+.tw-py-12 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+
+/* Text */
+.tw-text-center { text-align: center !important; }
+.tw-text-right { text-align: right !important; }
+.tw-text-white { color: #fff !important; }
+.tw-text-black { color: #000 !important; }
+
+/* Backgrounds */
+.tw-bg-white { background-color: #fff !important; }
+.tw-bg-black { background-color: #000 !important; }
+.tw-bg-success { background-color: #198754 !important; }
+.tw-bg-secondary { background-color: #6c757d !important; }
+.tw-bg-emerald-600 { background-color: #10b981 !important; }
+.tw-bg-emerald-800 { background-color: #065f46 !important; }
+
+/* Borders */
+.tw-border { border: 1px solid #dee2e6 !important; }
+.tw-border-primary { border-color: #10b981 !important; }
+.tw-border-white { border-color: #fff !important; }
+.tw-rounded { border-radius: 0.375rem !important; }
+.tw-rounded-lg { border-radius: 0.5rem !important; }
+
+/* Shadows */
+.tw-shadow-\[0_0_12px_-5px_rgba\(0\,0\,0\,0\.5\)\] {
+  box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Layout */
+.tw-overflow-x-hidden { overflow-x: hidden !important; }
+.tw-whitespace-nowrap { white-space: nowrap !important; }
+.tw-z-50 { z-index: 50 !important; }
+
+/* Display */
+.tw-hidden { display: none !important; }
+.tw-block { display: block !important; }
+.tw-inline { display: inline !important; }
+.tw-inline-block { display: inline-block !important; }
+.tw-flex { display: flex !important; }
+
+/* Flex */
+.tw-items-center { align-items: center !important; }
+.tw-justify-center { justify-content: center !important; }
+.tw-justify-between { justify-content: space-between !important; }
+.tw-gap-2 { gap: 0.5rem !important; }
+.tw-gap-4 { gap: 1rem !important; }
+
+/* Sizing */
+.tw-size-6 { width: 1.5rem !important; height: 1.5rem !important; }
+.tw-size-8 { width: 2rem !important; height: 2rem !important; }
+.tw-w-\[50\%\] { width: 50% !important; }
+.tw-w-full { width: 100% !important; }
+.tw-h-16 { height: 4rem !important; }
+
+/* Position */
+.tw-relative { position: relative !important; }
+.tw-absolute { position: absolute !important; }
+.tw-top-2 { top: 0.5rem !important; }
+.tw-right-2 { right: 0.5rem !important; }
+
+/* Transitions */
+.tw-transition-all { transition: all 0.15s ease-in-out !important; }
+.tw-transition-colors { transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out !important; }
+.tw-duration-1000 { transition-duration: 1s !important; }
+
+/* Hover */
+.hover\:tw-border-white:hover { border-color: #fff !important; }
+.hover\:tw-text-white:hover { color: #fff !important; }
+.hover\:tw-bg-white:hover { background-color: #fff !important; }
+.hover\:tw-bg-secondary:hover { background-color: #6c757d !important; }
+.hover\:tw-brightness-80:hover { filter: brightness(0.8) !important; }
+
+/* Responsive */
+@media (min-width: 768px) {
+  .md\:tw-block { display: block !important; }
+  .md\:tw-flex { display: flex !important; }
+  .md\:tw-hidden { display: none !important; }
+}
+
+@media (min-width: 1024px) {
+  .lg\:tw-hidden { display: none !important; }
+  .lg\:tw-inline { display: inline !important; }
+  .lg\:tw-flex { display: flex !important; }
+  .lg\:tw-pt-2 { padding-top: 0.5rem !important; }
+  .lg\:tw-text-3xl { font-size: 1.875rem !important; line-height: 2.25rem !important; }
+}
+
+/* Animations */
+.tw-animate-marquee { animation: marquee 15s linear infinite !important; }
+.tw-animate-marquee-md { animation: marquee 35s linear infinite !important; }
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Gradients */
+.tw-bg-gradient-to-r { background-image: linear-gradient(to right, var(--tw-gradient-stops)) !important; }
+.tw-from-emerald-600 { --tw-gradient-from: #10b981 !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(16, 185, 129, 0)) !important; }
+.tw-to-emerald-800 { --tw-gradient-to: #065f46 !important; }
+
+/* Flexbox */
+.tw-flex-col { flex-direction: column !important; }
+.tw-flex-row { flex-direction: row !important; }
+
+/* Text sizing */
+.tw-text-2xl { font-size: 1.5rem !important; line-height: 2rem !important; }
+.tw-text-4xl { font-size: 2.25rem !important; line-height: 2.5rem !important; }
+.tw-text-lg { font-size: 1.125rem !important; line-height: 1.75rem !important; }
+.tw-text-3xl { font-size: 1.875rem !important; line-height: 2.25rem !important; }
+
+/* Font weights */
+.tw-font-bold { font-weight: 700 !important; }
+.tw-font-semibold { font-weight: 600 !important; }
+
+/* Padding */
+.tw-px-8 { padding-left: 2rem !important; padding-right: 2rem !important; }
+.tw-py-3 { padding-top: 0.75rem !important; padding-bottom: 0.75rem !important; }
+
+/* Hover for buttons */
+.hover\:tw-bg-gray-100:hover { background-color: #f3f4f6 !important; }
+.hover\:tw-text-emerald-600:hover { color: #10b981 !important; }
+
+/* Responsive grid */
+@media (max-width: 576px) {
+  .tw-grid-cols-3 { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+@media (min-width: 768px) {
+  .tw-grid-cols-3 { grid-template-columns: repeat(3, 1fr) !important; }
+}
+
+@media (min-width: 1024px) {
+  .tw-grid-cols-6 { grid-template-columns: repeat(6, 1fr) !important; }
+}

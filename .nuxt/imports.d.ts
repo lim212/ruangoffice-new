@@ -29,7 +29,16 @@ export { withCtx, withDirectives, withKeys, withMemo, withModifiers, withScopeId
 export { requestIdleCallback, cancelIdleCallback } from '#app/compat/idle-callback';
 export { setInterval } from '#app/compat/interval';
 export { defineLazyHydrationComponent } from '#app/composables/lazy-hydration';
+export { useDarkMode } from '../composables/useDarkMode';
+export { useDataProtection } from '../composables/useDataProtection';
+export { useLoading } from '../composables/useLoading';
+export { useScrollLoading } from '../composables/useScrollLoading';
 export { useAppSeoMeta } from '../composables/useSeoMeta';
-export { useTestimonials, TestimonialItem } from '../composables/useTestimonials';
+export { useStructuredData } from '../composables/useStructuredData';
+export { useSiteConfig } from '../node_modules/nuxt-site-config/dist/runtime/composables/useSiteConfig';
+export { updateSiteConfig } from '../node_modules/nuxt-site-config/dist/runtime/composables/updateSiteConfig';
+export { useNitroOrigin } from '../node_modules/nuxt-site-config/dist/runtime/composables/useNitroOrigin';
+export { createSitePathResolver, withSiteTrailingSlash, withSiteUrl } from '../node_modules/nuxt-site-config/dist/runtime/composables/utils';
+export { defineRobotMeta } from '../node_modules/nuxt-simple-robots/dist/runtime/composables/defineRobotMeta';
 export { useNuxtDevTools } from '../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';
 export { definePageMeta } from '../node_modules/nuxt/dist/pages/runtime/composables';

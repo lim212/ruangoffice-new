@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test KBLI Search</title>
+</head>
+<body>
+    <h1>Test KBLI Search</h1>
+    <div id="status">Loading...</div>
+    <div id="results"></div>
+
+    <script>
+        async function testKbliSearch() {
+            try {
+                const response = await fetch('/kbli.json');
+                const data = await response.json();
+                
+                document.getElementById('status').innerHTML = `Database loaded: ${data.length} items`;
+                
+                // Test search for 93113
+                const query = '93113';
+                const results = data.filter(item => 
+                    item.code.toLowerCase().includes(query.toLowerCase()) ||
+                    item.title.toLowerCase().includes(query.toLowerCase()) ||
+                    item.description.toLowerCase().includes(query.toLowerCase())
+                );
+                
+                document.getElementById('results').innerHTML = `
+                    <h2>Search results for "${query}":</h2>
+                    <p>Found ${results.length} results</p>
+                    ${results.map(item => `
+                        <div style="border: 1px solid #ccc; margin: 10px; padding: 10px;">
+                            <strong>${item.code}</strong> - ${item.title}
+                            <br><small>${item.description.substring(0, 200)}...</small>
+                        </div>
+                    `).join('')}
+                `;
+                
+            } catch (error) {
+                document.getElementById('status').innerHTML = `Error: ${error.message}`;
+            }
+        }
+        
+        testKbliSearch();
+    </script>
+</body>
+</html>

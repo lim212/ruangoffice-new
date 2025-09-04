@@ -3,14 +3,38 @@ import type { Serialize, Simplify } from "nitropack/types";
 declare module "nitropack/types" {
   type Awaited<T> = T extends PromiseLike<infer U> ? Awaited<U> : T
   interface InternalApi {
-    '/api/news': {
-      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/news.get').default>>>>
+    '/api/kbli-protected': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/kbli-protected.get').default>>>>
+    }
+    '/api/peraturan-protected': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/peraturan-protected.get').default>>>>
+    }
+    '/api/robots.txt': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/robots.txt').default>>>>
+    }
+    '/api/sitemap.xml': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/sitemap.xml').default>>>>
     }
     '/api/testimonials': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/testimonials').default>>>>
     }
     '/__nuxt_error': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/nuxt/dist/core/runtime/nitro/handlers/renderer').default>>>>
+    }
+    '/__site-config__/debug.json': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/nuxt-site-config/dist/runtime/nitro/routes/__site-config__/debug').default>>>>
+    }
+    '/__sitemap__/debug.json': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/nuxt-simple-sitemap/dist/runtime/routes/__sitemap__/debug').default>>>>
+    }
+    '/__sitemap__/style.xsl': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/nuxt-simple-sitemap/dist/runtime/routes/sitemap.xsl').default>>>>
+    }
+    '/sitemap.xml': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/nuxt-simple-sitemap/dist/runtime/routes/sitemap.xml').default>>>>
+    }
+    '/robots.txt': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/nuxt-simple-robots/dist/runtime/server/robots-txt').default>>>>
     }
     '/__nuxt_island/**': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/#internal/nuxt/island-renderer').default>>>>

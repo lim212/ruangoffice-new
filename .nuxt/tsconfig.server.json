@@ -112,6 +112,12 @@
       ],
       "#unhead/composables": [
         "../node_modules/nuxt/dist/head/runtime/composables/v3"
+      ],
+      "#internal/nuxt-site-config": [
+        "../node_modules/nuxt-site-config/dist/runtime/nitro/composables"
+      ],
+      "#internal/nuxt-site-config/*": [
+        "../node_modules/nuxt-site-config/dist/runtime/nitro/composables/*"
       ]
     },
     "lib": [
@@ -124,6 +130,8 @@
     "./types/nitro-nuxt.d.ts",
     "../node_modules/runtime/server",
     "../node_modules/dist/runtime/server",
+    "../node_modules/nuxt-site-config/dist/module.mjs/runtime/server",
+    "../node_modules/nuxt-site-config/dist/module.mjs/dist/runtime/server",
     "./types/nitro.d.ts",
     "../**/*",
     "../server/**/*"
@@ -132,6 +140,9 @@
     "../node_modules",
     "../node_modules/nuxt/node_modules",
     "../node_modules/@nuxtjs/tailwindcss/node_modules",
+    "../node_modules/nuxt-site-config/node_modules",
+    "../node_modules/nuxt-simple-sitemap/node_modules",
+    "../node_modules/nuxt-simple-robots/node_modules",
     "../node_modules/@nuxt/devtools/node_modules",
     "../node_modules/@nuxt/telemetry/node_modules",
     "../dist"
