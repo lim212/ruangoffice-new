@@ -1,161 +1,186 @@
 <template>
-  <ScrollSection container-class="relative bg-[#0A0A0A] overflow-hidden reveal-animate" :show-header="false" :skeleton-lines="0" :eager="true">
-    <!-- Animated Background Pattern -->
-    <div class="absolute inset-0">
-      <div class="absolute inset-0 bg-gradient-to-r from-amber-500/5 via-yellow-500/5 to-amber-500/5"></div>
-      <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-amber-400/10 to-yellow-400/10 rounded-full blur-3xl animate-pulse"></div>
-      <div class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-yellow-400/10 to-amber-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      <!-- Subtle diagonal pattern -->
-      <div class="absolute inset-0 opacity-5" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 215, 0, 0.1) 10px, rgba(255, 215, 0, 0.1) 20px);"></div>
+  <ScrollSection container-class="relative bg-gradient-to-br from-[#0A0A0A] via-[#1A1A1A] to-[#0A0A0A] overflow-hidden reveal-animate" :show-header="false" :skeleton-lines="0" :eager="true">
+    <!-- Enhanced Animated Background Pattern -->
+    <div class="absolute inset-0 overflow-hidden">
+      <!-- Main gradient overlay with enhanced depth -->
+      <div class="absolute inset-0 bg-gradient-to-br from-[#0A0A0A] via-[#1A1A1A] to-[#0A0A0A]"></div>
+      <div class="absolute inset-0 bg-gradient-to-tr from-amber-500/10 via-yellow-500/8 to-amber-500/10"></div>
+      
+      <!-- Enhanced animated floating orbs with glow effects -->
+      <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-amber-400/20 to-yellow-400/20 rounded-full blur-3xl animate-float shadow-2xl shadow-amber-500/30"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-yellow-400/20 to-amber-400/20 rounded-full blur-3xl animate-float delay-1000 shadow-2xl shadow-yellow-500/30"></div>
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-amber-300/15 to-yellow-300/15 rounded-full blur-2xl animate-float delay-500 shadow-xl shadow-amber-400/25"></div>
+      <div class="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-r from-yellow-300/25 to-amber-300/25 rounded-full blur-xl animate-float delay-2000 shadow-lg shadow-yellow-400/20"></div>
+      
+      <!-- Enhanced diagonal pattern with animation -->
+      <div class="absolute inset-0 opacity-15 animate-pulse" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(255, 215, 0, 0.2) 15px, rgba(255, 215, 0, 0.2) 30px);"></div>
+      
+      <!-- Subtle grid pattern with enhanced visibility -->
+      <div class="absolute inset-0 opacity-8" style="background-image: linear-gradient(rgba(255, 215, 0, 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 215, 0, 0.15) 1px, transparent 1px); background-size: 50px 50px;"></div>
+      
+      <!-- Enhanced animated particles for extra dynamism -->
+      <div class="absolute top-1/4 left-1/3 w-2 h-2 bg-yellow-400 rounded-full animate-ping opacity-60 shadow-lg shadow-yellow-400/50"></div>
+      <div class="absolute top-3/4 right-1/4 w-1 h-1 bg-amber-400 rounded-full animate-ping delay-1000 opacity-40 shadow-lg shadow-amber-400/50"></div>
+      <div class="absolute top-1/2 left-1/5 w-1.5 h-1.5 bg-yellow-300 rounded-full animate-ping delay-2000 opacity-50 shadow-lg shadow-yellow-300/50"></div>
+      <div class="absolute top-2/3 right-1/3 w-1 h-1 bg-amber-300 rounded-full animate-ping delay-1500 opacity-35 shadow-lg shadow-amber-300/50"></div>
+      <div class="absolute top-1/6 right-1/6 w-1.5 h-1.5 bg-yellow-500 rounded-full animate-ping delay-3000 opacity-45 shadow-lg shadow-yellow-500/50"></div>
+      <div class="absolute bottom-1/4 left-1/6 w-1 h-1 bg-amber-500 rounded-full animate-ping delay-2500 opacity-30 shadow-lg shadow-amber-500/50"></div>
+      
+      <!-- Floating geometric shapes -->
+      <div class="absolute top-1/3 right-1/5 w-3 h-3 border border-yellow-400/30 rotate-45 animate-spin-slow"></div>
+      <div class="absolute bottom-1/3 left-1/4 w-2 h-2 border border-amber-400/40 rounded-full animate-pulse"></div>
+      <div class="absolute top-2/3 right-1/3 w-4 h-1 bg-gradient-to-r from-yellow-400/20 to-amber-400/20 rounded-full animate-float delay-3000"></div>
     </div>
 
-    <div class="relative max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 py-4 sm:py-6 lg:py-8">
-      <div class="grid lg:grid-cols-2 gap-4 lg:gap-6 items-center">
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 sm:pb-20 lg:pb-24">
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[85vh]">
         <!-- Left Content -->
-        <div class="text-left space-y-3 sm:space-y-4">
+        <div class="lg:col-span-7 text-left space-y-6">
           <!-- Badge -->
-          <div class="badge-premium font-poppins inline-flex items-center px-4 py-2 rounded-full text-xs">
-            <span class="mr-2 text-sm">🚀</span>
-            <span class="text-black font-black">Pionir Solusi Bisnis Terpercaya Sejak 2021</span>
+          <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-400 to-amber-500 text-black font-bold rounded-full text-sm shadow-lg hover:shadow-xl transition-all duration-300">
+            <span class="mr-2 text-lg">🚀</span>
+            <span>Solusi Bisnis Terpercaya Sejak 2021</span>
           </div>
 
           <!-- Main Heading -->
-          <h1 class="heading-premium font-poppins leading-tight text-2xl sm:text-3xl lg:text-4xl xl:text-5xl">
-            <span class="block gradient-text">Virtual Office Premium,</span>
-            <span class="gradient-text">Pendirian PT & Perizinan Usaha</span>
-            <span class="block text-white font-black mt-2" style="text-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);">di Jakarta & Seluruh Indonesia</span>
+          <h1 class="font-poppins leading-tight">
+            <span class="block mb-3 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl">
+              <span class="bg-gradient-to-r from-yellow-300 via-amber-400 to-yellow-300 bg-clip-text text-transparent font-black">Virtual Office Premium,</span>
+            </span>
+            <span class="block mb-4 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
+              <span class="bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-400 bg-clip-text text-transparent font-black">Pendirian PT & Perizinan Usaha</span>
+            </span>
+            <span class="block text-2xl sm:text-3xl lg:text-4xl xl:text-5xl">
+              <span class="text-white font-bold">di Jakarta & Seluruh Indonesia</span>
+            </span>
           </h1>
 
           <!-- Description -->
-          <p class="text-white font-inter text-base sm:text-lg max-w-2xl leading-relaxed font-black" style="text-shadow: 0 3px 6px rgba(0, 0, 0, 0.9);">
-            <span class="text-yellow-300 font-black text-lg" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);">🎯 Transformasi Bisnis Anda Dimulai di Sini!</span> Dengan pengalaman 3+ tahun, RuangOffice telah membantu 5000+ perusahaan sukses dengan alamat kantor premium, pendirian badan usaha yang cepat, dan pengurusan izin berstandar OSS RBA. 
-            <br><br>
-            <span class="text-yellow-300 font-black text-lg" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);">⚡ Layanan Express:</span> Proses 100% legal, transparan, dan terpercaya untuk akselerasi pertumbuhan bisnis Anda ke level berikutnya!
-          </p>
+          <div class="text-white font-inter text-lg leading-relaxed">
+            <p class="mb-6 font-semibold text-xl text-yellow-300">
+              🎯 Transformasi Bisnis Anda Dimulai di Sini!
+            </p>
+            <p class="text-white mb-6">
+              Dengan pengalaman 3+ tahun, RuangOffice telah membantu banyak perusahaan sukses dengan alamat kantor premium, pendirian badan usaha yang cepat, dan pengurusan izin berstandar OSS RBA.
+            </p>
+            <div class="flex items-center space-x-3 p-4 bg-gradient-to-r from-yellow-500/20 to-amber-500/20 rounded-xl border border-yellow-400/30">
+              <div class="w-6 h-6 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full flex items-center justify-center">
+                <span class="text-white text-sm font-bold">⚡</span>
+              </div>
+              <p class="font-semibold text-yellow-300">
+                Layanan Express: Proses 100% legal, transparan, dan terpercaya
+              </p>
+            </div>
+          </div>
 
           <!-- CTA Buttons -->
-          <div class="flex flex-row gap-3">
+          <div class="flex flex-col sm:flex-row gap-4 mt-6">
             <a
               href="#services"
-              class="btn-clean font-poppins group inline-flex items-center justify-center px-6 py-3 text-sm font-black"
+              class="group bg-gradient-to-r from-yellow-400 to-amber-500 text-black font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 text-center"
             >
-              <span class="mr-2 text-lg">🚀</span>
+              <span class="mr-3 text-xl">🚀</span>
               <span>Mulai Perjalanan Bisnis</span>
             </a>
             <a
               :href="`https://wa.me/62811113666?text=Halo, saya ingin konsultasi tentang layanan RuangOffice`"
               target="_blank"
               rel="noopener"
-              class="font-poppins group inline-flex items-center justify-center px-6 py-3 bg-transparent border-2 border-[#FFA500] text-[#FFA500] font-black text-sm rounded-lg hover:bg-[#FFA500] hover:text-black transition-all duration-300"
+              class="group bg-transparent border-2 border-yellow-400 text-yellow-400 font-bold px-8 py-4 rounded-xl hover:bg-yellow-400 hover:text-black transition-all duration-300 text-center"
             >
-              <span class="mr-2 text-lg">💬</span>
+              <span class="mr-3 text-xl">💬</span>
               <span>Konsultasi Expert Gratis</span>
             </a>
           </div>
 
-          <!-- Trust Indicators & Contact Info -->
-          <div class="pt-2">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <!-- Trust Indicators -->
-              <div class="space-y-2">
-                <div class="flex items-center space-x-3 group cursor-pointer">
-                  <div class="icon-clean">
-                    <span class="text-xs font-bold">⚡</span>
-                  </div>
-                  <span class="text-yellow-300 font-inter text-sm font-black group-hover:text-[#FFD700] transition-colors duration-300" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);">Proses 100% Legal & Terpercaya</span>
+          <!-- Trust Indicators -->
+          <div class="pt-6">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="flex items-center space-x-3 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-yellow-500/20 hover:bg-white/10 transition-all duration-300">
+                <div class="w-10 h-10 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full flex items-center justify-center">
+                  <span class="text-white text-lg font-bold">⚡</span>
                 </div>
-                <div class="flex items-center space-x-3 group cursor-pointer">
-                  <div class="icon-clean">
-                    <span class="text-xs font-bold">🎯</span>
-                  </div>
-                  <span class="text-yellow-300 font-inter text-sm font-black group-hover:text-[#FFD700] transition-colors duration-300" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);">Tim Expert Berpengalaman 3+ Tahun</span>
-                </div>
-                <div class="flex items-center space-x-3 group cursor-pointer">
-                  <div class="icon-clean">
-                    <span class="text-xs font-bold">🛡️</span>
-                  </div>
-                  <span class="text-yellow-300 font-inter text-sm font-black group-hover:text-[#FFD700] transition-colors duration-300" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);">Dukungan 24/7 & Garansi Kepuasan</span>
+                <div>
+                  <div class="text-white font-bold text-sm">100% Legal</div>
+                  <div class="text-yellow-300 text-xs">Terpercaya</div>
                 </div>
               </div>
               
-              <!-- Contact Info -->
-              <div class="space-y-2">
-                <a 
-                  :href="`https://wa.me/62811113666?text=Halo, saya ingin konsultasi tentang layanan RuangOffice`"
-                  target="_blank"
-                  rel="noopener"
-                  class="flex items-center space-x-3 group cursor-pointer"
-                >
-                  <div class="icon-clean">
-                    <span class="text-xs">📞</span>
-                  </div>
-                  <div>
-                    <div class="text-yellow-300 font-inter text-xs font-black group-hover:text-[#FFD700] transition-colors duration-300" style="text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);">Hotline Expert</div>
-                    <div class="text-white font-inter text-sm font-black group-hover:text-[#FFD700] transition-colors duration-300" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);">{{ waPhone }}</div>
-                  </div>
-                </a>
-                <a 
-                  :href="`https://wa.me/62811113666?text=Halo, saya ingin konsultasi tentang layanan RuangOffice`"
-                  target="_blank"
-                  rel="noopener"
-                  class="flex items-center space-x-3 group cursor-pointer"
-                >
-                  <div class="icon-clean">
-                    <span class="text-xs">📧</span>
-                  </div>
-                  <div>
-                    <div class="text-yellow-300 font-inter text-xs font-black group-hover:text-[#FFD700] transition-colors duration-300" style="text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);">Email Support</div>
-                    <div class="text-white font-inter text-sm font-black group-hover:text-[#FFD700] transition-colors duration-300" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);">{{ email }}</div>
-                  </div>
-                </a>
+              <div class="flex items-center space-x-3 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-yellow-500/20 hover:bg-white/10 transition-all duration-300">
+                <div class="w-10 h-10 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full flex items-center justify-center">
+                  <span class="text-white text-lg font-bold">🎯</span>
+                </div>
+                <div>
+                  <div class="text-white font-bold text-sm">3+ Tahun</div>
+                  <div class="text-yellow-300 text-xs">Pengalaman</div>
+                </div>
+              </div>
+              
+              <div class="flex items-center space-x-3 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-yellow-500/20 hover:bg-white/10 transition-all duration-300">
+                <div class="w-10 h-10 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full flex items-center justify-center">
+                  <span class="text-white text-lg font-bold">🛡️</span>
+                </div>
+                <div>
+                  <div class="text-white font-bold text-sm">24/7</div>
+                  <div class="text-yellow-300 text-xs">Support</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Right Content - Desktop Illustration & Stats -->
-        <div class="relative">
-          <div class="hidden lg:block relative">
-            <img :src="localBrandAssets.heroIllustration" alt="RuangOffice" class="w-full max-w-xl mx-auto rounded-2xl shadow-2xl ring-1 ring-white/10" />
-            <div class="card-clean absolute -bottom-4 -left-4 p-4" style="border-top: 4px solid #FFA500;">
-              <div class="grid grid-cols-2 gap-3 min-w-[260px]">
+        <!-- Right Content - Stats Section -->
+        <div class="lg:col-span-5 relative">
+          <div class="hidden lg:block">
+            <!-- Stats Cards -->
+            <div class="space-y-4">
+              <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-yellow-500/20 hover:bg-white/10 transition-all duration-300">
                 <div class="text-center">
-                  <div class="text-3xl font-black gradient-text font-poppins">5000+</div>
-                  <div class="text-yellow-300 font-inter text-xs font-black" style="text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);">Perusahaan Sukses</div>
+                  <div class="text-4xl font-black gradient-text font-poppins mb-2">100+</div>
+                  <div class="text-yellow-300 font-bold text-sm">Klien Aktif</div>
                 </div>
+              </div>
+              
+              <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-yellow-500/20 hover:bg-white/10 transition-all duration-300">
                 <div class="text-center">
-                  <div class="text-3xl font-black gradient-text font-poppins">3+</div>
-                  <div class="text-yellow-300 font-inter text-xs font-black" style="text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);">Tahun Pengalaman</div>
+                  <div class="text-4xl font-black gradient-text font-poppins mb-2">3+</div>
+                  <div class="text-yellow-300 font-bold text-sm">Tahun Pengalaman</div>
                 </div>
+              </div>
+              
+              <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-yellow-500/20 hover:bg-white/10 transition-all duration-300">
                 <div class="text-center">
-                  <div class="text-3xl font-black gradient-text font-poppins">100%</div>
-                  <div class="text-yellow-300 font-inter text-xs font-black" style="text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);">Kepuasan Klien</div>
+                  <div class="text-4xl font-black gradient-text font-poppins mb-2">95%</div>
+                  <div class="text-yellow-300 font-bold text-sm">Kepuasan Klien</div>
                 </div>
+              </div>
+              
+              <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-yellow-500/20 hover:bg-white/10 transition-all duration-300">
                 <div class="text-center">
-                  <div class="text-3xl font-black gradient-text font-poppins">24/7</div>
-                  <div class="text-yellow-300 font-inter text-xs font-black" style="text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);">Support Expert</div>
+                  <div class="text-4xl font-black gradient-text font-poppins mb-2">24/7</div>
+                  <div class="text-yellow-300 font-bold text-sm">Support Expert</div>
                 </div>
               </div>
             </div>
           </div>
 
           <!-- Mobile stats section -->
-          <div class="grid grid-cols-2 gap-3 lg:hidden mt-4">
-            <div class="card-clean text-center p-4" style="border-top: 4px solid #FFA500;">
-              <div class="text-xl font-black gradient-text font-poppins mb-1">5000+</div>
-              <div class="text-yellow-300 font-inter text-xs font-black" style="text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);">Perusahaan Sukses</div>
+          <div class="grid grid-cols-2 gap-3 lg:hidden mt-6">
+            <div class="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-yellow-500/20 hover:bg-white/10 transition-all duration-300">
+              <div class="text-2xl font-black gradient-text font-poppins mb-1">100+</div>
+              <div class="text-yellow-300 font-bold text-xs">Klien Aktif</div>
             </div>
-            <div class="card-clean text-center p-4" style="border-top: 4px solid #FFA500;">
-              <div class="text-xl font-black gradient-text font-poppins mb-1">3+</div>
-              <div class="text-yellow-300 font-inter text-xs font-black" style="text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);">Tahun Pengalaman</div>
+            <div class="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-yellow-500/20 hover:bg-white/10 transition-all duration-300">
+              <div class="text-2xl font-black gradient-text font-poppins mb-1">3+</div>
+              <div class="text-yellow-300 font-bold text-xs">Tahun Pengalaman</div>
             </div>
-            <div class="card-clean text-center p-4" style="border-top: 4px solid #FFA500;">
-              <div class="text-xl font-black gradient-text font-poppins mb-1">100%</div>
-              <div class="text-yellow-300 font-inter text-xs font-black" style="text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);">Kepuasan Klien</div>
+            <div class="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-yellow-500/20 hover:bg-white/10 transition-all duration-300">
+              <div class="text-2xl font-black gradient-text font-poppins mb-1">95%</div>
+              <div class="text-yellow-300 font-bold text-xs">Kepuasan Klien</div>
             </div>
-            <div class="card-clean text-center p-4" style="border-top: 4px solid #FFA500;">
-              <div class="text-xl font-black gradient-text font-poppins mb-1">24/7</div>
-              <div class="text-yellow-300 font-inter text-xs font-black" style="text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);">Support Expert</div>
+            <div class="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-yellow-500/20 hover:bg-white/10 transition-all duration-300">
+              <div class="text-2xl font-black gradient-text font-poppins mb-1">24/7</div>
+              <div class="text-yellow-300 font-bold text-xs">Support Expert</div>
             </div>
           </div>
         </div>

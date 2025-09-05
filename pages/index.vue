@@ -44,7 +44,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'RuangOffice menyediakan layanan Virtual Office, Private Office, Pendirian PT/CV, Konsultasi Hukum & Keuangan, dan Pengurusan ISO. Solusi bisnis terpercaya sejak 2018.'
+      content: 'RuangOffice menyediakan layanan Virtual Office, Private Office, Pendirian PT/CV, Konsultasi Hukum & Keuangan, dan Pengurusan ISO. Solusi bisnis terpercaya sejak 2021.'
     },
     {
       name: 'keywords',

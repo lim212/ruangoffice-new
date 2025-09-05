@@ -13,7 +13,7 @@
             </div>
           </div>
           <p class="text-gray-300 text-sm sm:text-base mb-4 sm:mb-6 leading-relaxed max-w-md">
-            Sejak 2021, RuangOffice telah membantu ribuan perusahaan dalam mengembangkan bisnis mereka dengan layanan yang komprehensif dan terpercaya.
+            Sejak 2021, RuangOffice telah membantu banyak perusahaan dalam mengembangkan bisnis mereka dengan layanan yang komprehensif dan terpercaya.
           </p>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <div class="space-y-2">

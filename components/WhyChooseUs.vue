@@ -128,17 +128,17 @@
             Bukti Kepercayaan Klien
           </h3>
           <p class="text-gray-600 text-lg">
-            Ribuan perusahaan telah mempercayai kami untuk mengembangkan bisnis mereka
+            Banyak perusahaan telah mempercayai kami untuk solusi bisnis mereka
           </p>
         </div>
         
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 lg:gap-12">
           <div class="text-center p-3 sm:p-4 rounded-xl hover:bg-amber-50 transition-all duration-300 cursor-pointer group">
-            <div class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-yellow-600 mb-1 sm:mb-2 group-hover:scale-110 transition-transform duration-300">5000+</div>
-            <div class="text-xs sm:text-sm lg:text-base text-gray-600">Perusahaan</div>
+            <div class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-yellow-600 mb-1 sm:mb-2 group-hover:scale-110 transition-transform duration-300">100+</div>
+            <div class="text-xs sm:text-sm lg:text-base text-gray-600">Klien Aktif</div>
           </div>
           <div class="text-center p-3 sm:p-4 rounded-xl hover:bg-amber-50 transition-all duration-300 cursor-pointer group">
-            <div class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-yellow-600 mb-1 sm:mb-2 group-hover:scale-110 transition-transform duration-300">100%</div>
+            <div class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-yellow-600 mb-1 sm:mb-2 group-hover:scale-110 transition-transform duration-300">95%</div>
             <div class="text-xs sm:text-sm lg:text-base text-gray-600">Kepuasan</div>
           </div>
           <div class="text-center p-3 sm:p-4 rounded-xl hover:bg-amber-50 transition-all duration-300 cursor-pointer group">

@@ -3,41 +3,41 @@ import { Server } from 'node:http';
 import { resolve as resolve$1, dirname, join } from 'node:path';
 import nodeCrypto from 'node:crypto';
 import { parentPort, threadId } from 'node:worker_threads';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, createError, getRequestHost, getRequestProtocol, setHeader, getResponseStatus, getHeader, getQuery as getQuery$1, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getRouterParam, getHeaders, getResponseStatusText } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/h3/dist/index.mjs';
-import { escapeHtml } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/@vue/shared/dist/shared.cjs.js';
-import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, hasProtocol, withHttps, decodePath, withLeadingSlash, withoutTrailingSlash, withoutProtocol, joinRelativeURL, withBase } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/ufo/dist/index.mjs';
-import { renderToString } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/vue/server-renderer/index.mjs';
-import { klona } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/klona/dist/index.mjs';
-import defu, { defuFn, defu as defu$1, createDefu } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/defu/dist/defu.mjs';
-import destr, { destr as destr$1 } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/destr/dist/index.mjs';
-import { snakeCase } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/scule/dist/index.mjs';
-import { createHead as createHead$1, propsToString, renderSSRHead } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/unhead/dist/server.mjs';
-import { stringify, uneval } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/devalue/index.js';
-import { isVNode, toValue, isRef } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/vue/index.mjs';
-import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/unhead/dist/plugins.mjs';
-import { createHooks } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/hookable/dist/index.mjs';
-import { createFetch, Headers as Headers$1 } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/ofetch/dist/node.mjs';
-import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/node-mock-http/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/unstorage/drivers/fs.mjs';
-import { digest } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/ohash/dist/index.mjs';
-import { toRouteMatcher, createRouter } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/radix3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, createError, getRequestHost, getRequestProtocol, setHeader, getResponseStatus, getHeader, getQuery as getQuery$1, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getRouterParam, getHeaders, getResponseStatusText } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/h3/dist/index.mjs';
+import { escapeHtml } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/@vue/shared/dist/shared.cjs.js';
+import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, hasProtocol, withHttps, decodePath, withLeadingSlash, withoutTrailingSlash, withoutProtocol, joinRelativeURL, withBase } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/ufo/dist/index.mjs';
+import { renderToString } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/vue/server-renderer/index.mjs';
+import { klona } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/klona/dist/index.mjs';
+import defu, { defuFn, defu as defu$1, createDefu } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/defu/dist/defu.mjs';
+import destr, { destr as destr$1 } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/destr/dist/index.mjs';
+import { snakeCase } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/scule/dist/index.mjs';
+import { createHead as createHead$1, propsToString, renderSSRHead } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/unhead/dist/server.mjs';
+import { stringify, uneval } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/devalue/index.js';
+import { isVNode, toValue, isRef } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/vue/index.mjs';
+import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/unhead/dist/plugins.mjs';
+import { createHooks } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/hookable/dist/index.mjs';
+import { createFetch, Headers as Headers$1 } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/ofetch/dist/node.mjs';
+import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/node-mock-http/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/unstorage/drivers/fs.mjs';
+import { digest } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/ohash/dist/index.mjs';
+import { toRouteMatcher, createRouter } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/radix3/dist/index.mjs';
 import { readFile } from 'node:fs/promises';
-import consola, { consola as consola$1, createConsola } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/consola/dist/index.mjs';
-import { ErrorParser } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/youch-core/build/index.js';
-import { Youch } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/nitropack/node_modules/youch/build/index.js';
-import { SourceMapConsumer } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/source-map/source-map.js';
+import consola, { consola as consola$1, createConsola } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/consola/dist/index.mjs';
+import { ErrorParser } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/youch-core/build/index.js';
+import { Youch } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/nitropack/node_modules/youch/build/index.js';
+import { SourceMapConsumer } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/source-map/source-map.js';
 import { AsyncLocalStorage } from 'node:async_hooks';
-import { getContext } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/unctx/dist/index.mjs';
-import { captureRawStackTrace, parseRawStackTrace } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/errx/dist/index.js';
-import devalue from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/@nuxt/devalue/dist/devalue.mjs';
+import { getContext } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/unctx/dist/index.mjs';
+import { captureRawStackTrace, parseRawStackTrace } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/errx/dist/index.js';
+import devalue from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/@nuxt/devalue/dist/devalue.mjs';
 import { promises } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { dirname as dirname$1, resolve as resolve$2 } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/pathe/dist/index.mjs';
-import { walkResolver } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/unhead/dist/utils.mjs';
+import { dirname as dirname$1, resolve as resolve$2 } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/pathe/dist/index.mjs';
+import { walkResolver } from 'file://C:/Users/FELIX/RO/ruangoffice-new/node_modules/unhead/dist/utils.mjs';
 
-const serverAssets = [{"baseName":"server","dir":"C:/Users/62819/Cursor/ruangoffice-new/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"C:/Users/FELIX/RO/ruangoffice-new/server/assets"}];
 
 const assets$1 = createStorage();
 
@@ -49,11 +49,11 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets$1);
 
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:/Users/62819/Cursor/ruangoffice-new","watchOptions":{"ignored":[null]}}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:/Users/62819/Cursor/ruangoffice-new/server","watchOptions":{"ignored":[null]}}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:/Users/62819/Cursor/ruangoffice-new/.nuxt"}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:/Users/62819/Cursor/ruangoffice-new/.nuxt/cache"}));
-storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"C:/Users/62819/Cursor/ruangoffice-new/.data/kv"}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:/Users/FELIX/RO/ruangoffice-new","watchOptions":{"ignored":[null]}}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:/Users/FELIX/RO/ruangoffice-new/server","watchOptions":{"ignored":[null]}}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:/Users/FELIX/RO/ruangoffice-new/.nuxt"}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:/Users/FELIX/RO/ruangoffice-new/.nuxt/cache"}));
+storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"C:/Users/FELIX/RO/ruangoffice-new/.data/kv"}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -1095,13 +1095,13 @@ if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
 window.__NUXT_DEVTOOLS_TIME_METRIC__.appInit = Date.now()
 `;
 
-const _knKqyXVSUxQDZ2ZEyIQNTT0BLvp80tR8E8BpUVTGXxc = (function(nitro) {
+const _7H3iMnW2l8Ytc4fBN9DEbxn90NaiIMmyeOtEfEUn7Y = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script}<\/script>`);
   });
 });
 
-const rootDir = "C:/Users/62819/Cursor/ruangoffice-new";
+const rootDir = "C:/Users/FELIX/RO/ruangoffice-new";
 
 const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1, shrink-to-fit=no"},{"name":"description","content":"RuangOffice.com - Jasa pendirian PT, CV, PMA, Virtual Office, SIUP, HAKI, ISO, NIB, Pajak terpercaya sejak 2021. Proses cepat 1-3 hari, harga terjangkau, garansi 100%. Konsultasi gratis!"},{"name":"keywords","content":"jasa pendirian PT, jasa buat PT, jasa bikin PT, jasa pendirian CV, jasa legalitas, jasa HAKI, jasa ISO, Virtual Office Jakarta, pendirian perusahaan, perizinan usaha, SIUP, TDP, NPWP perusahaan, konsultasi hukum bisnis"},{"name":"author","content":"RuangOffice.com"},{"name":"robots","content":"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"},{"name":"googlebot","content":"index, follow"},{"name":"bingbot","content":"index, follow"},{"name":"theme-color","content":"#f59e0b"},{"name":"msapplication-TileColor","content":"#f59e0b"},{"name":"msapplication-config","content":"/browserconfig.xml"},{"property":"og:type","content":"website"},{"property":"og:url","content":"https://www.ruangoffice.com"},{"property":"og:site_name","content":"RuangOffice.com"},{"property":"og:title","content":"RuangOffice.com - Jasa Pendirian PT, CV & Virtual Office Terpercaya | Legalitas Bisnis #1"},{"property":"og:description","content":"Jasa pendirian PT, CV, PMA, Virtual Office, SIUP, HAKI, ISO, NIB, Pajak terpercaya sejak 2021. Proses cepat 1-3 hari, harga terjangkau, garansi 100%. Konsultasi gratis!"},{"property":"og:image","content":"https://www.ruangoffice.com/og-image.jpg"},{"property":"og:image:width","content":"1200"},{"property":"og:image:height","content":"630"},{"property":"og:image:alt","content":"RuangOffice.com - Jasa Legalitas & Virtual Office"},{"property":"og:locale","content":"id_ID"},{"name":"twitter:card","content":"summary_large_image"},{"name":"twitter:site","content":"@ruangoffice"},{"name":"twitter:creator","content":"@ruangoffice"},{"name":"twitter:title","content":"RuangOffice.com - Jasa Pendirian PT, CV & Virtual Office Terpercaya"},{"name":"twitter:description","content":"Jasa pendirian PT, CV, PMA, Virtual Office terpercaya sejak 2021. Proses cepat, harga terjangkau, garansi 100%."},{"name":"twitter:image","content":"https://www.ruangoffice.com/twitter-image.jpg"},{"name":"geo.region","content":"ID-JK"},{"name":"geo.placename","content":"Jakarta"},{"name":"geo.position","content":"-6.2088;106.8456"},{"name":"ICBM","content":"-6.2088, 106.8456"},{"name":"DC.title","content":"RuangOffice.com - Jasa Legalitas & Virtual Office"},{"name":"DC.description","content":"Jasa pendirian PT, CV, PMA, Virtual Office terpercaya sejak 2021"},{"name":"DC.subject","content":"Jasa Legalitas, Virtual Office, Pendirian PT, Pendirian CV"},{"name":"DC.creator","content":"RuangOffice.com"},{"name":"DC.publisher","content":"RuangOffice.com"},{"name":"DC.contributor","content":"RuangOffice.com"},{"name":"DC.date","content":"2024-01-01"},{"name":"DC.type","content":"Service"},{"name":"DC.format","content":"text/html"},{"name":"DC.identifier","content":"https://www.ruangoffice.com"},{"name":"DC.language","content":"id"},{"name":"DC.relation","content":"https://www.ruangoffice.com"},{"name":"DC.coverage","content":"Indonesia"},{"name":"DC.rights","content":"Copyright RuangOffice.com"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"},{"rel":"apple-touch-icon","href":"/assets/ruangoffice/favicon.png"},{"rel":"manifest","href":"/site.webmanifest"},{"rel":"shortcut icon","href":"/favicon.ico"},{"rel":"canonical","href":"https://www.ruangoffice.com"},{"rel":"preconnect","href":"https://fonts.googleapis.com"},{"rel":"preconnect","href":"https://fonts.gstatic.com","crossorigin":"anonymous"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"}],"style":[],"script":[{"src":"https://www.googletagmanager.com/gtag/js?id=G-64CPVQTDR6","async":true},{"type":"application/ld+json","innerHTML":"{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"RuangOffice.com\",\"url\":\"https://www.ruangoffice.com\",\"logo\":\"https://www.ruangoffice.com/logo-ro.ico\",\"description\":\"Jasa pendirian PT, CV, PMA, Virtual Office, SIUP, HAKI, ISO, NIB, Pajak terpercaya sejak 2021\",\"foundingDate\":\"2021\",\"contactPoint\":{\"@type\":\"ContactPoint\",\"telephone\":\"+62-811-113-6666\",\"contactType\":\"customer service\"},\"address\":{\"@type\":\"PostalAddress\",\"addressCountry\":\"ID\",\"addressRegion\":\"Jakarta\"}}"}],"noscript":[],"htmlAttrs":{"lang":"id"},"title":"RuangOffice.com - Jasa Pendirian PT, CV & Virtual Office Terpercaya | Legalitas Bisnis #1"};
 
@@ -1120,7 +1120,7 @@ const devReducers = {
   URL: (data) => data instanceof URL ? data.toString() : void 0
 };
 const asyncContext = getContext("nuxt-dev", { asyncContext: true, AsyncLocalStorage });
-const _tRe828s_7NtxZc1Jr87XqEojhcOMwzeSt08_ltkPHNI = (nitroApp) => {
+const _gkBxEa9AljagyIGXCHdopVRejZFC3IvugoxIK2uAOys = (nitroApp) => {
   const handler = nitroApp.h3App.handler;
   nitroApp.h3App.handler = (event) => {
     return asyncContext.callAsync({ logs: [], event }, () => handler(event));
@@ -1281,7 +1281,7 @@ function useSiteConfig(e, _options) {
   return e.context.siteConfig.get(options);
 }
 
-const _ZzRld6IxxPm6nniqlhUX8bDxI2N7WqioFfl22ntbGc = defineNitroPlugin(async (nitroApp) => {
+const _jfbfS2iQykpYkaNcHW7iYsmVi4gmfkgyEIGymk8VYA = defineNitroPlugin(async (nitroApp) => {
   nitroApp.hooks.hook("render:html", async (ctx, { event }) => {
     const routeOptions = getRouteRules(event);
     const isIsland = process.env.NUXT_COMPONENT_ISLANDS && event.path.startsWith("/__nuxt_island");
@@ -1297,9 +1297,9 @@ const _ZzRld6IxxPm6nniqlhUX8bDxI2N7WqioFfl22ntbGc = defineNitroPlugin(async (nit
 });
 
 const plugins = [
-  _knKqyXVSUxQDZ2ZEyIQNTT0BLvp80tR8E8BpUVTGXxc,
-_tRe828s_7NtxZc1Jr87XqEojhcOMwzeSt08_ltkPHNI,
-_ZzRld6IxxPm6nniqlhUX8bDxI2N7WqioFfl22ntbGc
+  _7H3iMnW2l8Ytc4fBN9DEbxn90NaiIMmyeOtEfEUn7Y,
+_gkBxEa9AljagyIGXCHdopVRejZFC3IvugoxIK2uAOys,
+_jfbfS2iQykpYkaNcHW7iYsmVi4gmfkgyEIGymk8VYA
 ];
 
 const assets = {};
@@ -1327,7 +1327,7 @@ function getAsset (id) {
 
 const METHODS = /* @__PURE__ */ new Set(["HEAD", "GET"]);
 const EncodingMap = { gzip: ".gz", br: ".br" };
-const _EsyREI = eventHandler((event) => {
+const _L4Hxii = eventHandler((event) => {
   if (event.method && !METHODS.has(event.method)) {
     return;
   }
@@ -1418,7 +1418,7 @@ function useNitroOrigin(e) {
   return withTrailingSlash(`${protocol}://${host}${port}`);
 }
 
-const _eSYQb5 = eventHandler(async (e) => {
+const _652jmD = eventHandler(async (e) => {
   if (e.context._initedSiteConfig)
     return;
   const runtimeConfig = useRuntimeConfig(e);
@@ -1470,7 +1470,7 @@ const _eSYQb5 = eventHandler(async (e) => {
   e.context._initedSiteConfig = true;
 });
 
-const _mqd293 = eventHandler(async (e) => {
+const _9F_GDC = eventHandler(async (e) => {
   const siteConfig = useSiteConfig(e);
   const nitroOrigin = useNitroOrigin(e);
   const runtimeConfig = useRuntimeConfig(e);
@@ -1858,7 +1858,7 @@ function useSimpleSitemapRuntimeConfig() {
   return Object.freeze(clone);
 }
 
-const _4D0YMD = defineEventHandler(async (e) => {
+const _v1bpFQ = defineEventHandler(async (e) => {
   const _runtimeConfig = useSimpleSitemapRuntimeConfig();
   const { sitemaps: _sitemaps } = _runtimeConfig;
   const runtimeConfig = { ..._runtimeConfig };
@@ -1880,7 +1880,7 @@ const _4D0YMD = defineEventHandler(async (e) => {
   };
 });
 
-const _ZZFcMn = defineEventHandler(async (e) => {
+const _WG2fRC = defineEventHandler(async (e) => {
   setHeader(e, "Content-Type", "application/xslt+xml");
   const fixPath = createSitePathResolver(e, { absolute: false, withBase: true });
   const { sitemapName: fallbackSitemapName, version, xslColumns, xslTips } = useSimpleSitemapRuntimeConfig();
@@ -2697,7 +2697,7 @@ async function createSitemap(e, definition) {
   return sitemap;
 }
 
-const _ZR1tMd = defineEventHandler(async (e) => {
+const _eJFqTR = defineEventHandler(async (e) => {
   const { sitemaps } = useSimpleSitemapRuntimeConfig();
   if ("index" in sitemaps) {
     return sendRedirect(e, withBase("/sitemap_index.xml", useRuntimeConfig().app.baseURL), 302 );
@@ -2764,8 +2764,8 @@ function setSSRError(ssrContext, error) {
 
 const APP_ROOT_OPEN_TAG = `<${appRootTag}${propsToString(appRootAttrs)}>`;
 const APP_ROOT_CLOSE_TAG = `</${appRootTag}>`;
-const getServerEntry = () => import('file://C:/Users/62819/Cursor/ruangoffice-new/.nuxt//dist/server/server.mjs').then((r) => r.default || r);
-const getClientManifest = () => import('file://C:/Users/62819/Cursor/ruangoffice-new/.nuxt//dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getServerEntry = () => import('file://C:/Users/FELIX/RO/ruangoffice-new/.nuxt//dist/server/server.mjs').then((r) => r.default || r);
+const getClientManifest = () => import('file://C:/Users/FELIX/RO/ruangoffice-new/.nuxt//dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
 const getSSRRenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
   if (!manifest) {
@@ -3011,28 +3011,28 @@ async function getIslandContext(event) {
   return ctx;
 }
 
-const _lazy_BavmSg = () => Promise.resolve().then(function () { return kbliProtected_get$1; });
-const _lazy_FtvU2s = () => Promise.resolve().then(function () { return peraturanProtected_get$1; });
-const _lazy_rZam9Z = () => Promise.resolve().then(function () { return robots_txt$1; });
-const _lazy_olrRh0 = () => Promise.resolve().then(function () { return sitemap_xml$1; });
-const _lazy_CfSXhl = () => Promise.resolve().then(function () { return testimonials$1; });
-const _lazy_oMmag4 = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_3QGq5V = () => Promise.resolve().then(function () { return kbliProtected_get$1; });
+const _lazy_W0Mkol = () => Promise.resolve().then(function () { return peraturanProtected_get$1; });
+const _lazy_RV1XZi = () => Promise.resolve().then(function () { return robots_txt$1; });
+const _lazy_lBYzpV = () => Promise.resolve().then(function () { return sitemap_xml$1; });
+const _lazy_dHRFMZ = () => Promise.resolve().then(function () { return testimonials$1; });
+const _lazy_0F2aOp = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '', handler: _EsyREI, lazy: false, middleware: true, method: undefined },
-  { route: '/api/kbli-protected', handler: _lazy_BavmSg, lazy: true, middleware: false, method: "get" },
-  { route: '/api/peraturan-protected', handler: _lazy_FtvU2s, lazy: true, middleware: false, method: "get" },
-  { route: '/api/robots.txt', handler: _lazy_rZam9Z, lazy: true, middleware: false, method: undefined },
-  { route: '/api/sitemap.xml', handler: _lazy_olrRh0, lazy: true, middleware: false, method: undefined },
-  { route: '/api/testimonials', handler: _lazy_CfSXhl, lazy: true, middleware: false, method: undefined },
-  { route: '/__nuxt_error', handler: _lazy_oMmag4, lazy: true, middleware: false, method: undefined },
-  { route: '', handler: _eSYQb5, lazy: false, middleware: true, method: undefined },
-  { route: '/__site-config__/debug.json', handler: _mqd293, lazy: false, middleware: false, method: undefined },
-  { route: '/__sitemap__/debug.json', handler: _4D0YMD, lazy: false, middleware: false, method: undefined },
-  { route: '/__sitemap__/style.xsl', handler: _ZZFcMn, lazy: false, middleware: false, method: undefined },
-  { route: '/sitemap.xml', handler: _ZR1tMd, lazy: false, middleware: false, method: undefined },
+  { route: '', handler: _L4Hxii, lazy: false, middleware: true, method: undefined },
+  { route: '/api/kbli-protected', handler: _lazy_3QGq5V, lazy: true, middleware: false, method: "get" },
+  { route: '/api/peraturan-protected', handler: _lazy_W0Mkol, lazy: true, middleware: false, method: "get" },
+  { route: '/api/robots.txt', handler: _lazy_RV1XZi, lazy: true, middleware: false, method: undefined },
+  { route: '/api/sitemap.xml', handler: _lazy_lBYzpV, lazy: true, middleware: false, method: undefined },
+  { route: '/api/testimonials', handler: _lazy_dHRFMZ, lazy: true, middleware: false, method: undefined },
+  { route: '/__nuxt_error', handler: _lazy_0F2aOp, lazy: true, middleware: false, method: undefined },
+  { route: '', handler: _652jmD, lazy: false, middleware: true, method: undefined },
+  { route: '/__site-config__/debug.json', handler: _9F_GDC, lazy: false, middleware: false, method: undefined },
+  { route: '/__sitemap__/debug.json', handler: _v1bpFQ, lazy: false, middleware: false, method: undefined },
+  { route: '/__sitemap__/style.xsl', handler: _WG2fRC, lazy: false, middleware: false, method: undefined },
+  { route: '/sitemap.xml', handler: _eJFqTR, lazy: false, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: _SxA8c9, lazy: false, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_oMmag4, lazy: true, middleware: false, method: undefined }
+  { route: '/**', handler: _lazy_0F2aOp, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {

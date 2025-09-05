@@ -13,9 +13,9 @@ export const heroContent = {
   description:
     'Ambil dari pengalaman panjang RuangOffice: alamat kantor siap pakai, pendirian badan usaha, dan pengurusan izin dengan standar OSS RBA. Layanan cepat, transparan, dan 100% legal untuk pertumbuhan bisnis Anda.',
   stats: [
-    { label: 'Perusahaan', value: '5000+', description: 'Perusahaan yang telah terbentuk' },
+    { label: 'Klien Aktif', value: '100+', description: 'Klien yang aktif menggunakan layanan' },
     { label: 'Tahun', value: '3+', description: 'Tahun pengalaman melayani' },
-    { label: 'Kepuasan', value: '100%', description: 'Tingkat kepuasan klien' },
+    { label: 'Kepuasan', value: '95%', description: 'Tingkat kepuasan klien' },
     { label: 'Support', value: '24/7', description: 'Layanan customer support' },
   ],
 };
