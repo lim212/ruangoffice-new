@@ -3,41 +3,41 @@ import { Server } from 'node:http';
 import { resolve as resolve$1, dirname, join } from 'node:path';
 import nodeCrypto from 'node:crypto';
 import { parentPort, threadId } from 'node:worker_threads';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, getResponseStatus, createError, getRequestHost, getRequestProtocol, removeResponseHeader, setHeader, getHeader, getQuery as getQuery$1, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getRouterParam, getHeaders, getResponseStatusText } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/h3/dist/index.mjs';
-import { escapeHtml } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/@vue/shared/dist/shared.cjs.js';
-import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, hasProtocol, withLeadingSlash, withBase, withHttps, withoutTrailingSlash, joinRelativeURL, withoutProtocol, decodePath } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/ufo/dist/index.mjs';
-import { renderToString } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/vue/server-renderer/index.mjs';
-import { klona } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/klona/dist/index.mjs';
-import defu, { defuFn, createDefu, defu as defu$1 } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/defu/dist/defu.mjs';
-import destr, { destr as destr$1 } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/destr/dist/index.mjs';
-import { snakeCase } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/scule/dist/index.mjs';
-import { createHead as createHead$1, propsToString, renderSSRHead } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/unhead/dist/server.mjs';
-import { stringify, uneval } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/devalue/index.js';
-import { isVNode, toValue, isRef } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/vue/index.mjs';
-import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/unhead/dist/plugins.mjs';
-import { createHooks } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/hookable/dist/index.mjs';
-import { createFetch, Headers as Headers$1 } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/ofetch/dist/node.mjs';
-import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/node-mock-http/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/unstorage/drivers/fs.mjs';
-import { digest } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/ohash/dist/index.mjs';
-import { toRouteMatcher, createRouter } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/radix3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, createError, getRequestHost, getRequestProtocol, setHeader, getResponseStatus, getHeader, getQuery as getQuery$1, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getRouterParam, getHeaders, getResponseStatusText } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/h3/dist/index.mjs';
+import { escapeHtml } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/@vue/shared/dist/shared.cjs.js';
+import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, hasProtocol, withHttps, decodePath, withLeadingSlash, withoutTrailingSlash, withoutProtocol, joinRelativeURL, withBase } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/ufo/dist/index.mjs';
+import { renderToString } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/vue/server-renderer/index.mjs';
+import { klona } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/klona/dist/index.mjs';
+import defu, { defuFn, defu as defu$1, createDefu } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/defu/dist/defu.mjs';
+import destr, { destr as destr$1 } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/destr/dist/index.mjs';
+import { snakeCase } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/scule/dist/index.mjs';
+import { createHead as createHead$1, propsToString, renderSSRHead } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/unhead/dist/server.mjs';
+import { stringify, uneval } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/devalue/index.js';
+import { isVNode, toValue, isRef } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/vue/index.mjs';
+import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/unhead/dist/plugins.mjs';
+import { createHooks } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/hookable/dist/index.mjs';
+import { createFetch, Headers as Headers$1 } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/ofetch/dist/node.mjs';
+import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/node-mock-http/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/unstorage/drivers/fs.mjs';
+import { digest } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/ohash/dist/index.mjs';
+import { toRouteMatcher, createRouter } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/radix3/dist/index.mjs';
 import { readFile } from 'node:fs/promises';
-import consola, { consola as consola$1 } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/consola/dist/index.mjs';
-import { ErrorParser } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/youch-core/build/index.js';
-import { Youch } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/nitropack/node_modules/youch/build/index.js';
-import { SourceMapConsumer } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/source-map/source-map.js';
+import consola, { consola as consola$1, createConsola } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/consola/dist/index.mjs';
+import { ErrorParser } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/youch-core/build/index.js';
+import { Youch } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/nitropack/node_modules/youch/build/index.js';
+import { SourceMapConsumer } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/source-map/source-map.js';
 import { AsyncLocalStorage } from 'node:async_hooks';
-import { getContext } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/unctx/dist/index.mjs';
-import { captureRawStackTrace, parseRawStackTrace } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/errx/dist/index.js';
-import devalue from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/@nuxt/devalue/dist/devalue.mjs';
+import { getContext } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/unctx/dist/index.mjs';
+import { captureRawStackTrace, parseRawStackTrace } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/errx/dist/index.js';
+import devalue from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/@nuxt/devalue/dist/devalue.mjs';
 import { promises } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { dirname as dirname$1, resolve as resolve$2 } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/pathe/dist/index.mjs';
-import { walkResolver } from 'file://C:/Users/FELIX/ruangoffice-new/node_modules/unhead/dist/utils.mjs';
+import { dirname as dirname$1, resolve as resolve$2 } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/pathe/dist/index.mjs';
+import { walkResolver } from 'file://C:/Users/62819/Cursor/ruangoffice-new/node_modules/unhead/dist/utils.mjs';
 
-const serverAssets = [{"baseName":"server","dir":"C:/Users/FELIX/ruangoffice-new/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"C:/Users/62819/Cursor/ruangoffice-new/server/assets"}];
 
 const assets$1 = createStorage();
 
@@ -49,11 +49,11 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets$1);
 
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:/Users/FELIX/ruangoffice-new","watchOptions":{"ignored":[null]}}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:/Users/FELIX/ruangoffice-new/server","watchOptions":{"ignored":[null]}}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:/Users/FELIX/ruangoffice-new/.nuxt"}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:/Users/FELIX/ruangoffice-new/.nuxt/cache"}));
-storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"C:/Users/FELIX/ruangoffice-new/.data/kv"}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:/Users/62819/Cursor/ruangoffice-new","watchOptions":{"ignored":[null]}}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:/Users/62819/Cursor/ruangoffice-new/server","watchOptions":{"ignored":[null]}}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:/Users/62819/Cursor/ruangoffice-new/.nuxt"}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:/Users/62819/Cursor/ruangoffice-new/.nuxt/cache"}));
+storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"C:/Users/62819/Cursor/ruangoffice-new/.data/kv"}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -585,7 +585,7 @@ const inlineAppConfig = {
 
 const appConfig = defuFn(inlineAppConfig);
 
-function getEnv$1(key, opts) {
+function getEnv(key, opts) {
   const envKey = snakeCase(key).toUpperCase();
   return destr(
     process.env[opts.prefix + envKey] ?? process.env[opts.altPrefix + envKey]
@@ -597,7 +597,7 @@ function _isObject(input) {
 function applyEnv(obj, opts, parentKey = "") {
   for (const key in obj) {
     const subKey = parentKey ? `${parentKey}_${key}` : key;
-    const envValue = getEnv$1(subKey, opts);
+    const envValue = getEnv(subKey, opts);
     if (_isObject(obj[key])) {
       if (_isObject(envValue)) {
         obj[key] = { ...obj[key], ...envValue };
@@ -711,12 +711,6 @@ const _inlineRuntimeConfig = {
   "nuxt-site-config": {
     "stack": [
       {
-        "_priority": -20,
-        "_context": "defaults",
-        "defaultLocale": "en",
-        "trailingSlash": false
-      },
-      {
         "_context": "system",
         "_priority": -15,
         "name": "ruangoffice-new",
@@ -733,31 +727,9 @@ const _inlineRuntimeConfig = {
         "url": "https://ruangoffice.online"
       }
     ],
-    "version": "1.6.7",
-    "debug": false
-  },
-  "nuxt-simple-robots": {
-    "isRobotsGroupsBlockingIndexing": false,
-    "credits": true,
-    "groups": [
-      {
-        "userAgent": [
-          "*"
-        ],
-        "allow": [
-          "/"
-        ],
-        "disallow": [
-          "/admin",
-          "/admin/"
-        ]
-      }
-    ],
-    "sitemap": [
-      "/sitemap.xml"
-    ],
-    "robotsEnabledValue": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-    "robotsDisabledValue": "noindex, nofollow"
+    "version": "3.2.2",
+    "debug": false,
+    "multiTenancy": []
   }
 };
 const envOptions = {
@@ -780,12 +752,7 @@ function useRuntimeConfig(event) {
   event.context.nitro.runtimeConfig = runtimeConfig;
   return runtimeConfig;
 }
-const _sharedAppConfig = _deepFreeze(klona(appConfig));
-function useAppConfig(event) {
-  {
-    return _sharedAppConfig;
-  }
-}
+_deepFreeze(klona(appConfig));
 function _deepFreeze(object) {
   const propNames = Object.getOwnPropertyNames(object);
   for (const name of propNames) {
@@ -1128,15 +1095,15 @@ if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
 window.__NUXT_DEVTOOLS_TIME_METRIC__.appInit = Date.now()
 `;
 
-const _MTbJ2TRSnvuBKM8IZGFvy_XRonEoRzWezKOj4AnFoJ8 = (function(nitro) {
+const _knKqyXVSUxQDZ2ZEyIQNTT0BLvp80tR8E8BpUVTGXxc = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script}<\/script>`);
   });
 });
 
-const rootDir = "C:/Users/FELIX/ruangoffice-new";
+const rootDir = "C:/Users/62819/Cursor/ruangoffice-new";
 
-const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1, shrink-to-fit=no"},{"name":"description","content":"RuangOffice.com - Jasa pendirian PT, CV, PMA, Virtual Office, SIUP, HAKI, ISO, NIB, Pajak terpercaya sejak 2009. Proses cepat 1-3 hari, harga terjangkau, garansi 100%. Konsultasi gratis!"},{"name":"keywords","content":"jasa pendirian PT, jasa buat PT, jasa bikin PT, jasa pendirian CV, jasa legalitas, jasa HAKI, jasa ISO, Virtual Office Jakarta, pendirian perusahaan, perizinan usaha, SIUP, TDP, NPWP perusahaan, konsultasi hukum bisnis"},{"name":"author","content":"RuangOffice.com"},{"name":"robots","content":"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"},{"name":"googlebot","content":"index, follow"},{"name":"bingbot","content":"index, follow"},{"name":"theme-color","content":"#f59e0b"},{"name":"msapplication-TileColor","content":"#f59e0b"},{"name":"msapplication-config","content":"/browserconfig.xml"},{"property":"og:type","content":"website"},{"property":"og:url","content":"https://www.ruangoffice.com"},{"property":"og:site_name","content":"RuangOffice.com"},{"property":"og:title","content":"RuangOffice.com - Jasa Pendirian PT, CV & Virtual Office Terpercaya | Legalitas Bisnis #1"},{"property":"og:description","content":"Jasa pendirian PT, CV, PMA, Virtual Office, SIUP, HAKI, ISO, NIB, Pajak terpercaya sejak 2009. Proses cepat 1-3 hari, harga terjangkau, garansi 100%. Konsultasi gratis!"},{"property":"og:image","content":"https://www.ruangoffice.com/og-image.jpg"},{"property":"og:image:width","content":"1200"},{"property":"og:image:height","content":"630"},{"property":"og:image:alt","content":"RuangOffice.com - Jasa Legalitas & Virtual Office"},{"property":"og:locale","content":"id_ID"},{"name":"twitter:card","content":"summary_large_image"},{"name":"twitter:site","content":"@ruangoffice"},{"name":"twitter:creator","content":"@ruangoffice"},{"name":"twitter:title","content":"RuangOffice.com - Jasa Pendirian PT, CV & Virtual Office Terpercaya"},{"name":"twitter:description","content":"Jasa pendirian PT, CV, PMA, Virtual Office terpercaya sejak 2009. Proses cepat, harga terjangkau, garansi 100%."},{"name":"twitter:image","content":"https://www.ruangoffice.com/twitter-image.jpg"},{"name":"geo.region","content":"ID-JK"},{"name":"geo.placename","content":"Jakarta"},{"name":"geo.position","content":"-6.2088;106.8456"},{"name":"ICBM","content":"-6.2088, 106.8456"},{"name":"DC.title","content":"RuangOffice.com - Jasa Legalitas & Virtual Office"},{"name":"DC.description","content":"Jasa pendirian PT, CV, PMA, Virtual Office terpercaya sejak 2009"},{"name":"DC.subject","content":"Jasa Legalitas, Virtual Office, Pendirian PT, Pendirian CV"},{"name":"DC.creator","content":"RuangOffice.com"},{"name":"DC.publisher","content":"RuangOffice.com"},{"name":"DC.contributor","content":"RuangOffice.com"},{"name":"DC.date","content":"2024-01-01"},{"name":"DC.type","content":"Service"},{"name":"DC.format","content":"text/html"},{"name":"DC.identifier","content":"https://www.ruangoffice.com"},{"name":"DC.language","content":"id"},{"name":"DC.relation","content":"https://www.ruangoffice.com"},{"name":"DC.coverage","content":"Indonesia"},{"name":"DC.rights","content":"Copyright RuangOffice.com"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"},{"rel":"icon","type":"image/png","sizes":"16x16","href":"/favicon-16x16.png"},{"rel":"icon","type":"image/png","sizes":"32x32","href":"/favicon-32x32.png"},{"rel":"icon","type":"image/png","sizes":"96x96","href":"/favicon-96x96.png"},{"rel":"icon","type":"image/png","sizes":"192x192","href":"/favicon-192x192.png"},{"rel":"icon","type":"image/png","sizes":"512x512","href":"/favicon-512x512.png"},{"rel":"apple-touch-icon","sizes":"57x57","href":"/apple-touch-icon-57x57.png"},{"rel":"apple-touch-icon","sizes":"60x60","href":"/apple-touch-icon-60x60.png"},{"rel":"apple-touch-icon","sizes":"72x72","href":"/apple-touch-icon-72x72.png"},{"rel":"apple-touch-icon","sizes":"76x76","href":"/apple-touch-icon-76x76.png"},{"rel":"apple-touch-icon","sizes":"114x114","href":"/apple-touch-icon-114x114.png"},{"rel":"apple-touch-icon","sizes":"120x120","href":"/apple-touch-icon-120x120.png"},{"rel":"apple-touch-icon","sizes":"144x144","href":"/apple-touch-icon-144x144.png"},{"rel":"apple-touch-icon","sizes":"152x152","href":"/apple-touch-icon-152x152.png"},{"rel":"apple-touch-icon","sizes":"180x180","href":"/apple-touch-icon-180x180.png"},{"rel":"apple-touch-icon","sizes":"192x192","href":"/apple-touch-icon-192x192.png"},{"rel":"apple-touch-icon","sizes":"512x512","href":"/apple-touch-icon-512x512.png"},{"rel":"manifest","href":"/site.webmanifest"},{"rel":"mask-icon","href":"/safari-pinned-tab.svg","color":"#f59e0b"},{"rel":"shortcut icon","href":"/favicon.ico"},{"rel":"canonical","href":"https://www.ruangoffice.com"},{"rel":"preconnect","href":"https://fonts.googleapis.com"},{"rel":"preconnect","href":"https://fonts.gstatic.com","crossorigin":"anonymous"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"}],"style":[],"script":[{"src":"https://www.googletagmanager.com/gtag/js?id=G-64CPVQTDR6","async":true},{"type":"application/ld+json","innerHTML":"{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"RuangOffice.com\",\"url\":\"https://www.ruangoffice.com\",\"logo\":\"https://www.ruangoffice.com/logo-ro.ico\",\"description\":\"Jasa pendirian PT, CV, PMA, Virtual Office, SIUP, HAKI, ISO, NIB, Pajak terpercaya sejak 2009\",\"foundingDate\":\"2009\",\"contactPoint\":{\"@type\":\"ContactPoint\",\"telephone\":\"+62-811-113-6666\",\"contactType\":\"customer service\"},\"address\":{\"@type\":\"PostalAddress\",\"addressCountry\":\"ID\",\"addressRegion\":\"Jakarta\"}}"}],"noscript":[],"htmlAttrs":{"lang":"id"},"title":"RuangOffice.com - Jasa Pendirian PT, CV & Virtual Office Terpercaya | Legalitas Bisnis #1"};
+const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1, shrink-to-fit=no"},{"name":"description","content":"RuangOffice.com - Jasa pendirian PT, CV, PMA, Virtual Office, SIUP, HAKI, ISO, NIB, Pajak terpercaya sejak 2021. Proses cepat 1-3 hari, harga terjangkau, garansi 100%. Konsultasi gratis!"},{"name":"keywords","content":"jasa pendirian PT, jasa buat PT, jasa bikin PT, jasa pendirian CV, jasa legalitas, jasa HAKI, jasa ISO, Virtual Office Jakarta, pendirian perusahaan, perizinan usaha, SIUP, TDP, NPWP perusahaan, konsultasi hukum bisnis"},{"name":"author","content":"RuangOffice.com"},{"name":"robots","content":"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"},{"name":"googlebot","content":"index, follow"},{"name":"bingbot","content":"index, follow"},{"name":"theme-color","content":"#f59e0b"},{"name":"msapplication-TileColor","content":"#f59e0b"},{"name":"msapplication-config","content":"/browserconfig.xml"},{"property":"og:type","content":"website"},{"property":"og:url","content":"https://www.ruangoffice.com"},{"property":"og:site_name","content":"RuangOffice.com"},{"property":"og:title","content":"RuangOffice.com - Jasa Pendirian PT, CV & Virtual Office Terpercaya | Legalitas Bisnis #1"},{"property":"og:description","content":"Jasa pendirian PT, CV, PMA, Virtual Office, SIUP, HAKI, ISO, NIB, Pajak terpercaya sejak 2021. Proses cepat 1-3 hari, harga terjangkau, garansi 100%. Konsultasi gratis!"},{"property":"og:image","content":"https://www.ruangoffice.com/og-image.jpg"},{"property":"og:image:width","content":"1200"},{"property":"og:image:height","content":"630"},{"property":"og:image:alt","content":"RuangOffice.com - Jasa Legalitas & Virtual Office"},{"property":"og:locale","content":"id_ID"},{"name":"twitter:card","content":"summary_large_image"},{"name":"twitter:site","content":"@ruangoffice"},{"name":"twitter:creator","content":"@ruangoffice"},{"name":"twitter:title","content":"RuangOffice.com - Jasa Pendirian PT, CV & Virtual Office Terpercaya"},{"name":"twitter:description","content":"Jasa pendirian PT, CV, PMA, Virtual Office terpercaya sejak 2021. Proses cepat, harga terjangkau, garansi 100%."},{"name":"twitter:image","content":"https://www.ruangoffice.com/twitter-image.jpg"},{"name":"geo.region","content":"ID-JK"},{"name":"geo.placename","content":"Jakarta"},{"name":"geo.position","content":"-6.2088;106.8456"},{"name":"ICBM","content":"-6.2088, 106.8456"},{"name":"DC.title","content":"RuangOffice.com - Jasa Legalitas & Virtual Office"},{"name":"DC.description","content":"Jasa pendirian PT, CV, PMA, Virtual Office terpercaya sejak 2021"},{"name":"DC.subject","content":"Jasa Legalitas, Virtual Office, Pendirian PT, Pendirian CV"},{"name":"DC.creator","content":"RuangOffice.com"},{"name":"DC.publisher","content":"RuangOffice.com"},{"name":"DC.contributor","content":"RuangOffice.com"},{"name":"DC.date","content":"2024-01-01"},{"name":"DC.type","content":"Service"},{"name":"DC.format","content":"text/html"},{"name":"DC.identifier","content":"https://www.ruangoffice.com"},{"name":"DC.language","content":"id"},{"name":"DC.relation","content":"https://www.ruangoffice.com"},{"name":"DC.coverage","content":"Indonesia"},{"name":"DC.rights","content":"Copyright RuangOffice.com"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"},{"rel":"apple-touch-icon","href":"/assets/ruangoffice/favicon.png"},{"rel":"manifest","href":"/site.webmanifest"},{"rel":"shortcut icon","href":"/favicon.ico"},{"rel":"canonical","href":"https://www.ruangoffice.com"},{"rel":"preconnect","href":"https://fonts.googleapis.com"},{"rel":"preconnect","href":"https://fonts.gstatic.com","crossorigin":"anonymous"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"}],"style":[],"script":[{"src":"https://www.googletagmanager.com/gtag/js?id=G-64CPVQTDR6","async":true},{"type":"application/ld+json","innerHTML":"{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"RuangOffice.com\",\"url\":\"https://www.ruangoffice.com\",\"logo\":\"https://www.ruangoffice.com/logo-ro.ico\",\"description\":\"Jasa pendirian PT, CV, PMA, Virtual Office, SIUP, HAKI, ISO, NIB, Pajak terpercaya sejak 2021\",\"foundingDate\":\"2021\",\"contactPoint\":{\"@type\":\"ContactPoint\",\"telephone\":\"+62-811-113-6666\",\"contactType\":\"customer service\"},\"address\":{\"@type\":\"PostalAddress\",\"addressCountry\":\"ID\",\"addressRegion\":\"Jakarta\"}}"}],"noscript":[],"htmlAttrs":{"lang":"id"},"title":"RuangOffice.com - Jasa Pendirian PT, CV & Virtual Office Terpercaya | Legalitas Bisnis #1"};
 
 const appRootTag = "div";
 
@@ -1153,7 +1120,7 @@ const devReducers = {
   URL: (data) => data instanceof URL ? data.toString() : void 0
 };
 const asyncContext = getContext("nuxt-dev", { asyncContext: true, AsyncLocalStorage });
-const _EaSuE0FiWSfvZXcbNEXfKhGyDqQuDKF0rKBFy35kk1M = (nitroApp) => {
+const _tRe828s_7NtxZc1Jr87XqEojhcOMwzeSt08_ltkPHNI = (nitroApp) => {
   const handler = nitroApp.h3App.handler;
   nitroApp.h3App.handler = (event) => {
     return asyncContext.callAsync({ logs: [], event }, () => handler(event));
@@ -1222,12 +1189,27 @@ function onConsoleLog(callback) {
   consola$1.wrapConsole();
 }
 
+function normalizeSiteConfig(config) {
+  if (typeof config.indexable !== "undefined")
+    config.indexable = String(config.indexable) !== "false";
+  if (typeof config.trailingSlash !== "undefined" && !config.trailingSlash)
+    config.trailingSlash = String(config.trailingSlash) !== "false";
+  if (config.url && !hasProtocol(String(config.url), { acceptRelative: true, strict: false }))
+    config.url = withHttps(String(config.url));
+  const keys = Object.keys(config).sort((a, b) => a.localeCompare(b));
+  const newConfig = {};
+  for (const k of keys)
+    newConfig[k] = config[k];
+  return newConfig;
+}
 function createSiteConfigStack(options) {
   const debug = options?.debug || false;
   const stack = [];
   function push(input) {
-    if (!input || typeof input !== "object" || Object.keys(input).length === 0)
-      return;
+    if (!input || typeof input !== "object" || Object.keys(input).length === 0) {
+      return () => {
+      };
+    }
     if (!input._context && debug) {
       let lastFunctionName = new Error("tmp").stack?.split("\n")[2].split(" ")[5];
       if (lastFunctionName?.includes("/"))
@@ -1240,25 +1222,35 @@ function createSiteConfigStack(options) {
       if (typeof val !== "undefined" && val !== "")
         entry[k] = val;
     }
+    let idx;
     if (Object.keys(entry).filter((k) => !k.startsWith("_")).length > 0)
-      stack.push(entry);
+      idx = stack.push(entry);
+    return () => {
+      if (typeof idx !== "undefined") {
+        stack.splice(idx - 1, 1);
+      }
+    };
   }
   function get(options2) {
     const siteConfig = {};
     if (options2?.debug)
       siteConfig._context = {};
+    siteConfig._priority = {};
     for (const o in stack.sort((a, b) => (a._priority || 0) - (b._priority || 0))) {
       for (const k in stack[o]) {
         const key = k;
-        const val = stack[o][k];
-        if (!k.startsWith("_")) {
+        const val = options2?.resolveRefs ? toValue(stack[o][k]) : stack[o][k];
+        if (!k.startsWith("_") && typeof val !== "undefined" && val !== "") {
           siteConfig[k] = val;
+          if (typeof stack[o]._priority !== "undefined" && stack[o]._priority !== -1) {
+            siteConfig._priority[key] = stack[o]._priority;
+          }
           if (options2?.debug)
             siteConfig._context[key] = stack[o]._context?.[key] || stack[o]._context || "anonymous";
         }
       }
     }
-    return normalizeSiteConfig(siteConfig);
+    return options2?.skipNormalize ? siteConfig : normalizeSiteConfig(siteConfig);
   }
   return {
     stack,
@@ -1267,41 +1259,316 @@ function createSiteConfigStack(options) {
   };
 }
 
-function normalizeSiteConfig(config) {
-  if (typeof config.indexable !== "undefined")
-    config.indexable = String(config.indexable) !== "false";
-  if (typeof config.trailingSlash !== "undefined")
-    config.trailingSlash = String(config.trailingSlash) !== "false";
-  if (config.url && !hasProtocol(config.url, { acceptRelative: true, strict: false }))
-    config.url = withHttps(config.url);
-  const keys = Object.keys(config).sort((a, b) => a.localeCompare(b));
-  const newConfig = {};
-  for (const k of keys)
-    newConfig[k] = config[k];
-  return newConfig;
+function envSiteConfig(env) {
+  return Object.fromEntries(Object.entries(env).filter(([k]) => k.startsWith("NUXT_SITE_") || k.startsWith("NUXT_PUBLIC_SITE_")).map(([k, v]) => [
+    k.replace(/^NUXT_(PUBLIC_)?SITE_/, "").split("_").map((s, i) => i === 0 ? s.toLowerCase() : s[0].toUpperCase() + s.slice(1).toLowerCase()).join(""),
+    v
+  ]));
 }
-function resolveSitePath$1(pathOrUrl, options) {
-  let path = pathOrUrl;
-  if (hasProtocol(pathOrUrl, { strict: false, acceptRelative: true })) {
-    const parsed = parseURL(pathOrUrl);
-    path = parsed.pathname;
+
+const logger = /* @__PURE__ */ createConsola({
+  defaults: {
+    tag: "nuxt-site-config"
   }
-  const base = withLeadingSlash(options.base || "/");
-  if (base !== "/" && path.startsWith(base)) {
-    path = path.slice(base.length);
+});
+
+function useSiteConfig(e, _options) {
+  if (!e.context._initedSiteConfig) {
+    logger.warn("Site config has not been initialized yet. If you're trying to access site config in a server middleware then this not yet supported. See https://github.com/harlan-zw/nuxt-seo/issues/397");
   }
-  const origin = options.absolute ? options.siteUrl : "";
-  const baseWithOrigin = options.withBase ? withBase(base, origin || "/") : origin;
-  const resolvedUrl = withBase(path, baseWithOrigin);
-  return path === "/" && !options.withBase ? withTrailingSlash(resolvedUrl) : fixSlashes$1(options.trailingSlash, resolvedUrl);
+  e.context.siteConfig = e.context.siteConfig || createSiteConfigStack();
+  const options = defu$1(_options, useRuntimeConfig(e)["nuxt-site-config"], { debug: false });
+  return e.context.siteConfig.get(options);
 }
-function fixSlashes$1(trailingSlash, pathOrUrl) {
-  const $url = parseURL(pathOrUrl);
-  const isFileUrl = $url.pathname.includes(".");
-  if (isFileUrl)
-    return pathOrUrl;
-  const fixedPath = trailingSlash ? withTrailingSlash($url.pathname) : withoutTrailingSlash($url.pathname);
-  return `${$url.protocol ? `${$url.protocol}//` : ""}${$url.host || ""}${fixedPath}${$url.search || ""}${$url.hash || ""}`;
+
+const _ZzRld6IxxPm6nniqlhUX8bDxI2N7WqioFfl22ntbGc = defineNitroPlugin(async (nitroApp) => {
+  nitroApp.hooks.hook("render:html", async (ctx, { event }) => {
+    const routeOptions = getRouteRules(event);
+    const isIsland = process.env.NUXT_COMPONENT_ISLANDS && event.path.startsWith("/__nuxt_island");
+    event.path;
+    const noSSR = event.context.nuxt?.noSSR || routeOptions.ssr === false && !isIsland || (false);
+    if (noSSR) {
+      const siteConfig = Object.fromEntries(
+        Object.entries(useSiteConfig(event)).map(([k, v]) => [k, toValue(v)])
+      );
+      ctx.body.push(`<script>window.__NUXT_SITE_CONFIG__=${devalue(siteConfig)}<\/script>`);
+    }
+  });
+});
+
+const plugins = [
+  _knKqyXVSUxQDZ2ZEyIQNTT0BLvp80tR8E8BpUVTGXxc,
+_tRe828s_7NtxZc1Jr87XqEojhcOMwzeSt08_ltkPHNI,
+_ZzRld6IxxPm6nniqlhUX8bDxI2N7WqioFfl22ntbGc
+];
+
+const assets = {};
+
+function readAsset (id) {
+  const serverDir = dirname$1(fileURLToPath(globalThis._importMeta_.url));
+  return promises.readFile(resolve$2(serverDir, assets[id].path))
+}
+
+const publicAssetBases = {"/_nuxt/builds/meta/":{"maxAge":31536000},"/_nuxt/builds/":{"maxAge":1}};
+
+function isPublicAssetURL(id = '') {
+  if (assets[id]) {
+    return true
+  }
+  for (const base in publicAssetBases) {
+    if (id.startsWith(base)) { return true }
+  }
+  return false
+}
+
+function getAsset (id) {
+  return assets[id]
+}
+
+const METHODS = /* @__PURE__ */ new Set(["HEAD", "GET"]);
+const EncodingMap = { gzip: ".gz", br: ".br" };
+const _EsyREI = eventHandler((event) => {
+  if (event.method && !METHODS.has(event.method)) {
+    return;
+  }
+  let id = decodePath(
+    withLeadingSlash(withoutTrailingSlash(parseURL(event.path).pathname))
+  );
+  let asset;
+  const encodingHeader = String(
+    getRequestHeader(event, "accept-encoding") || ""
+  );
+  const encodings = [
+    ...encodingHeader.split(",").map((e) => EncodingMap[e.trim()]).filter(Boolean).sort(),
+    ""
+  ];
+  if (encodings.length > 1) {
+    appendResponseHeader(event, "Vary", "Accept-Encoding");
+  }
+  for (const encoding of encodings) {
+    for (const _id of [id + encoding, joinURL(id, "index.html" + encoding)]) {
+      const _asset = getAsset(_id);
+      if (_asset) {
+        asset = _asset;
+        id = _id;
+        break;
+      }
+    }
+  }
+  if (!asset) {
+    if (isPublicAssetURL(id)) {
+      removeResponseHeader(event, "Cache-Control");
+      throw createError({ statusCode: 404 });
+    }
+    return;
+  }
+  const ifNotMatch = getRequestHeader(event, "if-none-match") === asset.etag;
+  if (ifNotMatch) {
+    setResponseStatus(event, 304, "Not Modified");
+    return "";
+  }
+  const ifModifiedSinceH = getRequestHeader(event, "if-modified-since");
+  const mtimeDate = new Date(asset.mtime);
+  if (ifModifiedSinceH && asset.mtime && new Date(ifModifiedSinceH) >= mtimeDate) {
+    setResponseStatus(event, 304, "Not Modified");
+    return "";
+  }
+  if (asset.type && !getResponseHeader(event, "Content-Type")) {
+    setResponseHeader(event, "Content-Type", asset.type);
+  }
+  if (asset.etag && !getResponseHeader(event, "ETag")) {
+    setResponseHeader(event, "ETag", asset.etag);
+  }
+  if (asset.mtime && !getResponseHeader(event, "Last-Modified")) {
+    setResponseHeader(event, "Last-Modified", mtimeDate.toUTCString());
+  }
+  if (asset.encoding && !getResponseHeader(event, "Content-Encoding")) {
+    setResponseHeader(event, "Content-Encoding", asset.encoding);
+  }
+  if (asset.size > 0 && !getResponseHeader(event, "Content-Length")) {
+    setResponseHeader(event, "Content-Length", asset.size);
+  }
+  return readAsset(id);
+});
+
+function useNitroOrigin(e) {
+  const cert = process.env.NITRO_SSL_CERT;
+  const key = process.env.NITRO_SSL_KEY;
+  let host = process.env.NITRO_HOST || process.env.HOST || false;
+  let port = false;
+  port = process.env.NITRO_PORT || process.env.PORT || "3000";
+  let protocol = cert && key || false ? "https" : "http";
+  if (process.env.__NUXT_DEV__) {
+    const origin = JSON.parse(process.env.__NUXT_DEV__).proxy.url;
+    host = withoutProtocol(origin);
+    protocol = origin.includes("https") ? "https" : "http";
+  } else if (process.env.NUXT_VITE_NODE_OPTIONS) {
+    const origin = JSON.parse(process.env.NUXT_VITE_NODE_OPTIONS).baseURL.replace("/__nuxt_vite_node__", "");
+    host = withoutProtocol(origin);
+    protocol = origin.includes("https") ? "https" : "http";
+  } else if (e) {
+    host = getRequestHost(e, { xForwardedHost: true }) || host;
+    protocol = getRequestProtocol(e, { xForwardedProto: true }) || protocol;
+  }
+  if (typeof host === "string" && host.includes(":")) {
+    port = host.split(":").pop();
+    host = host.split(":")[0];
+  }
+  port = port ? `:${port}` : "";
+  return withTrailingSlash(`${protocol}://${host}${port}`);
+}
+
+const _eSYQb5 = eventHandler(async (e) => {
+  if (e.context._initedSiteConfig)
+    return;
+  const runtimeConfig = useRuntimeConfig(e);
+  const config = runtimeConfig["nuxt-site-config"];
+  const nitroApp = useNitroApp();
+  const siteConfig = e.context.siteConfig || createSiteConfigStack({
+    debug: config.debug
+  });
+  const nitroOrigin = useNitroOrigin(e);
+  e.context.siteConfigNitroOrigin = nitroOrigin;
+  {
+    siteConfig.push({
+      _context: "nitro:init",
+      _priority: -4,
+      url: nitroOrigin
+    });
+  }
+  siteConfig.push({
+    _context: "runtimeEnv",
+    _priority: 0,
+    ...runtimeConfig.site || {},
+    ...runtimeConfig.public.site || {},
+    // @ts-expect-error untyped
+    ...envSiteConfig(globalThis._importMeta_.env)
+    // just in-case, shouldn't be needed
+  });
+  const buildStack = config.stack || [];
+  buildStack.forEach((c) => siteConfig.push(c));
+  if (e.context._nitro.routeRules.site) {
+    siteConfig.push({
+      _context: "route-rules",
+      ...e.context._nitro.routeRules.site
+    });
+  }
+  if (config.multiTenancy) {
+    const host = parseURL(nitroOrigin).host;
+    const tenant = config.multiTenancy?.find((t) => t.hosts.includes(host));
+    if (tenant) {
+      siteConfig.push({
+        _context: `multi-tenancy:${host}`,
+        _priority: 0,
+        ...tenant.config
+      });
+    }
+  }
+  const ctx = { siteConfig, event: e };
+  await nitroApp.hooks.callHook("site-config:init", ctx);
+  e.context.siteConfig = ctx.siteConfig;
+  e.context._initedSiteConfig = true;
+});
+
+const _mqd293 = eventHandler(async (e) => {
+  const siteConfig = useSiteConfig(e);
+  const nitroOrigin = useNitroOrigin(e);
+  const runtimeConfig = useRuntimeConfig(e);
+  const stack = e.context.siteConfig.stack;
+  setHeader(e, "Content-Type", "application/json");
+  return {
+    config: siteConfig,
+    stack,
+    nitroOrigin,
+    version: runtimeConfig["nuxt-site-config"].version
+  };
+});
+
+async function fetchDataSource(input) {
+  const context = typeof input.context === "string" ? { name: input.context } : input.context || { name: "fetch" };
+  context.tips = context.tips || [];
+  const url = typeof input.fetch === "string" ? input.fetch : input.fetch[0];
+  const options = typeof input.fetch === "string" ? {} : input.fetch[1];
+  const start = Date.now();
+  const timeout = options.timeout || 5e3;
+  const timeoutController = new AbortController();
+  const abortRequestTimeout = setTimeout(() => timeoutController.abort(), timeout);
+  let isHtmlResponse = false;
+  try {
+    const urls = await globalThis.$fetch(url, {
+      responseType: "json",
+      signal: timeoutController.signal,
+      headers: {
+        Accept: "application/json"
+      },
+      // @ts-expect-error untyped
+      onResponse({ response }) {
+        if (typeof response._data === "string" && response._data.startsWith("<!DOCTYPE html>"))
+          isHtmlResponse = true;
+      }
+    });
+    const timeTakenMs = Date.now() - start;
+    if (isHtmlResponse) {
+      context.tips.push("This is usually because the URL isn't correct or is throwing an error. Please check the URL");
+      return {
+        ...input,
+        context,
+        urls: [],
+        timeTakenMs,
+        error: "Received HTML response instead of JSON"
+      };
+    }
+    return {
+      ...input,
+      context,
+      timeTakenMs,
+      urls
+    };
+  } catch (_err) {
+    const error = _err;
+    if (error.message.includes("This operation was aborted"))
+      context.tips.push("The request has taken too long. Make sure app sources respond within 5 seconds or adjust the timeout fetch option.");
+    else
+      context.tips.push(`Response returned a status of ${error.response?.status || "unknown"}.`);
+    console.error("[nuxt-simple-sitemap] Failed to fetch source.", { url, error });
+    return {
+      ...input,
+      context,
+      urls: [],
+      error: error.message
+    };
+  } finally {
+    abortRequestTimeout && clearTimeout(abortRequestTimeout);
+  }
+}
+function globalSitemapSources() {
+  return Promise.resolve().then(function () { return globalSources; }).then((m) => m.sources);
+}
+function childSitemapSources(definition) {
+  return definition?._hasSourceChunk ? Promise.resolve().then(function () { return childSources; }).then((m) => m.sources[definition.sitemapName] || []) : Promise.resolve([]);
+}
+async function resolveSitemapSources(sources) {
+  return (await Promise.all(
+    sources.map((source) => {
+      if (typeof source === "object" && "urls" in source) {
+        return {
+          timeTakenMs: 0,
+          ...source,
+          urls: source.urls
+        };
+      }
+      if (source.fetch)
+        return fetchDataSource(source);
+      return {
+        ...source,
+        error: "Invalid source"
+      };
+    })
+  )).flat();
+}
+
+function defineNitroPlugin(def) {
+  return def;
 }
 
 function defineRenderHandler(render) {
@@ -1392,41 +1659,153 @@ function publicAssetsURL(...path) {
   return path.length ? joinRelativeURL(publicBase, ...path) : publicBase;
 }
 
-function useSiteConfig(e, _options) {
-  e.context.siteConfig = e.context.siteConfig || createSiteConfigStack();
-  const options = defu(_options, useRuntimeConfig()["nuxt-site-config"], { debug: false });
-  return e.context.siteConfig.get(options);
+function resolveSitePath$1(pathOrUrl, options) {
+  let path = pathOrUrl;
+  if (hasProtocol(pathOrUrl, { strict: false, acceptRelative: true })) {
+    const parsed = parseURL(pathOrUrl);
+    path = parsed.pathname;
+  }
+  const base = withLeadingSlash(options.base || "/");
+  if (base !== "/" && path.startsWith(base)) {
+    path = path.slice(base.length);
+  }
+  let origin = withoutTrailingSlash(options.absolute ? options.siteUrl : "");
+  if (base !== "/" && origin.endsWith(base)) {
+    origin = origin.slice(0, origin.indexOf(base));
+  }
+  const baseWithOrigin = options.withBase ? withBase(base, origin || "/") : origin;
+  const resolvedUrl = withBase(path, baseWithOrigin);
+  return path === "/" && !options.withBase ? withTrailingSlash(resolvedUrl) : fixSlashes$1(options.trailingSlash, resolvedUrl);
 }
-
-function useNitroOrigin(e) {
-  const cert = process.env.NITRO_SSL_CERT;
-  const key = process.env.NITRO_SSL_KEY;
-  let host = process.env.NITRO_HOST || process.env.HOST || false;
-  let port;
-  port = process.env.NITRO_PORT || process.env.PORT || "3000";
-  let protocol = cert && key || false ? "https" : "http";
-  if (!e) {
-    if (process.env.NUXT_VITE_NODE_OPTIONS) {
-      const origin = JSON.parse(process.env.NUXT_VITE_NODE_OPTIONS).baseURL.replace("/__nuxt_vite_node__", "");
-      host = withoutProtocol(origin);
-      protocol = origin.includes("https") ? "https" : "http";
-    }
-  } else {
-    host = getRequestHost(e, { xForwardedHost: true }) || host;
-    protocol = getRequestProtocol(e, { xForwardedProto: true }) || protocol;
-  }
-  if (typeof host === "string" && host.includes(":")) {
-    port = host.split(":").pop();
-    host = host.split(":")[0];
-  }
-  port = port ? `:${port}` : "";
-  return `${protocol}://${host}${port}/`;
+const fileExtensions = [
+  // Images
+  "jpg",
+  "jpeg",
+  "png",
+  "gif",
+  "bmp",
+  "webp",
+  "svg",
+  "ico",
+  // Documents
+  "pdf",
+  "doc",
+  "docx",
+  "xls",
+  "xlsx",
+  "ppt",
+  "pptx",
+  "txt",
+  "md",
+  "markdown",
+  // Archives
+  "zip",
+  "rar",
+  "7z",
+  "tar",
+  "gz",
+  // Audio
+  "mp3",
+  "wav",
+  "flac",
+  "ogg",
+  "opus",
+  "m4a",
+  "aac",
+  "midi",
+  "mid",
+  // Video
+  "mp4",
+  "avi",
+  "mkv",
+  "mov",
+  "wmv",
+  "flv",
+  "webm",
+  // Web
+  "html",
+  "css",
+  "js",
+  "json",
+  "xml",
+  "tsx",
+  "jsx",
+  "ts",
+  "vue",
+  "svelte",
+  "xsl",
+  "rss",
+  "atom",
+  // Programming
+  "php",
+  "py",
+  "rb",
+  "java",
+  "c",
+  "cpp",
+  "h",
+  "go",
+  // Data formats
+  "csv",
+  "tsv",
+  "sql",
+  "yaml",
+  "yml",
+  // Fonts
+  "woff",
+  "woff2",
+  "ttf",
+  "otf",
+  "eot",
+  // Executables/Binaries
+  "exe",
+  "msi",
+  "apk",
+  "ipa",
+  "dmg",
+  "iso",
+  "bin",
+  // Scripts/Config
+  "bat",
+  "cmd",
+  "sh",
+  "env",
+  "htaccess",
+  "conf",
+  "toml",
+  "ini",
+  // Package formats
+  "deb",
+  "rpm",
+  "jar",
+  "war",
+  // E-books
+  "epub",
+  "mobi",
+  // Common temporary/backup files
+  "log",
+  "tmp",
+  "bak",
+  "old",
+  "sav"
+];
+function isPathFile$1(path) {
+  const lastSegment = path.split("/").pop();
+  const ext = (lastSegment || path).match(/\.[0-9a-z]+$/i)?.[0];
+  return ext && fileExtensions.includes(ext.replace(".", ""));
+}
+function fixSlashes$1(trailingSlash, pathOrUrl) {
+  const $url = parseURL(pathOrUrl);
+  if (isPathFile$1($url.pathname))
+    return pathOrUrl;
+  const fixedPath = trailingSlash ? withTrailingSlash($url.pathname) : withoutTrailingSlash($url.pathname);
+  return `${$url.protocol ? `${$url.protocol}//` : ""}${$url.host || ""}${fixedPath}${$url.search || ""}${$url.hash || ""}`;
 }
 
 function createSitePathResolver(e, options = {}) {
   const siteConfig = useSiteConfig(e);
   const nitroOrigin = useNitroOrigin(e);
-  const nuxtBase = useRuntimeConfig().app.baseURL || "/";
+  const nuxtBase = useRuntimeConfig(e).app.baseURL || "/";
   return (path) => {
     return resolveSitePath$1(path, {
       ...options,
@@ -1435,286 +1814,6 @@ function createSitePathResolver(e, options = {}) {
       base: nuxtBase
     });
   };
-}
-function withSiteUrl(e, path, options = {}) {
-  const siteConfig = e.context.siteConfig?.get();
-  return resolveSitePath$1(path, {
-    absolute: true,
-    siteUrl: options.canonical !== false || false ? siteConfig.url : e.context.siteConfigNitroOrigin,
-    trailingSlash: siteConfig.trailingSlash,
-    base: e.context.nitro.baseURL,
-    withBase: options.withBase
-  });
-}
-
-const InjectStatePlugin = async (nitroApp) => {
-  nitroApp.hooks.hook("render:html", async (ctx, { event }) => {
-    const routeOptions = getRouteRules(event);
-    const isIsland = process.env.NUXT_COMPONENT_ISLANDS && event.path.startsWith("/__nuxt_island");
-    event.path;
-    const noSSR = event.context.nuxt?.noSSR || routeOptions.ssr === false && !isIsland || (false);
-    if (noSSR) {
-      const siteConfig = Object.fromEntries(
-        Object.entries(useSiteConfig(event)).map(([k, v]) => [k, toValue(v)])
-      );
-      ctx.body.push(`<script>window.__NUXT_SITE_CONFIG__=${devalue(siteConfig)}<\/script>`);
-    }
-  });
-};
-
-const plugins = [
-  _MTbJ2TRSnvuBKM8IZGFvy_XRonEoRzWezKOj4AnFoJ8,
-_EaSuE0FiWSfvZXcbNEXfKhGyDqQuDKF0rKBFy35kk1M,
-InjectStatePlugin
-];
-
-const assets = {};
-
-function readAsset (id) {
-  const serverDir = dirname$1(fileURLToPath(globalThis._importMeta_.url));
-  return promises.readFile(resolve$2(serverDir, assets[id].path))
-}
-
-const publicAssetBases = {"/_nuxt/builds/meta/":{"maxAge":31536000},"/_nuxt/builds/":{"maxAge":1}};
-
-function isPublicAssetURL(id = '') {
-  if (assets[id]) {
-    return true
-  }
-  for (const base in publicAssetBases) {
-    if (id.startsWith(base)) { return true }
-  }
-  return false
-}
-
-function getAsset (id) {
-  return assets[id]
-}
-
-const METHODS = /* @__PURE__ */ new Set(["HEAD", "GET"]);
-const EncodingMap = { gzip: ".gz", br: ".br" };
-const _qrfFkb = eventHandler((event) => {
-  if (event.method && !METHODS.has(event.method)) {
-    return;
-  }
-  let id = decodePath(
-    withLeadingSlash(withoutTrailingSlash(parseURL(event.path).pathname))
-  );
-  let asset;
-  const encodingHeader = String(
-    getRequestHeader(event, "accept-encoding") || ""
-  );
-  const encodings = [
-    ...encodingHeader.split(",").map((e) => EncodingMap[e.trim()]).filter(Boolean).sort(),
-    ""
-  ];
-  if (encodings.length > 1) {
-    appendResponseHeader(event, "Vary", "Accept-Encoding");
-  }
-  for (const encoding of encodings) {
-    for (const _id of [id + encoding, joinURL(id, "index.html" + encoding)]) {
-      const _asset = getAsset(_id);
-      if (_asset) {
-        asset = _asset;
-        id = _id;
-        break;
-      }
-    }
-  }
-  if (!asset) {
-    if (isPublicAssetURL(id)) {
-      removeResponseHeader(event, "Cache-Control");
-      throw createError({ statusCode: 404 });
-    }
-    return;
-  }
-  const ifNotMatch = getRequestHeader(event, "if-none-match") === asset.etag;
-  if (ifNotMatch) {
-    setResponseStatus(event, 304, "Not Modified");
-    return "";
-  }
-  const ifModifiedSinceH = getRequestHeader(event, "if-modified-since");
-  const mtimeDate = new Date(asset.mtime);
-  if (ifModifiedSinceH && asset.mtime && new Date(ifModifiedSinceH) >= mtimeDate) {
-    setResponseStatus(event, 304, "Not Modified");
-    return "";
-  }
-  if (asset.type && !getResponseHeader(event, "Content-Type")) {
-    setResponseHeader(event, "Content-Type", asset.type);
-  }
-  if (asset.etag && !getResponseHeader(event, "ETag")) {
-    setResponseHeader(event, "ETag", asset.etag);
-  }
-  if (asset.mtime && !getResponseHeader(event, "Last-Modified")) {
-    setResponseHeader(event, "Last-Modified", mtimeDate.toUTCString());
-  }
-  if (asset.encoding && !getResponseHeader(event, "Content-Encoding")) {
-    setResponseHeader(event, "Content-Encoding", asset.encoding);
-  }
-  if (asset.size > 0 && !getResponseHeader(event, "Content-Length")) {
-    setResponseHeader(event, "Content-Length", asset.size);
-  }
-  return readAsset(id);
-});
-
-function getEnv(config) {
-  const key = config.toUpperCase();
-  const env = globalThis._importMeta_.env || {};
-  const privateKey = `NUXT_SITE_${key}`;
-  const publicKey = `NUXT_PUBLIC_SITE_${key}`;
-  if (privateKey in env)
-    return env[privateKey];
-  if (publicKey in env)
-    return env[publicKey];
-}
-const _dMlyH0 = defineEventHandler((e) => {
-  const config = useRuntimeConfig()["nuxt-site-config"];
-  const siteConfig = e.context.siteConfig || createSiteConfigStack({
-    debug: config.debug
-  });
-  if (siteConfig) {
-    const appConfig = useAppConfig();
-    const nitroOrigin = useNitroOrigin(e);
-    e.context.siteConfigNitroOrigin = nitroOrigin;
-    siteConfig.push({
-      _context: "nitro:init",
-      _priority: -4,
-      url: nitroOrigin
-    });
-    siteConfig.push({
-      _context: "runtimeEnv",
-      _priority: 0,
-      env: getEnv("Env"),
-      url: getEnv("Url"),
-      name: getEnv("Name"),
-      description: getEnv("Description"),
-      logo: getEnv("Image"),
-      defaultLocale: getEnv("Language"),
-      indexable: getEnv("Indexable")
-    });
-    const buildStack = config.stack || [];
-    buildStack.forEach((c) => siteConfig.push(c));
-    if (appConfig.site) {
-      siteConfig.push({
-        _priority: -2,
-        _context: "app:config",
-        ...appConfig.site
-      });
-    }
-    if (e.context._nitro.routeRules.site) {
-      siteConfig.push({
-        _context: "route-rules",
-        ...e.context._nitro.routeRules.site
-      });
-    }
-    const curStack = siteConfig.get();
-    if (typeof curStack.indexable === "undefined") {
-      siteConfig.push({
-        _context: "computed-env",
-        _priority: -4,
-        // allow overriding from the module
-        indexable: curStack.env === "production"
-      });
-    }
-  }
-  e.context.siteConfig = siteConfig;
-});
-
-const _IXzbA1 = defineEventHandler(async (e) => {
-  const siteConfig = useSiteConfig(e);
-  const nitroOrigin = useNitroOrigin(e);
-  const { public: publicRuntimeConfig } = useRuntimeConfig();
-  const stack = e.context.siteConfig.stack;
-  setHeader(e, "Content-Type", "application/json");
-  return {
-    config: siteConfig,
-    stack,
-    nitroOrigin,
-    version: publicRuntimeConfig["nuxt-site-config"]
-  };
-});
-
-async function fetchDataSource(input) {
-  const context = typeof input.context === "string" ? { name: input.context } : input.context || { name: "fetch" };
-  context.tips = context.tips || [];
-  const url = typeof input.fetch === "string" ? input.fetch : input.fetch[0];
-  const options = typeof input.fetch === "string" ? {} : input.fetch[1];
-  const start = Date.now();
-  const timeout = options.timeout || 5e3;
-  const timeoutController = new AbortController();
-  const abortRequestTimeout = setTimeout(() => timeoutController.abort(), timeout);
-  let isHtmlResponse = false;
-  try {
-    const urls = await globalThis.$fetch(url, {
-      responseType: "json",
-      signal: timeoutController.signal,
-      headers: {
-        Accept: "application/json"
-      },
-      // @ts-expect-error untyped
-      onResponse({ response }) {
-        if (typeof response._data === "string" && response._data.startsWith("<!DOCTYPE html>"))
-          isHtmlResponse = true;
-      }
-    });
-    const timeTakenMs = Date.now() - start;
-    if (isHtmlResponse) {
-      context.tips.push("This is usually because the URL isn't correct or is throwing an error. Please check the URL");
-      return {
-        ...input,
-        context,
-        urls: [],
-        timeTakenMs,
-        error: "Received HTML response instead of JSON"
-      };
-    }
-    return {
-      ...input,
-      context,
-      timeTakenMs,
-      urls
-    };
-  } catch (_err) {
-    const error = _err;
-    if (error.message.includes("This operation was aborted"))
-      context.tips.push("The request has taken too long. Make sure app sources respond within 5 seconds or adjust the timeout fetch option.");
-    else
-      context.tips.push(`Response returned a status of ${error.response?.status || "unknown"}.`);
-    console.error("[nuxt-simple-sitemap] Failed to fetch source.", { url, error });
-    return {
-      ...input,
-      context,
-      urls: [],
-      error: error.message
-    };
-  } finally {
-    abortRequestTimeout && clearTimeout(abortRequestTimeout);
-  }
-}
-function globalSitemapSources() {
-  return Promise.resolve().then(function () { return globalSources; }).then((m) => m.sources);
-}
-function childSitemapSources(definition) {
-  return definition?._hasSourceChunk ? Promise.resolve().then(function () { return childSources; }).then((m) => m.sources[definition.sitemapName] || []) : Promise.resolve([]);
-}
-async function resolveSitemapSources(sources) {
-  return (await Promise.all(
-    sources.map((source) => {
-      if (typeof source === "object" && "urls" in source) {
-        return {
-          timeTakenMs: 0,
-          ...source,
-          urls: source.urls
-        };
-      }
-      if (source.fetch)
-        return fetchDataSource(source);
-      return {
-        ...source,
-        error: "Invalid source"
-      };
-    })
-  )).flat();
 }
 
 const merger = createDefu((obj, key, value) => {
@@ -1759,7 +1858,7 @@ function useSimpleSitemapRuntimeConfig() {
   return Object.freeze(clone);
 }
 
-const _3uO3Ko = defineEventHandler(async (e) => {
+const _4D0YMD = defineEventHandler(async (e) => {
   const _runtimeConfig = useSimpleSitemapRuntimeConfig();
   const { sitemaps: _sitemaps } = _runtimeConfig;
   const runtimeConfig = { ..._runtimeConfig };
@@ -1781,7 +1880,7 @@ const _3uO3Ko = defineEventHandler(async (e) => {
   };
 });
 
-const _4aCuUA = defineEventHandler(async (e) => {
+const _ZZFcMn = defineEventHandler(async (e) => {
   setHeader(e, "Content-Type", "application/xslt+xml");
   const fixPath = createSitePathResolver(e, { absolute: false, withBase: true });
   const { sitemapName: fallbackSitemapName, version, xslColumns, xslTips } = useSimpleSitemapRuntimeConfig();
@@ -2598,124 +2697,12 @@ async function createSitemap(e, definition) {
   return sitemap;
 }
 
-const _ltjiLz = defineEventHandler(async (e) => {
+const _ZR1tMd = defineEventHandler(async (e) => {
   const { sitemaps } = useSimpleSitemapRuntimeConfig();
   if ("index" in sitemaps) {
     return sendRedirect(e, withBase("/sitemap_index.xml", useRuntimeConfig().app.baseURL), 302 );
   }
   return createSitemap(e, Object.values(sitemaps)[0]);
-});
-
-function generateRobotsTxt({ groups, sitemaps }) {
-  const lines = [];
-  for (const group of groups) {
-    for (const comment of group.comment || [])
-      lines.push(`# ${comment}`);
-    for (const userAgent of group.userAgent || ["*"])
-      lines.push(`User-agent: ${userAgent}`);
-    for (const allow of group.allow || [])
-      lines.push(`Allow: ${allow}`);
-    for (const disallow of group.disallow || [])
-      lines.push(`Disallow: ${disallow}`);
-    lines.push("");
-  }
-  for (const sitemap of sitemaps)
-    lines.push(`Sitemap: ${sitemap}`);
-  return lines.join("\n");
-}
-
-const _Tqz6dv = defineEventHandler(async (e) => {
-  const query = getQuery$1(e);
-  setHeader(e, "Content-Type", "text/plain; charset=utf-8");
-  setHeader(e, "Cache-Control", "no-store" );
-  const { groups, sitemap, credits } = useRuntimeConfig()["nuxt-simple-robots"];
-  const { indexable: _indexable, _context } = useSiteConfig(e, { debug: true });
-  let indexable = Boolean(_indexable);
-  const queryIndexableEnabled = String(query.indexable) === "true" || query.indexable === "";
-  let sitemaps = [...Array.isArray(sitemap) ? sitemap : [sitemap]].map((s) => {
-    if (!s.startsWith("http"))
-      return withSiteUrl(e, s, { withBase: true});
-    return s;
-  });
-  sitemaps = [...new Set(sitemaps)];
-  const devHints = [];
-  {
-    if (!indexable && _context.indexable === "nuxt-simple-robots:config") {
-      devHints.push("You are blocking indexing with your nuxt-simple-robots config.");
-    } else if (queryIndexableEnabled && _context.indexable === "computed-env") {
-      indexable = true;
-      devHints.push("You are mocking a production enviroment with ?indexable query.");
-    } else if (!indexable && !indexable) {
-      if (_context.indexable === "computed-env")
-        devHints.push(`Indexing is blocked because of the environment. You can mock a production environment with ?indexable query.`);
-      else
-        devHints.push(`Indexing is blocked by site config set by ${_context.indexable}.`);
-    }
-  }
-  if (!indexable) {
-    sitemaps = [];
-  }
-  const robotGroups = indexable ? [...groups] : [
-    {
-      allow: [],
-      comment: [],
-      userAgent: ["*"],
-      disallow: ["/"]
-    }
-  ];
-  let robotsTxt = generateRobotsTxt({ groups: robotGroups, sitemaps });
-  if (devHints.length) {
-    robotsTxt += `
-# DEVELOPMENT HINTS: ${devHints.join(", ")}
-`;
-  }
-  if (credits) {
-    robotsTxt = [
-      `# START nuxt-simple-robots (${indexable ? "indexable" : "indexing disabled"})`,
-      robotsTxt,
-      "# END nuxt-simple-robots"
-    ].filter(Boolean).join("\n");
-  }
-  const hookCtx = { robotsTxt };
-  const nitro = useNitroApp();
-  await nitro.hooks.callHook("robots:robots-txt", hookCtx);
-  return hookCtx.robotsTxt;
-});
-
-function asArray(v) {
-  return typeof v === "undefined" ? [] : Array.isArray(v) ? v : [v];
-}
-function indexableFromGroup(groups, path) {
-  let indexable = true;
-  const wildCardGroups = groups.filter((group) => asArray(group.userAgent).includes("*"));
-  for (const group of wildCardGroups) {
-    const hasDisallowRule = asArray(group.disallow).filter((rule) => Boolean(rule)).some((rule) => path.startsWith(rule));
-    const hasAllowRule = asArray(group.allow).some((rule) => path.startsWith(rule));
-    if (hasDisallowRule && !hasAllowRule) {
-      indexable = false;
-      break;
-    }
-  }
-  return indexable;
-}
-
-const _JoyvIo = defineEventHandler((e) => {
-  if (e.path === "/robots.txt")
-    return;
-  const { indexable } = useSiteConfig(e);
-  const { robotsDisabledValue, groups } = useRuntimeConfig()["nuxt-simple-robots"];
-  const routeRules = getRouteRules(e);
-  if (typeof routeRules.robots === "string") {
-    setHeader(e, "X-Robots-Tag", routeRules.robots);
-    return;
-  }
-  if (routeRules.index === false || indexable === false) {
-    setHeader(e, "X-Robots-Tag", robotsDisabledValue);
-    return;
-  }
-  const groupIndexable = indexableFromGroup(groups, e.path);
-  if (!groupIndexable)
-    setHeader(e, "X-Robots-Tag", robotsDisabledValue);
 });
 
 const VueResolver = (_, value) => {
@@ -2777,8 +2764,8 @@ function setSSRError(ssrContext, error) {
 
 const APP_ROOT_OPEN_TAG = `<${appRootTag}${propsToString(appRootAttrs)}>`;
 const APP_ROOT_CLOSE_TAG = `</${appRootTag}>`;
-const getServerEntry = () => import('file://C:/Users/FELIX/ruangoffice-new/.nuxt//dist/server/server.mjs').then((r) => r.default || r);
-const getClientManifest = () => import('file://C:/Users/FELIX/ruangoffice-new/.nuxt//dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getServerEntry = () => import('file://C:/Users/62819/Cursor/ruangoffice-new/.nuxt//dist/server/server.mjs').then((r) => r.default || r);
+const getClientManifest = () => import('file://C:/Users/62819/Cursor/ruangoffice-new/.nuxt//dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
 const getSSRRenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
   if (!manifest) {
@@ -2945,7 +2932,7 @@ function replaceIslandTeleports(ssrContext, html) {
   return html;
 }
 
-const ISLAND_SUFFIX_RE = /\.json(\?.*)?$/;
+const ISLAND_SUFFIX_RE = /\.json(?:\?.*)?$/;
 const _SxA8c9 = defineEventHandler(async (event) => {
   const nitroApp = useNitroApp();
   setResponseHeaders(event, {
@@ -3024,30 +3011,28 @@ async function getIslandContext(event) {
   return ctx;
 }
 
-const _lazy_3HhS6w = () => Promise.resolve().then(function () { return kbliProtected_get$1; });
-const _lazy_Paie9R = () => Promise.resolve().then(function () { return peraturanProtected_get$1; });
-const _lazy_EdUkHT = () => Promise.resolve().then(function () { return robots_txt$1; });
-const _lazy_qSXwKJ = () => Promise.resolve().then(function () { return sitemap_xml$1; });
-const _lazy_LQGzLy = () => Promise.resolve().then(function () { return testimonials$1; });
-const _lazy_A7yp1f = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_BavmSg = () => Promise.resolve().then(function () { return kbliProtected_get$1; });
+const _lazy_FtvU2s = () => Promise.resolve().then(function () { return peraturanProtected_get$1; });
+const _lazy_rZam9Z = () => Promise.resolve().then(function () { return robots_txt$1; });
+const _lazy_olrRh0 = () => Promise.resolve().then(function () { return sitemap_xml$1; });
+const _lazy_CfSXhl = () => Promise.resolve().then(function () { return testimonials$1; });
+const _lazy_oMmag4 = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '', handler: _qrfFkb, lazy: false, middleware: true, method: undefined },
-  { route: '/api/kbli-protected', handler: _lazy_3HhS6w, lazy: true, middleware: false, method: "get" },
-  { route: '/api/peraturan-protected', handler: _lazy_Paie9R, lazy: true, middleware: false, method: "get" },
-  { route: '/api/robots.txt', handler: _lazy_EdUkHT, lazy: true, middleware: false, method: undefined },
-  { route: '/api/sitemap.xml', handler: _lazy_qSXwKJ, lazy: true, middleware: false, method: undefined },
-  { route: '/api/testimonials', handler: _lazy_LQGzLy, lazy: true, middleware: false, method: undefined },
-  { route: '/__nuxt_error', handler: _lazy_A7yp1f, lazy: true, middleware: false, method: undefined },
-  { route: '', handler: _dMlyH0, lazy: false, middleware: true, method: undefined },
-  { route: '/__site-config__/debug.json', handler: _IXzbA1, lazy: false, middleware: false, method: undefined },
-  { route: '/__sitemap__/debug.json', handler: _3uO3Ko, lazy: false, middleware: false, method: undefined },
-  { route: '/__sitemap__/style.xsl', handler: _4aCuUA, lazy: false, middleware: false, method: undefined },
-  { route: '/sitemap.xml', handler: _ltjiLz, lazy: false, middleware: false, method: undefined },
-  { route: '/robots.txt', handler: _Tqz6dv, lazy: false, middleware: false, method: undefined },
-  { route: '', handler: _JoyvIo, lazy: false, middleware: false, method: undefined },
+  { route: '', handler: _EsyREI, lazy: false, middleware: true, method: undefined },
+  { route: '/api/kbli-protected', handler: _lazy_BavmSg, lazy: true, middleware: false, method: "get" },
+  { route: '/api/peraturan-protected', handler: _lazy_FtvU2s, lazy: true, middleware: false, method: "get" },
+  { route: '/api/robots.txt', handler: _lazy_rZam9Z, lazy: true, middleware: false, method: undefined },
+  { route: '/api/sitemap.xml', handler: _lazy_olrRh0, lazy: true, middleware: false, method: undefined },
+  { route: '/api/testimonials', handler: _lazy_CfSXhl, lazy: true, middleware: false, method: undefined },
+  { route: '/__nuxt_error', handler: _lazy_oMmag4, lazy: true, middleware: false, method: undefined },
+  { route: '', handler: _eSYQb5, lazy: false, middleware: true, method: undefined },
+  { route: '/__site-config__/debug.json', handler: _mqd293, lazy: false, middleware: false, method: undefined },
+  { route: '/__sitemap__/debug.json', handler: _4D0YMD, lazy: false, middleware: false, method: undefined },
+  { route: '/__sitemap__/style.xsl', handler: _ZZFcMn, lazy: false, middleware: false, method: undefined },
+  { route: '/sitemap.xml', handler: _ZR1tMd, lazy: false, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: _SxA8c9, lazy: false, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_A7yp1f, lazy: true, middleware: false, method: undefined }
+  { route: '/**', handler: _lazy_oMmag4, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
@@ -3122,7 +3107,10 @@ function createNitroApp() {
     preemptive: true
   });
   const nodeHandler = toNodeListener(h3App);
-  const localCall = (aRequest) => callNodeRequestHandler(nodeHandler, aRequest);
+  const localCall = (aRequest) => callNodeRequestHandler(
+    nodeHandler,
+    aRequest
+  );
   const localFetch = (input, init) => {
     if (!input.toString().startsWith("/")) {
       return globalThis.fetch(input, init);

@@ -1,9 +1,6 @@
 <template>
   <div>
-    <!-- Scroll Progress -->
-    <ScrollProgress />
-    
-    <!-- Loading Bar -->
+    <!-- Loading Bar (kept minimal) -->
     <LoadingBar />
     
     <!-- Main App -->

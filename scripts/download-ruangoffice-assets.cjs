@@ -44,13 +44,15 @@ function walk(
 function extractUrls(text) {
   const urls = new Set();
   const regex =
-    /(https:\/\/www\.ruangoffice\.com[^"'\s)]+)|(https:\/\/ruangoffice\.com[^"'\s)]+)/g;
+    /(https:\/\/www\.ruangoffice\.(?:com|online)[^"'\s)]+)|(https:\/\/ruangoffice\.(?:com|online)[^"'\s)]+)/g;
   let m;
   while ((m = regex.exec(text)) !== null) {
     const url = (m[1] || m[2]).trim();
     if (
       url.startsWith("https://www.ruangoffice.com") ||
-      url.startsWith("https://ruangoffice.com")
+      url.startsWith("https://ruangoffice.com") ||
+      url.startsWith("https://www.ruangoffice.online") ||
+      url.startsWith("https://ruangoffice.online")
     ) {
       urls.add(url);
     }
@@ -178,8 +180,12 @@ function rewriteFile(filePath, replacements) {
         ".otf",
         ".json",
         ".map",
+        ".html",
       ]);
-      return allow.has(ext);
+      if (allow.has(ext)) return true;
+      // If no extension, treat as HTML page (exclude APIs)
+      if (!ext && !pathname.includes("/api/")) return true;
+      return false;
     } catch {
       return false;
     }

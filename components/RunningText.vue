@@ -1,32 +1,27 @@
 <template>
-  <div class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black py-2 sm:py-3 overflow-hidden relative">
+  <div class="bg-gradient-to-r from-[#1a1a1a] to-[#0A0A0A] text-white overflow-hidden relative border-b border-[#FFD700]/20" style="height: 36px;">
     <!-- Desktop Version -->
-    <div class="hidden sm:block animate-marquee whitespace-nowrap">
-      <span class="inline-block mx-8 text-sm sm:text-base font-semibold leading-relaxed">
-        🚀 RuangOffice.com - Solusi Bisnis Terpercaya | 
-        📞 0811113666 | 
-        💼 Pendirian PT, CV, PMA | 
-        🏢 Virtual Office & Private Office | 
-        ⚖️ Jasa Legalitas & Konsultan | 
-        🔒 Terdaftar OSS RBA | 
-        ⭐ 5000+ Klien Puas | 
-        🎯 98% Sukses Rate | 
-        💬 Support 24 Jam
+    <div class="hidden sm:flex items-center h-full animate-marquee whitespace-nowrap">
+      <span class="inline-block mx-6 text-sm font-bold leading-relaxed flex items-center text-white">
+        <span class="mr-2 text-[#FFD700] text-base">📞</span> 0811-113-666 | 
+        <span class="mr-2 ml-4 text-[#FFD700] text-base">🏢</span> Pendirian PT, CV, PMA | 
+        <span class="mr-2 ml-4 text-[#FFD700] text-base">💼</span> Virtual Office & Perizinan | 
+        <span class="mr-2 ml-4 text-[#FFD700] text-base">⚡</span> Konsultasi Gratis 24 Jam | 
+        <span class="mr-2 ml-4 text-[#FFD700] text-base">🎯</span> Proses 100% Legal & Transparan | 
+        <span class="mr-2 ml-4 text-[#FFD700] text-base">📋</span> KBLI Terbaru 2024 | 
+        <span class="mr-2 ml-4 text-[#FFD700] text-base">🏆</span> 5000+ Perusahaan Terpercaya
       </span>
     </div>
     
     <!-- Mobile Version -->
-    <div class="sm:hidden animate-marquee-mobile whitespace-nowrap">
-      <span class="inline-block mx-4 text-xs font-semibold leading-relaxed">
-        🚀 RuangOffice.com | 
-        📞 0811113666 | 
-        💼 Pendirian PT, CV, PMA | 
-        🏢 Virtual Office | 
-        ⚖️ Jasa Legalitas | 
-        🔒 OSS RBA | 
-        ⭐ 5000+ Klien | 
-        🎯 98% Sukses | 
-        💬 24 Jam
+    <div class="sm:hidden flex items-center h-full animate-marquee-mobile whitespace-nowrap">
+      <span class="inline-block mx-3 text-xs font-bold leading-relaxed flex items-center text-white">
+        <span class="mr-1 text-[#FFD700]">📞</span> 0811-113-666 | 
+        <span class="mr-1 ml-2 text-[#FFD700]">🏢</span> PT, CV, PMA | 
+        <span class="mr-1 ml-2 text-[#FFD700]">💼</span> Virtual Office | 
+        <span class="mr-1 ml-2 text-[#FFD700]">⚡</span> 24 Jam | 
+        <span class="mr-1 ml-2 text-[#FFD700]">🎯</span> 100% Legal | 
+        <span class="mr-1 ml-2 text-[#FFD700]">🏆</span> 5000+ Klien
       </span>
     </div>
   </div>

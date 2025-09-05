@@ -1,5 +1,5 @@
 <template>
-  <section class="py-12 sm:py-16 lg:py-20 bg-white">
+  <section class="py-12 sm:py-16 lg:py-20 bg-white reveal-animate">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Header -->
       <div class="text-center mb-10 sm:mb-12 lg:mb-16">
@@ -28,7 +28,7 @@
               <img 
                 :src="slide.image" 
                 :alt="slide.title"
-                class="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover"
+                class="w-full h-56 sm:h-72 md:h-80 lg:h-96 object-cover"
                 loading="lazy"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>

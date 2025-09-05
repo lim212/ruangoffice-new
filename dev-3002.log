@@ -1,0 +1,75 @@
+[90m[[90mnuxi[90m][39m [90m[32mNuxt [1m3.19.0[22m[90m with Nitro [1m2.12.5[22m[39m
+
+[32m  ➜ Local:   [39m [36m[4mhttp://localhost:[1m3002[22m/[24m[39m
+[90m  ➜ Network:  use [37m--host[90m to expose[39m
+
+[90m[[90mnuxt:tailwindcss[90m][39m [36mℹ[39m Using Tailwind CSS from ~/assets/css/tailwind.css
+[33m  ➜ DevTools: [39m[2mpress [22m[32mShift[39m[2m + [22m[32mAlt[39m[2m + [22m[32mD[39m[2m in the browser (v2.6.3)[22m
+
+[90m[[90mnuxt:tailwindcss[90m][39m [36mℹ[39m Tailwind Viewer: [4m[33mhttp://localhost:3002/_tailwind/[39m[24m
+[32m✔[39m Vite client built in 438ms
+[32m✔[39m Vite server built in 8487ms
+[90m[[90mnuxt[90m][39m [36mℹ[39m Compiled [36mplugins.server.mjs[39m in 1045.4ms
+[90m[[90mnuxt[90m][39m [36mℹ[39m Compiled [36mplugins.client.mjs[39m in 1146.33ms
+[90m[[90mnuxt[90m][39m [36mℹ[39m Compiled [36mtypes/plugins.d.ts[39m in 1185.75ms
+[90m[[90mnuxt[90m][39m [36mℹ[39m Compiled [36mplugins.server.mjs[39m in 700.04ms
+[90m[[90mnuxt[90m][39m [36mℹ[39m Compiled [36mplugins.client.mjs[39m in 1447.12ms
+[90m[[90mnuxt[90m][39m [36mℹ[39m Compiled [36mtypes/plugins.d.ts[39m in 1610.26ms
+[90m[[90mnitro[90m][39m [32m✔[39m Nuxt Nitro server built in 18115ms
+[36mℹ[39m Vite client warmed up in 31ms
+[36mℹ[39m Vite server warmed up in 17973ms
+[90m[[90mnuxt[90m][39m [36mℹ[39m Compiled [36mtypes/plugins.d.ts[39m in 551.52ms
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m
+[90m[[90mnuxt[90m][39m [36mℹ[39m Compiled [36mtypes/plugins.d.ts[39m in 507.6ms
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x2)[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x3)[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x4)[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x5)[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x6)[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x7)[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x8)[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x9)[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x10)[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x11)[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x12)[22m
+[90m[[90mnuxt:tailwindcss[90m][39m [36mℹ[39m Using Tailwind CSS from ~/assets/css/tailwind.css
+[33m  ➜ DevTools: [39m[2mpress [22m[32mShift[39m[2m + [22m[32mAlt[39m[2m + [22m[32mD[39m[2m in the browser (v2.6.3)[22m
+
+[90m[[90mnuxt:tailwindcss[90m][39m [36mℹ[39m Tailwind Viewer: [4m[33mhttp://localhost:3002/_tailwind/[39m[24m
+[90m[[90mnuxt[90m][39m [36mℹ[39m Compiled [36mplugins.server.mjs[39m in 530.46ms
+[90m[[90mnuxt[90m][39m [36mℹ[39m Compiled [36mplugins.client.mjs[39m in 555.95ms
+[90m[[90mnuxt[90m][39m [36mℹ[39m Compiled [36mtypes/plugins.d.ts[39m in 579.46ms
+[32m✔[39m Vite client built in 216ms
+[32m✔[39m Vite server built in 5103ms
+[90m[[90mnuxt[90m][39m [36mℹ[39m Compiled [36mrouter.options.mjs[39m in 693.06ms
+[90m[[90mnuxt[90m][39m [36mℹ[39m Compiled [36mplugins.server.mjs[39m in 1531.75ms
+[90m[[90mnuxt[90m][39m [36mℹ[39m Compiled [36mplugins.client.mjs[39m in 1783.02ms
+[90m[[90mnuxt[90m][39m [36mℹ[39m Compiled [36mtypes/plugins.d.ts[39m in 1861.04ms
+[90m[[90mnitro[90m][39m [32m✔[39m Nuxt Nitro server built in 8814ms
+[36mℹ[39m Vite client warmed up in 10ms
+[36mℹ[39m Vite server warmed up in 7211ms
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x2)[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x3)[22m
+[36mℹ[39m [32mhmr update [39m[2m/components/ScrollProgress.vue, /assets/css/tailwind.css[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x2)[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x3)[22m
+[36mℹ[39m [32mhmr update [39m[2m/components/ScrollProgress.vue, /assets/css/tailwind.css[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m
+[36mℹ[39m [32mhmr update [39m[2m/app.vue, /assets/css/tailwind.css[22m
+[90m[[90mnuxt[90m][39m [36mℹ[39m Compiled [36mplugins.server.mjs[39m in 683.48ms
+[90m[[90mnuxt[90m][39m [36mℹ[39m Compiled [36mplugins.client.mjs[39m in 1597.85ms
+[90m[[90mnuxt[90m][39m [36mℹ[39m Compiled [36mtypes/plugins.d.ts[39m in 1932.27ms
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x2)[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x3)[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x4)[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x5)[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x6)[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x7)[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x8)[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x9)[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x10)[22m
+[36mℹ[39m [32mhmr update [39m[2m/assets/css/tailwind.css[22m[2m (x11)[22m
+^C

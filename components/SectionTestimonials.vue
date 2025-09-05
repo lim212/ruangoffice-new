@@ -1,5 +1,5 @@
 <template>
-  <section class="testimonials-section tw-py-16 md:tw-py-24 tw-bg-gray-900 tw-text-white">
+  <section class="testimonials-section tw-py-16 md:tw-py-24 tw-bg-[#0A0A0A] tw-text-white reveal-animate">
     <div class="tw-max-w-7xl tw-mx-auto tw-px-4">
       <!-- Section Header -->
       <div class="tw-text-center tw-mb-16">
@@ -12,18 +12,18 @@
       </div>
 
       <!-- Testimonials Grid -->
-      <div class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8">
+      <div class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8 mobile-optimized">
         <!-- Testimonial 1 -->
-        <div class="testimonial-card tw-bg-gray-800 tw-rounded-2xl tw-p-8 tw-relative">
-          <div class="tw-absolute -tw-top-4 -tw-left-4 tw-w-8 tw-h-8 tw-bg-emerald-500 tw-rounded-full tw-flex tw-items-center tw-justify-center">
-            <i class="fas fa-quote-left tw-text-white tw-text-sm"></i>
+        <div class="testimonial-card testimonial-mobile-card tw-bg-gray-800 tw-rounded-2xl tw-relative">
+          <div class="tw-absolute -tw-top-4 -tw-left-4 tw-w-8 tw-h-8 tw-rounded-full tw-flex tw-items-center tw-justify-center tw-bg-gradient-to-r tw-from-amber-400 tw-to-yellow-500">
+            <span class="tw-text-black tw-text-sm">❝</span>
           </div>
           <div class="tw-mb-6">
             <div class="tw-flex tw-items-center tw-gap-1 tw-mb-2">
               <i v-for="i in 5" :key="i" class="fas fa-star tw-text-yellow-400"></i>
             </div>
-            <p class="tw-text-gray-300 tw-leading-relaxed">
-              "Proses pendirian PT sangat cepat dan transparan. Tim RuangOffice sangat profesional dan selalu siap membantu. 
+            <p class="testimonial-mobile-text tw-text-gray-300 tw-leading-relaxed">
+              "Proses pendirian PT sangat cepat dan transparan. Tim RuangOffice sangat profesional dan selalu siap membantu.
               Saya sangat puas dengan layanan mereka."
             </p>
           </div>
@@ -39,16 +39,16 @@
         </div>
 
         <!-- Testimonial 2 -->
-        <div class="testimonial-card tw-bg-gray-800 tw-rounded-2xl tw-p-8 tw-relative">
-          <div class="tw-absolute -tw-top-4 -tw-left-4 tw-w-8 tw-h-8 tw-bg-emerald-500 tw-rounded-full tw-flex tw-items-center tw-justify-center">
-            <i class="fas fa-quote-left tw-text-white tw-text-sm"></i>
+        <div class="testimonial-card testimonial-mobile-card tw-bg-gray-800 tw-rounded-2xl tw-relative">
+          <div class="tw-absolute -tw-top-4 -tw-left-4 tw-w-8 tw-h-8 tw-rounded-full tw-flex tw-items-center tw-justify-center tw-bg-gradient-to-r tw-from-amber-400 tw-to-yellow-500">
+            <span class="tw-text-black tw-text-sm">❝</span>
           </div>
           <div class="tw-mb-6">
             <div class="tw-flex tw-items-center tw-gap-1 tw-mb-2">
               <i v-for="i in 5" :key="i" class="fas fa-star tw-text-yellow-400"></i>
             </div>
-            <p class="tw-text-gray-300 tw-leading-relaxed">
-              "Virtual office dari RuangOffice sangat membantu bisnis startup kami. Alamat strategis, 
+            <p class="testimonial-mobile-text tw-text-gray-300 tw-leading-relaxed">
+              "Virtual office dari RuangOffice sangat membantu bisnis startup kami. Alamat strategis,
               surat masuk tertangani dengan baik, dan harga sangat terjangkau."
             </p>
           </div>
@@ -64,16 +64,16 @@
         </div>
 
         <!-- Testimonial 3 -->
-        <div class="testimonial-card tw-bg-gray-800 tw-rounded-2xl tw-p-8 tw-relative">
-          <div class="tw-absolute -tw-top-4 -tw-left-4 tw-w-8 tw-h-8 tw-bg-emerald-500 tw-rounded-full tw-flex tw-items-center tw-justify-center">
-            <i class="fas fa-quote-left tw-text-white tw-text-sm"></i>
+        <div class="testimonial-card testimonial-mobile-card tw-bg-gray-800 tw-rounded-2xl tw-relative">
+          <div class="tw-absolute -tw-top-4 -tw-left-4 tw-w-8 tw-h-8 tw-rounded-full tw-flex tw-items-center tw-justify-center tw-bg-gradient-to-r tw-from-amber-400 tw-to-yellow-500">
+            <span class="tw-text-black tw-text-sm">❝</span>
           </div>
           <div class="tw-mb-6">
             <div class="tw-flex tw-items-center tw-gap-1 tw-mb-2">
               <i v-for="i in 5" :key="i" class="fas fa-star tw-text-yellow-400"></i>
             </div>
-            <p class="tw-text-gray-300 tw-leading-relaxed">
-              "Pengurusan perizinan usaha sangat mudah dengan RuangOffice. Tim konsultan sangat ahli 
+            <p class="testimonial-mobile-text tw-text-gray-300 tw-leading-relaxed">
+              "Pengurusan perizinan usaha sangat mudah dengan RuangOffice. Tim konsultan sangat ahli
               dan selalu memberikan solusi terbaik untuk bisnis kami."
             </p>
           </div>
@@ -89,16 +89,16 @@
         </div>
 
         <!-- Testimonial 4 -->
-        <div class="testimonial-card tw-bg-gray-800 tw-rounded-2xl tw-p-8 tw-relative">
-          <div class="tw-absolute -tw-top-4 -tw-left-4 tw-w-8 tw-h-8 tw-bg-emerald-500 tw-rounded-full tw-flex tw-items-center tw-justify-center">
-            <i class="fas fa-quote-left tw-text-white tw-text-sm"></i>
+        <div class="testimonial-card testimonial-mobile-card tw-bg-gray-800 tw-rounded-2xl tw-relative">
+          <div class="tw-absolute -tw-top-4 -tw-left-4 tw-w-8 tw-h-8 tw-rounded-full tw-flex tw-items-center tw-justify-center tw-bg-gradient-to-r tw-from-amber-400 tw-to-yellow-500">
+            <span class="tw-text-black tw-text-sm">❝</span>
           </div>
           <div class="tw-mb-6">
             <div class="tw-flex tw-items-center tw-gap-1 tw-mb-2">
               <i v-for="i in 5" :key="i" class="fas fa-star tw-text-yellow-400"></i>
             </div>
-            <p class="tw-text-gray-300 tw-leading-relaxed">
-              "Sertifikasi ISO berhasil kami dapatkan berkat bantuan RuangOffice. Proses yang terstruktur 
+            <p class="testimonial-mobile-text tw-text-gray-300 tw-leading-relaxed">
+              "Sertifikasi ISO berhasil kami dapatkan berkat bantuan RuangOffice. Proses yang terstruktur
               dan tim yang sangat kompeten di bidangnya."
             </p>
           </div>
@@ -114,16 +114,16 @@
         </div>
 
         <!-- Testimonial 5 -->
-        <div class="testimonial-card tw-bg-gray-800 tw-rounded-2xl tw-p-8 tw-relative">
-          <div class="tw-absolute -tw-top-4 -tw-left-4 tw-w-8 tw-h-8 tw-bg-emerald-500 tw-rounded-full tw-flex tw-items-center tw-justify-center">
-            <i class="fas fa-quote-left tw-text-white tw-text-sm"></i>
+        <div class="testimonial-card testimonial-mobile-card tw-bg-gray-800 tw-rounded-2xl tw-relative">
+          <div class="tw-absolute -tw-top-4 -tw-left-4 tw-w-8 tw-h-8 tw-rounded-full tw-flex tw-items-center tw-justify-center tw-bg-gradient-to-r tw-from-amber-400 tw-to-yellow-500">
+            <span class="tw-text-black tw-text-sm">❝</span>
           </div>
           <div class="tw-mb-6">
             <div class="tw-flex tw-items-center tw-gap-1 tw-mb-2">
               <i v-for="i in 5" :key="i" class="fas fa-star tw-text-yellow-400"></i>
             </div>
-            <p class="tw-text-gray-300 tw-leading-relaxed">
-              "Private office yang kami sewa sangat nyaman dan profesional. Fasilitas lengkap, 
+            <p class="testimonial-mobile-text tw-text-gray-300 tw-leading-relaxed">
+              "Private office yang kami sewa sangat nyaman dan profesional. Fasilitas lengkap,
               lokasi strategis, dan harga yang sangat kompetitif."
             </p>
           </div>
@@ -139,16 +139,16 @@
         </div>
 
         <!-- Testimonial 6 -->
-        <div class="testimonial-card tw-bg-gray-800 tw-rounded-2xl tw-p-8 tw-relative">
-          <div class="tw-absolute -tw-top-4 -tw-left-4 tw-w-8 tw-h-8 tw-bg-emerald-500 tw-rounded-full tw-flex tw-items-center tw-justify-center">
-            <i class="fas fa-quote-left tw-text-white tw-text-sm"></i>
+        <div class="testimonial-card testimonial-mobile-card tw-bg-gray-800 tw-rounded-2xl tw-relative">
+          <div class="tw-absolute -tw-top-4 -tw-left-4 tw-w-8 tw-h-8 tw-rounded-full tw-flex tw-items-center tw-justify-center tw-bg-gradient-to-r tw-from-amber-400 tw-to-yellow-500">
+            <span class="tw-text-black tw-text-sm">❝</span>
           </div>
           <div class="tw-mb-6">
             <div class="tw-flex tw-items-center tw-gap-1 tw-mb-2">
               <i v-for="i in 5" :key="i" class="fas fa-star tw-text-yellow-400"></i>
             </div>
-            <p class="tw-text-gray-300 tw-leading-relaxed">
-              "Konsultasi pajak dari RuangOffice sangat membantu mengoptimalkan struktur perpajakan perusahaan. 
+            <p class="testimonial-mobile-text tw-text-gray-300 tw-leading-relaxed">
+              "Konsultasi pajak dari RuangOffice sangat membantu mengoptimalkan struktur perpajakan perusahaan.
               Tim ahli yang sangat berpengalaman dan solutif."
             </p>
           </div>
@@ -167,40 +167,40 @@
       <!-- Stats Section -->
       <div class="tw-mt-20 tw-grid tw-grid-cols-2 md:tw-grid-cols-4 tw-gap-8">
         <div class="tw-text-center">
-          <div class="tw-text-4xl md:tw-text-5xl tw-font-bold tw-text-emerald-400 tw-mb-2">1000+</div>
+          <div class="tw-text-4xl md:tw-text-5xl tw-font-bold tw-text-[#FFD700] tw-mb-2">1000+</div>
           <div class="tw-text-gray-300">Klien Puas</div>
         </div>
         <div class="tw-text-center">
-          <div class="tw-text-4xl md:tw-text-5xl tw-font-bold tw-text-emerald-400 tw-mb-2">15+</div>
+          <div class="tw-text-4xl md:tw-text-5xl tw-font-bold tw-text-[#FFD700] tw-mb-2">3+</div>
           <div class="tw-text-gray-300">Tahun Pengalaman</div>
         </div>
         <div class="tw-text-center">
-          <div class="tw-text-4xl md:tw-text-5xl tw-font-bold tw-text-emerald-400 tw-mb-2">99%</div>
+          <div class="tw-text-4xl md:tw-text-5xl tw-font-bold tw-text-[#FFD700] tw-mb-2">99%</div>
           <div class="tw-text-gray-300">Tingkat Kepuasan</div>
         </div>
         <div class="tw-text-center">
-          <div class="tw-text-4xl md:tw-text-5xl tw-font-bold tw-text-emerald-400 tw-mb-2">24/7</div>
+          <div class="tw-text-4xl md:tw-text-5xl tw-font-bold tw-text-[#FFD700] tw-mb-2">24/7</div>
           <div class="tw-text-gray-300">Support</div>
         </div>
       </div>
 
       <!-- CTA Section -->
       <div class="tw-text-center tw-mt-16">
-        <div class="tw-bg-gradient-to-r tw-from-emerald-600 tw-to-green-600 tw-rounded-2xl tw-p-8 md:tw-p-12">
-          <h3 class="tw-text-2xl md:tw-text-4xl tw-font-bold tw-mb-4">
+        <div class="tw-bg-gradient-to-r tw-from-[#FFD700] tw-to-[#FFC107] tw-rounded-2xl tw-p-8 md:tw-p-12">
+          <h3 class="tw-text-2xl md:tw-text-4xl tw-font-bold tw-mb-4 tw-text-black">
             Bergabung dengan 1000+ Klien Puas
           </h3>
-          <p class="tw-text-lg md:tw-text-xl tw-mb-8 tw-opacity-90">
+          <p class="tw-text-lg md:tw-text-xl tw-mb-8 tw-opacity-90 tw-text-black">
             Mulai perjalanan bisnis Anda dengan RuangOffice
           </p>
           <div class="tw-flex tw-flex-col sm:tw-flex-row tw-gap-4 tw-justify-center">
             <a href="https://wa.me/62811113666" 
-               class="tw-bg-white tw-text-emerald-600 tw-px-8 tw-py-4 tw-rounded-lg tw-font-semibold tw-text-lg hover:tw-bg-gray-100 tw-transition-colors tw-inline-flex tw-items-center tw-gap-2">
+               class="tw-bg-black tw-text-white tw-px-8 tw-py-4 tw-rounded-lg tw-font-semibold tw-text-lg hover:tw-bg-gray-800 tw-transition-colors tw-inline-flex tw-items-center tw-gap-2">
               <i class="fab fa-whatsapp"></i>
               Konsultasi Gratis
             </a>
             <a href="/hubungi-kami" 
-               class="tw-border-2 tw-border-white tw-text-white tw-px-8 tw-py-4 tw-rounded-lg tw-font-semibold tw-text-lg hover:tw-bg-white hover:tw-text-emerald-600 tw-transition-colors">
+               class="tw-border-2 tw-border-black tw-text-black tw-px-8 tw-py-4 tw-rounded-lg tw-font-semibold tw-text-lg hover:tw-bg-black hover:tw-text-white tw-transition-colors">
               Hubungi Kami
             </a>
           </div>
@@ -226,3 +226,6 @@
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
 }
 </style>
+
+
+

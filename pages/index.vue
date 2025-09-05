@@ -3,6 +3,7 @@
     <RunningText />
     <Header />
     <Hero />
+    <TrustedBy />
     <BannerSlider />
     <About />
     <KbliSection />
@@ -18,11 +19,12 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 // Import all components
 import RunningText from '~/components/RunningText.vue'
 import Header from '~/components/Header.vue'
 import Hero from '~/components/Hero.vue'
+import TrustedBy from '~/components/TrustedBy.vue'
 import BannerSlider from '~/components/BannerSlider.vue'
 import About from '~/components/About.vue'
 import KbliSection from '~/components/KbliSection.vue'

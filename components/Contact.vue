@@ -1,24 +1,24 @@
 <template>
-  <section id="contact" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid lg:grid-cols-2 gap-16 items-start">
+  <section id="contact" class="py-12 sm:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
         <!-- Left Column - Header & Contact Info -->
-        <div class="space-y-10">
+        <div class="space-y-6">
           <!-- Header -->
-          <div class="space-y-8">
-            <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-400 to-yellow-600 text-black rounded-full text-base font-semibold shadow-lg">
-              <span class="mr-3">📞</span>
+          <div class="space-y-4">
+            <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-yellow-400 to-yellow-600 text-black rounded-full text-sm font-bold shadow-md">
+              <span class="mr-2">📞</span>
               Hubungi Kami
             </div>
             
-            <h2 class="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
               Siap Membantu
               <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">
                 Bisnis Anda
               </span>
             </h2>
             
-            <p class="text-2xl lg:text-3xl text-gray-600 leading-relaxed max-w-2xl">
+            <p class="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl">
               Tim ahli kami siap membantu Anda dengan berbagai layanan bisnis. 
               Konsultasi gratis untuk memastikan Anda mendapatkan solusi terbaik.
             </p>

@@ -11,7 +11,7 @@
           Solusi Bisnis <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-500">Terpercaya</span>
         </h2>
         <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-          Sejak 2009, RuangOffice telah membantu ribuan perusahaan dalam mengembangkan bisnis mereka dengan layanan yang komprehensif dan terpercaya.
+          Sejak 2021, RuangOffice telah membantu ribuan perusahaan dalam mengembangkan bisnis mereka dengan layanan yang komprehensif dan terpercaya.
         </p>
       </div>
 
@@ -26,7 +26,7 @@
               </div>
               <div>
                 <h4 class="font-semibold text-gray-900 text-base sm:text-lg group-hover:text-amber-700 transition-colors duration-300">Tim Ahli Berpengalaman</h4>
-                <p class="text-gray-600 text-sm sm:text-base group-hover:text-amber-600 transition-colors duration-300">Lebih dari 15 tahun pengalaman di bidang hukum dan bisnis</p>
+                <p class="text-gray-600 text-sm sm:text-base group-hover:text-amber-600 transition-colors duration-300">Lebih dari 3 tahun pengalaman di bidang hukum dan bisnis</p>
               </div>
             </div>
 
@@ -58,7 +58,7 @@
               <div class="text-xs sm:text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">Perusahaan Terbentuk</div>
             </div>
             <div class="text-center p-4 sm:p-6 rounded-lg sm:rounded-xl hover:bg-amber-50 transition-all duration-300 cursor-pointer group">
-              <div class="text-2xl sm:text-3xl lg:text-4xl font-bold text-amber-600 group-hover:text-amber-700 transition-colors duration-300">15+</div>
+              <div class="text-2xl sm:text-3xl lg:text-4xl font-bold text-amber-600 group-hover:text-amber-700 transition-colors duration-300">3+</div>
               <div class="text-xs sm:text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">Tahun Pengalaman</div>
             </div>
           </div>

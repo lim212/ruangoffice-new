@@ -1,16 +1,16 @@
 <template>
-  <section class="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-50 to-amber-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="py-8 sm:py-12 lg:py-16 bg-gradient-to-br from-slate-50 to-amber-50">
+    <div class="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
       <!-- Section Header -->
-      <div class="text-center mb-12 sm:mb-16">
-        <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-amber-400 to-amber-600 text-slate-800 rounded-full text-sm font-semibold mb-4 shadow-lg">
-          <span class="mr-2">⭐</span>
+      <div class="text-center mb-8 sm:mb-12">
+        <div class="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-amber-400 to-amber-600 text-slate-800 rounded-full text-xs font-bold mb-3 shadow-md">
+          <span class="mr-1.5">⭐</span>
           Mengapa Memilih Kami
         </div>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800 mb-4 leading-tight">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 mb-3 leading-tight">
           Keunggulan <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-amber-600">RuangOffice</span>
         </h2>
-        <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+        <p class="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
           Kami telah membantu ribuan perusahaan di Indonesia dengan layanan yang berkualitas, 
           proses yang cepat, dan tim ahli yang berpengalaman.
         </p>
@@ -99,7 +99,7 @@
           <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Tim Ahli</h3>
           <p class="text-gray-600 leading-relaxed">
             Tim kami terdiri dari ahli hukum, akuntan, dan konsultan bisnis dengan 
-            pengalaman lebih dari 15 tahun di bidangnya.
+            pengalaman lebih dari 3 tahun di bidangnya.
           </p>
         </div>
 
@@ -132,22 +132,22 @@
           </p>
         </div>
         
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12">
-          <div class="text-center">
-            <div class="text-3xl sm:text-4xl lg:text-5xl font-bold text-yellow-600 mb-2">5000+</div>
-            <div class="text-sm sm:text-base text-gray-600">Perusahaan Terbentuk</div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 lg:gap-12">
+          <div class="text-center p-3 sm:p-4 rounded-xl hover:bg-amber-50 transition-all duration-300 cursor-pointer group">
+            <div class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-yellow-600 mb-1 sm:mb-2 group-hover:scale-110 transition-transform duration-300">5000+</div>
+            <div class="text-xs sm:text-sm lg:text-base text-gray-600">Perusahaan</div>
           </div>
-          <div class="text-center">
-            <div class="text-3xl sm:text-4xl lg:text-5xl font-bold text-yellow-600 mb-2">98%</div>
-            <div class="text-sm sm:text-base text-gray-600">Tingkat Kepuasan</div>
+          <div class="text-center p-3 sm:p-4 rounded-xl hover:bg-amber-50 transition-all duration-300 cursor-pointer group">
+            <div class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-yellow-600 mb-1 sm:mb-2 group-hover:scale-110 transition-transform duration-300">100%</div>
+            <div class="text-xs sm:text-sm lg:text-base text-gray-600">Kepuasan</div>
           </div>
-          <div class="text-center">
-            <div class="text-3xl sm:text-4xl lg:text-5xl font-bold text-yellow-600 mb-2">15+</div>
-            <div class="text-sm sm:text-base text-gray-600">Tahun Pengalaman</div>
+          <div class="text-center p-3 sm:p-4 rounded-xl hover:bg-amber-50 transition-all duration-300 cursor-pointer group">
+            <div class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-yellow-600 mb-1 sm:mb-2 group-hover:scale-110 transition-transform duration-300">3+</div>
+            <div class="text-xs sm:text-sm lg:text-base text-gray-600">Tahun</div>
           </div>
-          <div class="text-center">
-            <div class="text-3xl sm:text-4xl lg:text-5xl font-bold text-yellow-600 mb-2">24/7</div>
-            <div class="text-sm sm:text-base text-gray-600">Layanan Support</div>
+          <div class="text-center p-3 sm:p-4 rounded-xl hover:bg-amber-50 transition-all duration-300 cursor-pointer group">
+            <div class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-yellow-600 mb-1 sm:mb-2 group-hover:scale-110 transition-transform duration-300">24/7</div>
+            <div class="text-xs sm:text-sm lg:text-base text-gray-600">Support</div>
           </div>
         </div>
       </div>

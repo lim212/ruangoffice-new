@@ -4,7 +4,7 @@
     <button
       @click="toggleTheme"
       :aria-label="getThemeLabel"
-      class="group relative w-12 h-12 bg-white/90 backdrop-blur-sm border border-gray-200/60 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center overflow-hidden"
+      class="group relative w-10 h-10 bg-white/90 backdrop-blur-sm border border-gray-200/60 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center justify-center overflow-hidden"
     >
       <!-- Background Gradient -->
       <div class="absolute inset-0 bg-gradient-to-br from-amber-400/20 via-yellow-400/20 to-amber-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

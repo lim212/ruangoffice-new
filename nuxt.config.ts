@@ -5,8 +5,7 @@ export default defineNuxtConfig({
   // 🔹 Modules
   modules: [
     "@nuxtjs/tailwindcss",
-    "nuxt-simple-sitemap",
-    "nuxt-simple-robots"
+    "nuxt-simple-sitemap"
   ],
 
   // 🔹 Global CSS
@@ -39,7 +38,7 @@ export default defineNuxtConfig({
         {
           name: "description",
           content:
-            "RuangOffice.com - Jasa pendirian PT, CV, PMA, Virtual Office, SIUP, HAKI, ISO, NIB, Pajak terpercaya sejak 2009. Proses cepat 1-3 hari, harga terjangkau, garansi 100%. Konsultasi gratis!"
+            "RuangOffice.com - Jasa pendirian PT, CV, PMA, Virtual Office, SIUP, HAKI, ISO, NIB, Pajak terpercaya sejak 2021. Proses cepat 1-3 hari, harga terjangkau, garansi 100%. Konsultasi gratis!"
         },
         {
           name: "keywords",
@@ -64,7 +63,7 @@ export default defineNuxtConfig({
         },
         {
           property: "og:description",
-          content: "Jasa pendirian PT, CV, PMA, Virtual Office, SIUP, HAKI, ISO, NIB, Pajak terpercaya sejak 2009. Proses cepat 1-3 hari, harga terjangkau, garansi 100%. Konsultasi gratis!"
+          content: "Jasa pendirian PT, CV, PMA, Virtual Office, SIUP, HAKI, ISO, NIB, Pajak terpercaya sejak 2021. Proses cepat 1-3 hari, harga terjangkau, garansi 100%. Konsultasi gratis!"
         },
         { property: "og:image", content: "https://www.ruangoffice.com/og-image.jpg" },
         { property: "og:image:width", content: "1200" },
@@ -82,7 +81,7 @@ export default defineNuxtConfig({
         },
         {
           name: "twitter:description",
-          content: "Jasa pendirian PT, CV, PMA, Virtual Office terpercaya sejak 2009. Proses cepat, harga terjangkau, garansi 100%."
+          content: "Jasa pendirian PT, CV, PMA, Virtual Office terpercaya sejak 2021. Proses cepat, harga terjangkau, garansi 100%."
         },
         { name: "twitter:image", content: "https://www.ruangoffice.com/twitter-image.jpg" },
         
@@ -92,7 +91,7 @@ export default defineNuxtConfig({
         { name: "geo.position", content: "-6.2088;106.8456" },
         { name: "ICBM", content: "-6.2088, 106.8456" },
         { name: "DC.title", content: "RuangOffice.com - Jasa Legalitas & Virtual Office" },
-        { name: "DC.description", content: "Jasa pendirian PT, CV, PMA, Virtual Office terpercaya sejak 2009" },
+        { name: "DC.description", content: "Jasa pendirian PT, CV, PMA, Virtual Office terpercaya sejak 2021" },
         { name: "DC.subject", content: "Jasa Legalitas, Virtual Office, Pendirian PT, Pendirian CV" },
         { name: "DC.creator", content: "RuangOffice.com" },
         { name: "DC.publisher", content: "RuangOffice.com" },
@@ -108,26 +107,10 @@ export default defineNuxtConfig({
       ],
 
       link: [
-        // 🔹 Favicons (taruh di /public)
+        // 🔹 Favicons (hanya yang tersedia di /public)
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-        { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
-        { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
-        { rel: "icon", type: "image/png", sizes: "96x96", href: "/favicon-96x96.png" },
-        { rel: "icon", type: "image/png", sizes: "192x192", href: "/favicon-192x192.png" },
-        { rel: "icon", type: "image/png", sizes: "512x512", href: "/favicon-512x512.png" },
-        { rel: "apple-touch-icon", sizes: "57x57", href: "/apple-touch-icon-57x57.png" },
-        { rel: "apple-touch-icon", sizes: "60x60", href: "/apple-touch-icon-60x60.png" },
-        { rel: "apple-touch-icon", sizes: "72x72", href: "/apple-touch-icon-72x72.png" },
-        { rel: "apple-touch-icon", sizes: "76x76", href: "/apple-touch-icon-76x76.png" },
-        { rel: "apple-touch-icon", sizes: "114x114", href: "/apple-touch-icon-114x114.png" },
-        { rel: "apple-touch-icon", sizes: "120x120", href: "/apple-touch-icon-120x120.png" },
-        { rel: "apple-touch-icon", sizes: "144x144", href: "/apple-touch-icon-144x144.png" },
-        { rel: "apple-touch-icon", sizes: "152x152", href: "/apple-touch-icon-152x152.png" },
-        { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon-180x180.png" },
-        { rel: "apple-touch-icon", sizes: "192x192", href: "/apple-touch-icon-192x192.png" },
-        { rel: "apple-touch-icon", sizes: "512x512", href: "/apple-touch-icon-512x512.png" },
+        { rel: "apple-touch-icon", href: "/assets/ruangoffice/favicon.png" },
         { rel: "manifest", href: "/site.webmanifest" },
-        { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#f59e0b" },
         { rel: "shortcut icon", href: "/favicon.ico" },
         { rel: "canonical", href: "https://www.ruangoffice.com" },
 
@@ -159,8 +142,8 @@ export default defineNuxtConfig({
             "name": "RuangOffice.com",
             "url": "https://www.ruangoffice.com",
             "logo": "https://www.ruangoffice.com/logo-ro.ico",
-            "description": "Jasa pendirian PT, CV, PMA, Virtual Office, SIUP, HAKI, ISO, NIB, Pajak terpercaya sejak 2009",
-            "foundingDate": "2009",
+            "description": "Jasa pendirian PT, CV, PMA, Virtual Office, SIUP, HAKI, ISO, NIB, Pajak terpercaya sejak 2021",
+            "foundingDate": "2021",
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+62-811-113-6666",
@@ -190,14 +173,5 @@ export default defineNuxtConfig({
   // 🔹 Sitemap & Robots
   sitemap: {
     exclude: ["/admin", "/admin/**"]
-  },
-  robots: {
-    groups: [
-      {
-        userAgent: "*",
-        allow: "/",
-        disallow: ["/admin", "/admin/"]
-      }
-    ]
   }
 })

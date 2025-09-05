@@ -70,6 +70,7 @@ interface Props {
   skeletonLines?: number
   threshold?: number
   rootMargin?: string
+  eager?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -78,7 +79,8 @@ const props = withDefaults(defineProps<Props>(), {
   showHeader: true,
   skeletonLines: 5,
   threshold: 0.1,
-  rootMargin: '100px'
+  rootMargin: '100px',
+  eager: false
 })
 
 const isVisible = ref(false)
@@ -110,10 +112,7 @@ const retryLoad = () => {
   isVisible.value = false
   startLoadingContent()
   
-  // Simulate content loading delay
-  setTimeout(() => {
-    onContentLoad()
-  }, 800)
+  onContentLoad()
 }
 
 // Setup intersection observer
@@ -125,11 +124,7 @@ const setupObserver = () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && !isVisible.value && !hasError.value) {
           startLoadingContent()
-          
-          // Simulate content loading delay
-          setTimeout(() => {
-            onContentLoad()
-          }, 800)
+          onContentLoad()
           
           // Stop observing
           observer?.unobserve(entry.target)
@@ -154,6 +149,11 @@ const cleanupObserver = () => {
 }
 
 onMounted(() => {
+  if (props.eager) {
+    // Render immediately for above-the-fold sections
+    onContentLoad()
+    return
+  }
   setupObserver()
 })
 

@@ -1,16 +1,16 @@
 <template>
-  <div class="fixed right-4 sm:right-6 z-50">
+  <div class="fixed right-4 sm:right-6 z-50 hidden sm:block">
     <!-- WhatsApp Button - Fixed Position -->
     <div class="mb-3">
       <a 
         :href="`https://wa.me/${waPhone}?text=Halo, saya ingin konsultasi tentang layanan RuangOffice`"
         target="_blank" 
         rel="noopener"
-        class="group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white rounded-full shadow-2xl hover:from-emerald-600 hover:to-emerald-700 transform hover:scale-110 transition-all duration-300 hover:shadow-emerald-500/50 border border-emerald-400/50"
+        class="group flex items-center justify-center w-16 h-16 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white rounded-full shadow-2xl hover:from-emerald-600 hover:to-emerald-700 transform hover:scale-110 transition-all duration-300 hover:shadow-emerald-500/50 ring-2 ring-white/10"
         :aria-label="`Chat WhatsApp dengan ${waPhone}`"
         style="bottom: 140px;"
       >
-        <span class="text-xl sm:text-2xl">💬</span>
+        <span class="text-2xl">💬</span>
         
         <!-- Tooltip -->
         <div class="absolute right-full mr-3 px-3 py-2 bg-slate-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
@@ -24,11 +24,11 @@
     <div class="mb-3">
       <a 
         :href="`tel:${waPhone}`"
-        class="group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full shadow-2xl hover:from-blue-600 hover:to-blue-700 transform hover:scale-110 transition-all duration-300 hover:shadow-blue-500/50 border border-blue-400/50"
+        class="group flex items-center justify-center w-16 h-16 bg-gradient-to-r from-amber-500 to-amber-600 text-white rounded-full shadow-2xl hover:from-amber-600 hover:to-amber-700 transform hover:scale-110 transition-all duration-300 hover:shadow-amber-500/50 ring-2 ring-white/10"
         :aria-label="`Telepon ke ${waPhone}`"
         style="bottom: 210px;"
       >
-        <span class="text-xl sm:text-2xl">📞</span>
+        <span class="text-2xl">📞</span>
         
         <!-- Tooltip -->
         <div class="absolute right-full mr-3 px-3 py-2 bg-slate-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
@@ -42,11 +42,11 @@
     <div class="mb-3">
       <a 
         :href="`mailto:${email}?subject=Konsultasi Layanan RuangOffice&body=Halo, saya ingin konsultasi tentang layanan RuangOffice`"
-        class="group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-full shadow-2xl hover:from-purple-600 hover:to-purple-700 transform hover:scale-110 transition-all duration-300 hover:shadow-purple-500/50 border border-purple-400/50"
+        class="group flex items-center justify-center w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-600 text-white rounded-full shadow-2xl hover:from-indigo-600 hover:to-indigo-700 transform hover:scale-110 transition-all duration-300 hover:shadow-indigo-500/50 ring-2 ring-white/10"
         :aria-label="`Kirim email ke ${email}`"
         style="bottom: 280px;"
       >
-        <span class="text-xl sm:text-2xl">📧</span>
+        <span class="text-2xl">📧</span>
         
         <!-- Tooltip -->
         <div class="absolute right-full mr-3 px-3 py-2 bg-slate-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
@@ -60,11 +60,11 @@
     <div class="mb-3">
       <button 
         @click="scrollToTop"
-        class="group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-r from-indigo-500 to-indigo-600 text-white rounded-full shadow-2xl hover:from-indigo-600 hover:to-indigo-700 transform hover:scale-110 transition-all duration-300 hover:shadow-indigo-500/50 border border-indigo-400/50"
+        class="group flex items-center justify-center w-16 h-16 bg-gradient-to-r from-slate-600 to-slate-700 text-white rounded-full shadow-2xl hover:from-slate-700 hover:to-slate-800 transform hover:scale-110 transition-all duration-300 hover:shadow-black/40 ring-2 ring-white/10"
         aria-label="Scroll ke atas"
         style="bottom: 350px;"
       >
-        <span class="text-xl sm:text-2xl">⬆️</span>
+        <span class="text-2xl">⬆️</span>
         
         <!-- Tooltip -->
         <div class="absolute right-full mr-3 px-3 py-2 bg-slate-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
@@ -78,11 +78,11 @@
     <div class="mb-3">
       <button 
         @click="scrollToBottom"
-        class="group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-full shadow-2xl hover:from-teal-600 hover:to-teal-700 transform hover:scale-110 transition-all duration-300 hover:shadow-teal-500/50 border border-teal-400/50"
+        class="group flex items-center justify-center w-16 h-16 bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-full shadow-2xl hover:from-teal-600 hover:to-teal-700 transform hover:scale-110 transition-all duration-300 hover:shadow-teal-500/50 ring-2 ring-white/10"
         aria-label="Scroll ke bawah"
         style="bottom: 420px;"
       >
-        <span class="text-xl sm:text-2xl">⬇️</span>
+        <span class="text-2xl">⬇️</span>
         
         <!-- Tooltip -->
         <div class="absolute right-full mr-3 px-3 py-2 bg-slate-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">

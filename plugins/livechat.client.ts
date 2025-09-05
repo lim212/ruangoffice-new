@@ -27,6 +27,18 @@ export default defineNuxtPlugin(() => {
           webhookUrl: 'https://n8n-4u1spji0.n8x.biz.id/webhook/b66a3a03-55da-493f-ab6c-648f91ca60e8/chat',
           initialMessages: ['Hallo, nama saya Felix. ada yang bisa saya bantu?'],
           defaultLanguage: 'id',
+          theme: {
+            placement: 'bottom-right',
+            launcher: {
+              iconUrl: '/assets/img/logo-ro.ico',
+              size: 56,
+              borderRadius: 9999,
+              backgroundColor: '#10b981',
+              boxShadow: '0 10px 20px rgba(0,0,0,.25)'
+            },
+            tooltip: 'Chat kami',
+            zIndex: 60,
+          },
           i18n: {
             en: {
               title: 'RuangOffice.com',
@@ -44,6 +56,40 @@ export default defineNuxtPlugin(() => {
             }
           }
         });
+
+        // Reposition launcher to avoid collision with sticky CTA on mobile
+        const tryReposition = () => {
+          const probes = [
+            'button[class*="launcher"]',
+            '.n8n-chat-launcher',
+            '[data-testid="launcher-button"]',
+            'button[aria-label*="chat" i]'
+          ];
+          let el = null;
+          for (const sel of probes) {
+            el = document.querySelector(sel);
+            if (el) break;
+          }
+          if (!el) return false;
+          const isMobile = window.innerWidth < 640;
+          (el as HTMLElement).style.zIndex = '70';
+          (el as HTMLElement).style.position = 'fixed';
+          (el as HTMLElement).style.right = '12px';
+          (el as HTMLElement).style.bottom = isMobile ? '88px' : '24px';
+          return true;
+        };
+
+        // Poll a few times until the launcher exists
+        let attempts = 0;
+        const poll = setInterval(() => {
+          attempts++;
+          if (tryReposition() || attempts > 40) clearInterval(poll);
+        }, 150);
+
+        // Also adjust on resize
+        window.addEventListener('resize', () => {
+          tryReposition();
+        }, { passive: true });
       } catch (e) {
         console && console.warn && console.warn('Livechat init failed:', e)
       }

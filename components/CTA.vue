@@ -1,7 +1,7 @@
 
 
 <template>
-  <section class="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+  <section class="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden reveal-animate">
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-10">
       <div class="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-transparent"></div>
@@ -12,8 +12,8 @@
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <!-- Section Header -->
       <div class="mb-12 sm:mb-16">
-        <div class="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-yellow-400 to-yellow-600 text-black rounded-full text-sm sm:text-base font-semibold mb-6 shadow-lg">
-          <span class="mr-2 sm:mr-3">🚀</span>
+        <div class="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-yellow-400 to-yellow-600 text-black rounded-full text-sm sm:text-base font-semibold mb-6 shadow-lg whitespace-nowrap">
+          <span class="ui-circle-icon">🚀</span>
           Mulai Sekarang
         </div>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 sm:mb-8 leading-tight">
@@ -31,7 +31,7 @@
           href="#contact" 
           class="inline-flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-bold text-lg sm:text-xl rounded-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 shadow-lg"
         >
-          <span class="mr-3">💬</span>
+          <span class="ui-circle-icon">💬</span>
           Konsultasi Gratis
           <span class="ml-3">→</span>
         </a>
@@ -39,7 +39,7 @@
           href="tel:0811113666" 
           class="inline-flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 bg-white text-black font-bold text-lg sm:text-xl rounded-xl hover:bg-gray-100 transform hover:-translate-y-1 transition-all duration-300 shadow-lg"
         >
-          <span class="mr-3">📞</span>
+          <span class="ui-circle-icon">📞</span>
           Hubungi Kami
         </a>
       </div>
@@ -48,7 +48,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
         <div class="text-center p-6 sm:p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300">
           <div class="w-16 h-16 bg-yellow-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <span class="text-3xl">⚡</span>
+            <span class="ui-circle-icon" style="width:32px;height:32px;font-size:18px;">⚡</span>
           </div>
           <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Proses Cepat</h3>
           <p class="text-gray-300 text-sm sm:text-base">
@@ -58,21 +58,21 @@
 
         <div class="text-center p-6 sm:p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300">
           <div class="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <span class="text-3xl">🛡️</span>
+            <span class="ui-circle-icon" style="width:32px;height:32px;font-size:18px;">🛡️</span>
           </div>
-          <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Garansi 100%</h3>
+          <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Dukungan Penuh</h3>
           <p class="text-gray-300 text-sm sm:text-base">
-            Kami jamin kepuasan Anda atau uang kembali
+            Kami dampingi hingga selesai, layanan responsif dan profesional
           </p>
         </div>
 
         <div class="text-center p-6 sm:p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300">
           <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <span class="text-3xl">👥</span>
+            <span class="ui-circle-icon" style="width:32px;height:32px;font-size:18px;">👥</span>
           </div>
           <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Tim Ahli</h3>
           <p class="text-gray-300 text-sm sm:text-base">
-            Konsultan berpengalaman lebih dari 15 tahun
+            Konsultan berpengalaman lebih dari 3 tahun
           </p>
         </div>
       </div>
@@ -86,7 +86,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-8">
           <div class="text-center">
             <div class="w-16 h-16 bg-yellow-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <span class="text-2xl">📞</span>
+              <span class="ui-circle-icon" style="width:32px;height:32px;font-size:18px;">📞</span>
             </div>
             <h4 class="font-semibold text-white mb-2">Telepon</h4>
             <p class="text-yellow-400 font-medium">0811113666</p>
@@ -95,7 +95,7 @@
           
           <div class="text-center">
             <div class="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <span class="text-2xl">📧</span>
+              <span class="ui-circle-icon" style="width:32px;height:32px;font-size:18px;">📧</span>
             </div>
             <h4 class="font-semibold text-white mb-2">Email</h4>
             <p class="text-green-400 font-medium">Legal@RuangOffice.com</p>
@@ -104,7 +104,7 @@
           
           <div class="text-center">
             <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <span class="text-2xl">🌐</span>
+              <span class="ui-circle-icon" style="width:32px;height:32px;font-size:18px;">🌐</span>
             </div>
             <h4 class="font-semibold text-white mb-2">Website</h4>
             <p class="text-blue-400 font-medium">www.RuangOffice.com</p>
@@ -140,7 +140,7 @@
             href="#contact" 
             class="inline-flex items-center justify-center px-10 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-bold text-xl sm:text-2xl rounded-2xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 shadow-lg"
           >
-            <span class="mr-4">🚀</span>
+            <span class="ui-circle-icon" style="width:32px;height:32px;font-size:18px;">🚀</span>
             Mulai Konsultasi Sekarang
             <span class="ml-4">→</span>
           </a>
